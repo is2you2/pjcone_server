@@ -1,0 +1,23 @@
+{
+    "name": "fileuploadhtml",
+    "version": "1.0.0",
+    "description": "Node.js Fileupload.",
+    "main": "server.js",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.10.8",
+        "multer": "^0.1.8"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "keywords": [
+        "file",
+        "upload",
+        "svenatwork",
+        "liss22"
+    ],
+    "author": "liss22",
+    "license": "MIT"
+}

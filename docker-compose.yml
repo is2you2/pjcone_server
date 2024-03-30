@@ -1,0 +1,78 @@
+version: '3'
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:12.2-alpine
+    environment:
+      - POSTGRES_DB=nakama
+      - POSTGRES_PASSWORD=localdb
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    expose:
+      - "8080"
+      - "5432"
+    ports:
+      - "5432:5432"
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "nakama"]
+      interval: 3s
+      timeout: 3s
+      retries: 5
+  nakama:
+    container_name: nakama
+    image: registry.heroiclabs.com/heroiclabs/nakama:3.20.1
+    entrypoint:
+      - "/bin/sh"
+      - "-ecx"
+      - >
+        /nakama/nakama migrate up --database.address postgres:localdb@postgres:5432/nakama &&
+        /nakama/nakama --config /nakama/data/pjcone.yml
+    restart: always
+    links:
+      - "postgres:db"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./data/:/nakama/data
+    expose:
+      - "7349"
+      - "7350"
+      - "7351"
+    ports:
+      - "7349:7349"
+      - "7350:7350"
+      - "7351:7351"
+    healthcheck:
+      test: ["CMD", "/nakama/nakama", "healthcheck"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  apache: # 파일 업로드 공개 서버
+    container_name: apache
+    image: httpd
+    volumes:
+      - "./uploader:/usr/local/apache2/htdocs"
+      - "./httpd.conf:/usr/local/apache2/conf/httpd.conf"
+      - "./httpd-ssl.conf:/usr/local/apache2/conf/extra/httpd-ssl.conf"
+      - "./data/public.crt:/usr/local/apache2/conf/public.crt"
+      - "./data/private.key:/usr/local/apache2/conf/private.key"
+    ports:
+      - "9001:9001"
+      # - "9002:80" # no-ssl
+      - "9002:443" # 컴퓨터:도커
+    command: sh /usr/local/apache2/htdocs/setup_uploader.sh
+  coturn: # WebRTC 서버 (사용시 등록 필요)
+    container_name: coturn
+    image: coturn/coturn
+    network_mode: host
+    volumes:
+      - ./data/:/etc/coturn/
+    environment:
+      DETECT_EXTERNAL_IP: 'yes'
+      DETECT_RELAY_IP: 'yes'
+      PATH: $PATH:/root/Android/Sdk/platform-tools:/usr/local/sbin:/usr/sbin:/sbin
+      GODOT_SILENCE_ROOT_WARNING: 1
+volumes:
+  data:
