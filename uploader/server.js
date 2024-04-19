@@ -43,6 +43,11 @@ app.use(multer({
     }
 }));
 
+/** 파일 삭제 요청 */
+app.use('/remove/', (req, res) => {
+    fs.unlinkSync(`./cdn${req.url}`);
+    res.end();
+});
 
 /** Rendering upload form with simple html */
 function displayForm(req, res) {
