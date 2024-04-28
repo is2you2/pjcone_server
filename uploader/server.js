@@ -45,8 +45,22 @@ app.use(multer({
 
 /** 파일 삭제 요청 */
 app.use('/remove/', (req, res) => {
-    fs.unlinkSync(`./cdn${req.url}`);
-    console.log(`Remove file: ./cdn${req.url}`);
+    fs.unlinkSync(`./cdn${decodeURIComponent(req.url)}`);
+    console.log(`Remove file: ./cdn${decodeURIComponent(req.url)}`);
+    res.end();
+});
+
+/** 키워드가 포함된 모든 파일 삭제 */
+app.use('/remove_key/', (req, res) => {
+    let target_key = `${decodeURIComponent(req.url).substring(1)}`;
+    fs.readdir('./cdn', (err, files) => {
+        files.forEach(path => {
+            if (path.indexOf(target_key) >= 0) {
+                fs.unlinkSync(`./cdn/${path}`);
+                console.log(`Remove file: ./cdn${decodeURIComponent(req.url)}`);
+            }
+        });
+    });
     res.end();
 });
 
