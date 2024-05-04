@@ -5,7 +5,8 @@ local function send_noti_all(context, payload)
 
   local subject = "send_noti_all"
   local code = 1
-  local persistent = true
+  local persistent = json.persistent
+  json.persistent = nil
 
   nk.notification_send_all(subject, json, code, persistent)
 end

@@ -72,7 +72,7 @@ services:
     environment:
       DETECT_EXTERNAL_IP: 'yes'
       DETECT_RELAY_IP: 'yes'
-      PATH: $PATH:/root/Android/Sdk/platform-tools:/usr/local/sbin:/usr/sbin:/sbin
+      PATH: /usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin
       GODOT_SILENCE_ROOT_WARNING: 1
 volumes:
   data:
