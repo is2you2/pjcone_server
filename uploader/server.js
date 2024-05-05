@@ -45,8 +45,10 @@ app.use(multer({
 
 /** 파일 삭제 요청 */
 app.use('/remove/', (req, res) => {
-    fs.unlinkSync(`./cdn${decodeURIComponent(req.url)}`);
     console.log(`Remove file: ./cdn${decodeURIComponent(req.url)}`);
+    fs.unlink(`./cdn${decodeURIComponent(req.url)}`, e => {
+        console.error(`Result: Remove file ${decodeURIComponent(req.url)}: ${e}`);
+    });
     res.end();
 });
 
@@ -54,10 +56,13 @@ app.use('/remove/', (req, res) => {
 app.use('/remove_key/', (req, res) => {
     let target_key = `${decodeURIComponent(req.url).substring(1)}`;
     fs.readdir('./cdn', (err, files) => {
+        console.log(`Remove file with key: ${decodeURIComponent(req.url)}`);
         files.forEach(path => {
             if (path.indexOf(target_key) >= 0) {
-                fs.unlinkSync(`./cdn/${path}`);
-                console.log(`Remove file: ./cdn${decodeURIComponent(req.url)}`);
+                console.log(`Remove file: ./cdn/${decodeURIComponent(path)}`);
+                fs.unlink(`./cdn/${path}`, e => {
+                    console.error(`Result: Remove file with key: ${decodeURIComponent(path)}: ${e}`);
+                });
             }
         });
     });
