@@ -45,9 +45,7 @@ app.use(multer({
 
 /** 파일 크기 요청 */
 app.use('/filesize/', (req, res) => {
-    console.log(`Req filesize: ./cdn${decodeURIComponent(req.url)}`);
     let stat = fs.statSync(`./cdn${decodeURIComponent(req.url)}`);
-    console.log(stat.size);
     res.end(`${stat.size}`);
 });
 
