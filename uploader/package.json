@@ -1,23 +1,19 @@
 {
-    "name": "fileuploadhtml",
+    "name": "file_server",
     "version": "1.0.0",
-    "description": "Node.js Fileupload.",
-    "main": "server.js",
-    "dependencies": {
-        "cors": "^2.8.5",
-        "express": "^4.10.8",
-        "multer": "^0.1.8"
-    },
+    "description": "nakama file side server",
+    "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
+        "start": "node index.js"
     },
-    "keywords": [
-        "file",
-        "upload",
-        "svenatwork",
-        "liss22"
-    ],
     "author": "liss22",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.19.2",
+        "multer": "^0.1.8",
+        "uuid": "^10.0.0",
+        "ws": "^8.18.0"
+    }
 }
