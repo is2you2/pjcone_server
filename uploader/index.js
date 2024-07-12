@@ -89,7 +89,8 @@ https.createServer(options, app).listen(9001, "0.0.0.0", () => {
 //     console.log("Working on port 9001: No Secure");
 // });
 
-const secure_server = https.createServer(options);
+// 이 아래부터는 사설 그룹채팅 서버 구성
+const secure_server = https.createServer(options, (req, res) => { });
 const wss = new ws.Server({ secure_server });
 
 // const wss = new ws.Server({ port: 12013 }, () => {
