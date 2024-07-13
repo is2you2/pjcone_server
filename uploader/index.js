@@ -90,7 +90,7 @@ https.createServer(options, app).listen(9001, "0.0.0.0", () => {
 // });
 
 const secure_server = https.createServer(options);
-const wss = new ws.Server({ secure_server });
+const wss = new ws.Server({ server: secure_server });
 
 // const wss = new ws.Server({ port: 12013 }, () => {
 //     console.log("Working on port 12013: No Secure");
