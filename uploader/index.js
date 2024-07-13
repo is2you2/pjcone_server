@@ -165,7 +165,12 @@ wss.on('connection', (ws) => {
             dedi_client[channel_id][keys[i]]['ws'].send(msg);
         delete dedi_client[channel_id][clientId];
         delete joined_channel[clientId];
-        if (keys.length == 1) delete dedi_client[channel_id];
+        { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
+            let keys = Object.keys(dedi_client[channel_id]);
+            for (let i = 0, j = keys.length; i < j; i++)
+                dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
+            if (keys.length < 1) delete dedi_client[channel_id];
+        }
     });
 });
 
