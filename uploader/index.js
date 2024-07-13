@@ -89,9 +89,8 @@ https.createServer(options, app).listen(9001, "0.0.0.0", () => {
 //     console.log("Working on port 9001: No Secure");
 // });
 
-// 이 아래부터는 사설 그룹채팅 서버 구성
 const secure_server = https.createServer(options);
-const wss = new ws.Server({ server: secure_server });
+const wss = new ws.Server({ secure_server });
 
 // const wss = new ws.Server({ port: 12013 }, () => {
 //     console.log("Working on port 12013: No Secure");
@@ -99,35 +98,49 @@ const wss = new ws.Server({ server: secure_server });
 
 
 /** 사설 그룹채팅 클라이언트 맵
- * dedi_client[pid] = { ws, name };
+ * dedi_client[channel_id][pid] = { ws, name };
  */
 const dedi_client = {};
+/** 사용자가 참여한 채널  
+ * joined_channel[pid] = channel_id
+ */
+const joined_channel = {};
 
 // 웹 소켓 서버 구성
 wss.on('connection', (ws) => {
     const clientId = uuidv4();
-    dedi_client[clientId] = {};
-    dedi_client[clientId]['ws'] = ws;
-
-    { // 진입시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
-        let keys = Object.keys(dedi_client);
-        for (let i = 0, j = keys.length; i < j; i++)
-            dedi_client[keys[i]]['ws'].send(JSON.stringify({ count: j }));
-    }
     // 사용자 uuid를 명시하고 모든 사용자에게 브로드캐스트
     ws.on('message', (msg) => {
         try {
             let json = JSON.parse(msg);
-            if (json['type'] == 'join') {
-                dedi_client[clientId]['ws'] = ws;
-                dedi_client[clientId]['name'] = json['name'];
+            let channel_id = json['channel'] || joined_channel[clientId];
+            switch (json['type']) {
+                case 'join': // 새로운 사용자 참여
+                    if (!json['channel']) // 참여 예정 채널이 없다면 새 채널 만들기
+                        channel_id = clientId;
+                    joined_channel[clientId] = channel_id;
+                    if (!dedi_client[channel_id])
+                        dedi_client[channel_id] = {};
+                    if (!dedi_client[channel_id][clientId])
+                        dedi_client[channel_id][clientId] = {};
+                    dedi_client[channel_id][clientId]['ws'] = ws;
+                    dedi_client[channel_id][clientId]['name'] = json['name'];
+                    json['channel'] = channel_id;
+                    { // 진입시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
+                        let keys = Object.keys(dedi_client[channel_id]);
+                        for (let i = 0, j = keys.length; i < j; i++)
+                            dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
+                    }
+                    break;
+                default:
+                    break;
             }
             json['uid'] = clientId;
             json = JSON.stringify(json);
             { // 메시지 브로드캐스트
-                let keys = Object.keys(dedi_client);
+                let keys = Object.keys(dedi_client[channel_id]);
                 for (let i = 0, j = keys.length; i < j; i++)
-                    dedi_client[keys[i]]['ws'].send(json);
+                    dedi_client[channel_id][keys[i]]['ws'].send(json);
             }
         } catch (e) {
             console.error(`json 변환 오류_${msg}: ${e}`);
@@ -138,9 +151,9 @@ wss.on('connection', (ws) => {
 
     // 연결이 종료되었을 때 실행되는 콜백 함수
     ws.on('close', () => { // 모든 사용자에게 사용자 나감 브로드캐스트
-        let catch_name = dedi_client[clientId]['name'];
-        delete dedi_client[clientId];
-        let keys = Object.keys(dedi_client);
+        const channel_id = joined_channel[clientId];
+        const catch_name = dedi_client[channel_id][clientId]['name'];
+        let keys = Object.keys(dedi_client[channel_id]);
         let count = {
             uid: clientId,
             name: catch_name,
@@ -149,7 +162,10 @@ wss.on('connection', (ws) => {
         }
         let msg = JSON.stringify(count);
         for (let i = 0, j = keys.length; i < j; i++)
-            dedi_client[keys[i]]['ws'].send(msg);
+            dedi_client[channel_id][keys[i]]['ws'].send(msg);
+        delete dedi_client[channel_id][clientId];
+        delete joined_channel[clientId];
+        if (keys.length == 1) delete dedi_client[channel_id];
     });
 });
 
