@@ -114,8 +114,9 @@ wss.on('connection', (ws) => {
                 case 'init': // 사용자에게 새 채널 id를 구성하여 전달
                     let new_channel_id = uuidv4();
                     let init = {
-                        type: 'init',
+                        type: 'init_id',
                         id: new_channel_id,
+                        uid: clientId,
                     }
                     dedi_client[new_channel_id] = {};
                     ws.send(JSON.stringify(init));
@@ -149,14 +150,14 @@ wss.on('connection', (ws) => {
             }
         } catch (e) {
             console.error(`json 변환 오류 msg: ${msg}`);
-            console.warn(e);
+            // 클라이언트에게 메시지 반환
+            ws.send('서버에서 받은 메시지: ' + msg);
         }
-        // 클라이언트에게 메시지 전송
-        ws.send('서버에서 받은 메시지: ' + msg);
     });
 
     // 연결이 종료되었을 때 실행되는 콜백 함수
     ws.on('close', () => { // 모든 사용자에게 사용자 나감 브로드캐스트
+        try {
         const channel_id = joined_channel[clientId];
         const catch_name = dedi_client[channel_id][clientId]['name'];
         let keys = Object.keys(dedi_client[channel_id]);
@@ -176,6 +177,9 @@ wss.on('connection', (ws) => {
             for (let i = 0, j = keys.length; i < j; i++)
                 dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
             if (keys.length < 1) delete dedi_client[channel_id];
+            }
+        } catch (e) {
+            console.log('사용자 퇴장 오류: ', e);
         }
     });
 });
