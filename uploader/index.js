@@ -158,25 +158,37 @@ wss.on('connection', (ws) => {
     // 연결이 종료되었을 때 실행되는 콜백 함수
     ws.on('close', () => { // 모든 사용자에게 사용자 나감 브로드캐스트
         try {
-        const channel_id = joined_channel[clientId];
-        const catch_name = dedi_client[channel_id][clientId]['name'];
-        let keys = Object.keys(dedi_client[channel_id]);
-        let count = {
-            uid: clientId,
-            name: catch_name,
-            type: 'leave',
-            count: keys.length,
-        }
-        let msg = JSON.stringify(count);
-        for (let i = 0, j = keys.length; i < j; i++)
-            dedi_client[channel_id][keys[i]]['ws'].send(msg);
-        delete dedi_client[channel_id][clientId];
-        delete joined_channel[clientId];
-        { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
+            const channel_id = joined_channel[clientId];
+            // 이 서버에 파일을 직접 게시했다면 해당 사용자의 파일 삭제
+            fs.readdir('./cdn', (err, files) => {
+                console.log(`Remove file with key: /square_${channel_id}_${clientId}`);
+                files.forEach(path => {
+                    if (path.indexOf(`square_${channel_id}_${clientId}`) >= 0) {
+                        console.log(`Remove file: ./cdn/${decodeURIComponent(path)}`);
+                        fs.unlink(`./cdn/${path}`, e => {
+                            console.error(`Result: Remove file with key: ${decodeURIComponent(path)}: ${e}`);
+                        });
+                    }
+                });
+            });
+            const catch_name = dedi_client[channel_id][clientId]['name'];
             let keys = Object.keys(dedi_client[channel_id]);
+            let count = {
+                uid: clientId,
+                name: catch_name,
+                type: 'leave',
+                count: keys.length,
+            }
+            let msg = JSON.stringify(count);
             for (let i = 0, j = keys.length; i < j; i++)
-                dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
-            if (keys.length < 1) delete dedi_client[channel_id];
+                dedi_client[channel_id][keys[i]]['ws'].send(msg);
+            delete dedi_client[channel_id][clientId];
+            delete joined_channel[clientId];
+            { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
+                let keys = Object.keys(dedi_client[channel_id]);
+                for (let i = 0, j = keys.length; i < j; i++)
+                    dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
+                if (keys.length < 1) delete dedi_client[channel_id];
             }
         } catch (e) {
             console.log('사용자 퇴장 오류: ', e);
