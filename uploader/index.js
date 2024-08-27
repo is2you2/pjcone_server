@@ -104,7 +104,7 @@ const joined_channel = {};
 
 // 웹 소켓 서버 구성
 wss.on('connection', (ws) => {
-    const clientId = uuidv4();
+    let clientId = uuidv4();
     // 사용자 uuid를 명시하고 모든 사용자에게 브로드캐스트
     ws.on('message', (msg) => {
         try {
@@ -121,6 +121,9 @@ wss.on('connection', (ws) => {
                     dedi_client[new_channel_id] = {};
                     ws.send(JSON.stringify(init));
                     return;
+                // 광장 채널에서 FFS 우선처리가 된 경우 별도 클라이언트 연결
+                case 'override':
+                    clientId = json['clientId'];
                 case 'join': // 새로운 사용자 참여
                     if (!json['channel']) // 참여 예정 채널이 없다면 새 채널 만들기
                         channel_id = clientId;
