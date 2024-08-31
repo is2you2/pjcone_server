@@ -138,10 +138,11 @@ wss.on('connection', (ws) => {
                     joined_channel[clientId] = channel_id;
                     if (!dedi_client[channel_id])
                         dedi_client[channel_id] = {};
-                    if (!dedi_client[channel_id][clientId])
+                    if (!dedi_client[channel_id][clientId]) {
                         dedi_client[channel_id][clientId] = {};
-                    dedi_client[channel_id][clientId]['ws'] = ws;
-                    dedi_client[channel_id][clientId]['name'] = json['name'];
+                        dedi_client[channel_id][clientId]['ws'] = ws;
+                        dedi_client[channel_id][clientId]['name'] = json['name'];
+                    }
                     json['channel'] = channel_id;
                     { // 진입시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
                         let keys = Object.keys(dedi_client[channel_id]);
