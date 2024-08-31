@@ -4,7 +4,6 @@ var cors = require('cors')
 var express = require("express");
 var multer = require('multer');
 var app = express();
-var done = false;
 const https = require('node:https');
 const fs = require('node:fs');
 const ws = require('ws');
@@ -98,13 +97,21 @@ const wss = new ws.Server({ server: secure_server });
  */
 const dedi_client = {};
 /** 사용자가 참여한 채널  
- * joined_channel[pid] = channel_id
+ * joined_channel[pid] = channel_id;
  */
 const joined_channel = {};
 
+/** 이미 uuid가 사용중인지 검토하기 */
+function CreateUUIDv4() {
+    let clientId = uuidv4();
+    let keys = Object.keys(joined_channel);
+    if (keys.includes(clientId))
+        return CreateUUIDv4();
+    return clientId;
+}
 // 웹 소켓 서버 구성
 wss.on('connection', (ws) => {
-    let clientId = uuidv4();
+    let clientId = CreateUUIDv4();
     // 사용자 uuid를 명시하고 모든 사용자에게 브로드캐스트
     ws.on('message', (msg) => {
         try {
@@ -125,7 +132,8 @@ wss.on('connection', (ws) => {
                 case 'override':
                     clientId = json['clientId'];
                 case 'join': // 새로운 사용자 참여
-                    if (!json['channel']) // 참여 예정 채널이 없다면 새 채널 만들기
+                    // 참여 예정 채널이 없다면 사용자 아이디로 새 채널 만들기
+                    if (!json['channel'])
                         channel_id = clientId;
                     joined_channel[clientId] = channel_id;
                     if (!dedi_client[channel_id])
@@ -183,8 +191,13 @@ wss.on('connection', (ws) => {
                 count: keys.length,
             }
             let msg = JSON.stringify(count);
+            /** 방장으로 지정된 사람이 탈퇴한 경우 */
+            let isHostLeft = channel_id == clientId;
             for (let i = 0, j = keys.length; i < j; i++)
-                dedi_client[channel_id][keys[i]]['ws'].send(msg);
+                // 방장이 나갔다면 모든 사람들 탈퇴처리
+                if (isHostLeft) {
+                    dedi_client[channel_id][keys[i]]['ws'].close();
+                } else dedi_client[channel_id][keys[i]]['ws'].send(msg);
             delete dedi_client[channel_id][clientId];
             delete joined_channel[clientId];
             { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
