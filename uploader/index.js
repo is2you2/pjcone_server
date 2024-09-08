@@ -135,6 +135,7 @@ wss.on('connection', (ws) => {
                     // 참여 예정 채널이 없다면 사용자 아이디로 새 채널 만들기
                     if (!json['channel'])
                         channel_id = clientId;
+                    // 이 경우 사용자는 방장으로서 동작한다
                     joined_channel[clientId] = channel_id;
                     if (!dedi_client[channel_id])
                         dedi_client[channel_id] = {};
@@ -146,8 +147,8 @@ wss.on('connection', (ws) => {
                     json['channel'] = channel_id;
                     { // 진입시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
                         let keys = Object.keys(dedi_client[channel_id]);
-                        for (let i = 0, j = keys.length; i < j; i++)
-                            dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
+                        for (let key of keys)
+                            dedi_client[channel_id][key]['ws'].send(JSON.stringify({ count: j }));
                     }
                     break;
                 default:
@@ -157,8 +158,8 @@ wss.on('connection', (ws) => {
             json = JSON.stringify(json);
             { // 메시지 브로드캐스트
                 let keys = Object.keys(dedi_client[channel_id]);
-                for (let i = 0, j = keys.length; i < j; i++)
-                    dedi_client[channel_id][keys[i]]['ws'].send(json);
+                for (let key of keys)
+                    dedi_client[channel_id][key]['ws'].send(json);
             }
         } catch (e) {
             console.error(`json 변환 오류 msg: ${msg}`);
@@ -185,27 +186,33 @@ wss.on('connection', (ws) => {
             });
             const catch_name = dedi_client[channel_id][clientId]['name'];
             let keys = Object.keys(dedi_client[channel_id]);
-            let count = {
-                uid: clientId,
-                name: catch_name,
-                type: 'leave',
-                count: keys.length,
-            }
-            let msg = JSON.stringify(count);
             /** 방장으로 지정된 사람이 탈퇴한 경우 */
             let isHostLeft = channel_id == clientId;
-            for (let i = 0, j = keys.length; i < j; i++)
+            for (let key of keys)
                 // 방장이 나갔다면 모든 사람들 탈퇴처리
                 if (isHostLeft) {
-                    dedi_client[channel_id][keys[i]]['ws'].close();
-                } else dedi_client[channel_id][keys[i]]['ws'].send(msg);
+                    dedi_client[channel_id][key]['ws'].close();
+                } else {
+                    let count = {
+                        uid: clientId,
+                        name: catch_name,
+                        type: 'leave',
+                        count: keys.length,
+                    }
+                    let msg = JSON.stringify(count);
+                    dedi_client[channel_id][key]['ws'].send(msg);
+                }
             delete dedi_client[channel_id][clientId];
             delete joined_channel[clientId];
             { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
                 let keys = Object.keys(dedi_client[channel_id]);
-                for (let i = 0, j = keys.length; i < j; i++)
-                    dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
-                if (keys.length < 1) delete dedi_client[channel_id];
+                for (let key of keys)
+                    dedi_client[channel_id][key]['ws'].send(JSON.stringify({ count: j }));
+                // 사람이 없으면 채널 삭제처리
+                if (keys.length < 1) {
+                    delete dedi_client[channel_id];
+                    console.log('채널 삭제: ', channel_id);
+                }
             }
         } catch (e) {
             console.log('사용자 퇴장 오류: ', e);
