@@ -147,8 +147,8 @@ wss.on('connection', (ws) => {
                     json['channel'] = channel_id;
                     { // 진입시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
                         let keys = Object.keys(dedi_client[channel_id]);
-                        for (let key of keys)
-                            dedi_client[channel_id][key]['ws'].send(JSON.stringify({ count: j }));
+                        for (let i = 0, j = keys.length; i < j; i++)
+                            dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
                     }
                     break;
                 default:
@@ -158,8 +158,8 @@ wss.on('connection', (ws) => {
             json = JSON.stringify(json);
             { // 메시지 브로드캐스트
                 let keys = Object.keys(dedi_client[channel_id]);
-                for (let key of keys)
-                    dedi_client[channel_id][key]['ws'].send(json);
+                for (let i = 0, j = keys.length; i < j; i++)
+                    dedi_client[channel_id][keys[i]]['ws'].send(json);
             }
         } catch (e) {
             console.error(`json 변환 오류 msg: ${msg}`);
@@ -206,8 +206,8 @@ wss.on('connection', (ws) => {
             delete joined_channel[clientId];
             { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
                 let keys = Object.keys(dedi_client[channel_id]);
-                for (let key of keys)
-                    dedi_client[channel_id][key]['ws'].send(JSON.stringify({ count: j }));
+                for (let i = 0, j = keys.length; i < j; i++)
+                    dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
                 // 사람이 없으면 채널 삭제처리
                 if (keys.length < 1) {
                     delete dedi_client[channel_id];
