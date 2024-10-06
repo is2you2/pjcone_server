@@ -1,15 +1,18 @@
 /** Define dependencies.*/
 
-var cors = require('cors')
+var cors = require('cors');
 var express = require("express");
 var multer = require('multer');
 var app = express();
+const path = require('path');
 const https = require('node:https');
 const fs = require('node:fs');
 const ws = require('ws');
 const { v4: uuidv4 } = require('uuid');
 
-// multer 활용 페이지 구성
+/** 페이지 서버 포트 */
+const port = 12000;
+
 app.use(cors());
 
 app.use((req, res, next) => {
@@ -223,3 +226,15 @@ wss.on('connection', (ws) => {
 secure_server.listen(12013, () => {
     console.log("Working on port 12013");
 });
+
+// 페이지를 다운받으면 로컬에서 실행할 수 있습니다
+// 페이지 구성요소는 https://github.com/is2you2/is2you2.github.io 프로젝트의 pjcone_pwa 아래 있습니다
+// index.html, manifest.webmanifest 등 폴더 내 base_href 에 해당하는 정보(/pjcone_pwa/) 문자열을 루트(/)로 변경해야 합니다
+try {
+    app.use(express.static(path.join(__dirname, './www')));
+    app.listen(port, () => {
+        console.log(`서버가 http://localhost:${port}에서 실행 중입니다.`);
+    });
+} catch (e) {
+    console.log('페이지 서버 켜기 오류: ', e);
+}
