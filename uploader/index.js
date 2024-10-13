@@ -227,9 +227,8 @@ secure_server.listen(12013, () => {
     console.log("Working on port 12013");
 });
 
-// 페이지를 다운받으면 로컬에서 실행할 수 있습니다
-// 페이지 구성요소는 https://github.com/is2you2/is2you2.github.io 프로젝트의 pjcone_pwa 아래 있습니다
-// index.html, manifest.webmanifest 등 폴더 내 base_href 에 해당하는 정보(/pjcone_pwa/) 문자열을 루트(/)로 변경해야 합니다
+// 이 서버를 이용하면 http://localhost:{port} 로 페이지를 이용할 수 있고
+// 비보안 서버에 접속할 때 기능에 제한 없이 사용할 수 있습니다.
 try {
     app.use(express.static(path.join(__dirname, './www')));
     app.listen(port, () => {

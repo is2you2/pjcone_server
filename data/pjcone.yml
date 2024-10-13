@@ -25,4 +25,4 @@ logger:
 console:
     idle_timeout_ms: 300000
     username: "username"
-    password: "password"
+    password: "passwd"

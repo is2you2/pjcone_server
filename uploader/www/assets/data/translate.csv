@@ -1,0 +1,596 @@
+﻿#,ko,en
+SystemLangTarget,한국어,English
+## Front
+HeaderLabel,브라우저앱 설치 안내,Browser app installation instructions
+UseAnyway,어쨌든 앱 실행,Run app anyway
+## Main,,
+Title,해야할 일,Todo
+NoTodo,할 일 추가하기,Add todo
+RequestTodo,새로운 할 일을 받았습니다,Received new todo
+WorkerDone,할 일 완료,Todo completed
+WorkerAbandon,할 일 포기,Give up todo
+## TodoDetail,,
+Title,할 일 상세,Todo detail
+FilterCat_0,없음,None
+ColorFilterRed,빨강,Red
+ColorFilterYellow,노랑,Yellow
+ColorFilterGreen,초록,Green
+ColorFilterCyan,청록,Cyan
+ColorFilterBlue,파랑,Blue
+ColorFilterMagenta,자주,Magenta
+FilterByCreator,생성자,Creator
+CreatorLocal,로컬에 생성,Create locally
+CreatorMe,서버에 생성,Created on server
+Requested,지시함,Requested
+CreatorOther,지시 받음,Requested by
+Server,서버,Server
+Group,채널,Group
+StoreAt,저장 위치,Save to
+OnThisDevice,이 기기에서,On this device
+WrittenByMe,내가 작성,Written by me
+DeletedServer,서버 삭제됨,Server deleted
+Disconnected,연결 끊김,Disconnected
+TodoComplete,완료,Done
+MoveToLocal,로컬로 저장소 이전,Transfer storage locally
+RemoveFromRemote,원격 서버에 삭제요청되며 로컬에 다시 저장,A deletion request is made to the remote server and saved locally again.
+NoDeadLine,기한 없음,No deadline
+DisplayName,표시명,Display name
+DisplayName_placeholder,짧게,briefly
+CustomColor,색상,Color
+SetCustomColor,눌러서 사용자 지정,Set custom color
+CanAddToServer,서버 저장에 실패했습니다,Server save failed
+SaveAfterConnectServer,다음에 서버 연결시 적용됩니다,It will be applied the next time you connect to the server
+Importance,크기,Size
+Importance_2,커다람,Big
+Importance_1,보통,Normal
+Importance_0,작음,Small
+startFrom,시작일시,Start date
+startImmediatly,즉시 시작,Start immediately
+limit,기한,Deadline
+description,상세 내용,Description
+description_placeholder,할 일 상세 내용,Todo details
+new_draw,새 그림,New painting
+new_text,새 텍스트,New text
+user_fs,인앱 탐색기,Inapp explorer
+add_attach,가져오기,Load
+load_failed,파일 가져오기에 실패하였습니다,Failed to load file
+open_content_viewer,클릭하여 파일 뷰어에서 열기,Click to open in file viewer
+logs,기록,Logs
+remove,포기,Discard
+buttonDisplay_add,추가,Add
+buttonDisplay_modify,수정,Modify
+needDisplayName,표시명을 작성하여야 합니다,Display name must be written
+WIP,작업을 완료중입니다...,Work in progress...
+ManageWorker,작업자 관리,Manage workers
+ToggleWorkers,모든 사용자 선택,Select all users
+## Subscribes,,
+Title,채널,Channels
+myProfile,내 프로필,My profile
+JoinedChannels,참여 채널,Joined channels
+has_noties,검토해야할 알림이 있습니다,There are notifications to review
+NoChat,채널 생성하기,Create a channel
+noChatList,참여중인 대화가 없습니다,There are no active conversations
+noMessageHistory,기록된 메시지 없음,No messages logged
+CameraPermissionDenied,카메라 권한을 얻지 못했습니다,Failed to get camera permission
+Disconnected,연결된 서버가 없습니다,No server connected
+## Community,,
+Title,게시물,Post
+NoPosts,게시물 추가하기,Add posts
+## Arcade,,
+Title,아케이드,Arcade
+Preparing,준비중,On Preparing
+## AddPost,,
+Title,새 게시물,New posts
+EditTitle,게시물 편집,Edit post
+Creator,작성자,Creator
+AddNewPost,게시물 작성,Write a post
+TitlePlaceholder,게시물 제목을 입력합니다,Enter the title of the post
+ContentPlaceHolder,서버 사람들과 공유하고 싶은 내용이 있으신가요?,Is there anything you'd like to share with the people on the server?
+Post,게시하기,Post
+MainPostImage,대표사진,Header
+NeedPostTitle,제목을 입력해주세요,Please enter the subject
+RemoveAttach,첨부파일 제거,Remove attachment
+WIP,게시물을 등록합니다,Register a post
+SyncPostInfo,게시물 등록중,Registering post info
+SyncMainImage,대표이미지 등록중,Registering representative image
+SyncAttaches,첨부파일 등록중,Registering attached file
+SyncErr,게시물 저장 오류,Error saving post
+NSFW,후방주의,NSFW
+NoOutLink,전체공개,Public
+UseOutLink,부분공개,Partially
+OutLinkFailed,외부노출 실패,Create outlink failed
+NoPostOutLink,게시물 정보 없음,No post information
+RecordVoiceTime,시간기록,V.Time
+SavingRecord,녹음을 저장중입니다,Saving the recording
+RecordVoiceTime,녹음시간 기록됨,Recording time recorded
+FailedToSaveVoice,녹음 저장 실패,Failed to save recording
+## PostViewer,,
+Title,게시물 뷰어,Post viewer
+CreateTime,작성일,Creation date
+ModifyTime,수정일,Modifition date
+RemovePost,게시물 삭제,Remove post
+OpenFromViewer,파일 뷰어에서 보기,View in file viewer
+CannotOpenProfile,사용자 정보를 열 수 없음,Unable to open user information
+## Settings,,
+Title,설정,Settings
+CommunityAds,개발자 광고,Developer Ads
+AdsContact,광고 문의,Ads Contact
+env_info,사용 환경,Preferences
+myInfo,내 정보,My info
+groupServer,사용자 관리,Manage user info
+useDeviceAsServer,이 기기를 기능 서버로,Use this device as a functional server
+ShowChnServer,서버 표시,Show servers
+DevKit,보조 도구,Auxiliary tools
+WebLinkGen,웹 링크 생성기,Weblink generator
+FallbackFS,첫번째 파일 서버,First file server
+TryToFallbackFS,FFS 업로드 시도,Try with FFS
+OverrideFallbackFS,FFS 우선 적용,Override FFS
+ServerFiles,사용 설명서,User Manual
+InAppExplorer,인앱 탐색기,InApp Explorer
+EnginePPT,내부망 WebRTC,Internal network WebRTC
+joinDedi_placeholder,기본,Default
+admin_tools,관리자 도구,Admin tools
+ServerAdmin,서버 관리,Manage server
+admin_req_counter,서버 상태,Server status
+NotificationSetting,알림,Notifications
+batteryOptimization,배터리 최적화 제외 설정,Battery Optimization Exclusion Settings
+AppInfo,앱 정보,App info
+AppCreator,제작자,Creator
+AppTranslator,번역가,Translator
+StartPageSet,시작 페이지 설정,Set start page
+AppLanguage,언어 설정,Languages
+LicenseNotice,라이선스 고지,License Notice
+UserGuideLink,사용자 가이드,User guide
+Sponsorship,후원,Sponsorship
+Support,이 프로젝트를 후원합니다,Support this project
+OpenPlayStore,PWA 페이지 사용,Using PWA pages
+## NotificationSettings,,
+set_alert,알림 받기,Get notifications
+icon_mono,기본 앱 알림,Default
+diychat,Nakama 채널,Nakama channel
+simplechat,광장,Square
+engineppt,엔진PPT,EnginePPT
+## Profile,,
+noname_user,이름 없는 사용자,Unnamed user
+name_placeholder,사용자 이름,Username
+at_least,최소 8자리,at least 8 digits
+user_display_name,사용자 표시명,Display name
+login_toggle,연결 시도,Connect to
+LogOut,연결 끊기,Disconnect
+main_content,메인 콘텐츠,Main contents
+upload,올리기,Upload
+remove_content,삭제,Remove
+no_main_content,없음,Null
+need_email,이메일 주소를 입력해주세요,Please enter your email address
+need_password,비밀번호를 입력해주세요,Please enter a password
+user_profile_changed,사용자 프로필 변경됨,User profile changed
+user_image_changed,사용자 이미지 변경됨,User image changed
+## OtherProfile,,
+Title,사용자 정보,User info
+add_to_group,추가,Add to group
+add_friend,친구,Add as friend
+privacy_chat,1:1 대화,Private chat
+kick_from_group,추방,Kick user
+added_to_group,사용자가 추가되었습니다,User added
+kicked_from_group,사용자를 내보냈습니다,User kicked
+## ChatRoom,,
+noname_chatroom,이름 없는 채널,Unnamed channel
+fetch_previous_chat,이전 기록 불러오기,Recall previous record
+unknown_ext,검토 불가,No review
+ExtSettings,채널설정,Settings
+ExtSoloImage,채널사진,Ch Pic
+BackgroundImage,배경사진,BGImg
+attachments,첨부파일,Attach
+FileLink,외부링크,Outlink
+StartVRecord,녹음을 시작합니다,Start recording
+VoiceRecord,인앱 음성 녹음,In-app voice record
+voidDraw,그림판,Paint
+newText,텍스트,Text
+Detour,우회안함,Default
+useFSS,FFS우선,tryFFS
+forceSQL,SQL강제,useSQL
+Camera,카메라,Camera
+Voice,녹음하기,Mic.
+VoiceStop,중지,Stop
+VoiceChat,음성통화,Voice
+EmbedFiles,파일들,Files
+ReadText,읽어주기,TTS
+LogOut,연결끊기,Disconn.
+RemoveHistory,기록삭제,Remove
+QRLinkFailed,정보 오류,Information error
+input_placeholder,메시지 입력...,Enter message...
+ManageChat,메시지 관리,Manage message
+EditChat,편집,Edit
+MsgEdited,편집됨,Edited
+MsgRemoved,메시지 삭제됨,Messages deleted
+cannot_open_from_mobile,모바일에서 열 수 없음,Can not open on mobile
+cannot_open_with_viewer,이 파일은 뷰어로 볼 수 없습니다,This file cannot be viewed with a viewer
+download_anyway,그래도 다운로드,Download anyway
+uploading,업로드 중,Uploading
+downloaded,다운로드됨,Downloaded
+FileSaved,파일 저장됨,File saved
+SavingFile,파일 저장중,Saving file
+SendFile,파일 전송됨,File sent
+qouteMsg,답장,Reply to
+LostOriginMsg,원본 메시지를 찾을 수 없음,Original message not found
+viewer_not_support,뷰어가 지원하지 않는 파일,Files not supported by the viewer
+cannot_open_file,파일을 열람할 수 없습니다,The file cannot be viewed
+export_download,추출,Extraction
+YouReadHereLast,여기까지 읽었습니다,You've read this far
+QuickShare,이 곳을 눌러 정보를 공유받습니다,Click here to share information
+QuickShare_placeholder,정보를 공유합니다...,Will share information...
+JoinWebRTCMatch,통화 채널 참여,Join call
+MatchExpiration,통화 채널 만료,Call expiration
+JoinMatchFailed,통화 참여 오류,Failed to join call
+FailedToJoinChannel,채널에 참가하지 못했습니다,Failed to join channel
+FailedToSend,발송 실패,Failed to send
+ExternalLinkFile,외부 링크 파일,External link file
+LongText,긴 글,Long text
+CreateAsTextFile,긴 메시지를 파일로 변환합니다,Convert long messages to file
+MultipleSend,여러 파일 발송,Send multiple files
+CountFile,파일 수,Number of files
+Send,발송,Send
+GoToRecent,최근 메시지 보기,Go to recent
+TalkMessage,말해주세요,Tell me
+RemoveChannel,채널 기록 삭제,Remove channel files
+CannotUndone,이 작업은 되돌릴 수 없습니다,This action cannot be undone
+RemoveChannelLogs,채널 기록을 삭제합니다,Delete channel history
+Delete,삭제,Delete
+LocalImageChanged,채널 이미지가 변경되었습니다,Channel image has been changed
+LocalImageRemoved,채널 이미지가 삭제되었습니다,Channel image has been deleted
+AlreadyRemoved,이미 정보가 삭제되었습니다,Information has already been removed
+## ContentViewer,,
+Title,파일 뷰어,File Viewer
+ContentInfo,파일 정보,File info
+Edit,이미지 편집,Edit
+EditText,문서 편집,Edit text
+Download,외부에 저장,Save external
+creator,제작자,Creator
+related_creator,그 외,Related
+Filename,파일 이름,Filename
+OnLoadContent,파일을 불러오는중,Loading file
+OnFailedLoadContent,파일을 열지 못함,Cannot open file
+saveFile,저장,Save
+AlreadyExist,같은 이름의 파일이 이미 있습니다,A file with the same name already exists
+OverWriteFile,파일 덮어쓰기,Overwrite files
+fileSaveFailed,파일 저장에 실패했습니다,Failed to save file
+ShareContent,다른 채널에 공유하기,Share to other channels
+CannotEditFile,편집 불가 파일,Cannot edit file
+DownloadThisFile,파일 다운로드,Download file
+FileDownloading,다운받는 중,Downloading
+RemoveFile,파일 삭제,Remove file
+DownloadToLocal,파일 기록하기,Record files
+QuickViewerLink,빠른 진입 링크,Quick viewer link
+CannotOpenText,열람할 수 없는 파일입니다,This file cannot be viewed
+ReadObject,개체 정보 읽는중,Reading object information
+FailedGetBaseColor,색상 불러오기 실패,Failed to load basecolor
+FailedGetEmitColor,이미션 색상 불러오기 실패,Failed to load emit_color
+LoadMeshFailed,메쉬 불러오기 실패,Failed to load mesh
+LinkedTexFile,텍스처 파일이 내장되어있지 않음,Texture file not embedded
+NoMaterial,등록된 머터리얼 없음,No registered materials
+OnWorkReadLightMode,포인트 라이트로 대체됨,Replaced by point lights
+ReachLightLimit,빛은 최대 5개까지 등록됩니다,Up to 5 lights can be registered
+MayGimbalLock,짐벌락 현상으로 각도가 다르게 표현될 수 있음,The angle may be expressed differently due to gimbal lock phenomenon
+## MinimalChat,,
+concurrent_users,동시접속자,Concurrent users
+input_placeholder,메시지 입력...,Enter message...
+header_title_group,광장,Square
+WebTitle_group,Project: 광장,Project: Square
+Noti_Reply,답장,Reply
+TrashChat,비우기,Empty
+TrashChatLog,대화 기록을 비웁니다,Clear your conversation history
+name_me,나,Me
+name_stranger_group,참여자,Participants
+joinChat_group,광장에 참여합니다,Join the square
+user_join,사용자 참여,User joined
+user_join_comment,광장에 참여했습니다,joined the square
+user_out,사용자 떠남,User out
+user_out_comment,광장을 떠났습니다,leaved the square
+user_send_attach,파일을 보냈습니다,sent a file
+meet_someone,누군가를 만났습니다,You met someone
+leave_someone,상대방이 나갔습니다,Opponent has gone
+Noti_Greeting,인사,Greeting
+failed_to_join,채널 참가에 실패했습니다,Failed to join channel
+cannot_join,채널에 참가할 수 없습니다,Unable to join channel
+leave_chat_group,광장에서 나옵니다,You leave square
+## InstantCall,,
+Title,즉석 통화,Instant call
+Waiting,연결 대기중,Waiting for connection
+MissingInfo,연결 정보가 누락되었습니다,Connection information is missing
+Connecting,연결중,Connecting
+Connected,연결됨,Connected
+CallEnd,통화 종료,End call
+## GroupServer,,
+JoinedServerList,참여중인 서버 목록,List of participating servers
+ServerDetail,정보,Info
+EditInfo,편집,Edit
+RemoveUnofficial,삭제,Delete
+RemoveAccount,탈퇴,Leave
+RemoveAccountReally,서버 탈퇴,Leave server
+RegisterServer,사설 서버 등록하기,Register private server
+DisplayName,표시명,Display name
+DisplayName_placeholder,사용자 사설 서버,User dedicated server
+DivisionName,구분자,Separator
+DivisionName_placeholder,표시명을 따라감,Follow display name
+Address,서버 주소,Address
+Key,서버 키,Key
+Port,포트,Port
+isSSL,SSL 적용여부,use SSL
+submit,등록하기,Submit
+UseDevTestServer,개발 테스트 서버 사용하기,Use development test server
+NeedSetDIsplayName,이름을 지정해주세요,Please specify a display name
+## ServerDetail,,
+copy_scan_below,QR코드를 클릭하여 초대 주소 공유,Click the QR code to share the invitation address
+ApplyChangeServerInfo,적용하기,Apply
+ServerPresets,서버 사전설정,Server presets
+CreateInfo,같은 서버의 다른 주소를 미리 등록할 수 있습니다,You can pre-register other addresses of the same server
+Add,추가,Add
+## AddGroup,,
+Title,새 채널 만들기,Create new channel
+SelectServer,서버 선택,Select server
+UseLocalStorage,이 기기에 기록,Record on this device
+GroupInfo,채널 정보,Channel info
+JoinGroupWithId,다른 채널에 참여,Join other channel
+InputGroupId,대상 ID,Input channel ID
+DiffFormat,형식 오류,Different format
+DisplayName,표시명,Display name
+DisplayName_placeholder,채널 이름,Channel name
+ClicktoChangeGroupImg,눌러서 채널 이미지 설정,Click to add channel iamge
+Volatile,휘발성 채널,Volatile channel
+JoinThisGroup,채널 참여,Join
+AfterCreateGroup,채널을 생성하여 계속,Continue by creating a channel
+GroupDetail,채널 상세,Channel details
+GroupDetail_placeholder,채널 설명,Channel description
+LanguageTag,국가 태그,LangTag
+MemberMaxLimit,최대 인원,Maximum member
+IsOpen,공개 여부,is Open group
+submit,위 정보로 추가하기,Submit
+cannot_use_selected_server,선택한 서버를 사용할 수 없습니다,The selected server is unavailable
+group_created,채널이 생성되었습니다,A channel has been created
+join_group_succ,채널에 참여했습니다,Joined the channel
+check_group_id,ID를 확인해주세요,Please check the channel ID
+NeedSetGroupName,채널 이름을 작성해주세요,Please write the channel name
+AlreadyExist,이미 같은 이름의 채널이 존재합니다,A channel with the same name already exists
+UnexpectedErr,준비되지 않은 오류처리,Unexpected error occured
+## GroupDetail,,
+Title,채널 상세,Channel detail
+IsOpen,공개 여부,Public or not
+NotAcceptYet,아직 수락되지 않았습니다,Not yet accepted
+MissedGroup,더 이상 채널구성원이 아닙니다,No longer a channel member
+NoDetailGroup,설명 없는 채널,No description
+Members,채널 구성원,Members
+BreakupGroup,채널 해산,Breakup
+LeaveGroup,떠나기,Leave group
+GroupRemoved,채널 삭제됨,Channel removed
+GroupForceRemoved,채널이 강제 삭제됨,Channel was forcibly deleted
+YouAreNotCreator,채널 생성자가 아닙니다,You are not channel creator
+## Licenses,,
+open_link,열기,Open
+## QuickQRShare,,
+GroupServer,서버 정보,Server info
+Group,채널,Channel
+EmptyData,없음,Null
+success_received,적용하였습니다,Applied
+## UseAsServer,,
+Title,이 기기를 기능 서버로,Use this device as a functional server
+UserNotice,사용 유의사항,Precautions for use
+ThisDeviceAddress,이 기기의 네트워크 주소,Network address of this device
+DedicatedServer,사설 서버,Dedicated server
+LoadingAddresses,이곳에 이 기기의 네트워크 주소가 보여집니다,The network address of this device will display here
+NoAddress,연결된 네트워크가 없습니다,No network connected
+Tool_engineppt,엔진 PPT 리모콘,Engine PPT Remote contr.
+## Translator,,
+TranslatorSpeaking,번역가의 한마디,A word from the translator
+## CreatorInfo,,
+creatorComment,제작자의 한마디,A word from the maker
+Ifyoulike,이 앱이 마음에 드신다면,If you like this app
+giveacoffeetodev,개발자에게 커피를 사주세요,Give a coffee to developer
+contributors,프로젝트 기여자,Contributors
+thanks_to,도움주신 분들,Thanks to
+## GlobalAct,,
+CancelText,취소,Cancel
+PCClipboard,복사됨,Copied
+ClipboardFailed,파일 복사 실패,Failed to copy file
+FailedToDownloadGodot,씬 실행 실패,Execution scene failed
+variousCreator,파일 첨부,Attachments
+FromCamera,카메라로 직접 촬영,From camera
+ErrorFromCamera,촬영 실패,Failed to film
+FromVoidDraw,앱 그림판에서 작업,From in-app painter
+FromAutoLongText,긴 글 파일,Long text file
+FromTextEditor,텍스트 편집기,From text editor
+SharedContent,다른 채널로부터 공유받음,Shared from other channels
+UnknownSource,알 수 없는 출처,Unknown source
+failed_to_gen_qr,QRCode 생성 실패,QRCode generation failed
+UploadFailed,파일 서버에 업로드 실패: 요청 시간 초과,Upload to file server failed: request timed out
+OnlineMode,온라인,Online
+OnlineMode_text,서버에 연결되어 있습니다,You are connected to the server
+OfflineMode,오프라인,Offline
+OfflineMode_text,연결된 서버가 없습니다,No server connected
+CheckCdnServer,파일 업로드 시도중,Attempting to upload file
+CheckFileAddress,파일 주소를 기다리는중,Waiting for file address
+CancelingUpload,업로드 시도 우회,Attempt to upload bypass
+## IndexedDB,,
+FailedToDownloadFile,다운받기 오류,Failed to download file
+## Nakama,,
+DevTestServer,개발 테스트 서버,Development test server
+ServerAdded,서버가 추가되었습니다,Server added
+AccessTestServer,테스트 서버에 연결합니다,Connect to Test server
+AlreadyHaveTargetName,이미 같은 이름의 서버가 있습니다,There already exists a server with the same name
+NeedLoginInfo,사용자 정보를 확인해주세요,Please check your user information
+NeedLinkUser,사용자를 연결해주세요,Please link user device info
+NeedAccountReset,비밀번호를 확인해주세요,Please check your password
+ServerNoti,서버 알림,Server notification
+RegisterUserSucc,서버 이용자로 등록되었습니다,You are registered as a server user
+UnexpectedLoginErr,준비되지 않은 오류 유형,Unexpected error type
+CannotOpenImg,유효한 이미지가 아닙니다,Not a valid image
+UserNotFound,만료된 알림: 사용자 없음,Notification expired: no users
+MissingFile,이 파일은 서버에서 삭제되었습니다,This file has been deleted from the server
+RemovingAccount,사용자 삭제중,Deleting user
+LogoutAccount,세션 삭제중,Deleting session
+RemovingNotification,알림 삭제중,Deleting notifications
+MissingChannels,채널 손상처리,Processing channel damage
+MissingChannelFiles,파일 이관중,Transferring file
+MissingGroups,그룹 손상처리,Processing channel group
+DeletingServerInfo,서버 정보 삭제,Delete server information
+DamagedChannel,손상된 채널,Damaged channel
+DeletedServer,삭제된 서버,Deleted server
+GroupUserJoin,사용자 채널참여,User joined
+GroupUserOut,사용자 채널탈퇴,User leaved
+GroupUserKick,사용자 강제퇴장,User kicked
+ReqContServer,서버,Server
+ReqContUserName,사용자명,User name
+ReqContTitle,채널 참가 요청,Request to join
+ReqContAccept,수락,Accept
+ReqContReject,거절,Reject
+LocalNotiTitle,채널 참가됨,Joined channel
+LocalNotiOK,확인,OK
+LocalNotiCheck,검토,Check
+AddChannelFailed,채널 추가 실패,Failed to add channel
+AddChannelFailed_Code3,사용자 삭제됨,User deleted
+FailedUpload,업로드 실패,Failed to upload
+FailedDownload,다운로드 실패,Failed to download
+FailedToAddGroup,그룹 추가 실패,Failed to add group
+GroupAllListDone,없는 그룹 정보,There is no group
+GroupAlreadyJoined,이미 참가한 그룹,Already joined group
+SessionLogout,로그아웃됨,Logged out
+LoginAgain,이 서버에 다시 연결합니다,Reconnect to this server
+PendingLogin,연결을 시도합니다,Trying to connect
+NoLoginServer,연결할 서버가 없습니다,There is no server to connect to
+TryOnline,온라인 처리 시도,Online processing attempt
+## voidDraw,,
+sideSIzeIssue,캔버스의 모든 변은 0보다 커야합니다,All sides of the canvas must be greater than 0
+UseThisImage,이미지를 준비중...,Preparing image to send...
+newDraw,새 그림,New draw
+CreateNew,새로 만들기,New
+width,가로,Width
+height,세로,Height
+weight,선 두께,Stroke weight
+changeWeight,두께 변경,Change weight
+apply,적용,Apply
+CreateChannel,새 채널 생성,Create new channel
+InputAddress,주소 입력,Input address
+ChannelIdAddress,채널id 입력,Input channel id
+ConnectedToServer,서버에 연결됨,Connected
+ConnectToAddress,연결하기,Connect
+LocalAddrInput,주소 직접 입력하기,Enter address directly
+ServerStarted,공유 그림판 서버 켜짐,Shared paint server turned on
+Confirm,연결,Confirm
+WaitingConnection,연결을 기다리는중,Waiting for connection
+FailedToOpenServer,서버 생성 실패,Failed to create server
+Connected,연결됨,Connected
+InternalConn,내부망 연결,Internal network
+WebRTC_Waiting,WebRTC 연결 대기중,Waiting WebRTC connection
+WebRTC_Init,WebRTC 초기화중,Initialize WebRTC
+WebRTC_Offer,제의 교환중,Sharing offer
+WebRTC_Reply,주소 정보 교환중,Receiving information reply
+WebRTC_Ice,ICE 정보 교환중,Exchanging ICE information
+## UserFsDir,,
+NewFolder,새 폴더,New folder
+AddFile,추가,Add
+CreateFolder,폴더 생성,Create folder
+Create,생성,Create
+NeedFolderName,폴더 이름을 작성해주세요,Please write the folder name
+FailedToCreateFolder,폴더 생성 실패,Folder creation failed
+FolderName,폴더 이름 작성,Enter folder name
+MultipleSave,여러 파일 저장,Save multiple files
+OK,확인,OK
+ResetDB,모든 파일 삭제,Delete all files
+LoadingExplorer,준비중,Explorer
+DeleteFile,파일 삭제,Delete file
+DeleteAccept,삭제,Delete
+Action,이 파일을..,Action..
+Use,사용하기,Use
+Open,열기,Open
+Select,선택,Select
+Download,받기,Download
+Import,수입,Import
+ImportFailed,수입 실패,Import failed
+Delete,삭제,Delete
+CreateAt,생성일시,Creation date
+ImportFolder,폴더 수입,Import folder
+RemoveCurrentDir,삭제,Remove
+RemoveThisFolder,이 폴더와 하위 폴더 및 파일들을 삭제합니다,Delete this folder and subfolders and files
+RemoveApply,삭제,Remove
+OpenExtFolder,외부 저장소 보기,View external storage
+PrivateAccessDenied,사용자 정보가 포함된 파일이므로 접근이 제한됩니다 ,Access is restricted as this file contains user information
+NeedResetToApply,앱을 재시작하면 적용됩니다,Takes effect when you restart the app
+## AdminTools,,
+ArcadeSet,아케이드 설정,Arcade setting
+ArcadeListURL,리스트 주소,List URL
+ArcadeURLPlaceholder,아케이드 리스트 파일 URL,Arcade list file URL
+SuccSetArcadeURL,아케이드 리스트 변경 성공,Arcade list change successful
+FailedSetArcadeURL,아케이드 리스트 변경 실패,Failed to change arcade list
+GlobalNoti,전체알림 발송,Send all notifications
+ImageURL,이미지 URL,Image URL
+EnterURI,이미지 주소 입력,Enter image url
+NoNotiMsg,전달할 메시지를 입력해주세요,Please enter your message
+Send,발송,Send
+Refresh,새로고침,Refresh
+Requesting,정보 없음,No information
+SendFailed,발송 실패,Send failed
+isPersistent,오프라인 사용자에게도 전달,Persistent
+UserList,사용자 목록,Users
+UserCreate,생성일시,Create at
+ForceLeave,이 사용자를 삭제합니다,Delete this user
+ApplyLeave,탈퇴,Withdraw
+UserLeaved,사용자 탈퇴됨,Withdrawn
+UserLeavedFailed,사용자 탈퇴 실패,Withdrawn failed
+GroupList,그룹채널 목록,Group channels
+GroupCreator,생성자,Creator
+GroupUserCounter,그룹 인원,Group members
+ForceBreakUp,이 그룹을 해산합니다,Disband this group
+ForceBreaked,그룹 해산됨,Group breakup
+ForceBreakedFailed,그룹 해산 실패,Breakup failed
+promote_as_manager,매니저 권한 부여,Promote as manager
+Apply,적용하기,Apply
+PromoteAsWell,승격 설정이 적용되었습니다,Promotion settings have been applied
+PromoteError,승격 설정이 이루어지지 않았습니다,Promotion settings are not established
+ToggleAllPromote,모두 선택,Toggle all
+AlreadyAdmin,이미 관리자입니다,You are already an administrator
+RemovedGroup,삭제된 그룹,Removed group
+## ShareContentToOther,,
+Title,파일 공유하기,Share file
+NoChannelToShare,가용 채널이 없습니다,No channels available
+AvailableChannels,공유 가능한 채널,Shareable channels
+## WebLinkGen,,
+subtitle,빠른 진입 주소 생성하기,Generate a fast entry address
+baseURL,주소 기반,Address based
+CustomInfo,정보 지정,Set information
+AutoOpenChannel,채널 열기,Open channel
+OpenGroupChannel,선택한 채널 열기,Open selected channel
+OpenPrivateChannel,1:1 채널 열기,Open private channel
+ClickToPaste,사용자 id 붙여넣기,Paste user id
+## ContentInfo,,
+WorkLogs,작업 기록,Work logs
+LastPost,최종 게시자,Last post by
+TimeAt,일시,Date
+WorkHistory,이전 작업 기록,Previous work history
+FileSize,파일 크기,File size
+SourceFrom,출처,Source
+Publisher,게시자,Publisher
+CloseModal,닫기,Close
+## QuickShareReview,,
+Title,빠른 공유 검토,Quick share review
+Servers,서버,Servers
+Channels,채널,Channel
+QuickShareGrant,이 정보를 공유받기,Get this information shared
+ApplyChecked,선택한 정보를 적용,Apply selected information
+## WebRTCDevManager,,
+Title,WebRTC 서버,WebRTC server
+VideoIn,비디오 입력 장치,Video input
+AudioIn,오디오 입력 장치,Audio input
+AudioOut,오디오 출력 장치,Audio output
+saveSetup,설정 저장하기,Save setting
+IgnoreSave,서버 정보를 입력해주세요,Please enter server information
+InitErr,초기화 실패,Failed to initialize
+AlreadyCalling,다른 통화가 진행중입니다,Another call is in progress
+ManageServer,서버 관리,Manage servers
+Remove,서버 정보 삭제,Remove server info
+AddServer,가용 서버 추가,Add available servers
+ServerInfo,서버 정보,Server info
+Urls,주소,Urls
+Username,사용자명,Username
+Credential,인증,credential
+Save,저장하기,Save
+NoRegServer,등록된 서버가 없습니다,There are no registered servers
+SecurityError,보안상 동작 불가,Impossible to operate due to security reasons
