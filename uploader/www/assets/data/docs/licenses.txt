@@ -52,10 +52,6 @@
 ├── package.json:  MIT
 └── license files: MIT
 
-@capacitor-community/speech-recognition@6.0.1 [license(s): MIT]
-├── package.json:  MIT
-└── license files: MIT
-
 @capacitor-community/text-to-speech@4.1.0 [license(s): MIT]
 ├── package.json:  MIT
 └── license files: MIT
