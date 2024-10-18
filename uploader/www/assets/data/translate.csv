@@ -119,6 +119,7 @@ myInfo,내 정보,My info
 groupServer,사용자 관리,Manage user info
 useDeviceAsServer,이 기기를 기능 서버로,Use this device as a functional server
 ShowChnServer,서버 표시,Show servers
+ShowShortCutHint,단축키 힌트 표시,Show shortcut hints
 DevKit,보조 도구,Auxiliary tools
 WebLinkGen,웹 링크 생성기,Weblink generator
 FallbackFS,첫번째 파일 서버,First file server
@@ -142,7 +143,6 @@ LicenseNotice,라이선스 고지,License Notice
 UserGuideLink,사용자 가이드,User guide
 Sponsorship,후원,Sponsorship
 Support,이 프로젝트를 후원합니다,Support this project
-OpenPlayStore,PWA 페이지 사용,Using PWA pages
 ## NotificationSettings,,
 set_alert,알림 받기,Get notifications
 icon_mono,기본 앱 알림,Default
