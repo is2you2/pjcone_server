@@ -10,10 +10,31 @@ const fs = require('node:fs');
 const ws = require('ws');
 const { v4: uuidv4 } = require('uuid');
 
-/** 로컬 웹 페이지 서버 포트 */
-const port = 12000;
-/** 보안 프로토콜을 이용하지 않는 경우 false로 변경하세요 */
-const UseSSL = true;
+let SitePort = 12000;
+let cdnPort = 9001;
+let squarePort = 12013;
+let UseSSL = true;
+{ // 설정파일을 불러와서 사용할 정보에 대입
+    let useSSLFile = fs.readFileSync('./config.txt');
+    let ReadSetup = useSSLFile.toString('utf-8');
+    let sep = ReadSetup.split('\n');
+    for (let line of sep) {
+        let sep = line.split('=');
+        switch (sep[0]) {
+            case 'SitePort':
+                SitePort = Number(sep[1]);
+                break;
+            case 'cdnPort':
+                cdnPort = Number(sep[1]);
+                break;
+            case 'squarePort':
+                squarePort = Number(sep[1]);
+            case 'UseSSL':
+                UseSSL = sep[1] == 'true';
+                break;
+        }
+    }
+}
 
 app.use(cors());
 
@@ -83,19 +104,19 @@ if (UseSSL) {
         cert: fs.readFileSync('/usr/local/apache2/conf/public.crt'),
     };
 
-    https.createServer(options, app).listen(9001, "0.0.0.0", () => {
-        console.log("Working on port 9001");
+    https.createServer(options, app).listen(cdnPort, "0.0.0.0", () => {
+        console.log(`Working on port ${cdnPort}`);
     });
 
     secure_server = https.createServer(options);
     wss = new ws.Server({ server: secure_server });
 } else {
-    app.listen(9001, "0.0.0.0", () => {
-        console.log("Working on port 9001: No Secure");
+    app.listen(cdnPort, "0.0.0.0", () => {
+        console.log(`Working on port ${cdnPort}: No Secure`);
     });
 
-    wss = new ws.Server({ port: 12013 }, () => {
-        console.log("Working on port 12013: No Secure");
+    wss = new ws.Server({ port: squarePort }, () => {
+        console.log(`Working on port ${squarePort}: No Secure`);
     });
 }
 
@@ -242,16 +263,16 @@ wss.on('connection', (ws) => {
 });
 
 if (UseSSL)
-    secure_server.listen(12013, () => {
-        console.log("Working on port 12013");
+    secure_server.listen(squarePort, () => {
+        console.log(`Working on port ${squarePort}`);
     });
 
-// 이 서버를 이용하면 http://localhost:{port} 로 페이지를 이용할 수 있고
+// 이 서버를 이용하면 http://localhost:{SitePort} 로 페이지를 이용할 수 있고
 // 앱에서 비보안 서버에 접속할 때 기능에 제한 없이 사용할 수 있습니다.
 try {
     app.use(express.static(path.join(__dirname, './www')));
-    app.listen(port, () => {
-        console.log(`서버가 http://localhost:${port}에서 실행 중입니다.`);
+    app.listen(SitePort, () => {
+        console.log(`서버가 http://localhost:${SitePort}에서 실행 중입니다.`);
     });
 } catch (e) {
     console.log('페이지 서버 켜기 오류: ', e);
