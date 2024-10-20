@@ -76,6 +76,7 @@ app.use('/remove_key/', (req, res) => {
 });
 
 let wss;
+let secure_server;
 if (UseSSL) {
     const options = {
         key: fs.readFileSync('/usr/local/apache2/conf/private.key'),
@@ -86,7 +87,7 @@ if (UseSSL) {
         console.log("Working on port 9001");
     });
 
-    const secure_server = https.createServer(options);
+    secure_server = https.createServer(options);
     wss = new ws.Server({ server: secure_server });
 } else {
     app.listen(9001, "0.0.0.0", () => {
