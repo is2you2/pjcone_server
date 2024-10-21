@@ -4,7 +4,7 @@ SystemLangTarget,한국어,English
 HeaderLabel,브라우저앱 설치 안내,Browser app installation instructions
 UseAnyway,어쨌든 앱 실행,Run app anyway
 ## Main,,
-Title,해야할 일,Todo
+Title,해야할 일,Todos
 NoTodo,할 일 추가하기,Add todo
 WorkerDone,할 일 완료,Todo completed
 WorkerAbandon,할 일 포기,Give up todo
@@ -65,6 +65,7 @@ ToggleWorkers,모든 사용자 선택,Select all users
 ## Subscribes,,
 Title,채널,Channels
 myProfile,내 프로필,My profile
+OnebyOneChat,1:1 대화 초대,1:1 Chat Invitation
 JoinedChannels,참여 채널,Joined channels
 has_noties,검토해야할 알림이 있습니다,There are notifications to review
 NoChat,채널 생성하기,Create a channel
@@ -73,7 +74,7 @@ noMessageHistory,기록된 메시지 없음,No messages logged
 CameraPermissionDenied,카메라 권한을 얻지 못했습니다,Failed to get camera permission
 Disconnected,연결된 서버가 없습니다,No server connected
 ## Community,,
-Title,게시물,Post
+Title,게시물,Posts
 NoPosts,게시물 추가하기,Add posts
 ## Arcade,,
 Title,아케이드,Arcade
@@ -121,10 +122,10 @@ useDeviceAsServer,이 기기를 기능 서버로,Use this device as a functional
 ShowChnServer,서버 표시,Show servers
 ShowShortCutHint,단축키 힌트 표시,Show shortcut hints
 DevKit,보조 도구,Auxiliary tools
-WebLinkGen,웹 링크 생성기,Weblink generator
 FallbackFS,첫번째 파일 서버,First file server
 TryToFallbackFS,FFS 업로드 시도,Try with FFS
 OverrideFallbackFS,FFS 우선 적용,Override FFS
+BugReport,오류 보고,Bug Report
 ServerFiles,사용 설명서,User Manual
 InAppExplorer,인앱 탐색기,InApp Explorer
 EnginePPT,내부망 WebRTC,Internal network WebRTC
@@ -301,8 +302,8 @@ Connected,연결됨,Connected
 CallEnd,통화 종료,End call
 ## GroupServer,,
 JoinedServerList,참여중인 서버 목록,List of participating servers
-ServerDetail,정보,Info
-EditInfo,편집,Edit
+ServerDetail,서버 정보,Server info
+EditInfo,정보,Info
 RemoveUnofficial,삭제,Delete
 RemoveAccount,탈퇴,Leave
 RemoveAccountReally,서버 탈퇴,Leave server
@@ -551,14 +552,6 @@ RemovedGroup,삭제된 그룹,Removed group
 Title,파일 공유하기,Share file
 NoChannelToShare,가용 채널이 없습니다,No channels available
 AvailableChannels,공유 가능한 채널,Shareable channels
-## WebLinkGen,,
-subtitle,빠른 진입 주소 생성하기,Generate a fast entry address
-baseURL,주소 기반,Address based
-CustomInfo,정보 지정,Set information
-AutoOpenChannel,채널 열기,Open channel
-OpenGroupChannel,선택한 채널 열기,Open selected channel
-OpenPrivateChannel,1:1 채널 열기,Open private channel
-ClickToPaste,사용자 id 붙여넣기,Paste user id
 ## ContentInfo,,
 WorkLogs,작업 기록,Work logs
 LastPost,최종 게시자,Last post by

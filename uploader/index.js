@@ -174,8 +174,10 @@ wss.on('connection', (ws) => {
                         channel_id = clientId;
                     // 이 경우 사용자는 방장으로서 동작한다
                     joined_channel[clientId] = channel_id;
-                    if (!dedi_client[channel_id])
+                    if (!dedi_client[channel_id]) {
                         dedi_client[channel_id] = {};
+                        console.log('채널 생성: ', channel_id);
+                    }
                     if (!dedi_client[channel_id][clientId]) {
                         dedi_client[channel_id][clientId] = {};
                         dedi_client[channel_id][clientId]['ws'] = ws;
