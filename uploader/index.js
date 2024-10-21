@@ -10,9 +10,15 @@ const fs = require('node:fs');
 const ws = require('ws');
 const { v4: uuidv4 } = require('uuid');
 
+/** 사설 사이트 운영 */
+let UseCustomSite = true;
+/** 사설 사이트 포트 */
 let SitePort = 12000;
+/** Nakama 연계 파일 서버 포트 */
 let cdnPort = 9001;
+/** 광장 채널 포트 */
 let squarePort = 12013;
+/** 보안 프로토콜 사용 여부 */
 let UseSSL = true;
 { // 설정파일을 불러와서 사용할 정보에 대입
     let useSSLFile = fs.readFileSync('./config.txt');
@@ -21,6 +27,9 @@ let UseSSL = true;
     for (let line of sep) {
         let sep = line.split('=');
         switch (sep[0]) {
+            case 'UseCustomSite':
+                UseCustomSite = sep[1] == 'true';
+                break;
             case 'SitePort':
                 SitePort = Number(sep[1]);
                 break;
@@ -272,10 +281,11 @@ if (UseSSL)
 // 이 서버를 이용하면 http://localhost:{SitePort} 로 페이지를 이용할 수 있고
 // 앱에서 비보안 서버에 접속할 때 기능에 제한 없이 사용할 수 있습니다.
 try {
+    if (!UseCustomSite) throw '사이트를 운영하지 않기로 설정됨';
     app.use(express.static(path.join(__dirname, './www')));
     app.listen(SitePort, () => {
         console.log(`서버가 http://localhost:${SitePort}에서 실행 중입니다.`);
     });
 } catch (e) {
-    console.log('페이지 서버 켜기 오류: ', e);
+    console.log('사설 사이트 켜기 오류: ', e);
 }
