@@ -74,7 +74,7 @@ noMessageHistory,기록된 메시지 없음,No messages logged
 CameraPermissionDenied,카메라 권한을 얻지 못했습니다,Failed to get camera permission
 Disconnected,연결된 서버가 없습니다,No server connected
 ## Community,,
-Title,게시물,Posts
+Title,공지,Notice
 NoPosts,게시물 추가하기,Add posts
 ## Arcade,,
 Title,아케이드,Arcade
@@ -96,8 +96,8 @@ SyncMainImage,대표이미지 등록중,Registering representative image
 SyncAttaches,첨부파일 등록중,Registering attached file
 SyncErr,게시물 저장 오류,Error saving post
 NSFW,후방주의,NSFW
-NoOutLink,전체공개,Public
-UseOutLink,부분공개,Partially
+NoOutLink,공지,Notice
+UseOutLink,게시물,Post
 OutLinkFailed,외부노출 실패,Create outlink failed
 NoPostOutLink,게시물 정보 없음,No post information
 RecordVoiceTime,시간기록,V.Time
