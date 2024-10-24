@@ -478,7 +478,7 @@ Confirm,연결,Confirm
 WaitingConnection,연결을 기다리는중,Waiting for connection
 FailedToOpenServer,서버 생성 실패,Failed to create server
 Connected,연결됨,Connected
-InternalConn,내부망 연결,Internal network
+InternalConn,직접 연결,Connect directly
 WebRTC_Waiting,WebRTC 연결 대기중,Waiting WebRTC connection
 WebRTC_Init,WebRTC 초기화중,Initialize WebRTC
 WebRTC_Offer,제의 교환중,Sharing offer
