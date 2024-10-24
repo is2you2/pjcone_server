@@ -303,7 +303,6 @@ CallEnd,통화 종료,End call
 ## GroupServer,,
 JoinedServerList,참여중인 서버 목록,List of participating servers
 ServerDetail,서버 정보,Server info
-EditInfo,정보,Info
 RemoveUnofficial,삭제,Delete
 RemoveAccount,탈퇴,Leave
 RemoveAccountReally,서버 탈퇴,Leave server
