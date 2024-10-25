@@ -7,5 +7,6 @@ services:
       - "443:443"
     command: certonly --standalone --email your@email.address --agree-tos -d your.domain.here
     volumes:
+      - ./result:/etc/letsencrypt/archive
       - ./certbot/letsencrypt:/etc/letsencrypt
       - ./certbot/logs:/var/log/letsencrypt
