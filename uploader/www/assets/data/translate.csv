@@ -66,7 +66,7 @@ ToggleWorkers,모든 사용자 선택,Select all users
 Title,채널,Channels
 myProfile,내 프로필,My profile
 OnebyOneChat,1:1 대화 초대,1:1 Chat Invitation
-JoinedChannels,참여 채널,Joined channels
+JoinedChannels,채널 목록,Channel List
 has_noties,검토해야할 알림이 있습니다,There are notifications to review
 NoChat,채널 생성하기,Create a channel
 noChatList,참여중인 대화가 없습니다,There are no active conversations
@@ -316,10 +316,12 @@ Key,서버 키,Key
 Port,포트,Port
 isSSL,SSL 적용여부,use SSL
 submit,등록하기,Submit
-UseDevTestServer,개발 테스트 서버 사용하기,Use development test server
 NeedSetDIsplayName,이름을 지정해주세요,Please specify a display name
 ## ServerDetail,,
 copy_scan_below,QR코드를 클릭하여 초대 주소 공유,Click the QR code to share the invitation address
+RegenWebRTC,WebRTC 서버 재구성,WebRTC 서버 재구성
+RegenWebRTCDone,WebRTC 서버 정보를 다시 구성하였습니다,Reconfigured WebRTC server information
+detailInfo,상세 정보,More information
 ApplyChangeServerInfo,적용하기,Apply
 ServerPresets,서버 사전설정,Server presets
 CreateInfo,같은 서버의 다른 주소를 미리 등록할 수 있습니다,You can pre-register other addresses of the same server
@@ -431,7 +433,7 @@ MissingChannels,채널 손상처리,Processing channel damage
 MissingChannelFiles,파일 이관중,Transferring file
 MissingGroups,그룹 손상처리,Processing channel group
 DeletingServerInfo,서버 정보 삭제,Delete server information
-DamagedChannel,손상된 채널,Damaged channel
+DamagedChannel,손상된 로컬 채널,Damaged local channel
 DeletedServer,삭제된 서버,Deleted server
 GroupUserJoin,사용자 채널참여,User joined
 GroupUserOut,사용자 채널탈퇴,User leaved
@@ -576,6 +578,7 @@ IgnoreSave,서버 정보를 입력해주세요,Please enter server information
 InitErr,초기화 실패,Failed to initialize
 AlreadyCalling,다른 통화가 진행중입니다,Another call is in progress
 ManageServer,서버 관리,Manage servers
+Modify,서버 정보 수정,Modify server info
 Remove,서버 정보 삭제,Remove server info
 AddServer,가용 서버 추가,Add available servers
 ServerInfo,서버 정보,Server info
