@@ -169,8 +169,13 @@ user_image_changed,사용자 이미지 변경됨,User image changed
 ## OtherProfile,,
 Title,사용자 정보,User info
 add_to_group,추가,Add to group
-add_friend,친구,Add as friend
 privacy_chat,1:1 대화,Private chat
+PromoteMember,승급,Promote
+PromoteSucc,사용자 승급,User promoted
+PromoteFailed,승급 실패,Promotion failed
+DemoteMember,강등,Demote
+DemoteSucc,사용자 강등,User Demoted
+DemoteFailed,강등 실패,Demotion failed
 kick_from_group,추방,Kick user
 added_to_group,사용자가 추가되었습니다,User added
 kicked_from_group,사용자를 내보냈습니다,User kicked
@@ -363,6 +368,8 @@ NotAcceptYet,아직 수락되지 않았습니다,Not yet accepted
 MissedGroup,더 이상 채널구성원이 아닙니다,No longer a channel member
 NoDetailGroup,설명 없는 채널,No description
 Members,채널 구성원,Members
+ChangeMaxCount,변경,Change
+FailedToChangeMax,최대 인원 변경 실패,Failed to change maximum
 BreakupGroup,채널 해산,Breakup
 LeaveGroup,떠나기,Leave group
 GroupRemoved,채널 삭제됨,Channel removed
@@ -545,13 +552,9 @@ GroupUserCounter,그룹 인원,Group members
 ForceBreakUp,이 그룹을 해산합니다,Disband this group
 ForceBreaked,그룹 해산됨,Group breakup
 ForceBreakedFailed,그룹 해산 실패,Breakup failed
-promote_as_manager,매니저 권한 부여,Promote as manager
-Apply,적용하기,Apply
 PromoteAsWell,승격 설정이 적용되었습니다,Promotion settings have been applied
 PromoteError,승격 설정이 이루어지지 않았습니다,Promotion settings are not established
-ToggleAllPromote,모두 선택,Toggle all
 AlreadyAdmin,이미 관리자입니다,You are already an administrator
-RemovedGroup,삭제된 그룹,Removed group
 ## ShareContentToOther,,
 Title,파일 공유하기,Share file
 NoChannelToShare,가용 채널이 없습니다,No channels available
