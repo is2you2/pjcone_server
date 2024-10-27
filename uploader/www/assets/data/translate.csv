@@ -65,6 +65,7 @@ ToggleWorkers,모든 사용자 선택,Select all users
 ## Subscribes,,
 Title,채널,Channels
 myProfile,내 프로필,My profile
+RightClickChat,우클릭하여 대화 초대,Right click to invite to chat
 OnebyOneChat,1:1 대화 초대,1:1 Chat Invitation
 JoinedChannels,채널 목록,Channel List
 has_noties,검토해야할 알림이 있습니다,There are notifications to review
@@ -261,6 +262,7 @@ FileDownloading,다운받는 중,Downloading
 RemoveFile,파일 삭제,Remove file
 DownloadToLocal,파일 기록하기,Record files
 QuickViewerLink,빠른 진입 링크,Quick viewer link
+QuickNewWindow,우클릭으로 새 창에서 열기,Right click to open in new window
 CannotOpenText,열람할 수 없는 파일입니다,This file cannot be viewed
 ReadObject,개체 정보 읽는중,Reading object information
 FailedGetBaseColor,색상 불러오기 실패,Failed to load basecolor
@@ -303,6 +305,7 @@ CallEnd,통화 종료,End call
 ## GroupServer,,
 JoinedServerList,참여중인 서버 목록,List of participating servers
 ServerDetail,서버 정보,Server info
+RightClickDetail,서버를 우클릭하여 정보 상세,Right click on the server to view detailed information
 RemoveUnofficial,삭제,Delete
 RemoveAccount,탈퇴,Leave
 RemoveAccountReally,서버 탈퇴,Leave server
