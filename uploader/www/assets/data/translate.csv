@@ -370,6 +370,7 @@ NoDetailGroup,설명 없는 채널,No description
 Members,채널 구성원,Members
 ChangeMaxCount,변경,Change
 FailedToChangeMax,최대 인원 변경 실패,Failed to change maximum
+FailedToChangeOpen,그룹 공개 여부 변경 실패,Failed to change group visibility
 BreakupGroup,채널 해산,Breakup
 LeaveGroup,떠나기,Leave group
 GroupRemoved,채널 삭제됨,Channel removed
