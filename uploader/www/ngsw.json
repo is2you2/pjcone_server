@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1730358665701,
+  "timestamp": 1730360734187,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -1664,7 +1664,7 @@
     "/assets/data/infos/thanks_to.json": "01eb570616230a8fd449f8a7c2fa4520377782b8",
     "/assets/data/install_pwa.png": "820701a51140575a8b884a566cdd89dbfdeeecb0",
     "/assets/data/local.svg": "d98944907ef57b0a5e418231da80aa7762630d22",
-    "/assets/data/translate.csv": "6b68631b9477038d96a4b96267f4a03572d4650f",
+    "/assets/data/translate.csv": "1c5ca7548bc0fa42c53b9119386356771976c0c8",
     "/assets/html/index.apple-touch-icon.png": "1d7d1450f43a7e460e6db0a73683ea93313c6a34",
     "/assets/html/index.audio.worklet.js": "fa4ddbcecba3dbaefaf6722b9af8e9964d42a1df",
     "/assets/html/index.html": "dc60ade4582a469fbd4a95ba52f2a6f6693ecce7",

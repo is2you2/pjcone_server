@@ -74,7 +74,7 @@ noChatList,참여중인 대화가 없습니다,There are no active conversations
 noMessageHistory,기록된 메시지 없음,No messages logged
 CameraPermissionDenied,카메라 권한을 얻지 못했습니다,Failed to get camera permission
 QRScanInitFailed,스캔을 시작할 수 없음,Unable to start scan
-QRScanPlaceholder,스캔된 결과 없음,No scanned results
+QRScanPlaceholder,QR코드 스캔된 결과 없음,No results from scanning QR code
 Disconnected,연결된 서버가 없습니다,No server connected
 ## Community,,
 Title,공지,Notice
