@@ -16,6 +16,7 @@ function setup() {
     .then(videoInputDevices => {
       try {
         DeviceList = videoInputDevices;
+        DeviceIndex = DeviceList.length - 1;
         const firstDeviceId = videoInputDevices[DeviceIndex].deviceId;
         codeReader.decodeFromVideoDevice(firstDeviceId, capture.elt, (result, err) => {
           if (result && window['scan_result']) window['scan_result'](result);
