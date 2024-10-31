@@ -8,9 +8,6 @@ var ErrorInfo = undefined;
 function setup() {
   noCanvas();
   frameRate(10);
-  capture = createCapture(VIDEO);
-  capture.elt.id = 'qr_capture';
-  capture.size(400, 368);
   window['ChangeDevice'] = ChangeDevice;
   codeReader.listVideoInputDevices()
     .then(videoInputDevices => {
@@ -18,6 +15,9 @@ function setup() {
         DeviceList = videoInputDevices;
         DeviceIndex = DeviceList.length - 1;
         const firstDeviceId = videoInputDevices[DeviceIndex].deviceId;
+        capture = createCapture(VIDEO, { video: { deviceId: firstDeviceId } });
+        capture.elt.id = 'qr_capture';
+        capture.size(400, 368);
         codeReader.decodeFromVideoDevice(firstDeviceId, capture.elt, (result, err) => {
           if (result && window['scan_result']) window['scan_result'](result);
         });
