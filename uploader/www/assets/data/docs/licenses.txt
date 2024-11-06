@@ -368,6 +368,10 @@ magic-string@0.30.10 [license(s): MIT]
 ├── package.json:  MIT
 └── readme files: MIT
 
+marked@14.1.3 [license(s): MIT]
+├── package.json:  MIT
+└── license files: MIT
+
 merge2@1.4.1 [license(s): MIT]
 ├── package.json:  MIT
 ├── license files: MIT
