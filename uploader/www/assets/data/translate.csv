@@ -88,7 +88,7 @@ EditTitle,게시물 편집,Edit post
 Creator,작성자,Creator
 AddNewPost,게시물 작성,Write a post
 TitlePlaceholder,게시물 제목을 입력합니다,Enter the title of the post
-ContentPlaceHolder,서버 사람들과 공유하고 싶은 내용이 있으신가요?,Is there anything you'd like to share with the people on the server?
+ContentPlaceHolder,마크다운 양식을 지원합니다,Supports Markdown format
 Post,게시하기,Post
 MainPostImage,대표사진,Header
 NeedPostTitle,제목을 입력해주세요,Please enter the subject
