@@ -18,6 +18,10 @@ ColorFilterCyan,청록,Cyan
 ColorFilterBlue,파랑,Blue
 ColorFilterMagenta,자주,Magenta
 FilterByCreator,생성자,Creator
+Deadline,기한,Deadline
+TimeBefore,준비중,Preparing
+TimeIn,진행중,Ongoing
+TimeOut,만료됨,Expired
 CreatorLocal,로컬에 생성,Create locally
 CreatorMe,서버에 생성,Created on server
 Requested,지시함,Requested
