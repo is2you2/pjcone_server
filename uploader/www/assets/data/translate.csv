@@ -508,6 +508,7 @@ WebRTC_Init,WebRTC 초기화중,Initialize WebRTC
 WebRTC_Offer,제의 교환중,Sharing offer
 WebRTC_datachannel,데이터채널 구성중,Configuring data channel
 WebRTC_ShareBG,배경이미지 교환중,Exchanging background images
+FailedGetBG,배경이미지 교환 실패,Background image exchange failed
 WebRTC_Reply,주소 정보 교환중,Receiving information reply
 WebRTC_Ice,ICE 정보 교환중,Exchanging ICE information
 ## UserFsDir,,
