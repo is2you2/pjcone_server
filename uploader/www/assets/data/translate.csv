@@ -22,6 +22,9 @@ Deadline,기한,Deadline
 TimeBefore,준비중,Preparing
 TimeIn,진행중,Ongoing
 TimeOut,만료됨,Expired
+Yesterday,어제까지,Until yesterday
+Today,오늘까지,Until today
+Tomorrow,내일까지,Until tomorrow
 CreatorLocal,로컬에 생성,Create locally
 CreatorMe,서버에 생성,Created on server
 Requested,지시함,Requested
@@ -425,6 +428,7 @@ SharedContent,다른 채널로부터 공유받음,Shared from other channels
 UnknownSource,알 수 없는 출처,Unknown source
 failed_to_gen_qr,QRCode 생성 실패,QRCode generation failed
 UploadFailed,파일 서버에 업로드 실패: 요청 시간 초과,Upload to file server failed: request timed out
+FailedToReadClipboard,클립보드 읽기 실패,Failed to read clipboard
 OnlineMode,온라인,Online
 OnlineMode_text,서버에 연결되어 있습니다,You are connected to the server
 OfflineMode,오프라인,Offline
