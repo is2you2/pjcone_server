@@ -278,6 +278,7 @@ RemoveFile,파일 삭제,Remove file
 DownloadToLocal,파일 기록하기,Record files
 QuickViewerLink,빠른 진입 링크,Quick viewer link
 QuickNewWindow,우클릭으로 새 창에서 열기,Right click to open in new window
+ForceReadAsText,텍스트로 읽기 시도,Try reading it as text
 CannotOpenText,열람할 수 없는 파일입니다,This file cannot be viewed
 ReadObject,개체 정보 읽는중,Reading object information
 FailedGetBaseColor,색상 불러오기 실패,Failed to load basecolor
