@@ -145,6 +145,7 @@ ServerAdmin,서버 관리,Manage server
 admin_req_counter,서버 상태,Server status
 NotificationSetting,알림,Notifications
 batteryOptimization,배터리 최적화 제외 설정,Battery Optimization Exclusion Settings
+QRCodeBasic,사설 주소 사용,Use private address
 AppInfo,앱 정보,App info
 AppCreator,제작자,Creator
 AppTranslator,번역가,Translator
