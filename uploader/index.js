@@ -226,9 +226,9 @@ wss.on('connection', (ws) => {
             const channel_id = joined_channel[clientId];
             // 이 서버에 파일을 직접 게시했다면 해당 사용자의 파일 삭제
             fs.readdir('./cdn', (err, files) => {
-                console.log(`Remove file with key: /square_${channel_id}_${clientId}`);
+                console.log(`Remove file with key: /tmp_${channel_id}_${clientId}`);
                 files.forEach(path => {
-                    if (path.indexOf(`square_${channel_id}_${clientId}`) >= 0) {
+                    if (path.indexOf(`tmp_${channel_id}_${clientId}`) >= 0) {
                         console.log(`Remove file: ./cdn/${decodeURIComponent(path)}`);
                         fs.unlink(`./cdn/${path}`, e => {
                             console.error(`Result: Remove file with key: ${decodeURIComponent(path)}: ${e}`);
