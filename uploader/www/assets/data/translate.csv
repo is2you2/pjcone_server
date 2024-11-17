@@ -103,7 +103,7 @@ RemoveAttach,첨부파일 제거,Remove attachment
 WIP,게시물을 등록합니다,Register a post
 SyncPostInfo,게시물 등록중,Registering post info
 SyncMainImage,대표이미지 등록중,Registering representative image
-SyncAttaches,첨부파일 등록중,Registering attached file
+SyncAttaches,첨부파일 동기화중,Synchronizing attachments
 SyncErr,게시물 저장 오류,Error saving post
 NSFW,후방주의,NSFW
 NoOutLink,공지,Notice
