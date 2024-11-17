@@ -485,6 +485,8 @@ GroupAlreadyJoined,이미 참가한 그룹,Already joined group
 SessionLogout,로그아웃됨,Logged out
 LoginAgain,이 서버에 다시 연결합니다,Reconnect to this server
 PendingLogin,연결을 시도합니다,Trying to connect
+AddNewServer,새 서버의 이름을 지정해주세요,Please specify a name for your new server
+NeedLogin,로그인해주십시오,Please log in
 NoLoginServer,연결할 서버가 없습니다,There is no server to connect to
 TryOnline,온라인 처리 시도,Online processing attempt
 ## voidDraw,,
