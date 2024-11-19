@@ -262,6 +262,7 @@ ContentInfo,파일 정보,File info
 Edit,이미지 편집,Edit
 EditText,문서 편집,Edit text
 Download,외부에 저장,Save external
+CopyToClipboard,클립보드에 복사,Copy to clipboard
 creator,제작자,Creator
 related_creator,그 외,Related
 Filename,파일 이름,Filename
