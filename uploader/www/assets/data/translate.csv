@@ -419,6 +419,8 @@ thanks_to,도움주신 분들,Thanks to
 ## GlobalAct,,
 CancelText,취소,Cancel
 PCClipboard,복사됨,Copied
+ClipboardCopy,클립보드에 복사중,Copying to clipboard
+ClipboardPaste,클립보드로부터 불러오는중,Loading from clipboard
 ClipboardFailed,파일 복사 실패,Failed to copy file
 FailedToDownloadGodot,씬 실행 실패,Execution scene failed
 variousCreator,파일 첨부,Attachments
