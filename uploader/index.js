@@ -164,42 +164,53 @@ wss.on('connection', (ws) => {
                         id: new_channel_id,
                         uid: clientId,
                     }
-                    dedi_client[new_channel_id] = {};
+                    dedi_client[new_channel_id] = {
+                        users: {},
+                    };
+                    // 최대 인원이 제한된 경우 설정처리
+                    if (json['max']) dedi_client[new_channel_id]['max'] = json.max;
                     ws.send(JSON.stringify(init));
                     return;
-                // 게임 채널로 사용하기
-                // 인스턴스 게임 서버와 관련된 정보를 저장함
-                // 게임 채널은 방장이 존재하지 않음, 모든 사용자가 떠날 때까지 유지된다
-                case 'rules':
-                    dedi_client[channel_id]['rules'] = json['rules'];
-                    break;
                 // 광장 채널에서 FFS 우선처리가 된 경우 별도 클라이언트 연결
                 case 'override':
                     clientId = json['clientId'];
                 // 새로운 사용자 참여
                 case 'join':
                     // 참여 예정 채널이 없다면 사용자 아이디로 새 채널 만들기
+                    // 이 경우 사용자는 방장으로서 동작한다
                     if (!json['channel'])
                         channel_id = clientId;
-                    // 이 경우 사용자는 방장으로서 동작한다
+                    // 진입한 채널은 사용자 별로 중복 관리한다
                     joined_channel[clientId] = channel_id;
                     if (!dedi_client[channel_id]) {
-                        dedi_client[channel_id] = {};
+                        dedi_client[channel_id] = {
+                            users: {},
+                        };
                         console.log('채널 생성: ', channel_id);
                     }
-                    if (!dedi_client[channel_id][clientId]) {
-                        dedi_client[channel_id][clientId] = {};
-                        dedi_client[channel_id][clientId]['ws'] = ws;
-                        dedi_client[channel_id][clientId]['name'] = json['name'];
+                    // 최대 인원이 지정된 경우 진입 막기
+                    if (dedi_client[channel_id]['max']) {
+                        const MAX_COUNT = dedi_client[channel_id]['max'];
+                        const CURRENT_COUNT = Object.keys(dedi_client[channel_id]['users']).length;
+                        if (CURRENT_COUNT >= MAX_COUNT) {
+                            delete joined_channel[clientId];
+                            ws.send(JSON.stringify({
+                                type: 'block',
+                                reason: 'max_limit',
+                            }));
+                            return;
+                        }
                     }
-                    // 게임 채널에 진입했다면 게임 룰을 공유
-                    if (dedi_client[channel_id]['rules'])
-                        ws.send(JSON.stringify(dedi_client[channel_id]['rules']));
+                    if (!dedi_client[channel_id]['users'][clientId]) {
+                        dedi_client[channel_id]['users'][clientId] = {};
+                        dedi_client[channel_id]['users'][clientId]['ws'] = ws;
+                        dedi_client[channel_id]['users'][clientId]['name'] = json['name'];
+                    }
                     json['channel'] = channel_id;
                     { // 진입시 채널 내 사용자에게 현재 총 인원 수를 전파
-                        let keys = Object.keys(dedi_client[channel_id]);
+                        let keys = Object.keys(dedi_client[channel_id]['users']);
                         for (let i = 0, j = keys.length; i < j; i++)
-                            dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
+                            dedi_client[channel_id]['users'][keys[i]]['ws'].send(JSON.stringify({ count: j }));
                     }
                     break;
                 default:
@@ -208,19 +219,19 @@ wss.on('connection', (ws) => {
             json['uid'] = clientId;
             json = JSON.stringify(json);
             { // 채널 내 메시지 전파
-                let keys = Object.keys(dedi_client[channel_id]);
+                let keys = Object.keys(dedi_client[channel_id]['users']);
                 for (let i = 0, j = keys.length; i < j; i++)
-                    dedi_client[channel_id][keys[i]]['ws'].send(json);
+                    dedi_client[channel_id]['users'][keys[i]]['ws'].send(json);
             }
         } catch (e) {
-            console.error(`json 변환 오류 msg: ${msg}`);
+            console.error(`json 변환 오류: ${e} // msg: ${msg}`);
             // 클라이언트에게 메시지 반환
             ws.send('서버에서 받은 메시지: ' + msg);
         }
     });
 
     // 연결이 종료되었을 때 실행되는 콜백 함수
-    ws.on('close', () => {
+    ws.on('close', (code, reason) => {
         // 모든 사용자에게 사용자 나감 전파
         try {
             const channel_id = joined_channel[clientId];
@@ -236,14 +247,17 @@ wss.on('connection', (ws) => {
                     }
                 });
             });
-            const catch_name = dedi_client[channel_id][clientId]['name'];
-            let keys = Object.keys(dedi_client[channel_id]);
+            if (!channel_id) throw '채널 진입 실패한 사용자의 연결 끊어짐';
+            if (!dedi_client[channel_id]) throw '이미 지워진 채널';
+            if (!dedi_client[channel_id]['users'][clientId]) throw '등록되지 않은 사용자 (인원 제한 등으로 진입 직후 탈퇴처리)';
+            const catch_name = dedi_client[channel_id]['users'][clientId]['name'];
+            let keys = Object.keys(dedi_client[channel_id]['users']);
             /** 방장으로 지정된 사람이 탈퇴한 경우 */
-            let isHostLeft = channel_id == clientId;
+            const isHostLeft = channel_id == clientId;
             for (let key of keys)
                 // 방장이 나갔다면 모든 사람들 탈퇴처리
                 if (isHostLeft) {
-                    dedi_client[channel_id][key]['ws'].close();
+                    dedi_client[channel_id]['users'][key]['ws'].close(1000);
                 } else {
                     // 그게 아니라면 사용자 퇴장 알림처리
                     let count = {
@@ -253,14 +267,14 @@ wss.on('connection', (ws) => {
                         count: keys.length,
                     }
                     let msg = JSON.stringify(count);
-                    dedi_client[channel_id][key]['ws'].send(msg);
+                    dedi_client[channel_id]['users'][key]['ws'].send(msg);
                 }
-            delete dedi_client[channel_id][clientId];
+            delete dedi_client[channel_id]['users'][clientId];
             delete joined_channel[clientId];
             { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
-                let keys = Object.keys(dedi_client[channel_id]);
+                let keys = Object.keys(dedi_client[channel_id]['users']);
                 for (let i = 0, j = keys.length; i < j; i++)
-                    dedi_client[channel_id][keys[i]]['ws'].send(JSON.stringify({ count: j }));
+                    dedi_client[channel_id]['users'][keys[i]]['ws'].send(JSON.stringify({ count: j }));
                 // 사람이 없으면 채널 삭제처리
                 if (keys.length < 1) {
                     delete dedi_client[channel_id];

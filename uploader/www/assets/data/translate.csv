@@ -89,6 +89,11 @@ NoPosts,게시물 추가하기,Add posts
 ## Arcade,,
 Title,아케이드,Arcade
 Preparing,준비중,On Preparing
+AddCustom,추가하기,Add new
+AddedCustom,이 기기에 추가됨,Added to this device
+Search,검색,Search
+InputKeyword,키워드 입력,Enter keyword
+InputError,파일 입력 오류,File input error
 ## AddPost,,
 Title,새 게시물,New posts
 EditTitle,게시물 편집,Edit post
