@@ -8,6 +8,7 @@ const path = require('path');
 const https = require('node:https');
 const fs = require('node:fs');
 const ws = require('ws');
+const cheerio = require('cheerio');
 const { v4: uuidv4 } = require('uuid');
 
 /** 사설 사이트 운영 */
@@ -103,6 +104,40 @@ app.use('/remove_key/', (req, res) => {
         });
     });
     res.end();
+});
+
+app.use('/get-page-info', async (req, res) => {
+    const url = req.query.url;
+
+    if (!url) return res.status(400).json({ error: 'URL is required' });
+
+    try {
+        const response = await fetch(url);
+        let asText = await response.text();
+        const $ = cheerio.load(asText);
+
+        const title = $('title').first().text();
+        const description = $('meta[name="description"]').attr('content');
+        // 페이지에서 첫 번째 이미지 찾기
+        const firstImage = $('img').first();  // 첫 번째 <img> 태그 선택
+
+        // 이미지의 URL과 alt 텍스트 추출
+        const imageUrl = firstImage.attr('src') || '';
+        const imageAlt = firstImage.attr('alt') || 'No alt text';
+
+        // 이미지 URL이 상대 경로일 경우 절대 경로로 변환
+        const fullImageUrl = imageUrl.indexOf('http') == 0 ? imageUrl : new URL(imageUrl, url).href;
+
+        res.send(JSON.stringify({
+            title: title,
+            description: description,
+            imageUrl: fullImageUrl,
+            imageAlt: imageAlt,
+            url: url,
+        }));
+    } catch (e) {
+        res.status(500).json({ error: 'Error fetching the page information' });
+    }
 });
 
 let wss;
