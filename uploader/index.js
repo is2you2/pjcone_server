@@ -70,6 +70,7 @@ const upload = multer({ storage: storage });
 // 파일 업로드를 처리할 라우트 설정
 app.use('/cdn/', upload.single('files'), function (req, res) {
     // req.file은 업로드된 파일의 정보를 가지고 있음
+    console.log('파일 업로드 요청받음: ', req.file);
     // 여기에서 필요한 작업을 수행하고 응답을 보낼 수 있음
     res.send('file_server');
 });
@@ -183,12 +184,15 @@ function CreateUUIDv4() {
     return clientId;
 }
 // 웹 소켓 서버 구성
-wss.on('connection', (ws) => {
+wss.on('connection', (ws, req) => {
     let clientId = CreateUUIDv4();
+    const clientIp = req.socket.remoteAddress;
+    console.log('새로운 연결에 pid 지정: ', `${clientId} (${clientIp})`);
     // 사용자 uuid를 명시하고 모든 사용자에게 브로드캐스트
     ws.on('message', (msg) => {
         try {
             let json = JSON.parse(msg);
+            console.log(`${clientId}_사용자가 다음과 같은 행동 요청: `, json);
             let channel_id = json['channel'] || joined_channel[clientId];
             switch (json['type']) {
                 // 사용자에게 새 채널 id를 구성하여 전달
@@ -267,6 +271,7 @@ wss.on('connection', (ws) => {
 
     // 연결이 종료되었을 때 실행되는 콜백 함수
     ws.on('close', (code, reason) => {
+        console.log('사용자 연결 종료: ', `${clientId} (${clientIp})`);
         // 모든 사용자에게 사용자 나감 전파
         try {
             const channel_id = joined_channel[clientId];
