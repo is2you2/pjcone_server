@@ -573,6 +573,7 @@ Requesting,정보 없음,No information
 SendFailed,발송 실패,Send failed
 isPersistent,오프라인 사용자에게도 전달,Persistent
 UserList,사용자 목록,Users
+AboutMe,나,Me
 UserCreate,생성일시,Create at
 ForceLeave,이 사용자를 삭제합니다,Delete this user
 ApplyLeave,탈퇴,Withdraw
