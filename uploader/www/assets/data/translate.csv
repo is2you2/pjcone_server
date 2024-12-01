@@ -501,6 +501,11 @@ sideSIzeIssue,캔버스의 모든 변은 0보다 커야합니다,All sides of th
 UseThisImage,이미지를 준비중...,Preparing image to send...
 newDraw,새 그림,New draw
 CreateNew,새로 만들기,New
+ColorpickDetail,색상 상세 조정,Color Detailing
+ColorpickRed,빨강,Red
+ColorpickGreen,초록,Green
+ColorpickBlue,파랑,Blue
+ColorpickAlpha,투명도,Alpha
 width,가로,Width
 height,세로,Height
 weight,선 두께,Stroke weight
