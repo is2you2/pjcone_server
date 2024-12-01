@@ -17,7 +17,7 @@ let UseCustomSite = true;
 let SitePort = 12000;
 /** Nakama 연계 파일 서버 포트 */
 let cdnPort = 9001;
-/** 광장 채널 포트 */
+/** 광장 채널 등 웹 소켓 포트 */
 let squarePort = 12013;
 /** 보안 프로토콜 사용 여부 */
 let UseSSL = true;
@@ -174,6 +174,33 @@ const dedi_client = {};
  * joined_channel[pid] = channel_id;
  */
 const joined_channel = {};
+/** 아케이드 생성시 등록된 게임 및 사용자 정보  
+ * regInfo[pid] = { channel_id, game_url, game_info ... };
+ */
+const regInfo = {};
+
+// 8자리 랜덤 문자열 생성 함수
+function generateRandomString() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    const length = 8;
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters[randomIndex];
+    }
+    return result;
+}
+
+// 중복되지 않는 랜덤 문자열 생성 함수
+function generateUniqueRandomString() {
+    let randomString;
+    randomString = generateRandomString();
+    // 중복되지 않도록 새로운 문자열을 생성
+    let keys = Object.keys(regInfo);
+    if (keys.includes(randomString))
+        return generateUniqueRandomString();
+    return randomString;
+}
 
 /** 이미 uuid가 사용중인지 검토하기 */
 function CreateUUIDv4() {
@@ -183,6 +210,7 @@ function CreateUUIDv4() {
         return CreateUUIDv4();
     return clientId;
 }
+
 // 웹 소켓 서버 구성
 wss.on('connection', (ws, req) => {
     let clientId = CreateUUIDv4();
@@ -194,14 +222,30 @@ wss.on('connection', (ws, req) => {
             let json = JSON.parse(msg);
             console.log(`${clientId}_사용자가 다음과 같은 행동 요청: `, json);
             let channel_id = json['channel'] || joined_channel[clientId];
+            let additional_info = {};
             switch (json['type']) {
+                // 사용자가 생성한 정보를 요청하는 경우
+                // 요청한 정보만 반환하고 추가작업을 하지 않음
+                case 'reqInfo':
+                    ws.send(JSON.stringify(regInfo[json.socketId]));
+                    return;
+                // 사용자가 아케이드를 생성하면 자신의 pid 및 pck 정보를 기록시키고
+                // 새 채널을 구성하여 돌려주기
+                case 'initInfo':
+                    let socketId = generateUniqueRandomString();
+                    regInfo[socketId] = {};
+                    regInfo[socketId]['arcade_url'] = json?.arcade_url;
+                    additional_info['socketId'] = socketId;
+                    additional_info['arcade_url'] = json?.arcade_url;
                 // 사용자에게 새 채널 id를 구성하여 전달
+                // 채널만 생성되고 클라이언트 쪽에서 'init_id' 타입을 받으면 채널 진입을 따로 진행한다
                 case 'init':
-                    let new_channel_id = uuidv4();
+                    let new_channel_id = CreateUUIDv4();
                     let init = {
                         type: 'init_id',
                         id: new_channel_id,
                         uid: clientId,
+                        ...additional_info,
                     }
                     dedi_client[new_channel_id] = {
                         users: {},
@@ -310,6 +354,8 @@ wss.on('connection', (ws, req) => {
                     dedi_client[channel_id]['users'][key]['ws'].send(msg);
                 }
             delete dedi_client[channel_id]['users'][clientId];
+            if (joined_channel[clientId]['socketId'])
+                delete regInfo[joined_channel[clientId]['socketId']];
             delete joined_channel[clientId];
             { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
                 let keys = Object.keys(dedi_client[channel_id]['users']);
@@ -322,7 +368,7 @@ wss.on('connection', (ws, req) => {
                 }
             }
         } catch (e) {
-            console.log('사용자 퇴장 오류: ', e);
+            console.log('사용자 퇴장 정보: ', e);
         }
     });
 });

@@ -89,11 +89,19 @@ NoPosts,게시물 추가하기,Add posts
 ## Arcade,,
 Title,아케이드,Arcade
 Preparing,준비중,On Preparing
-AddCustom,추가하기,Add new
+AddCustom,즉시 실행,Run immediately
 AddedCustom,이 기기에 추가됨,Added to this device
-Search,검색,Search
-InputKeyword,키워드 입력,Enter keyword
+FromFile,파일 선택,Select file
+FromLink,복사된 링크,Copied link
 InputError,파일 입력 오류,File input error
+AlertTitle,아케이드 종료,Arcade exit
+AlertMsg,실행중인 게임을 종료합니다,Quit the running game
+AlertOK,종료,Exit
+ArcadeOpened,아케이드가 실행중이어서 파일을 열람하지 못하였습니다,The file could not be opened because the arcade is running
+ESCToExit,ESC를 눌러 전체화면 모드를 종료할 수 있습니다,You can exit full screen mode by pressing ESC
+TryingDownload,불러오기 시도중,Trying to load
+FailedToDownloadGodot,씬 실행 실패,Execution scene failed
+AlreadyUseWS,이미 연결된 서버가 있습니다,There is already a server connected
 ## AddPost,,
 Title,새 게시물,New posts
 EditTitle,게시물 편집,Edit post
@@ -405,14 +413,6 @@ GroupServer,서버 정보,Server info
 Group,채널,Channel
 EmptyData,없음,Null
 success_received,적용하였습니다,Applied
-## UseAsServer,,
-Title,이 기기를 기능 서버로,Use this device as a functional server
-UserNotice,사용 유의사항,Precautions for use
-ThisDeviceAddress,이 기기의 네트워크 주소,Network address of this device
-DedicatedServer,사설 서버,Dedicated server
-LoadingAddresses,이곳에 이 기기의 네트워크 주소가 보여집니다,The network address of this device will display here
-NoAddress,연결된 네트워크가 없습니다,No network connected
-Tool_engineppt,엔진 PPT 리모콘,Engine PPT Remote contr.
 ## Translator,,
 TranslatorSpeaking,번역가의 한마디,A word from the translator
 ## CreatorInfo,,
@@ -427,7 +427,6 @@ PCClipboard,복사됨,Copied
 ClipboardCopy,클립보드에 복사중,Copying to clipboard
 ClipboardPaste,클립보드로부터 불러오는중,Loading from clipboard
 ClipboardFailed,파일 복사 실패,Failed to copy file
-FailedToDownloadGodot,씬 실행 실패,Execution scene failed
 variousCreator,파일 첨부,Attachments
 FromCamera,카메라로 직접 촬영,From camera
 ErrorFromCamera,촬영 실패,Failed to film
