@@ -224,6 +224,8 @@ Voice,녹음하기,Mic.
 VoiceStop,중지,Stop
 VoiceChat,음성통화,Voice
 EmbedFiles,파일들,Files
+ShareToOther,채널복제,Copy
+CopyingChats,메시지를 복제중입니다,Duplicating message
 ReadText,읽어주기,TTS
 LogOut,연결끊기,Disconn.
 RemoveHistory,기록삭제,Remove
@@ -506,10 +508,13 @@ ColorpickRed,빨강,Red
 ColorpickGreen,초록,Green
 ColorpickBlue,파랑,Blue
 ColorpickAlpha,투명도,Alpha
+ResolutionDetail,해상도 조정,Adjust resolution
+ResolutionRatio,비율,Ratio
 width,가로,Width
 height,세로,Height
 weight,선 두께,Stroke weight
 changeWeight,두께 변경,Change weight
+changeDefaultWeight,그림판 기본 선 두께 변경,Change the default line thickness in Paint
 apply,적용,Apply
 CreateChannel,새 채널 생성,Create new channel
 InputAddress,주소 입력,Input address
