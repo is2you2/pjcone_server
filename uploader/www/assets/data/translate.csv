@@ -510,6 +510,7 @@ ColorpickBlue,파랑,Blue
 ColorpickAlpha,투명도,Alpha
 ResolutionDetail,해상도 조정,Adjust resolution
 ResolutionRatio,비율,Ratio
+AutoResolution,항상 표시된 대로 해상도 자동 조정,Always auto-adjust res. as displayed
 width,가로,Width
 height,세로,Height
 weight,선 두께,Stroke weight
