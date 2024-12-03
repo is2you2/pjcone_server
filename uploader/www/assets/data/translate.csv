@@ -225,6 +225,7 @@ VoiceStop,중지,Stop
 VoiceChat,음성통화,Voice
 EmbedFiles,파일들,Files
 ShareToOther,채널복제,Copy
+NoCopyChannelAvailable,복제 가능한 채널이 없습니다,There are no channels available for duplication
 CopyingChats,메시지를 복제중입니다,Duplicating message
 ReadText,읽어주기,TTS
 LogOut,연결끊기,Disconn.
