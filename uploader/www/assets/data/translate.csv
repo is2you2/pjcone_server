@@ -516,7 +516,7 @@ width,가로,Width
 height,세로,Height
 weight,선 두께,Stroke weight
 changeWeight,두께 변경,Change weight
-changeDefaultWeight,그림판 기본 선 두께 변경,Change the default line thickness in Paint
+changeDefaultWeight,기본값,Default
 apply,적용,Apply
 CreateChannel,새 채널 생성,Create new channel
 InputAddress,주소 입력,Input address
