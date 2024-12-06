@@ -234,6 +234,7 @@ wss.on('connection', (ws, req) => {
                 case 'initInfo':
                     let socketId = generateUniqueRandomString();
                     regInfo[socketId] = {};
+                    regInfo[socketId]['type'] = 'req_info';
                     regInfo[socketId]['arcade_url'] = json?.arcade_url;
                     additional_info['socketId'] = socketId;
                     additional_info['arcade_url'] = json?.arcade_url;
