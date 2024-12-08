@@ -147,7 +147,6 @@ ShowShortCutHint,단축키 힌트 표시,Show shortcut hints
 DevKit,보조 도구,Auxiliary tools
 FallbackFS,첫번째 파일 서버,First file server
 TryToFallbackFS,FFS 업로드 시도,Try with FFS
-OverrideFallbackFS,FFS 우선 적용,Override FFS
 BugReport,오류 보고,Bug Report
 ServerFiles,사용 설명서,User Manual
 InAppExplorer,인앱 탐색기,InApp Explorer
@@ -406,6 +405,7 @@ FailedToChangeMax,최대 인원 변경 실패,Failed to change maximum
 FailedToChangeOpen,그룹 공개 여부 변경 실패,Failed to change group visibility
 BreakupGroup,채널 해산,Breakup
 LeaveGroup,떠나기,Leave group
+GroupImageChanged,채널 이미지 변경됨,Channel image changed
 GroupRemoved,채널 삭제됨,Channel removed
 GroupForceRemoved,채널이 강제 삭제됨,Channel was forcibly deleted
 YouAreNotCreator,채널 생성자가 아닙니다,You are not channel creator

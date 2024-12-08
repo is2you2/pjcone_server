@@ -220,7 +220,10 @@ wss.on('connection', (ws, req) => {
     ws.on('message', (msg) => {
         try {
             let json = JSON.parse(msg);
-            console.log(`${clientId}_사용자가 다음과 같은 행동 요청: `, json);
+            const json_duplicate = JSON.parse(JSON.stringify(json));
+            if (json_duplicate['part'])
+                json_duplicate['part'] = `${json_duplicate['part'].substring(0, 10)}... ${json_duplicate['part'].length} characters`;
+            console.log(`${clientId}_사용자가 다음과 같은 행동 요청: `, json_duplicate);
             let channel_id = json['channel'] || joined_channel[clientId];
             let additional_info = {};
             switch (json['type']) {
