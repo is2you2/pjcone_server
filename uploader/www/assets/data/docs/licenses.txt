@@ -42,12 +42,6 @@
 ├── package.json:  MIT
 └── readme files: MIT
 
-@awesome-cordova-plugins/badge@6.8.0 [license(s): MIT]
-└── package.json:  MIT
-
-@awesome-cordova-plugins/core@6.8.0 [license(s): MIT]
-└── package.json:  MIT
-
 @babel/runtime@7.11.2 [license(s): MIT]
 ├── package.json:  MIT
 └── license files: MIT
@@ -134,10 +128,6 @@
 ├── package.json:  MIT
 ├── license files: MIT
 └── readme files: MIT
-
-@types/cordova@11.0.3 [license(s): MIT]
-├── package.json:  MIT
-└── license files: MIT
 
 @types/p5@1.7.6 [license(s): MIT]
 ├── package.json:  MIT
@@ -236,10 +226,6 @@ color-convert@2.0.1 [license(s): MIT]
 color-name@1.1.4 [license(s): MIT]
 ├── package.json:  MIT
 └── license files: MIT
-
-cordova-plugin-badge@0.8.9 [license(s): Apache, Apache 2.0]
-├── package.json:  Apache 2.0
-└── license files: Apache
 
 debug@4.3.6 [license(s): MIT]
 ├── package.json:  MIT
@@ -534,5 +520,5 @@ zone.js@0.14.8 [license(s): MIT]
 ├── license files: MIT
 └── readme files: MIT
 
-LICENSES: 0BSD, Apache, Apache 2.0, Apache-2.0, BSD, BSD-2-Clause, BSD-3-Clause, Eclipse Public License, GPL, ISC, LGPL, LGPL-2.1, MIT, MPL, Public Domain
+LICENSES: 0BSD, Apache, Apache-2.0, BSD, BSD-2-Clause, BSD-3-Clause, Eclipse Public License, GPL, ISC, LGPL, LGPL-2.1, MIT, MPL, Public Domain
 

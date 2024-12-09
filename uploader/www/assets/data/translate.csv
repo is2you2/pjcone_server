@@ -181,10 +181,8 @@ at_least,최소 8자리,at least 8 digits
 user_display_name,사용자 표시명,Display name
 login_toggle,연결 시도,Connect to
 LogOut,연결 끊기,Disconnect
-main_content,메인 콘텐츠,Main contents
 upload,올리기,Upload
 remove_content,삭제,Remove
-no_main_content,없음,Null
 need_email,이메일 주소를 입력해주세요,Please enter your email address
 need_password,비밀번호를 입력해주세요,Please enter a password
 user_profile_changed,사용자 프로필 변경됨,User profile changed
@@ -420,8 +418,6 @@ success_received,적용하였습니다,Applied
 TranslatorSpeaking,번역가의 한마디,A word from the translator
 ## CreatorInfo,,
 creatorComment,제작자의 한마디,A word from the maker
-Ifyoulike,이 앱이 마음에 드신다면,If you like this app
-giveacoffeetodev,개발자에게 커피를 사주세요,Give a coffee to developer
 contributors,프로젝트 기여자,Contributors
 thanks_to,도움주신 분들,Thanks to
 ## GlobalAct,,
