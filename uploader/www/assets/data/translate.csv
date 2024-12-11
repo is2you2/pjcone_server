@@ -249,9 +249,6 @@ export_download,추출,Extraction
 YouReadHereLast,여기까지 읽었습니다,You've read this far
 QuickShare,이 곳을 눌러 정보를 공유받습니다,Click here to share information
 QuickShare_placeholder,정보를 공유합니다...,Will share information...
-JoinWebRTCMatch,통화 채널 참여,Join call
-MatchExpiration,통화 채널 만료,Call expiration
-JoinMatchFailed,통화 참여 오류,Failed to join call
 FailedToJoinChannel,채널에 참가하지 못했습니다,Failed to join channel
 FailedToSend,발송 실패,Failed to send
 ExternalLinkFile,외부 링크 파일,External link file
