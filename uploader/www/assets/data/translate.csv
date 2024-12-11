@@ -613,7 +613,7 @@ Channels,채널,Channel
 QuickShareGrant,이 정보를 공유받기,Get this information shared
 ApplyChecked,선택한 정보를 적용,Apply selected information
 ## WebRTCDevManager,,
-Title,WebRTC 서버,WebRTC server
+Title,WebRTC 관리,Manage WebRTC
 VideoIn,비디오 입력 장치,Video input
 AudioIn,오디오 입력 장치,Audio input
 AudioOut,오디오 출력 장치,Audio output
