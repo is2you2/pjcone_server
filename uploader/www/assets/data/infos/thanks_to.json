@@ -3,32 +3,32 @@
         "ko": "김복순",
         "en": "Kim Boksoon",
         "url": "http://kmission.kr/",
-        "desc": "오류 검토, 디자인 및 기능 개선 사항 제안"
+        "desc": "할 일 기능과 관련된 디자인 및 기능 제안"
     },
     {
         "ko": "이해준",
         "en": "Lee Haejoon",
         "url": "https://www.linkedin.com/in/haejoon-l-97ba69161/",
-        "desc": "초기 단계 앱 사용자"
+        "desc": "초기 단계 앱 사용 및 테스트"
     },
     {
         "ko": "윤찬렬",
         "en": "Yoon Chanryul",
         "url": "https://github.com/razorbacky",
         "avatar": "assets/data/helped/razorbacky.png",
-        "desc": "전반적 방향성 제시 (구문 강조, 디자인 우선 작업, 적극적인 앱 사용, 기기별 테스트 등)",
+        "desc": "iOS 디자인 제안, 문서 구문 강조 제안, 적극적인 앱 사용 및 테스트",
         "mvp": true
     },
     {
         "ko": "이동진",
         "en": "Lee Dongjin",
         "url": "https://www.artstation.com/asjffdlasfj",
-        "desc": "초기 단계 앱 사용자"
+        "desc": "초기 단계 앱 사용 및 테스트"
     },
     {
         "ko": "ljr10",
         "en": "ljr10",
         "url": "https://github.com/ljr10",
-        "desc": "서버 구축 편의 방향성 제시 (서버 파일에 대한 git 저장소 추가 구성)"
+        "desc": "서버 구축 편의 방향성 제안 (서버 파일에 대한 git 저장소 추가 구성)"
     }
 ]
