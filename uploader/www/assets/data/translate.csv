@@ -435,10 +435,10 @@ UnknownSource,알 수 없는 출처,Unknown source
 failed_to_gen_qr,QRCode 생성 실패,QRCode generation failed
 UploadFailed,파일 서버에 업로드 실패: 요청 시간 초과,Upload to file server failed: request timed out
 FailedToReadClipboard,클립보드 읽기 실패,Failed to read clipboard
-OnlineMode,온라인,Online
-OnlineMode_text,서버에 연결되어 있습니다,You are connected to the server
-OfflineMode,오프라인,Offline
-OfflineMode_text,연결된 서버가 없습니다,No server connected
+TodoRecording,할 일에서 녹음중,Recording from To Do
+ChatRoomRecording,채팅에서 녹음중,Recording in chat
+PostRecording,게시물에서 녹음중,Recording from post
+SquareRecording,광장 채널에서 녹음중,Recording on the square channel
 CheckCdnServer,파일 업로드 시도중,Attempting to upload file
 CheckFileAddress,파일 주소를 기다리는중,Waiting for file address
 CancelingUpload,업로드 시도 우회,Attempt to upload bypass

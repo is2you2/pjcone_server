@@ -4,6 +4,7 @@ const createMaterial = require("./material.js");
 const createTexture = require("./texture.js");
 const createMesh = require("./mesh.js");
 const createLight = require("./light.js");
+const { log } = require("@angular-devkit/build-angular/src/builders/ssr-dev-server/index.js");
 
 const blender_object_types = {
 	mesh: 1,
@@ -11,7 +12,7 @@ const blender_object_types = {
 };
 
 function createObject(blender_file, object) {
-	
+
 	if (object.data) {
 		//get the mesh 
 		var buffered_geometry = createMesh(object.data, [0, 0, 0]);
@@ -76,7 +77,7 @@ function loadScene(three_scene, blender_file, cache) {
 		//Load Meshes
 		if (object.type == blender_object_types.mesh) {
 			let mesh = createObject(blender_file, object);
-			if(mesh){
+			if (mesh) {
 				three_scene.add(mesh);
 			}
 		}
