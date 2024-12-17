@@ -91,7 +91,8 @@ Title,아케이드,Arcade
 Preparing,준비중,On Preparing
 AddCustom,즉시 실행,Run immediately
 AddedCustom,이 기기에 추가됨,Added to this device
-FromFile,파일 선택,Select file
+FromPck,*.pck,*.pck
+FromFile,파일뷰어,Viewer
 FromLink,복사된 링크,Copied link
 InputError,파일 입력 오류,File input error
 AlertTitle,아케이드 종료,Arcade exit
