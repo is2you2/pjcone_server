@@ -210,6 +210,7 @@ ExtSoloImage,채널사진,Ch Pic
 BackgroundImage,배경사진,BGImg
 attachments,첨부파일,Attach
 FileLink,외부링크,Outlink
+FindingMsg,메시지를 찾는중,Looking for messages
 StartVRecord,녹음을 시작합니다,Start recording
 VoiceRecord,인앱 음성 녹음,In-app voice record
 voidDraw,그림판,Paint
@@ -270,6 +271,7 @@ AlreadyRemoved,이미 정보가 삭제되었습니다,Information has already be
 ## ContentViewer,,
 Title,파일 뷰어,File Viewer
 ContentInfo,파일 정보,File info
+FindMessage,메시지 찾기,Find message
 Edit,이미지 편집,Edit
 EditText,문서 편집,Edit text
 Download,외부에 저장,Save external
