@@ -107,6 +107,52 @@ app.use('/remove_key/', (req, res) => {
     res.end();
 });
 
+
+/** 이미지 URL이 유효한지 확인하는 함수 */
+async function isValidImageUrl(url) {
+    try {
+        // 이미지 URL이 실제 이미지 확장자를 포함하는지 확인
+        const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.svg'];
+        const hasImageExtension = imageExtensions.some(ext => url.endsWith(ext));
+
+        if (!hasImageExtension) return false;  // 이미지 확장자가 아니면 유효하지 않다고 판단
+
+        // URL을 HEAD 요청을 보내서 상태 코드 확인
+        const response = await fetch(url);
+        return response.status === 200;  // 200 OK이면 유효한 URL
+    } catch (error) {
+        return false;  // 오류 발생시 유효하지 않음
+    }
+}
+
+/** 재귀적으로 이미지 URL을 수집하는 함수 */
+async function getImageSrcRecursive($, len, index = 0) {
+    try {
+        // 이미지 태그의 src 속성을 추출합니다
+        const imageSrc = $('img').eq(index);
+        if (index > len) throw '페이지에 이미지 정보가 없음';
+
+        if (!imageSrc) {
+            return null;  // 더 이상 이미지가 없으면 null을 반환
+        }
+
+        // 이미지 URL이 유효한지 확인
+        const isValid = await isValidImageUrl(imageSrc.attr('src'));
+        const result = {
+            src: imageSrc.attr('src'),
+            alt: imageSrc.attr('src'),
+        }
+
+        if (isValid) {
+            return result;  // 유효한 이미지를 찾으면 해당 URL을 반환
+        } else {
+            return getImageSrcRecursive($, len, index + 1);  // 유효하지 않으면 다음 이미지를 재귀적으로 시도
+        }
+    } catch (error) {
+        return null;
+    }
+}
+
 app.use('/get-page-info', async (req, res) => {
     const url = req.query.url;
 
@@ -117,25 +163,49 @@ app.use('/get-page-info', async (req, res) => {
         let asText = await response.text();
         const $ = cheerio.load(asText);
 
-        const title = $('title').first().text();
+        let title = $('title').text();
+
+        // 타이틀이 비어 있으면 <h1> 또는 <h2> 태그에서 대체 텍스트를 찾습니다
+        if (!title) {
+            title = $('h1').first().text() || $('h2').first().text();
+        }
+
+        if (!title) {
+            title = $('meta[property="og:title"]').attr('content');
+        }
+
+        if (!title) {
+            throw '타이틀 정보 수집 실패';
+        }
+
         const description = $('meta[name="description"]').attr('content');
-        // 페이지에서 첫 번째 이미지 찾기
-        const firstImage = $('img').first();  // 첫 번째 <img> 태그 선택
 
-        // 이미지의 URL과 alt 텍스트 추출
-        const imageUrl = firstImage.attr('src') || '';
-        const imageAlt = firstImage.attr('alt') || 'No alt text';
-
-        // 이미지 URL이 상대 경로일 경우 절대 경로로 변환
-        const fullImageUrl = imageUrl.indexOf('http') == 0 ? imageUrl : new URL(imageUrl, url).href;
-
-        res.send(JSON.stringify({
+        let result = {
             title: title,
             description: description,
-            imageUrl: fullImageUrl,
-            imageAlt: imageAlt,
             url: url,
-        }));
+        }
+        // og:image 메타 태그에서 썸네일 URL을 추출합니다
+        const thumbnailUrl = $('meta[property="og:image"]').attr('content');
+        if (thumbnailUrl) {
+            result['imageUrl'] = thumbnailUrl;
+            result['imageAlt'] = 'thumbnail';
+        } else {
+            // 실패했다면 잡히는 이미지 아무거나를 잡아냅니다
+            const imageCount = $('img').length;
+            let imageInfo = await getImageSrcRecursive($, imageCount);
+            if (imageInfo) {
+                // 이미지의 URL과 alt 텍스트 추출
+                const imageUrl = imageInfo.src;
+                const imageAlt = imageInfo.alt || 'No alt text';
+
+                // 이미지 URL이 상대 경로일 경우 절대 경로로 변환
+                const fullImageUrl = imageUrl.indexOf('http') == 0 ? imageUrl : new URL(imageUrl, url).href;
+                result['imageUrl'] = fullImageUrl;
+                result['imageAlt'] = imageAlt;
+            }
+        }
+        res.send(JSON.stringify(result));
     } catch (e) {
         res.status(500).json({ error: 'Error fetching the page information' });
     }
