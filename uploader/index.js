@@ -10,6 +10,21 @@ const fs = require('node:fs');
 const ws = require('ws');
 const cheerio = require('cheerio');
 const { v4: uuidv4 } = require('uuid');
+const log4js = require('log4js');
+
+// 로그 설정
+log4js.configure({
+    appenders: {
+        file: { type: 'file', filename: 'server.log' },
+        console: { type: 'console' }
+    },
+    categories: {
+        default: { appenders: ['file', 'console'], level: 'info' }
+    }
+});
+
+// 로거 인스턴스 생성
+const logger = log4js.getLogger();
 
 /** 사설 사이트 운영 */
 let UseCustomSite = true;
@@ -70,7 +85,7 @@ const upload = multer({ storage: storage });
 // 파일 업로드를 처리할 라우트 설정
 app.use('/cdn/', upload.single('files'), function (req, res) {
     // req.file은 업로드된 파일의 정보를 가지고 있음
-    console.log('파일 업로드 요청받음: ', req.file);
+    logger.info('파일 업로드 요청받음: ', req.file);
     // 여기에서 필요한 작업을 수행하고 응답을 보낼 수 있음
     res.send('file_server');
 });
@@ -83,9 +98,9 @@ app.use('/filesize/', (req, res) => {
 
 /** 파일 삭제 요청 */
 app.use('/remove/', (req, res) => {
-    console.log(`Remove file: ./cdn${decodeURIComponent(req.url)}`);
+    logger.info(`Remove file: ./cdn${decodeURIComponent(req.url)}`);
     fs.unlink(`./cdn${decodeURIComponent(req.url)}`, e => {
-        console.error(`Result: Remove file ${decodeURIComponent(req.url)}: ${e}`);
+        logger.error(`Result: Remove file ${decodeURIComponent(req.url)}: ${e}`);
     });
     res.end();
 });
@@ -94,12 +109,12 @@ app.use('/remove/', (req, res) => {
 app.use('/remove_key/', (req, res) => {
     let target_key = `${decodeURIComponent(req.url).substring(1)}`;
     fs.readdir('./cdn', (err, files) => {
-        console.log(`Remove file with key: ${decodeURIComponent(req.url)}`);
+        logger.info(`Remove file with key: ${decodeURIComponent(req.url)}`);
         files.forEach(path => {
             if (path.indexOf(target_key) >= 0) {
-                console.log(`Remove file: ./cdn/${decodeURIComponent(path)}`);
+                logger.info(`Remove file: ./cdn/${decodeURIComponent(path)}`);
                 fs.unlink(`./cdn/${path}`, e => {
-                    console.error(`Result: Remove file with key: ${decodeURIComponent(path)}: ${e}`);
+                    logger.error(`Result: Remove file with key: ${decodeURIComponent(path)}: ${e}`);
                 });
             }
         });
@@ -220,18 +235,18 @@ if (UseSSL) {
     };
 
     https.createServer(options, app).listen(cdnPort, "0.0.0.0", () => {
-        console.log(`Working on port ${cdnPort}`);
+        logger.info(`Working on port ${cdnPort}`);
     });
 
     secure_server = https.createServer(options);
     wss = new ws.Server({ server: secure_server });
 } else {
     app.listen(cdnPort, "0.0.0.0", () => {
-        console.log(`Working on port ${cdnPort}: No Secure`);
+        logger.info(`Working on port ${cdnPort}: No Secure`);
     });
 
     wss = new ws.Server({ port: squarePort }, () => {
-        console.log(`Working on port ${squarePort}: No Secure`);
+        logger.info(`Working on port ${squarePort}: No Secure`);
     });
 }
 
@@ -285,7 +300,7 @@ function CreateUUIDv4() {
 wss.on('connection', (ws, req) => {
     let clientId = CreateUUIDv4();
     const clientIp = req.socket.remoteAddress;
-    console.log('새로운 연결에 pid 지정: ', `${clientId} (${clientIp})`);
+    logger.info('새로운 연결에 pid 지정: ', `${clientId} (${clientIp})`);
     // 사용자 uuid를 명시하고 모든 사용자에게 브로드캐스트
     ws.on('message', (msg) => {
         try {
@@ -293,7 +308,7 @@ wss.on('connection', (ws, req) => {
             const json_duplicate = JSON.parse(JSON.stringify(json));
             if (json_duplicate['part'])
                 json_duplicate['part'] = `${json_duplicate['part'].substring(0, 10)}... ${json_duplicate['part'].length} characters`;
-            console.log(`${clientId}_사용자가 다음과 같은 행동 요청: `, json_duplicate);
+            logger.info(`${clientId}_사용자가 다음과 같은 행동 요청: `, json_duplicate);
             let channel_id = json['channel'] || joined_channel[clientId];
             let additional_info = {};
             switch (json['type']) {
@@ -343,7 +358,7 @@ wss.on('connection', (ws, req) => {
                         dedi_client[channel_id] = {
                             users: {},
                         };
-                        console.log('채널 생성: ', channel_id);
+                        logger.info('채널 생성: ', channel_id);
                     }
                     // 최대 인원이 지정된 경우 진입 막기
                     if (dedi_client[channel_id]['max']) {
@@ -381,7 +396,7 @@ wss.on('connection', (ws, req) => {
                     dedi_client[channel_id]['users'][keys[i]]['ws'].send(json);
             }
         } catch (e) {
-            console.error(`json 변환 오류: ${e} // msg: ${msg}`);
+            logger.error(`json 변환 오류: ${e} // msg: ${msg}`);
             // 클라이언트에게 메시지 반환
             ws.send('서버에서 받은 메시지: ' + msg);
         }
@@ -389,18 +404,18 @@ wss.on('connection', (ws, req) => {
 
     // 연결이 종료되었을 때 실행되는 콜백 함수
     ws.on('close', (code, reason) => {
-        console.log('사용자 연결 종료: ', `${clientId} (${clientIp})`);
+        logger.info('사용자 연결 종료: ', `${clientId} (${clientIp})`);
         // 모든 사용자에게 사용자 나감 전파
         try {
             const channel_id = joined_channel[clientId];
             // 이 서버에 파일을 직접 게시했다면 해당 사용자의 파일 삭제
             fs.readdir('./cdn', (err, files) => {
-                console.log(`Remove file with key: /tmp_${channel_id}_${clientId}`);
+                logger.info(`Remove file with key: /tmp_${channel_id}_${clientId}`);
                 files.forEach(path => {
                     if (path.indexOf(`tmp_${channel_id}_${clientId}`) >= 0) {
-                        console.log(`Remove file: ./cdn/${decodeURIComponent(path)}`);
+                        logger.info(`Remove file: ./cdn/${decodeURIComponent(path)}`);
                         fs.unlink(`./cdn/${path}`, e => {
-                            console.error(`Result: Remove file with key: ${decodeURIComponent(path)}: ${e}`);
+                            logger.error(`Result: Remove file with key: ${decodeURIComponent(path)}: ${e}`);
                         });
                     }
                 });
@@ -438,18 +453,18 @@ wss.on('connection', (ws, req) => {
                 // 사람이 없으면 채널 삭제처리
                 if (keys.length < 1) {
                     delete dedi_client[channel_id];
-                    console.log('채널 삭제: ', channel_id);
+                    logger.info('채널 삭제: ', channel_id);
                 }
             }
         } catch (e) {
-            console.log('사용자 퇴장 정보: ', e);
+            logger.info('사용자 퇴장 정보: ', e);
         }
     });
 });
 
 if (UseSSL)
     secure_server.listen(squarePort, () => {
-        console.log(`Working on port ${squarePort}`);
+        logger.info(`Working on port ${squarePort}`);
     });
 
 // 이 서버를 이용하면 http://localhost:{SitePort} 로 페이지를 이용할 수 있고
@@ -458,8 +473,8 @@ try {
     if (!UseCustomSite) throw '사이트를 운영하지 않기로 설정됨';
     app.use(express.static(path.join(__dirname, './www')));
     app.listen(SitePort, () => {
-        console.log(`서버가 http://localhost:${SitePort}에서 실행 중입니다.`);
+        logger.info(`서버가 http://localhost:${SitePort}에서 실행 중입니다.`);
     });
 } catch (e) {
-    console.log('사설 사이트 켜기 오류: ', e);
+    logger.info('사설 사이트 켜기 오류: ', e);
 }
