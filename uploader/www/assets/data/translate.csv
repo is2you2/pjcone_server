@@ -501,7 +501,7 @@ sideSIzeIssue,캔버스의 모든 변은 0보다 커야합니다,All sides of th
 UseThisImage,이미지를 준비중...,Preparing image to send...
 newDraw,새 그림,New draw
 CreateNew,새로 만들기,New
-ColorpickDetail,색상 상세 조정,Color Detailing
+ColorpickDetail,그리기 상세 조정,Drawing detail adjustment
 ColorpickRed,빨강,Red
 ColorpickGreen,초록,Green
 ColorpickBlue,파랑,Blue
@@ -512,8 +512,8 @@ AutoResolution,항상 표시된 대로 해상도 자동 조정,Always auto-adjus
 width,가로,Width
 height,세로,Height
 weight,선 두께,Stroke weight
-changeWeight,두께 변경,Change weight
-changeDefaultWeight,기본값,Default
+quickSetup,빠른 설정 기본값,Quick setup defaults
+quickTransparent,투명도,ransparency
 apply,적용,Apply
 CreateChannel,새 채널 생성,Create new channel
 InputAddress,주소 입력,Input address
