@@ -84,7 +84,7 @@ QRScanInitFailed,스캔을 시작할 수 없음,Unable to start scan
 QRScanPlaceholder,QR코드 스캔된 결과 없음,No results from scanning QR code
 Disconnected,연결된 서버가 없습니다,No server connected
 ## Community,,
-Title,공지,Notice
+Title,게시물,Posts
 NoPosts,게시물 추가하기,Add posts
 ## Arcade,,
 Title,아케이드,Arcade
@@ -120,8 +120,8 @@ SyncMainImage,대표이미지 등록중,Registering representative image
 SyncAttaches,첨부파일 동기화중,Synchronizing attachments
 SyncErr,게시물 저장 오류,Error saving post
 NSFW,후방주의,NSFW
-NoOutLink,공지,Notice
-UseOutLink,게시물,Post
+NoOutLink,공개,Public
+UseOutLink,링크,Link
 OutLinkFailed,외부노출 실패,Create outlink failed
 NoPostOutLink,게시물 정보 없음,No post information
 RecordVoiceTime,시간기록,V.Time
