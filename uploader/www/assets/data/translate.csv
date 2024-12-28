@@ -92,6 +92,7 @@ Preparing,준비중,On Preparing
 AddCustom,즉시 실행,Run immediately
 OfficialList,공식 리스트,Official list
 DediList,개인 서버로부터 리스트,List from private server
+Search,검색..,Search..
 AddedCustom,이 기기에 추가됨,Added to this device
 FromPck,*.pck,*.pck
 FromFile,파일뷰어,Viewer
