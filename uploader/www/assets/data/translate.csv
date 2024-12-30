@@ -429,7 +429,7 @@ CancelText,취소,Cancel
 PCClipboard,복사됨,Copied
 ClipboardCopy,클립보드에 복사중,Copying to clipboard
 ClipboardPaste,클립보드로부터 불러오는중,Loading from clipboard
-ClipboardFailed,파일 복사 실패,Failed to copy file
+ClipboardFailed,복사 실패,Failed to copy
 variousCreator,파일 첨부,Attachments
 FromCamera,카메라로 직접 촬영,From camera
 ErrorFromCamera,촬영 실패,Failed to film
