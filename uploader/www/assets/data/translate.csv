@@ -222,6 +222,7 @@ Detour,우회안함,Default
 useFSS,FFS우선,tryFFS
 forceSQL,SQL강제,useSQL
 Camera,카메라,Camera
+LoadImageFromCamera,사진 불러오는중,Loading photos
 Voice,녹음하기,Mic.
 VoiceStop,중지,Stop
 VoiceChat,음성통화,Voice
