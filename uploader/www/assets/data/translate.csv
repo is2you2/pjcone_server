@@ -214,6 +214,7 @@ BackgroundImage,배경사진,BGImg
 attachments,첨부파일,Attach
 FileLink,외부링크,Outlink
 FindingMsg,메시지를 찾는중,Looking for messages
+MsgFound,메시지 찾음,Message found
 StartVRecord,녹음을 시작합니다,Start recording
 VoiceRecord,인앱 음성 녹음,In-app voice record
 voidDraw,그림판,Paint

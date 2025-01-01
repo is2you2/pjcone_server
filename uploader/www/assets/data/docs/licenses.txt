@@ -404,7 +404,7 @@ picomatch@4.0.2 [license(s): MIT]
 ├── package.json:  MIT
 └── license files: MIT
 
-project_cone@0.82.4 [license(s): Apache, BSD, Eclipse Public License, GPL, ISC, LGPL, MIT, MPL, Public Domain]
+project_cone@0.82.5 [license(s): Apache, BSD, Eclipse Public License, GPL, ISC, LGPL, MIT, MPL, Public Domain]
 ├── license files: Apache, BSD, Eclipse Public License, GPL, ISC, LGPL, MIT, MPL, Public Domain
 └── readme files: MIT
 
