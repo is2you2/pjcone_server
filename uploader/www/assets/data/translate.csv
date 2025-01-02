@@ -377,8 +377,6 @@ Title,새 채널 만들기,Create new channel
 SelectServer,서버 선택,Select server
 UseLocalStorage,이 기기에 기록,Record on this device
 GroupInfo,채널 정보,Channel info
-JoinGroupWithId,다른 채널에 참여,Join other channel
-InputGroupId,대상 ID,Input channel ID
 DiffFormat,형식 오류,Different format
 DisplayName,표시명,Display name
 DisplayName_placeholder,채널 이름,Channel name
