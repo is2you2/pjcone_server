@@ -67,6 +67,8 @@ buttonDisplay_add,추가,Add
 buttonDisplay_modify,수정,Modify
 needDisplayName,표시명을 작성하여야 합니다,Display name must be written
 WIP,작업을 완료중입니다...,Work in progress...
+ApplyingTodo,할 일 등록중,Registering to-do
+RemoveTodo,할 일 제거중,Removing to-do
 ManageWorker,작업자 관리,Manage workers
 ToggleWorkers,모든 사용자 선택,Select all users
 ## Subscribes,,
@@ -93,6 +95,7 @@ AddCustom,즉시 실행,Run immediately
 OfficialList,공식 리스트,Official list
 DediList,개인 서버로부터 리스트,List from private server
 Search,검색..,Search..
+OpeningCamera,카메라 준비중,Preparing the camera
 AddedCustom,이 기기에 추가됨,Added to this device
 FromPck,*.pck,*.pck
 FromFile,파일뷰어,Viewer
