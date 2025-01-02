@@ -289,6 +289,7 @@ related_creator,그 외,Related
 Filename,파일 이름,Filename
 OnLoadContent,파일을 불러오는중,Loading file
 OnFailedLoadContent,파일을 열지 못함,Cannot open file
+saveText,텍스트 파일 저장중,Saving text file
 saveFile,저장,Save
 AlreadyExist,같은 이름의 파일이 이미 있습니다,A file with the same name already exists
 OverWriteFile,파일 덮어쓰기,Overwrite files
