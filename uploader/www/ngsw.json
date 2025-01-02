@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1735720013573,
+  "timestamp": 1735779326227,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -1652,7 +1652,7 @@
     "/assets/data/docs/godot/godot.txt": "ec6856b4ffca03a91d1bef5ffbb184f71c93ed04",
     "/assets/data/docs/godot/thirdparty.txt": "21558fb5085fae1b4a0cdfb5775a97e8de086174",
     "/assets/data/docs/js.blend.txt": "2a8a94c47168085f7ff53c1ff8317f65aa93ca56",
-    "/assets/data/docs/licenses.txt": "9f6ea2516ede0715618020f0f9cbbb7259fb0d52",
+    "/assets/data/docs/licenses.txt": "fbda272337554706ee9d6c9458f88cc3e22f93f9",
     "/assets/data/docs/zxing.txt": "55601e40561c7cbb738ed8eb95073224ec5f2b59",
     "/assets/data/helped/razorbacky.png": "02c13213758fca55fe29faaa861b40a56049ce03",
     "/assets/data/infos/contributors.json": "97d170e1550eee4afc0af065b78cda302a97674c",
@@ -1666,7 +1666,7 @@
     "/assets/data/install_pwa.png": "820701a51140575a8b884a566cdd89dbfdeeecb0",
     "/assets/data/local.svg": "d98944907ef57b0a5e418231da80aa7762630d22",
     "/assets/data/translate.csv": "67b7a397b591d03b92422d9ac7da30ec00d563bb",
-    "/assets/empty.ogg": "2f209025d31a2c002302800e36fe973b8f18bed1",
+    "/assets/empty.ogg": "5b496eaa127b8f1872d94656d84727b469f3e62f",
     "/assets/html/index.apple-touch-icon.png": "1d7d1450f43a7e460e6db0a73683ea93313c6a34",
     "/assets/html/index.audio.worklet.js": "fa4ddbcecba3dbaefaf6722b9af8e9964d42a1df",
     "/assets/html/index.html": "5b20e07d2782022559f8f611fc6a22b957cbc95f",
