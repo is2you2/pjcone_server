@@ -249,7 +249,7 @@ uploading,업로드 중,Uploading
 downloaded,다운로드됨,Downloaded
 FileSaved,파일 저장됨,File saved
 SavingFile,파일 저장중,Saving file
-SendFile,파일 전송됨,File sent
+SendFile,파일 전송,File sent
 qouteMsg,답장,Reply to
 LostOriginMsg,원본 메시지를 찾을 수 없음,Original message not found
 viewer_not_support,뷰어가 지원하지 않는 파일,Files not supported by the viewer
