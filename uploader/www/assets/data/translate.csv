@@ -553,6 +553,7 @@ Create,생성,Create
 NeedFolderName,폴더 이름을 작성해주세요,Please write the folder name
 FailedToCreateFolder,폴더 생성 실패,Folder creation failed
 FolderName,폴더 이름 작성,Enter folder name
+AlreadyExistFolder,이미 있는 폴더,Folder that already exists
 MultipleSave,여러 파일 저장,Save multiple files
 OK,확인,OK
 ResetDB,모든 파일 삭제,Delete all files
