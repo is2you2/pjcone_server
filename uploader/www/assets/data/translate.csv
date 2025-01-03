@@ -298,6 +298,8 @@ AlreadyExist,같은 이름의 파일이 이미 있습니다,A file with the same
 OverWriteFile,파일 덮어쓰기,Overwrite files
 fileSaveFailed,파일 저장에 실패했습니다,Failed to save file
 ShareContent,다른 채널에 공유하기,Share to other channels
+FocusMode,집중 모드,Focus mode
+ChangingContent,파일 전환중,Converting files
 CannotEditFile,편집 불가 파일,Cannot edit file
 DownloadThisFile,파일 다운로드,Download file
 FileDownloading,다운받는 중,Downloading
@@ -603,6 +605,10 @@ GroupCreator,생성자,Creator
 GroupUserCounter,그룹 인원,Group members
 ForceBreakUp,이 그룹을 해산합니다,Disband this group
 ForceBreaked,그룹 해산됨,Group breakup
+ClearFFSKey,FFS 파일 삭제,Delete FFS files
+ClearCDN,파일 일괄 삭제,Delete files in bulk
+FailedFFSClear,FFS 파일 삭제 실패,Failed to delete FFS file
+FailedClear,파일 삭제 실패,Failed to delete file
 ForceBreakedFailed,그룹 해산 실패,Breakup failed
 PromoteAsWell,승격 설정이 적용되었습니다,Promotion settings have been applied
 PromoteError,승격 설정이 이루어지지 않았습니다,Promotion settings are not established
