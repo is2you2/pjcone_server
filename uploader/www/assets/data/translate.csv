@@ -299,7 +299,7 @@ OverWriteFile,파일 덮어쓰기,Overwrite files
 fileSaveFailed,파일 저장에 실패했습니다,Failed to save file
 ShareContent,다른 채널에 공유하기,Share to other channels
 FocusMode,집중 모드,Focus mode
-ChangingContent,파일 전환중,Converting files
+ChangingContent,파일 변경,Replace file to
 CannotEditFile,편집 불가 파일,Cannot edit file
 DownloadThisFile,파일 다운로드,Download file
 FileDownloading,다운받는 중,Downloading
