@@ -134,9 +134,8 @@ NoOutLink,공개,Public
 UseOutLink,링크,Link
 OutLinkFailed,외부노출 실패,Create outlink failed
 NoPostOutLink,게시물 정보 없음,No post information
-RecordVoiceTime,시간기록,V.Time
 SavingRecord,녹음을 저장중입니다,Saving the recording
-RecordVoiceTime,녹음시간 기록됨,Recording time recorded
+RecordVoiceTime,녹음시간 기록,Time record
 FailedToSaveVoice,녹음 저장 실패,Failed to save recording
 ## PostViewer,,
 Title,게시물 뷰어,Post viewer
@@ -196,8 +195,8 @@ upload,올리기,Upload
 remove_content,삭제,Remove
 need_email,이메일 주소를 입력해주세요,Please enter your email address
 need_password,비밀번호를 입력해주세요,Please enter a password
-user_profile_changed,사용자 프로필 변경됨,User profile changed
-user_image_changed,사용자 이미지 변경됨,User image changed
+user_profile_changed,사용자 프로필 변경,Change user profile
+user_image_changed,사용자 이미지 변경,Chage user image
 ## OtherProfile,,
 Title,사용자 정보,User info
 add_to_group,추가,Add to group
@@ -245,13 +244,13 @@ input_placeholder,메시지 입력...,Enter message...
 ManageChat,메시지 관리,Manage message
 EditChat,편집,Edit
 MsgEdited,편집됨,Edited
-MsgRemoved,메시지 삭제됨,Messages deleted
+MsgRemoved,메시지 삭제,Delete message
 cannot_open_from_mobile,모바일에서 열 수 없음,Can not open on mobile
 cannot_open_with_viewer,이 파일은 뷰어로 볼 수 없습니다,This file cannot be viewed with a viewer
 download_anyway,그래도 다운로드,Download anyway
 uploading,업로드 중,Uploading
-downloaded,다운로드됨,Downloaded
-FileSaved,파일 저장됨,File saved
+downloaded,다운로드,Download
+FileSaved,파일 저장,Save file
 SavingFile,파일 저장중,Saving file
 SendFile,파일 전송,File sent
 qouteMsg,답장,Reply to
@@ -300,6 +299,7 @@ fileSaveFailed,파일 저장에 실패했습니다,Failed to save file
 ShareContent,다른 채널에 공유하기,Share to other channels
 FocusMode,집중 모드,Focus mode
 ChangingContent,파일 변경,Replace file to
+EndOfList,목록의 끝,End of list
 CannotEditFile,편집 불가 파일,Cannot edit file
 DownloadThisFile,파일 다운로드,Download file
 FileDownloading,다운받는 중,Downloading
@@ -416,7 +416,7 @@ FailedToChangeName,그룹 이름 변경 실패,Failed to change group name
 FailedToChangeOpen,그룹 공개 여부 변경 실패,Failed to change group visibility
 BreakupGroup,채널 해산,Breakup
 LeaveGroup,떠나기,Leave group
-GroupImageChanged,채널 이미지 변경됨,Channel image changed
+GroupImageChanged,채널 이미지 변경,Change channel image
 GroupRemoved,채널 삭제됨,Channel removed
 GroupForceRemoved,채널이 강제 삭제됨,Channel was forcibly deleted
 YouAreNotCreator,채널 생성자가 아닙니다,You are not channel creator
@@ -490,11 +490,11 @@ ReqContUserName,사용자명,User name
 ReqContTitle,채널 참가 요청,Request to join
 ReqContAccept,수락,Accept
 ReqContReject,거절,Reject
-LocalNotiTitle,채널 참가됨,Joined channel
+LocalNotiTitle,채널 참가,Join channel
 LocalNotiOK,확인,OK
 LocalNotiCheck,검토,Check
 AddChannelFailed,채널 추가 실패,Failed to add channel
-AddChannelFailed_Code3,사용자 삭제됨,User deleted
+AddChannelFailed_Code3,사용자 삭제,Delete user
 FailedUpload,업로드 실패,Failed to upload
 FailedDownload,다운로드 실패,Failed to download
 FailedToAddGroup,그룹 추가 실패,Failed to add group
@@ -530,7 +530,6 @@ apply,적용,Apply
 CreateChannel,새 채널 생성,Create new channel
 InputAddress,주소 입력,Input address
 ChannelIdAddress,채널id 입력,Input channel id
-ConnectedToServer,서버에 연결됨,Connected
 ConnectToAddress,연결하기,Connect
 LocalAddrInput,주소 직접 입력하기,Enter address directly
 ServerStarted,공유 그림판 서버 켜짐,Shared paint server turned on
