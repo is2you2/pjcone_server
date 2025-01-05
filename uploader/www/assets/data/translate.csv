@@ -144,6 +144,8 @@ ModifyTime,수정일,Modifition date
 RemovePost,게시물 삭제,Remove post
 OpenFromViewer,파일 뷰어에서 보기,View in file viewer
 CannotOpenProfile,사용자 정보를 열 수 없음,Unable to open user information
+PreparingPost,게시물 준비중,Preparing post
+ReadyToSee,준비됨,Ready
 ## Settings,,
 Title,설정,Settings
 CommunityAds,개발자 광고,Developer Ads
