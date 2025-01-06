@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1736172538396,
+  "timestamp": 1736174782589,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -177,7 +177,7 @@
         "/assets/sw.js",
         "/common.1dd0e277261490e2.js",
         "/index.html",
-        "/main.f08b304b6f62a84e.js",
+        "/main.4e729de0849751b5.js",
         "/polyfills-core-js.c76198334f717402.js",
         "/polyfills-dom.bf542500b6fca113.js",
         "/polyfills.c3a9e4b87df5be46.js",
@@ -1652,7 +1652,7 @@
     "/assets/data/docs/godot/godot.txt": "ec6856b4ffca03a91d1bef5ffbb184f71c93ed04",
     "/assets/data/docs/godot/thirdparty.txt": "21558fb5085fae1b4a0cdfb5775a97e8de086174",
     "/assets/data/docs/js.blend.txt": "2a8a94c47168085f7ff53c1ff8317f65aa93ca56",
-    "/assets/data/docs/licenses.txt": "cd912189cb655557b847dca2a9d5ceaddc6f779c",
+    "/assets/data/docs/licenses.txt": "ee449a261274e136b52ab7ae538917b08b8b5ffe",
     "/assets/data/docs/zxing.txt": "55601e40561c7cbb738ed8eb95073224ec5f2b59",
     "/assets/data/helped/razorbacky.png": "02c13213758fca55fe29faaa861b40a56049ce03",
     "/assets/data/infos/contributors.json": "97d170e1550eee4afc0af065b78cda302a97674c",
@@ -1710,8 +1710,8 @@
     "/assets/p5js/zxing_scanner.js": "59dea1bdbbb3aa2a60cec2a48c51c71df041274c",
     "/assets/sw.js": "11859662d2afdce10230a37eae37e21dcb7333f5",
     "/common.1dd0e277261490e2.js": "8a7e6a955ced45586e5a8d8bacc2f67275eb76a1",
-    "/index.html": "d5166f89cac499d8354055dd4488a9d1eafd113d",
-    "/main.f08b304b6f62a84e.js": "fdc40300256cfe3f0b01a28327632a62b412def1",
+    "/index.html": "3b9513fa997653a9c9122557eb240ae95d3900f8",
+    "/main.4e729de0849751b5.js": "593c66426ed429c88f1036d87b7627a4b68c20ea",
     "/polyfills-core-js.c76198334f717402.js": "d6e270a2944b6a95a9b97dafd25599ba825e8d7f",
     "/polyfills-dom.bf542500b6fca113.js": "3fa333db66c8050f12e99d977f5098a6de8dd593",
     "/polyfills.c3a9e4b87df5be46.js": "11979a0b731e854f52a3004383a76bc8469e291e",
