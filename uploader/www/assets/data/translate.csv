@@ -124,7 +124,7 @@ MainPostImage,대표사진,Header
 NeedPostTitle,제목을 입력해주세요,Please enter the subject
 RemoveAttach,첨부파일 제거,Remove attachment
 AttachError,파일 첨부 오류,File attachment error
-WIP,게시물을 등록합니다,Register a post
+WIP,게시물을 등록,Register a post
 SyncPostInfo,게시물 등록중,Registering post info
 SyncMainImage,대표이미지 등록중,Registering representative image
 SyncAttaches,첨부파일 동기화,Attachment Synchronization
