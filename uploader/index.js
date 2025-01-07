@@ -72,10 +72,10 @@ app.use((req, res, next) => {
 
 // Multer 설정
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
+    destination: (req, file, cb) => {
         cb(null, './cdn/');
     },
-    filename: function (req, file, cb) {
+    filename: (req, file, cb) => {
         cb(null, decodeURI(req.url.substring(1)));
     }
 });
@@ -83,31 +83,105 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // 파일 업로드를 처리할 라우트 설정
-app.use('/cdn/', upload.single('files'), function (req, res) {
+app.use('/cdn/', upload.single('files'), (req, res) => {
     // req.file은 업로드된 파일의 정보를 가지고 있음
-    logger.info('파일 업로드 요청받음: ', req.file);
+    const uploaded_filename = decodeURI(req.url.substring(1));
+    const folderPath = `./cdn/${req.body['path']}`;
+    try {
+        fs.mkdirSync(folderPath, { recursive: true });
+    } catch (e) {
+        logger.error('폴더 재귀 생성 오류: ', e);
+    }
+    try {
+        fs.renameSync(`./cdn/${uploaded_filename}`, `${folderPath}/${req.body['filename']}`);
+    } catch (e) {
+        logger.error('파일 옮기기 오류: ', e);
+    }
+    const result = decodeURIComponent(`${req.body['path']}/${req.body['filename']}`);
     // 여기에서 필요한 작업을 수행하고 응답을 보낼 수 있음
-    res.send('file_server');
+    res.send(result);
 });
 
 /** 파일 크기 요청 */
 app.use('/filesize/', (req, res) => {
-    let stat = fs.statSync(`./cdn${decodeURIComponent(req.url)}`);
+    const stat = fs.statSync(`./cdn${decodeURIComponent(req.url)}`);
     res.end(`${stat.size}`);
 });
 
+/** 이 경로를 지웠을 때 폴더가 비게 된다면 부모 폴더를 삭제하기, 그것을 반복하기 */
+function RecursiveOutDirRemove(_path) {
+    let sep = _path.split('/');
+    sep.pop();
+    const parentDir = sep.join('/');
+    try {
+        fs.rmdirSync(parentDir);
+        if (parentDir) RecursiveOutDirRemove(parentDir);
+    } catch (e) {
+        // 보통 cdn 폴더에서 오류가 뜨니 이 오류는 무시합니다
+    }
+}
+
 /** 파일 삭제 요청 */
 app.use('/remove/', (req, res) => {
-    logger.info(`Remove file: ./cdn${decodeURIComponent(req.url)}`);
+    const path = decodeURIComponent(req.url);
+    const fullPath = `./cdn${path}`;
+    logger.info(`Remove file: ${fullPath}`);
+    fs.unlink(fullPath, e => {
+        logger.info(`Result: Remove file ${path}: ${e}`);
+        RecursiveOutDirRemove(fullPath);
+    });
+    // 아래, 구 버전 호환 삭제
     fs.unlink(`./cdn${decodeURIComponent(req.url)}`, e => {
         logger.error(`Result: Remove file ${decodeURIComponent(req.url)}: ${e}`);
     });
     res.end();
 });
 
+/** 대상 경로 내 모든 파일 및 폴더 리스트 */
+function getFilesInDirectory(dir) {
+    try {
+        let results = [];
+        // 디렉토리 내 파일 및 폴더 목록을 읽음
+        const list = fs.readdirSync(dir);
+        list.forEach((file) => {
+            const filePath = path.join(dir, file);
+            // 파일 또는 폴더에 대한 정보를 얻음
+            const stats = fs.statSync(filePath);
+            // 디렉토리인 경우 재귀적으로 내부 파일 탐색
+            if (stats.isDirectory()) {
+                results.push(filePath);
+                results = results.concat(getFilesInDirectory(filePath)); // 재귀 호출
+            } else results.push(filePath); // 파일이면 경로 추가
+        });
+        return results;
+    } catch (e) {
+        logger.error('없는 경로에 대한 요청: ', dir, ' / err: ', e);
+    }
+}
+
 /** 키워드가 포함된 모든 파일 삭제 */
 app.use('/remove_key/', (req, res) => {
-    let target_key = `${decodeURIComponent(req.url).substring(1)}`;
+    const target_key = `${decodeURIComponent(req.url).substring(1)}`;
+    const keys = target_key.split('_');
+    let target_path = '';
+    keys.forEach(key => target_path = target_path ? `${target_path}/${key}` : key);
+    let listAll = getFilesInDirectory('./cdn/' + target_path);
+    while (listAll?.length) {
+        const path = listAll.pop();
+        console.log('이게 사라지나: ', listAll?.length);
+        const stats = fs.statSync(path);
+        // 디렉토리인 경우 재귀적으로 내부 파일 탐색
+        if (stats.isDirectory()) {
+            try {
+                fs.rmdirSync(path);
+            } catch (e) { }
+        } else fs.unlinkSync(path);
+        if (!listAll?.length) {
+            console.log('마지막 경로 뭐야: ', `.${path}`);
+            RecursiveOutDirRemove(`./${path}`);
+        }
+    }
+    // 아래, 구버전 호환 코드
     fs.readdir('./cdn', (err, files) => {
         logger.info(`Remove file with key: ${decodeURIComponent(req.url)}`);
         files.forEach(path => {
@@ -476,5 +550,5 @@ try {
         logger.info(`서버가 http://localhost:${SitePort}에서 실행 중입니다.`);
     });
 } catch (e) {
-    logger.info('사설 사이트 켜기 오류: ', e);
+    logger.warn('사설 사이트 켜기 오류: ', e);
 }

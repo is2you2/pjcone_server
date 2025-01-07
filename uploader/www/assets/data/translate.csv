@@ -67,8 +67,8 @@ buttonDisplay_add,추가,Add
 buttonDisplay_modify,수정,Modify
 needDisplayName,표시명을 작성하여야 합니다,Display name must be written
 WIP,작업을 완료중입니다...,Work in progress...
-ApplyingTodo,할 일 등록중,Registering to-do
-RemoveTodo,할 일 제거중,Removing to-do
+ApplyingTodo,할 일 등록,Register a to-do
+RemoveTodo,할 일 제거,Remove to-dos
 ManageWorker,작업자 관리,Manage workers
 ToggleWorkers,모든 사용자 선택,Select all users
 ## Subscribes,,
