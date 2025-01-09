@@ -1,9 +1,10 @@
 /** Define dependencies.*/
 
-var cors = require('cors');
-var express = require("express");
-var multer = require('multer');
-var app = express();
+const cors = require('cors');
+const express = require("express");
+const multer = require('multer');
+const app = express();
+const cdn = express();
 const path = require('path');
 const https = require('node:https');
 const fs = require('node:fs');
@@ -30,8 +31,10 @@ const logger = log4js.getLogger();
 let UseCustomSite = true;
 /** 사설 사이트 포트 */
 let SitePort = 12000;
-/** Nakama 연계 파일 서버 포트 */
+/** Nakama 연계 파일 업로드 포트 */
 let cdnPort = 9001;
+/** 파일 게시 포트 (구 apache 서버 교체) */
+let apachePort = 9002;
 /** 광장 채널 등 웹 소켓 포트 */
 let squarePort = 12013;
 /** 보안 프로토콜 사용 여부 */
@@ -52,6 +55,9 @@ let UseSSL = true;
             case 'cdnPort':
                 cdnPort = Number(sep[1]);
                 break;
+            case 'apachePort':
+                apachePort = Number(sep[1]);
+                break;
             case 'squarePort':
                 squarePort = Number(sep[1]);
             case 'UseSSL':
@@ -69,6 +75,8 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Method", "*");
     next();
 });
+
+cdn.use(cors());
 
 // Multer 설정
 const storage = multer.diskStorage({
@@ -168,7 +176,6 @@ app.use('/remove_key/', (req, res) => {
     let listAll = getFilesInDirectory('./cdn/' + target_path);
     while (listAll?.length) {
         const path = listAll.pop();
-        console.log('이게 사라지나: ', listAll?.length);
         const stats = fs.statSync(path);
         // 디렉토리인 경우 재귀적으로 내부 파일 탐색
         if (stats.isDirectory()) {
@@ -176,10 +183,7 @@ app.use('/remove_key/', (req, res) => {
                 fs.rmdirSync(path);
             } catch (e) { }
         } else fs.unlinkSync(path);
-        if (!listAll?.length) {
-            console.log('마지막 경로 뭐야: ', `.${path}`);
-            RecursiveOutDirRemove(`./${path}`);
-        }
+        if (!listAll?.length) RecursiveOutDirRemove(`./${path}`);
     }
     // 아래, 구버전 호환 코드
     fs.readdir('./cdn', (err, files) => {
@@ -302,25 +306,35 @@ app.use('/get-page-info', async (req, res) => {
 
 let wss;
 let secure_server;
+
+cdn.use(express.static(path.join(__dirname, './')));
 if (UseSSL) {
     const options = {
-        key: fs.readFileSync('/usr/local/apache2/conf/private.key'),
-        cert: fs.readFileSync('/usr/local/apache2/conf/public.crt'),
+        key: fs.readFileSync('/root/private.key'),
+        cert: fs.readFileSync('/root/public.crt'),
     };
 
     https.createServer(options, app).listen(cdnPort, "0.0.0.0", () => {
-        logger.info(`Working on port ${cdnPort}`);
+        logger.info(`Open cdn on port ${cdnPort}`);
+    });
+
+    https.createServer(options, cdn).listen(apachePort, "0.0.0.0", () => {
+        logger.info(`Open page on port ${apachePort}`);
     });
 
     secure_server = https.createServer(options);
     wss = new ws.Server({ server: secure_server });
 } else {
     app.listen(cdnPort, "0.0.0.0", () => {
-        logger.info(`Working on port ${cdnPort}: No Secure`);
+        logger.info(`Open cdn on port ${cdnPort}: No Secure`);
+    });
+
+    cdn.listen(apachePort, "0.0.0.0", () => {
+        logger.info(`Open page on port ${apachePort}: No Secure`);
     });
 
     wss = new ws.Server({ port: squarePort }, () => {
-        logger.info(`Working on port ${squarePort}: No Secure`);
+        logger.info(`Open square on port ${squarePort}: No Secure`);
     });
 }
 

@@ -49,22 +49,22 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-  apache: # 파일 업로드 공개 서버
-    container_name: apache
-    image: httpd
+  nodejs: # 파일 업로드 공개 서버
+    container_name: nodejs
+    image: node
     volumes:
-      - "./uploader:/usr/local/apache2/htdocs"
-      - "./httpd.conf:/usr/local/apache2/conf/httpd.conf"
-      - "./httpd-ssl.conf:/usr/local/apache2/conf/extra/httpd-ssl.conf"
-      - "./data/public.crt:/usr/local/apache2/conf/public.crt"
-      - "./data/private.key:/usr/local/apache2/conf/private.key"
+      - "./uploader:/root/uploader"
+    #   - "./httpd.conf:/root/httpd.conf"
+    #   - "./httpd-ssl.conf:/root/extra/httpd-ssl.conf"
+      - "./data/public.crt:/root/public.crt"
+      - "./data/private.key:/root/private.key"
     ports:
-      - "9001:9001"
-      # - "9002:80" # no-ssl
-      - "9002:443" # 컴퓨터:도커
+      - "9001:9001" # 파일 업로드 받기 분리
+      - "9002:9002" # 파일 게시
       - "12000:12000" # 페이지 서버
       - "12013:12013" # 사설 그룹채팅
-    command: /bin/bash /usr/local/apache2/htdocs/setup_uploader.sh
+    command: /bin/bash /root/uploader/setup_uploader.sh
+    # command: tail -F /dev/null
   coturn: # WebRTC 서버 (사용시 등록 필요)
     container_name: coturn
     image: coturn/coturn
