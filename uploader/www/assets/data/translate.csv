@@ -99,7 +99,6 @@ OpeningCamera,스캔 카메라 준비중,Preparing the scan camera
 AddedCustom,이 기기에 추가됨,Added to this device
 FromPck,*.pck,*.pck
 FromFile,파일뷰어,Viewer
-ToggleBGMode,대기,Idle
 BGModeOn,백그라운드 모드를 시작합니다,Start background mode
 BGModeOff,백그라운드 모드를 종료합니다,Stop background mode
 FromLink,복사된 링크,Copied link
