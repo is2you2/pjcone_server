@@ -54,8 +54,6 @@ services:
     image: node
     volumes:
       - "./uploader:/root/uploader"
-    #   - "./httpd.conf:/root/httpd.conf"
-    #   - "./httpd-ssl.conf:/root/extra/httpd-ssl.conf"
       - "./data/public.crt:/root/public.crt"
       - "./data/private.key:/root/private.key"
     ports:
@@ -64,7 +62,6 @@ services:
       - "12000:12000" # 페이지 서버
       - "12013:12013" # 사설 그룹채팅
     command: /bin/bash /root/uploader/setup_uploader.sh
-    # command: tail -F /dev/null
   coturn: # WebRTC 서버 (사용시 등록 필요)
     container_name: coturn
     image: coturn/coturn
