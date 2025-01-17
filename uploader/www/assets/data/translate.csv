@@ -550,8 +550,6 @@ FailedGetBG,배경이미지 교환 실패,Background image exchange failed
 WebRTC_Reply,주소 정보 교환중,Receiving information reply
 WebRTC_Ice,ICE 정보 교환중,Exchanging ICE information
 ## UserFsDir,,
-NewFolder,새 폴더,New folder
-AddFile,추가,Add
 CreateFolder,폴더 생성,Create folder
 Create,생성,Create
 NeedFolderName,폴더 이름을 작성해주세요,Please write the folder name
@@ -574,7 +572,6 @@ ImportFailed,수입 실패,Import failed
 Delete,삭제,Delete
 CreateAt,생성일시,Creation date
 ImportFolder,폴더 수입,Import folder
-RemoveCurrentDir,삭제,Remove
 RemoveThisFolder,이 폴더와 하위 폴더 및 파일들을 삭제합니다,Delete this folder and subfolders and files
 RemoveApply,삭제,Remove
 OpenExtFolder,외부 저장소 보기,View external storage
@@ -591,7 +588,6 @@ ImageURL,이미지 URL,Image URL
 EnterURI,이미지 주소 입력,Enter image url
 NoNotiMsg,전달할 메시지를 입력해주세요,Please enter your message
 Send,발송,Send
-Refresh,새로고침,Refresh
 Requesting,정보 없음,No information
 SendFailed,발송 실패,Send failed
 isPersistent,오프라인 사용자에게도 전달,Persistent
