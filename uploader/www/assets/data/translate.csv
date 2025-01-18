@@ -88,6 +88,8 @@ Disconnected,연결된 서버가 없습니다,No server connected
 ## Community,,
 Title,게시물,Posts
 NoPosts,게시물 추가하기,Add posts
+AfterOnline,업로드 예정,Upload scheduled
+WillBeRemove,삭제될 예정,Remove scheduled
 ## Arcade,,
 Title,아케이드,Arcade
 Preparing,준비중,On Preparing
