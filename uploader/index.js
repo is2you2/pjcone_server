@@ -112,8 +112,12 @@ app.use('/cdn/', upload.single('files'), (req, res) => {
 
 /** 파일 크기 요청 */
 app.use('/filesize/', (req, res) => {
-    const stat = fs.statSync(`./cdn${decodeURIComponent(req.url)}`);
-    res.end(`${stat.size}`);
+    try {
+        const stat = fs.statSync(`./cdn${decodeURIComponent(req.url)}`);
+        res.end(`${stat.size}`);
+    } catch (e) {
+        logger.warn('파일 크기 검토 오류: ', e);
+    }
 });
 
 /** 이 경로를 지웠을 때 폴더가 비게 된다면 부모 폴더를 삭제하기, 그것을 반복하기 */
@@ -154,12 +158,16 @@ function getFilesInDirectory(dir) {
         list.forEach((file) => {
             const filePath = path.join(dir, file);
             // 파일 또는 폴더에 대한 정보를 얻음
-            const stats = fs.statSync(filePath);
-            // 디렉토리인 경우 재귀적으로 내부 파일 탐색
-            if (stats.isDirectory()) {
-                results.push(filePath);
-                results = results.concat(getFilesInDirectory(filePath)); // 재귀 호출
-            } else results.push(filePath); // 파일이면 경로 추가
+            try {
+                const stats = fs.statSync(filePath);
+                // 디렉토리인 경우 재귀적으로 내부 파일 탐색
+                if (stats.isDirectory()) {
+                    results.push(filePath);
+                    results = results.concat(getFilesInDirectory(filePath)); // 재귀 호출
+                } else results.push(filePath); // 파일이면 경로 추가
+            } catch (e) {
+                logger.warn('파일 경로 추가 오류: ', e);
+            }
         });
         return results;
     } catch (e) {
@@ -176,14 +184,18 @@ app.use('/remove_key/', (req, res) => {
     let listAll = getFilesInDirectory('./cdn/' + target_path);
     while (listAll?.length) {
         const path = listAll.pop();
-        const stats = fs.statSync(path);
-        // 디렉토리인 경우 재귀적으로 내부 파일 탐색
-        if (stats.isDirectory()) {
-            try {
-                fs.rmdirSync(path);
-            } catch (e) { }
-        } else fs.unlinkSync(path);
-        if (!listAll?.length) RecursiveOutDirRemove(`./${path}`);
+        try {
+            const stats = fs.statSync(path);
+            // 디렉토리인 경우 재귀적으로 내부 파일 탐색
+            if (stats.isDirectory()) {
+                try {
+                    fs.rmdirSync(path);
+                } catch (e) { }
+            } else fs.unlinkSync(path);
+            if (!listAll?.length) RecursiveOutDirRemove(`./${path}`);
+        } catch (e) {
+            logger.warn('key로 파일 삭제하기 오류: ', e);
+        }
     }
     // 아래, 구버전 호환 코드
     fs.readdir('./cdn', (err, files) => {
