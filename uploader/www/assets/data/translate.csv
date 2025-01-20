@@ -182,6 +182,8 @@ Sponsorship,후원,Sponsorship
 Support,이 프로젝트를 후원합니다,Support this project
 ## NotificationSettings,,
 set_alert,알림 받기,Get notifications
+set_alert_simple,알림 간소화,Simplify notifications
+set_alert_self,인앱 알림으로 전환하기,Switch to in-app notifications
 icon_mono,기본 앱 알림,Default
 diychat,Nakama 서버,Nakama server
 simplechat,광장,Square
