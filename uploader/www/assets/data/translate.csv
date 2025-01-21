@@ -297,6 +297,7 @@ OnLoadContent,파일을 불러오는중,Loading file
 OnFailedLoadContent,파일을 열지 못함,Cannot open file
 saveText,텍스트 파일 저장중,Saving text file
 saveFile,저장,Save
+ClickToCopy,클릭하여 URL 복사,Click to copy url
 AlreadyExist,같은 이름의 파일이 이미 있습니다,A file with the same name already exists
 OverWriteFile,파일 덮어쓰기,Overwrite files
 fileSaveFailed,파일 저장에 실패했습니다,Failed to save file
