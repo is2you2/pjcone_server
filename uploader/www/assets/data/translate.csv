@@ -29,6 +29,8 @@ CreatorLocal,로컬에 생성,Create locally
 CreatorMe,서버에 생성,Created on server
 Requested,지시함,Requested
 CreatorOther,지시 받음,Requested by
+AsString,문자열,Text
+InputPlaceHolder,검색어 입력,Enter search term
 Server,서버,Server
 Group,채널,Group
 StoreAt,저장 위치,Save to
