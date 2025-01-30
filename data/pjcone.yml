@@ -14,7 +14,7 @@ runtime:
     http_key: 'defaultkey'
 
 session:
-    token_expiry_sec: 60
+    token_expiry_sec: 300
     # single_socket: true
 
 logger:
