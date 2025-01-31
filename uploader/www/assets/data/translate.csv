@@ -94,14 +94,13 @@ AfterOnline,업로드 예정,Upload scheduled
 WillBeRemove,삭제될 예정,Remove scheduled
 ## Arcade,,
 Title,아케이드,Arcade
-Preparing,준비중,On Preparing
 AddCustom,이 탭에서 실행,Run in this tab
 OfficialList,공식 리스트,Official list
 DediList,개인 서버로부터 리스트,List from private server
 Search,검색..,Search..
 OpeningCamera,스캔 카메라 준비중,Preparing the scan camera
 AddedCustom,이 기기에 추가됨,Added to this device
-FromPck,*.pck,*.pck
+RegAvatar,아바타,Avatar
 FromFile,파일뷰어,Viewer
 BGModeOn,백그라운드 모드를 시작합니다,Start background mode
 BGModeOff,백그라운드 모드를 종료합니다,Stop background mode
@@ -112,9 +111,18 @@ AlertMsg,실행중인 게임을 종료합니다,Quit the running game
 AlertFullscr,집중,Focus
 AlertOK,종료,Exit
 ArcadeOpened,아케이드가 실행중이어서 파일을 열람하지 못하였습니다,The file could not be opened because the arcade is running
-TryingDownload,불러오기 시도중,Trying to load
-FailedToDownloadGodot,씬 실행 실패,Execution scene failed
+TryingDownload,다운로드중,Trying to download
 AlreadyUseWS,이미 연결된 서버가 있습니다,There is already a server connected
+## RegAvatar,,
+Title,사용자 아바타 설정,Set user avatar
+creator,제작자 이름,Creator name
+creator_placeholder,제작자 폴더명과 일치시킵니다,Matches the creator folder name
+infotitle,아바타 정보,Avatar info
+wrong_ext,올바르지 않은 확장자,Invalid extension
+model,아바타 이름,Avatar name
+model_placeholder,아바타 폴더명과 일치시킵니다,Matches the avatar folder name
+ApplyReg,이 캐릭터로 등록하기,Register with this character
+Registering,아바타 등록중,Registering avatar
 ## AddPost,,
 Title,새 게시물,New posts
 EditTitle,게시물 편집,Edit post
