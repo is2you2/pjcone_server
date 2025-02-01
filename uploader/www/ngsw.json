@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1738385758066,
+  "timestamp": 1738389005459,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -1652,7 +1652,7 @@
     "/assets/data/docs/godot/godot.txt": "ec6856b4ffca03a91d1bef5ffbb184f71c93ed04",
     "/assets/data/docs/godot/thirdparty.txt": "21558fb5085fae1b4a0cdfb5775a97e8de086174",
     "/assets/data/docs/js.blend.txt": "2a8a94c47168085f7ff53c1ff8317f65aa93ca56",
-    "/assets/data/docs/licenses.txt": "d6e6ad4b4af51d39bedf5e9c9c34d0b5873b3a8e",
+    "/assets/data/docs/licenses.txt": "b5d3ee292326da88a9871211f82ce16ed3237b3b",
     "/assets/data/docs/zxing.txt": "55601e40561c7cbb738ed8eb95073224ec5f2b59",
     "/assets/data/helped/razorbacky.png": "02c13213758fca55fe29faaa861b40a56049ce03",
     "/assets/data/infos/contributors.json": "97d170e1550eee4afc0af065b78cda302a97674c",
@@ -1667,7 +1667,7 @@
     "/assets/data/install_pwa.png": "820701a51140575a8b884a566cdd89dbfdeeecb0",
     "/assets/data/local.svg": "d98944907ef57b0a5e418231da80aa7762630d22",
     "/assets/data/translate.csv": "819bb30b4dca958a238856cdd60f67c000452db1",
-    "/assets/default.pck": "5374ed9c99e92d5fabd84e98251569e77d844a48",
+    "/assets/default.pck": "4b16a74282d4b6911af06d1ea4c30871d5ebfcf0",
     "/assets/empty.ogg": "5b496eaa127b8f1872d94656d84727b469f3e62f",
     "/assets/html/index.apple-touch-icon.png": "1d7d1450f43a7e460e6db0a73683ea93313c6a34",
     "/assets/html/index.audio.worklet.js": "fa4ddbcecba3dbaefaf6722b9af8e9964d42a1df",
