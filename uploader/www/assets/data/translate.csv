@@ -1,667 +1,667 @@
-﻿#,ko,en
-SystemLangTarget,한국어,English
+﻿#,ko,en,zh-CN,zh-TW,ja,es,fr,de,ru,tr,th
+SystemLangTarget,한국어,English,简体中文,繁體中文,日本語,Español,Français,Deutsch,Русский,Türkçe,ไทย
 ## Front
-HeaderLabel,브라우저앱 설치 안내,Browser app installation instructions
-UseAnyway,어쨌든 앱 실행,Run app anyway
-## Main,,
-Title,해야할 일,Todos
-NoTodo,할 일 추가하기,Add todo
-WorkerDone,할 일 완료,Todo completed
-WorkerAbandon,할 일 포기,Give up todo
-## TodoDetail,,
-Title,할 일 상세,Todo detail
-FilterCat_0,없음,None
-ColorFilterRed,빨강,Red
-ColorFilterYellow,노랑,Yellow
-ColorFilterGreen,초록,Green
-ColorFilterCyan,청록,Cyan
-ColorFilterBlue,파랑,Blue
-ColorFilterMagenta,자주,Magenta
-FilterByCreator,생성자,Creator
-Deadline,기한,Deadline
-TimeBefore,준비중,Preparing
-TimeIn,진행중,Ongoing
-TimeOut,만료됨,Expired
-Yesterday,어제까지,Until yesterday
-Today,오늘까지,Until today
-Tomorrow,내일까지,Until tomorrow
-CreatorLocal,로컬에 생성,Create locally
-CreatorMe,서버에 생성,Created on server
-Requested,지시함,Requested
-CreatorOther,지시 받음,Requested by
-AsString,문자열,Text
-InputPlaceHolder,검색어 입력,Enter search term
-Server,서버,Server
-Group,채널,Group
-StoreAt,저장 위치,Save to
-OnThisDevice,이 기기에서,On this device
-WrittenByMe,내가 작성,Written by me
-DeletedServer,서버 삭제됨,Server deleted
-Disconnected,연결 끊김,Disconnected
-TodoComplete,완료,Done
-MoveToLocal,로컬로 저장소 이전,Transfer storage locally
-RemoveFromRemote,원격 서버에 삭제요청되며 로컬에 다시 저장,A deletion request is made to the remote server and saved locally again.
-NoDeadLine,기한 없음,No deadline
-DisplayName,표시명,Display name
-DisplayName_placeholder,짧게,briefly
-CustomColor,색상,Color
-SetCustomColor,눌러서 사용자 지정,Set custom color
-CanAddToServer,서버 저장에 실패했습니다,Server save failed
-SaveAfterConnectServer,다음에 서버 연결시 적용됩니다,It will be applied the next time you connect to the server
-Importance,크기,Size
-Importance_2,커다람,Big
-Importance_1,보통,Normal
-Importance_0,작음,Small
-startFrom,시작일시,Start date
-startImmediatly,즉시 시작,Start immediately
-limit,기한,Deadline
-description,상세 내용,Description
-description_placeholder,할 일 상세 내용,Todo details
-new_draw,새 그림,New painting
-new_text,새 텍스트,New text
-user_fs,인앱 탐색기,Inapp explorer
-add_attach,가져오기,Load
-load_failed,파일 가져오기에 실패하였습니다,Failed to load file
-open_content_viewer,클릭하여 파일 뷰어에서 열기,Click to open in file viewer
-logs,기록,Logs
-remove,포기,Discard
-buttonDisplay_add,추가,Add
-buttonDisplay_modify,수정,Modify
-needDisplayName,표시명을 작성하여야 합니다,Display name must be written
-WIP,작업을 완료중입니다...,Work in progress...
-ApplyingTodo,할 일 등록,Register a to-do
-RemoveTodo,할 일 제거,Remove to-dos
-ManageWorker,작업자 관리,Manage workers
-ToggleWorkers,모든 사용자 선택,Select all users
-## Subscribes,,
-Title,채널,Channels
-myProfile,내 프로필,My profile
-RightClickChat,우클릭하여 대화 초대,Right click to invite to chat
-OnebyOneChat,1:1 대화 초대,1:1 Chat Invitation
-JoinedChannels,채널 목록,Channel List
-has_noties,검토해야할 알림이 있습니다,There are notifications to review
-NoChat,채널 생성하기,Create a channel
-noChatList,참여중인 대화가 없습니다,There are no active conversations
-noMessageHistory,기록된 메시지 없음,No messages logged
-CameraPermissionDenied,카메라 권한을 얻지 못했습니다,Failed to get camera permission
-QRScanInitFailed,스캔을 시작할 수 없음,Unable to start scan
-QRScanPlaceholder,QR코드 스캔된 결과 없음,No results from scanning QR code
-Disconnected,연결된 서버가 없습니다,No server connected
-## Community,,
-Title,게시물,Posts
-NoPosts,게시물 추가하기,Add posts
-AfterOnline,업로드 예정,Upload scheduled
-WillBeRemove,삭제될 예정,Remove scheduled
-## Arcade,,
-Title,아케이드,Arcade
-AddCustom,이 탭에서 실행,Run in this tab
-OfficialList,공식 리스트,Official list
-DediList,개인 서버로부터 리스트,List from private server
-Search,검색..,Search..
-OpeningCamera,스캔 카메라 준비중,Preparing the scan camera
-AddedCustom,이 기기에 추가됨,Added to this device
-RegAvatar,아바타,Avatar
-FromFile,파일뷰어,Viewer
-BGModeOn,백그라운드 모드를 시작합니다,Start background mode
-BGModeOff,백그라운드 모드를 종료합니다,Stop background mode
-FromLink,복사된 링크,Copied link
-InputError,파일 입력 오류,File input error
-AlertTitle,아케이드 종료,Arcade exit
-AlertMsg,실행중인 게임을 종료합니다,Quit the running game
-AlertFullscr,집중,Focus
-AlertOK,종료,Exit
-ArcadeOpened,아케이드가 실행중이어서 파일을 열람하지 못하였습니다,The file could not be opened because the arcade is running
-TryingDownload,다운로드중,Trying to download
-AlreadyUseWS,이미 연결된 서버가 있습니다,There is already a server connected
-## RegAvatar,,
-Title,사용자 아바타 설정,Set user avatar
-creator,제작자 이름,Creator name
-creator_placeholder,제작자 폴더명과 일치시킵니다,Matches the creator folder name
-infotitle,아바타 정보,Avatar info
-wrong_ext,올바르지 않은 확장자,Invalid extension
-model,아바타 이름,Avatar name
-model_placeholder,아바타 폴더명과 일치시킵니다,Matches the avatar folder name
-ApplyReg,이 캐릭터로 등록하기,Register with this character
-Registering,아바타 등록중,Registering avatar
-## AddPost,,
-Title,새 게시물,New posts
-EditTitle,게시물 편집,Edit post
-Creator,작성자,Creator
-AddNewPost,게시물 작성,Write a post
-TitlePlaceholder,게시물 제목을 입력합니다,Enter the title of the post
-ContentPlaceHolder,마크다운 양식을 지원합니다,Supports Markdown format
-Post,게시하기,Post
-MainPostImage,대표사진,Header
-NeedPostTitle,제목을 입력해주세요,Please enter the subject
-RemoveAttach,첨부파일 제거,Remove attachment
-AttachError,파일 첨부 오류,File attachment error
-WIP,게시물을 등록,Register a post
-SyncMainImage,대표이미지 등록중,Registering representative image
-SyncAttaches,첨부파일 동기화,Attachment Synchronization
-SyncErr,게시물 저장 오류,Error saving post
-NSFW,후방주의,NSFW
-NoOutLink,공개,Public
-UseOutLink,링크,Link
-OutLinkFailed,외부노출 실패,Create outlink failed
-NoPostOutLink,게시물 정보 없음,No post information
-SavingRecord,녹음을 저장중입니다,Saving the recording
-RecordVoiceTime,녹음시간 기록,Time record
-FailedToSaveVoice,녹음 저장 실패,Failed to save recording
-## PostViewer,,
-Title,게시물 뷰어,Post viewer
-CreateTime,작성일,Creation date
-ModifyTime,수정일,Modifition date
-RemovePost,게시물 삭제,Remove post
-OpenFromViewer,파일 뷰어에서 보기,View in file viewer
-CannotOpenProfile,사용자 정보를 열 수 없음,Unable to open user information
-PreparingPost,게시물 준비중,Preparing post
-ReadyToSee,준비됨,Ready
-## Settings,,
-Title,설정,Settings
-CommunityAds,개발자 광고,Developer Ads
-AdsContact,광고 문의,Ads Contact
-env_info,사용 환경,Preferences
-myInfo,내 정보,My info
-groupServer,사용자 관리,Manage user info
-useDeviceAsServer,이 기기를 기능 서버로,Use this device as a functional server
-ShowChnServer,서버 표시,Show servers
-ShowShortCutHint,단축키 힌트 표시,Show shortcut hints
-DevKit,보조 도구,Auxiliary tools
-FallbackFS,첫번째 파일 서버,First file server
-TryToFallbackFS,FFS 업로드 시도,Try with FFS
-BugReport,오류 보고,Bug Report
-ServerFiles,사용 설명서,User Manual
-InAppExplorer,인앱 탐색기,InApp Explorer
-EnginePPT,내부망 WebRTC,Internal network WebRTC
-joinDedi_placeholder,기본,Default
-admin_tools,관리자 도구,Admin tools
-ServerAdmin,서버 관리,Manage server
-admin_req_counter,서버 상태,Server status
-NotificationSetting,알림,Notifications
-batteryOptimization,배터리 최적화 제외 설정,Battery Optimization Exclusion Settings
-QRCodeBasic,사설 주소 사용,Use private address
-AppInfo,앱 정보,App info
-AppCreator,제작자,Creator
-AppTranslator,번역가,Translator
-StartPageSet,시작 페이지 설정,Set start page
-AppLanguage,언어 설정,Languages
-MainQuickLink,QRCode 초대,QRCode Invitation
-LicenseNotice,라이선스 고지,License Notice
-UserGuideLink,사용자 가이드,User guide
-Sponsorship,후원,Sponsorship
-Support,이 프로젝트를 후원합니다,Support this project
-## NotificationSettings,,
-set_alert,알림 받기,Get notifications
-set_alert_simple,알림 간소화,Simplify notifications
-set_alert_self,인앱 알림으로 전환하기,Switch to in-app notifications
-icon_mono,기본 앱 알림,Default
-diychat,Nakama 서버,Nakama server
-simplechat,광장,Square
-engineppt,엔진PPT,EnginePPT
-## Profile,,
-noname_user,이름 없는 사용자,Unnamed user
-name_placeholder,사용자 이름,Username
-at_least,최소 8자리,at least 8 digits
-user_display_name,사용자 표시명,Display name
-login_toggle,연결 시도,Connect to
-LogOut,연결 끊기,Disconnect
-upload,올리기,Upload
-remove_content,삭제,Remove
-need_email,이메일 주소를 입력해주세요,Please enter your email address
-need_password,비밀번호를 입력해주세요,Please enter a password
-user_profile_changed,사용자 프로필 변경,Change user profile
-user_image_changed,사용자 이미지 변경,Chage user image
-## OtherProfile,,
-Title,사용자 정보,User info
-add_to_group,추가,Add to group
-privacy_chat,1:1 대화,Private chat
-PromoteMember,승급,Promote
-PromoteSucc,사용자 승급,User promoted
-PromoteFailed,승급 실패,Promotion failed
-DemoteMember,강등,Demote
-DemoteSucc,사용자 강등,User Demoted
-DemoteFailed,강등 실패,Demotion failed
-kick_from_group,추방,Kick user
-added_to_group,사용자가 추가되었습니다,User added
-kicked_from_group,사용자를 내보냈습니다,User kicked
-## ChatRoom,,
-noname_chatroom,이름 없는 채널,Unnamed channel
-fetch_previous_chat,이전 기록 불러오기,Recall previous record
-unknown_ext,검토 불가,No review
-ExtSettings,채널설정,Settings
-ExtSoloImage,채널사진,Ch Pic
-BackgroundImage,배경사진,BGImg
-attachments,첨부파일,Attach
-FileLink,외부링크,Outlink
-FindingMsg,메시지를 찾는중,Looking for messages
-MsgFound,메시지 찾음,Message found
-StartVRecord,녹음을 시작합니다,Start recording
-VoiceRecord,인앱 음성 녹음,In-app voice record
-voidDraw,그림판,Paint
-newText,텍스트,Text
-Detour,우회안함,Default
-useFSS,FFS우선,tryFFS
-forceSQL,SQL강제,useSQL
-Camera,카메라,Camera
-LoadImageFromCamera,사진 불러오는중,Loading photos
-Voice,녹음하기,Mic.
-VoiceStop,중지,Stop
-VoiceChat,음성통화,Voice
-EmbedFiles,파일들,Files
-ShareToOther,채널복제,Copy
-NoCopyChannelAvailable,복제 가능한 채널이 없습니다,There are no channels available for duplication
-CopyingChats,메시지를 복제중입니다,Duplicating message
-ReadText,읽어주기,TTS
-LogOut,연결끊기,Disconn.
-RemoveHistory,기록삭제,Remove
-input_placeholder,메시지 입력...,Enter message...
-ManageChat,메시지 관리,Manage message
-EditChat,편집,Edit
-MsgEdited,편집됨,Edited
-MsgRemoved,메시지 삭제,Delete message
-cannot_open_from_mobile,모바일에서 열 수 없음,Can not open on mobile
-cannot_open_with_viewer,이 파일은 뷰어로 볼 수 없습니다,This file cannot be viewed with a viewer
-download_anyway,그래도 다운로드,Download anyway
-uploading,업로드 중,Uploading
-downloaded,다운로드,Download
-FileSaved,파일 저장,Save file
-SavingFile,파일 저장중,Saving file
-SendFile,파일 전송,File sent
-qouteMsg,답장,Reply to
-LostOriginMsg,원본 메시지를 찾을 수 없음,Original message not found
-viewer_not_support,뷰어가 지원하지 않는 파일,Files not supported by the viewer
-cannot_open_file,파일을 열람할 수 없습니다,The file cannot be viewed
-export_download,추출,Extraction
-YouReadHereLast,여기까지 읽었습니다,You've read this far
-QuickShare,이 곳을 눌러 정보를 공유받습니다,Click here to share information
-QuickShare_placeholder,정보를 공유합니다...,Will share information...
-FailedToJoinChannel,채널에 참가하지 못했습니다,Failed to join channel
-FailedToSend,발송 실패,Failed to send
-ExternalLinkFile,외부 링크 파일,External link file
-LongText,긴 글,Long text
-CreateAsTextFile,긴 메시지를 파일로 변환합니다,Convert long messages to file
-MultipleSend,여러 파일 발송,Send multiple files
-CountFile,파일 수,Number of files
-Send,발송,Send
-GoToRecent,최근 메시지 보기,Go to recent
-TalkMessage,말해주세요,Tell me
-RemoveChannel,채널 기록 삭제,Remove channel files
-CannotUndone,이 작업은 되돌릴 수 없습니다,This action cannot be undone
-RemoveChannelLogs,채널 기록을 삭제합니다,Delete channel history
-Delete,삭제,Delete
-LocalImageChanged,채널 이미지가 변경되었습니다,Channel image has been changed
-LocalImageRemoved,채널 이미지가 삭제되었습니다,Channel image has been deleted
-AlreadyRemoved,이미 정보가 삭제되었습니다,Information has already been removed
-## ContentViewer,,
-Title,파일 뷰어,File Viewer
-ContentInfo,파일 정보,File info
-FindMessage,메시지 찾기,Find message
-Edit,이미지 편집,Edit
-EditText,문서 편집,Edit text
-Download,외부에 저장,Save external
-CopyToClipboard,클립보드에 복사,Copy to clipboard
-creator,제작자,Creator
-related_creator,그 외,Related
-Filename,파일 이름,Filename
-OnLoadContent,파일을 불러오는중,Loading file
-OnFailedLoadContent,파일을 열지 못함,Cannot open file
-saveText,텍스트 파일 저장중,Saving text file
-saveFile,저장,Save
-ClickToCopy,클릭하여 URL 복사,Click to copy url
-AlreadyExist,같은 이름의 파일이 이미 있습니다,A file with the same name already exists
-OverWriteFile,파일 덮어쓰기,Overwrite files
-fileSaveFailed,파일 저장에 실패했습니다,Failed to save file
-ShareContent,다른 채널에 공유하기,Share to other channels
-FocusMode,집중 모드,Focus mode
-ChangingContent,파일 변경,Replace file to
-EndOfList,목록의 끝,End of list
-CannotEditFile,편집 불가 파일,Cannot edit file
-DownloadThisFile,파일 다운로드,Download file
-FileDownloading,다운받는 중,Downloading
-RemoveFile,파일 삭제,Remove file
-DownloadToLocal,파일 기록하기,Record files
-QuickViewerLink,빠른 진입 링크,Quick viewer link
-QuickNewWindow,우클릭으로 새 창에서 열기,Right click to open in new window
-ForceReadAsText,텍스트로 읽기 시도,Try reading it as text
-CannotOpenText,열람할 수 없는 파일입니다,This file cannot be viewed
-ReadObject,개체 정보 읽는중,Reading object information
-FailedGetBaseColor,색상 불러오기 실패,Failed to load basecolor
-FailedGetEmitColor,이미션 색상 불러오기 실패,Failed to load emit_color
-LoadMeshFailed,메쉬 불러오기 실패,Failed to load mesh
-LinkedTexFile,텍스처 파일이 내장되어있지 않음,Texture file not embedded
-NoMaterial,등록된 머터리얼 없음,No registered materials
-OnWorkReadLightMode,포인트 라이트로 대체됨,Replaced by point lights
-ReachLightLimit,빛은 최대 5개까지 등록됩니다,Up to 5 lights can be registered
-MayGimbalLock,짐벌락 현상으로 각도가 다르게 표현될 수 있음,The angle may be expressed differently due to gimbal lock phenomenon
-## MinimalChat,,
-concurrent_users,동시접속자,Concurrent users
-input_placeholder,메시지 입력...,Enter message...
-header_title_group,광장,Square
-WebTitle_group,Project: 광장,Project: Square
-Noti_Reply,답장,Reply
-TrashChat,비우기,Empty
-TrashChatLog,대화 기록을 비웁니다,Clear your conversation history
-name_me,나,Me
-name_stranger_group,참여자,Participants
-joinChat_group,광장에 참여합니다,Join the square
-user_join,사용자 참여,User joined
-user_join_comment,광장에 참여했습니다,joined the square
-user_out,사용자 떠남,User out
-user_out_comment,광장을 떠났습니다,leaved the square
-user_send_attach,파일을 보냈습니다,sent a file
-meet_someone,누군가를 만났습니다,You met someone
-leave_someone,상대방이 나갔습니다,Opponent has gone
-Noti_Greeting,인사,Greeting
-failed_to_join,채널 참가에 실패했습니다,Failed to join channel
-cannot_join,채널에 참가할 수 없습니다,Unable to join channel
-leave_chat_group,광장에서 나옵니다,You leave square
-## InstantCall,,
-Title,즉석 통화,Instant call
-Waiting,연결 대기중,Waiting for connection
-MissingInfo,연결 정보가 누락되었습니다,Connection information is missing
-Connecting,연결중,Connecting
-Connected,연결됨,Connected
-CallEnd,통화 종료,End call
-## GroupServer,,
-JoinedServerList,참여중인 서버 목록,List of participating servers
-ServerDetail,서버 정보,Server info
-RightClickDetail,서버를 우클릭하여 정보 상세,Right click on the server to view detailed information
-RemoveUnofficial,삭제,Delete
-RemoveAccount,탈퇴,Leave
-RemoveAccountReally,서버 탈퇴,Leave server
-RegisterServer,사설 서버 등록하기,Register private server
-DisplayName,표시명,Display name
-DisplayName_placeholder,사용자 사설 서버,User dedicated server
-DivisionName,구분자,Separator
-DivisionName_placeholder,표시명을 따라감,Follow display name
-Address,서버 주소,Address
-Key,서버 키,Key
-Port,Nakama 서버 포트,Nakama server port
-cdnPort,파일 서버 포트,File server port
-apachePort,아파치 서버 포트,Apache port
-SquarePort,광장 서버 포트,Square port
-WebRTCPort,WebRTC 서버 포트,WebRTC server port
-isSSL,SSL 적용여부,use SSL
-submit,등록하기,Submit
-NeedSetDIsplayName,이름을 지정해주세요,Please specify a display name
-## ServerDetail,,
-copy_scan_below,QR코드를 클릭하여 초대 주소 공유,Click the QR code to share the invitation address
-RegenWebRTC,WebRTC 서버 재구성,WebRTC 서버 재구성
-RegenWebRTCDone,WebRTC 서버 정보를 다시 구성하였습니다,Reconfigured WebRTC server information
-detailInfo,상세 정보,More information
-ApplyChangeServerInfo,적용하기,Apply
-ServerPresets,서버 사전설정,Server presets
-CreateInfo,같은 서버의 다른 주소를 미리 등록할 수 있습니다,You can pre-register other addresses of the same server
-Add,추가,Add
-## AddGroup,,
-Title,새 채널 만들기,Create new channel
-SelectServer,서버 선택,Select server
-UseLocalStorage,이 기기에 기록,Record on this device
-GroupInfo,채널 정보,Channel info
-DiffFormat,형식 오류,Different format
-DisplayName,표시명,Display name
-DisplayName_placeholder,채널 이름,Channel name
-ClicktoChangeGroupImg,눌러서 채널 이미지 설정,Click to add channel iamge
-Volatile,휘발성 채널,Volatile channel
-JoinThisGroup,채널 참여,Join
-AfterCreateGroup,채널을 생성하여 계속,Continue by creating a channel
-GroupDetail,채널 상세,Channel details
-GroupDetail_placeholder,채널 설명,Channel description
-LanguageTag,국가 태그,LangTag
-MemberMaxLimit,최대 인원,Maximum member
-IsOpen,공개 여부,is Open group
-submit,위 정보로 추가하기,Submit
-cannot_use_selected_server,선택한 서버를 사용할 수 없습니다,The selected server is unavailable
-group_created,채널이 생성되었습니다,A channel has been created
-join_group_succ,채널에 참여했습니다,Joined the channel
-check_group_id,ID를 확인해주세요,Please check the channel ID
-NeedSetGroupName,채널 이름을 작성해주세요,Please write the channel name
-AlreadyExist,이미 같은 이름의 채널이 존재합니다,A channel with the same name already exists
-UnexpectedErr,준비되지 않은 오류처리,Unexpected error occured
-## GroupDetail,,
-Title,채널 상세,Channel detail
-IsOpen,공개 여부,Public or not
-NotAcceptYet,아직 수락되지 않았습니다,Not yet accepted
-MissedGroup,더 이상 채널구성원이 아닙니다,No longer a channel member
-NoDetailGroup,설명 없는 채널,No description
-Members,채널 구성원,Members
-ChangeMaxCount,변경,Change
-FailedToChangeMax,최대 인원 변경 실패,Failed to change maximum
-FailedToChangeName,그룹 이름 변경 실패,Failed to change group name
-FailedToChangeOpen,그룹 공개 여부 변경 실패,Failed to change group visibility
-BreakupGroup,채널 해산,Breakup
-LeaveGroup,떠나기,Leave group
-GroupImageChanged,채널 이미지 변경,Change channel image
-GroupRemoved,채널 삭제됨,Channel removed
-GroupForceRemoved,채널이 강제 삭제됨,Channel was forcibly deleted
-YouAreNotCreator,채널 생성자가 아닙니다,You are not channel creator
-## Licenses,,
-open_link,열기,Open
-## QuickQRShare,,
-GroupServer,서버 정보,Server info
-Group,채널,Channel
-EmptyData,없음,Null
-success_received,적용하였습니다,Applied
-## Translator,,
-TranslatorSpeaking,번역가의 한마디,A word from the translator
-## CreatorInfo,,
-creatorComment,제작자의 한마디,A word from the maker
-contributors,프로젝트 기여자,Contributors
-thanks_to,도움주신 분들,Thanks to
-EmptyPatreons,아직 누구도 후원하지 않았습니다,No one has supported yet
-HowAboutPatreons,첫 후원자가 되어보시는건 어떨까요? :),How about becoming the first supporter? :)
-## GlobalAct,,
-CancelText,취소,Cancel
-PCClipboard,복사됨,Copied
-ClipboardCopy,클립보드에 복사중,Copying to clipboard
-ClipboardPaste,클립보드로부터 불러오는중,Loading from clipboard
-ClipboardFailed,복사 실패,Failed to copy
-variousCreator,파일 첨부,Attachments
-FromCamera,카메라로 직접 촬영,From camera
-ErrorFromCamera,촬영 실패,Failed to film
-FromVoidDraw,앱 그림판에서 작업,From in-app painter
-FromAutoLongText,긴 글 파일,Long text file
-FromTextEditor,텍스트 편집기,From text editor
-SharedContent,다른 채널로부터 공유받음,Shared from other channels
-UnknownSource,알 수 없는 출처,Unknown source
-failed_to_gen_qr,QRCode 생성 실패,QRCode generation failed
-UploadFailed,파일 서버에 업로드 실패: 요청 시간 초과,Upload to file server failed: request timed out
-FailedToReadClipboard,클립보드 읽기 실패,Failed to read clipboard
-TodoRecording,할 일에서 녹음중,Recording from To Do
-ChatRoomRecording,채팅에서 녹음중,Recording in chat
-PostRecording,게시물에서 녹음중,Recording from post
-SquareRecording,광장 채널에서 녹음중,Recording on the square channel
-CheckCdnServer,파일 업로드 시도중,Attempting to upload file
-CheckFileAddress,파일 주소를 기다리는중,Waiting for file address
-CancelingUpload,업로드 시도 우회,Attempt to upload bypass
-## IndexedDB,,
-FailedToDownloadFile,다운받기 오류,Failed to download file
-## Nakama,,
-DevTestServer,개발 테스트 서버,Development test server
-ServerAdded,서버가 추가되었습니다,Server added
-SyncingChannel,동기화중,Syncing
-AccessTestServer,테스트 서버에 연결합니다,Connect to Test server
-AlreadyHaveTargetName,이미 같은 이름의 서버가 있습니다,There already exists a server with the same name
-NeedLoginInfo,사용자 정보를 확인해주세요,Please check your user information
-NeedLinkUser,사용자를 연결해주세요,Please link user device info
-NeedAccountReset,비밀번호를 확인해주세요,Please check your password
-ServerNoti,서버 알림,Server notification
-RegisterUserSucc,서버 이용자로 등록되었습니다,You are registered as a server user
-UnexpectedLoginErr,준비되지 않은 오류 유형,Unexpected error type
-CannotOpenImg,유효한 이미지가 아닙니다,Not a valid image
-UserNotFound,만료된 알림: 사용자 없음,Notification expired: no users
-MissingFile,이 파일은 서버에서 삭제되었습니다,This file has been deleted from the server
-RemovingAccount,사용자 삭제중,Deleting user
-LogoutAccount,세션 삭제중,Deleting session
-RemovingNotification,알림 삭제중,Deleting notifications
-MissingChannels,채널 손상처리,Processing channel damage
-MissingChannelFiles,파일 이관중,Transferring file
-MissingGroups,그룹 손상처리,Processing channel group
-DeletingServerInfo,서버 정보 삭제,Delete server information
-DamagedChannel,손상된 로컬 채널,Damaged local channel
-DeletedServer,삭제된 서버,Deleted server
-GroupUserJoin,사용자 채널참여,User joined
-GroupUserOut,사용자 채널탈퇴,User leaved
-GroupUserKick,사용자 강제퇴장,User kicked
-ReqContServer,서버,Server
-ReqContUserName,사용자명,User name
-ReqContTitle,채널 참가 요청,Request to join
-ReqContAccept,수락,Accept
-ReqContReject,거절,Reject
-LocalNotiTitle,채널 참가,Join channel
-LocalNotiOK,확인,OK
-LocalNotiCheck,검토,Check
-AddChannelFailed,채널 추가 실패,Failed to add channel
-AddChannelFailed_Code3,사용자 삭제,Delete user
-FailedUpload,업로드 실패,Failed to upload
-FailedDownload,다운로드 실패,Failed to download
-FailedToAddGroup,그룹 추가 실패,Failed to add group
-SaveWebRTCServer,WebRTC 서버 정보가 저장되었습니다,WebRTC server information has been saved
-GroupAllListDone,없는 그룹 정보,There is no group
-GroupAlreadyJoined,이미 참가한 그룹,Already joined group
-SessionLogout,로그아웃됨,Logged out
-LoginAgain,이 서버에 다시 연결합니다,Reconnect to this server
-PendingLogin,연결을 시도합니다,Trying to connect
-AddNewServer,새 서버의 이름을 지정해주세요,Please specify a name for your new server
-NeedLogin,로그인해주십시오,Please log in
-NoLoginServer,연결할 서버가 없습니다,There is no server to connect to
-TryOnline,온라인 처리 시도,Online processing attempt
-## voidDraw,,
-sideSIzeIssue,캔버스의 모든 변은 0보다 커야합니다,All sides of the canvas must be greater than 0
-UseThisImage,이미지를 준비중...,Preparing image to send...
-newDraw,새 그림,New draw
-CreateNew,새로 만들기,New
-ColorpickDetail,그리기 상세 조정,Drawing detail adjustment
-ColorpickRed,빨강,Red
-ColorpickGreen,초록,Green
-ColorpickBlue,파랑,Blue
-ColorpickAlpha,투명도,Alpha
-ResolutionDetail,해상도 조정,Adjust resolution
-ResolutionRatio,비율,Ratio
-AutoResolution,항상 표시된 대로 해상도 자동 조정,Always auto-adjust res. as displayed
-width,가로,Width
-height,세로,Height
-weight,선 두께,Stroke weight
-quickSetup,빠른 설정 기본값,Quick setup defaults
-quickTransparent,투명도,ransparency
-apply,적용,Apply
-CreateChannel,새 채널 생성,Create new channel
-InputAddress,주소 입력,Input address
-ChannelIdAddress,채널id 입력,Input channel id
-ConnectToAddress,연결하기,Connect
-LocalAddrInput,주소 직접 입력하기,Enter address directly
-ServerStarted,공유 그림판 서버 켜짐,Shared paint server turned on
-Confirm,연결,Confirm
-WaitingConnection,연결을 기다리는중,Waiting for connection
-FailedToOpenServer,서버 생성 실패,Failed to create server
-Connected,연결됨,Connected
-InternalConn,직접 연결,Connect directly
-WebRTC_Waiting,WebRTC 연결 대기중,Waiting WebRTC connection
-WebRTC_Init,WebRTC 초기화중,Initialize WebRTC
-WebRTC_Offer,제의 교환중,Sharing offer
-WebRTC_datachannel,데이터채널 구성중,Configuring data channel
-WebRTC_ShareBG,배경이미지 교환중,Exchanging background images
-FailedGetBG,배경이미지 교환 실패,Background image exchange failed
-WebRTC_Reply,주소 정보 교환중,Receiving information reply
-WebRTC_Ice,ICE 정보 교환중,Exchanging ICE information
-## UserFsDir,,
-CreateFolder,폴더 생성,Create folder
-Create,생성,Create
-NeedFolderName,폴더 이름을 작성해주세요,Please write the folder name
-FailedToCreateFolder,폴더 생성 실패,Folder creation failed
-FolderName,폴더 이름 작성,Enter folder name
-AlreadyExistFolder,이미 있는 폴더,Folder that already exists
-MultipleSave,여러 파일 저장,Save multiple files
-OK,확인,OK
-ResetDB,모든 파일 삭제,Delete all files
-LoadingExplorer,준비중,Explorer
-DeleteFile,파일 삭제,Delete file
-DeleteAccept,삭제,Delete
-Action,이 파일을..,Action..
-Use,사용하기,Use
-Open,열기,Open
-Select,선택,Select
-Download,받기,Download
-Import,수입,Import
-ImportFailed,수입 실패,Import failed
-Delete,삭제,Delete
-CreateAt,생성일시,Creation date
-ImportFolder,폴더 수입,Import folder
-RemoveThisFolder,이 폴더와 하위 폴더 및 파일들을 삭제합니다,Delete this folder and subfolders and files
-RemoveApply,삭제,Remove
-OpenExtFolder,외부 저장소 보기,View external storage
-PrivateAccessDenied,사용자 정보가 포함된 파일이므로 접근이 제한됩니다 ,Access is restricted as this file contains user information
-NeedResetToApply,앱을 재시작하면 적용됩니다,Takes effect when you restart the app
-## AdminTools,,
-ArcadeSet,아케이드 설정,Arcade setting
-ArcadeListURL,리스트 주소,List URL
-ArcadeURLPlaceholder,아케이드 리스트 파일 URL,Arcade list file URL
-SuccSetArcadeURL,아케이드 리스트 변경 성공,Arcade list change successful
-FailedSetArcadeURL,아케이드 리스트 변경 실패,Failed to change arcade list
-GlobalNoti,전체알림 발송,Send all notifications
-ImageURL,이미지 URL,Image URL
-EnterURI,이미지 주소 입력,Enter image url
-NoNotiMsg,전달할 메시지를 입력해주세요,Please enter your message
-Send,발송,Send
-Requesting,정보 없음,No information
-SendFailed,발송 실패,Send failed
-isPersistent,오프라인 사용자에게도 전달,Persistent
-UserList,사용자 목록,Users
-AboutMe,나,Me
-UserCreate,생성일시,Create at
-ForceLeave,이 사용자를 삭제합니다,Delete this user
-ApplyLeave,탈퇴,Withdraw
-UserLeaved,사용자 탈퇴됨,Withdrawn
-UserLeavedFailed,사용자 탈퇴 실패,Withdrawn failed
-GroupList,그룹채널 목록,Group channels
-GroupCreator,생성자,Creator
-GroupUserCounter,그룹 인원,Group members
-ForceBreakUp,이 그룹을 해산합니다,Disband this group
-ForceBreaked,그룹 해산됨,Group breakup
-ClearFFSKey,FFS 파일 삭제,Delete FFS files
-ClearCDN,파일 일괄 삭제,Delete files in bulk
-FailedFFSClear,FFS 파일 삭제 실패,Failed to delete FFS file
-FailedClear,파일 삭제 실패,Failed to delete file
-ForceBreakedFailed,그룹 해산 실패,Breakup failed
-PromoteAsWell,승격 설정이 적용되었습니다,Promotion settings have been applied
-PromoteError,승격 설정이 이루어지지 않았습니다,Promotion settings are not established
-AlreadyAdmin,이미 관리자입니다,You are already an administrator
-## ShareContentToOther,,
-Title,파일 공유하기,Share file
-NoChannelToShare,가용 채널이 없습니다,No channels available
-AvailableChannels,공유 가능한 채널,Shareable channels
-## ContentInfo,,
-WorkLogs,작업 기록,Work logs
-LastPost,최종 게시자,Last post by
-TimeAt,일시,Date
-WorkHistory,이전 작업 기록,Previous work history
-FileSize,파일 크기,File size
-SourceFrom,출처,Source
-Publisher,게시자,Publisher
-CloseModal,닫기,Close
-## QuickShareReview,,
-Title,빠른 공유 검토,Quick share review
-Servers,서버,Servers
-Channels,채널,Channel
-QuickShareGrant,이 정보를 공유받기,Get this information shared
-ApplyChecked,선택한 정보를 적용,Apply selected information
-## WebRTCDevManager,,
-Title,WebRTC 관리,Manage WebRTC
-VideoIn,비디오 입력 장치,Video input
-AudioIn,오디오 입력 장치,Audio input
-AudioOut,오디오 출력 장치,Audio output
-saveSetup,설정 저장하기,Save setting
-IgnoreSave,서버 정보를 입력해주세요,Please enter server information
-InitErr,초기화 실패,Failed to initialize
-AlreadyCalling,다른 통화가 진행중입니다,Another call is in progress
-ManageServer,서버 관리,Manage servers
-Modify,서버 정보 수정,Modify server info
-Remove,서버 정보 삭제,Remove server info
-AddServer,가용 서버 추가,Add available servers
-ServerInfo,서버 정보,Server info
-Urls,주소,Urls
-Username,사용자명,Username
-Credential,인증,credential
-Save,저장하기,Save
-NoRegServer,등록된 서버가 없습니다,There are no registered servers
-SecurityError,보안상 동작 불가,Impossible to operate due to security reasons
+HeaderLabel,브라우저앱 설치 안내,Browser app installation instructions,浏览器应用安装指南,瀏覽器應用安裝指南,ブラウザアプリインストールガイド,Instrucciones de instalación de la aplicación del navegador,Instructions d'installation de l'application du navigateur,Browser-App-Installationsanweisungen,Инструкции по установке браузерного приложения,Brauzer uygulaması kurulum talimatları,คำแนะนำในการติดตั้งแอปเบราว์เซอร์
+UseAnyway,어쨌든 앱 실행,Run app anyway,无论如何运行应用,無論如何運行應用,アプリを実行する,Ejecutar la aplicación de todos modos,Exécuter l'application de toute façon,App trotzdem ausführen,Запустить приложение в любом случае,Uygulamayı yine de çalıştırın,เรียกใช้แอปพลิเคชันต่อไป
+## Main
+Title,해야할 일,Todos,待办事项,待辦事項,やること,Lista de tareas,À faire,Aufgaben,Дела,To-dos,Yapılacaklar,สิ่งที่ต้องทำ
+NoTodo,할 일 추가하기,Add todo,添加待办事项,添加待辦事項,TODOを追加,Agregar tarea,Ajouter une tâche,Aufgabe hinzufügen,Добавить задачу,Ekle,เพิ่มงาน
+WorkerDone,할 일 완료,Todo completed,任务完成,任務完成,タスク完了,Tarea completada,Tâche terminée,Aufgabe abgeschlossen,Задача выполнена,Görev tamamlandı,งานเสร็จ
+WorkerAbandon,할 일 포기,Give up todo,放弃任务,放棄任務,タスクを放棄,Abandonar tarea,Abandonner la tâche,Aufgabe aufgeben,Отказаться от задачи,Görevden vazgeç,ยกเลิกงาน
+## TodoDetail
+Title,할 일 상세,Todo detail,任务详情,任務詳情,タスクの詳細,Detalles de la tarea,Détails de la tâche,Aufgabendetails,Детали задачи,Görev detayı,รายละเอียดงาน
+FilterCat_0,없음,None,无,None,なし,Ninguno,Aucun,Keine,Нет,Ninguno,ไม่มี
+ColorFilterRed,빨강,Red,红色,紅色,赤,Rojo,Rouge,Rot,Красный,Kırmızı,แดง
+ColorFilterYellow,노랑,Yellow,黄色,黃色,黄色,Amarillo,Jaune,Gelb,Желтый,Sarı,เหลือง
+ColorFilterGreen,초록,Green,绿色,綠色,緑,Verde,Vert,Grün,Зеленый,Yeşil,เขียว
+ColorFilterCyan,청록,Cyan,青色,青色,シアン,Cian,Cyan,Türkis,Голубой,Camgöbeği,ฟ้า
+ColorFilterBlue,파랑,Blue,蓝色,藍色,青,Azul,Bleu,Blau,Синий,Mavi,น้ำเงิน
+ColorFilterMagenta,자주,Magenta,洋红,洋紅,マゼンタ,Magenta,Magenta,Magenta,Пурпурный,Mor,ม่วง
+FilterByCreator,생성자,Creator,创建者,創建者,作成者,Creador,Créateur,Ersteller,Создатель,Yaratıcı,ผู้สร้าง
+Deadline,기한,Deadline,截止日期,截止日期,締切日,Plazo,Ligne de fin,Frist,Срок,Son teslim,กำหนดเวลา
+TimeBefore,준비중,Preparing,准备中,準備中,準備中,Preparando,En préparation,Vorbereitung,Подготовка,Hazırlıkta,กำลังเตรียม
+TimeIn,진행중,Ongoing,进行中,進行中,進行中,En curso,En cours,Laufend,В процессе,Devam ediyor,กำลังดำเนินการ
+TimeOut,만료됨,Expired,已过期,已過期,期限切れ,Vencido,Expiré,Abgelaufen,Истек,Sonuçlandı,หมดอายุ
+Yesterday,어제까지,Until yesterday,直到昨天,直到昨天,昨日まで,Hasta ayer,Jusqu'à hier,Bis gestern,До вчерашнего дня, Dün'e kadar,เมื่อวานนี้
+Today,오늘까지,Until today,直到今天,直到今天,今日まで,Hasta hoy,Jusqu'à aujourd'hui,Bis heute,До сегодняшнего дня, Bugün'e kadar,จนถึงวันนี้
+Tomorrow,내일까지,Until tomorrow,直到明天,直到明天,明日まで,Hasta mañana,Jusqu'à demain,Bis morgen,До завтра,Yarın'a kadar,พรุ่งนี้
+CreatorLocal,로컬에 생성,Create locally,本地创建,本地創建,ローカルで作成,Crear localmente,Créer localement,Lokal erstellen,Создано локально,Yerel olarak oluştur,สร้างในเครื่อง
+CreatorMe,서버에 생성,Created on server,在服务器上创建,在伺服器上創建,サーバーで作成,Creado en el servidor,Créé sur le serveur,Auf dem Server erstellt,Создано на сервере,Sunucuda oluştur,สร้างบนเซิร์ฟเวอร์
+Requested,지시함,Requested,已请求,已請求,依頼済み,Solicitado,Demande,Angefordert,Запрашиваемый,Talep edildi,คำขอ
+CreatorOther,지시 받음,Requested by,由...请求,由...請求,依頼された,Solicitado por,Demande de,Angefordert von,Запрашиваемо,İstenilen,คำขอจาก
+AsString,문자열,Text,文本,文本,テキスト,Texto,Texte,Text,Текст,Metin,ข้อความ
+InputPlaceHolder,검색어 입력,Enter search term,输入搜索词,輸入搜尋詞,検索語句,Introduzca término de búsqueda,Entrez un terme de recherche,Geben Sie Suchbegriff ein,Введите поисковый запрос,Arama terimi girin,ป้อนคำค้นหา
+Server,서버,Server,服务器,伺服器,サーバー,Servidor,Serveur,Server,Сервер,Sunucu,เซิร์ฟเวอร์
+Group,채널,Group,频道,頻道,グループ,Grupo,Groupe,Gruppe,Группа,Grup,กลุ่ม
+StoreAt,저장 위치,Save to,保存到,保存到,保存先,Guardar en,Enregistrer dans,Speichern unter,Сохранить в,Kaydet,บันทึกไปยัง
+OnThisDevice,이 기기에서,On this device,在此设备上,在此設備上,このデバイス上で,En este dispositivo,Sur cet appareil,Auf diesem Gerät,На этом устройстве,Bu cihazda,Cihazนี้
+WrittenByMe,내가 작성,Written by me,由我编写,由我編寫,私が作成,Escrito por mí,Écrit par moi,Von mir geschrieben,Написано мной,Ben yazdım,เขียนโดยฉัน
+DeletedServer,서버 삭제됨,Server deleted,服务器已删除,伺服器已刪除,サーバーが削除されました,Servidor eliminado,Serveur supprimé,Server gelöscht,Сервер удален,Sunucu silindi,เซิร์ฟเวอร์ถูกลบ
+Disconnected,연결 끊김,Disconnected,已断开,已斷開,切断,Desconectado,Déconnecté,Getrennt,Отключено,Bağlantı kesildi,การเชื่อมต่อถูกตัด
+TodoComplete,완료,Done,完成,完成,完了,Hecho,Terminé,Fertig,Завершено,Tamamlandı,เสร็จแล้ว
+MoveToLocal,로컬로 저장소 이전,Transfer storage locally,将存储转移到本地,將儲存轉移到本地,ローカルに保存先を移動,Transferir almacenamiento localmente,Transférer le stockage localement,Lokal speichern,Переносить на локальный,Veri yerel olarak taşınacak,ย้ายที่เก็บไปยังท้องถิ่น
+RemoveFromRemote,원격 서버에 삭제요청되며 로컬에 다시 저장,A deletion request is made to the remote server and saved locally again.,向远程服务器发出删除请求并再次保存到本地,向遠程伺服器發出刪除請求並再次儲存到本地,リモートサーバーに削除要求がされ、再度ローカルに保存されます,Se realiza una solicitud de eliminación al servidor remoto y se guarda localmente de nuevo,Une demande de suppression est envoyée au serveur distant et enregistrée localement à nouveau,Eine Löschanforderung wird an den Remote-Server gesendet und erneut lokal gespeichert,Запрос на удаление отправлен на удаленный сервер, и данные снова сохраняются локально,Uzaktan sunucuya silme isteği yapılır ve yerel olarak yeniden kaydedilir,คำขอลบถูกส่งไปยังเซิร์ฟเวอร์ระยะไกลและบันทึกอีกครั้งในเครื่อง
+NoDeadLine,기한 없음,No deadline,无截止日期,無截止日期,期限なし,Sin fecha límite,Pas de délai,Kein Termin,Без срока,Son tarih yok,ไม่มีเส้นตาย
+DisplayName,표시명,Display name,显示名称,顯示名稱,表示名,Nombre para mostrar,Nom affiché,Anzeigename,Отображаемое имя,Görünen ad,ชื่อที่แสดง
+DisplayName_placeholder,짧게,briefly,简短,簡短,短く,Brevemente,Brèvement,Kurz,Кратко,Kısa,สั้นๆ
+CustomColor,색상,Color,颜色,顏色,色,Color,Couleur,Farbe,Цвет,Renk,สี
+SetCustomColor,눌러서 사용자 지정,Set custom color,点击设置自定义颜色,點擊設置自定義顏色,カスタムカラーを設定,Establecer color personalizado,Définir la couleur personnalisée,Benutzerdefinierte Farbe festlegen,Установить пользовательский цвет,Renk özelleştir,ตั้งค่าสีที่กำหนดเอง
+CanAddToServer,서버 저장에 실패했습니다,Server save failed,服务器保存失败,伺服器儲存失敗,サーバーの保存に失敗しました,Fallo al guardar en el servidor,Échec de l'enregistrement sur le serveur,Fehler beim Speichern auf dem Server,Не удалось сохранить на сервере,Sunucuya kaydetme başarısız oldu,การบันทึกไปยังเซิร์ฟเวอร์ล้มเหลว
+SaveAfterConnectServer,다음에 서버 연결시 적용됩니다,It will be applied the next time you connect to the server,下次连接服务器时应用,下次連接伺服器時應用,次回サーバー接続時に適用されます,Se aplicará la próxima vez que te conectes al servidor,Il sera appliqué lors de la prochaine connexion au serveur,Es wird beim nächsten Verbinden mit dem Server angewendet,Будет применено при следующем подключении к серверу,Sunucuya bir sonraki bağlantınızda uygulanacaktır,จะถูกใช้เมื่อเชื่อมต่อกับเซิร์ฟเวอร์ครั้งหน้า
+Importance,크기,Size,大小,大小,サイズ,Tamaño,Taille,Größe,Размер,Boyut,ขนาด
+Importance_2,커다람,Big,大,大,大,Grande,Grand,Groß,Большой,Büyük,ใหญ่
+Importance_1,보통,Normal,正常,正常,通常,Normal,Normal,Normal,Обычный,Normal,ปกติ
+Importance_0,작음,Small,小,小,小,Pequeño,Petit,Klein,Маленький,Küçük,เล็ก
+startFrom,시작일시,Start date,开始日期,開始日期,開始日,Fecha de inicio,Date de début,Startdatum,Дата начала,Başlangıç tarihi,วันที่เริ่มต้น
+startImmediatly,즉시 시작,Start immediately,立即开始,立即開始,即時開始,Comenzar inmediatamente,Démarrer immédiatement,Sofort starten,Начать немедленно,Hemen başla,เริ่มทันที
+limit,기한,Deadline,截止日期,截止日期,締切日,Plazo,Ligne de fin,Frist,Срок,Son teslim,กำหนดเวลา
+description,상세 내용,Description,描述,描述,詳細,Descripción,Description,Beschreibung,Описание,Açıklama,คำอธิบาย
+description_placeholder,할 일 상세 내용,Todo details,待办事项详情,待辦事項詳情,タスク詳細,Detalles de la tarea,Détails de la tâche,Aufgabendetails,Детали задачи,Görev detayları,รายละเอียดงาน
+new_draw,새 그림,New painting,新画作,新畫作,新しい絵,Nueva pintura,Nouvelle peinture,Neue Malerei,Новая картина,Yeni resim,ภาพวาดใหม่
+new_text,새 텍스트,New text,新文本,新文字,新しいテキスト,Texto nuevo,Nouveau texte,Neuer Text,Новый текст,Yeni metin,ข้อความใหม่
+user_fs,인앱 탐색기,Inapp explorer,应用内浏览器,應用內瀏覽器,アプリ内エクスプローラー,Explorador en la aplicación,Explorateur dans l'application,In-App-Explorer,Встроенный проводник,İç uygulama gezgini,ตัวสำรวจในแอป
+add_attach,가져오기,Load,加载,載入,読み込む,Cargar,Charger,Laden,Загрузить,Yükle,โหลด
+load_failed,파일 가져오기에 실패하였습니다,Failed to load file,加载文件失败,載入檔案失敗,ファイルの読み込みに失敗しました,No se pudo cargar el archivo,Échec du chargement du fichier,Fehler beim Laden der Datei,Не удалось загрузить файл,Dosya yüklenemedi,ไม่สามารถโหลดไฟล์ได้
+open_content_viewer,클릭하여 파일 뷰어에서 열기,Click to open in file viewer,点击在文件查看器中打开,點擊在文件查看器中打開,ファイルビューアで開くにはクリック,Haz clic para abrir en el visor de archivos,Cliquez pour ouvrir dans le visualiseur de fichiers,Klicken Sie, um im Datei-Viewer zu öffnen,Нажмите, чтобы открыть в просмотрщике файлов,Dosyayı görüntüleyiciye açmak için tıklayın,คลิกเพื่อเปิดในตัวดูไฟล์
+logs,기록,Logs,日志,日誌,ログ,Registros,Logs,Protokolle,Журналы,Kaydedilenler,บันทึก
+remove,포기,Discard,丢弃,丟棄,破棄,Descartar,Ignorer,Entfernen,Удалить,Sil,ลบ
+buttonDisplay_add,추가,Add,添加,添加,追加,Agregar,Ajouter,Hinzufügen,Добавить,Ekle,เพิ่ม
+buttonDisplay_modify,수정,Modify,修改,修改,修正,Modificar,Modifier,Ändern,Изменить,Değiştir,แก้ไข
+needDisplayName,표시명을 작성하여야 합니다,Display name must be written,必须填写显示名称,必須填寫顯示名稱,表示名を入力してください,El nombre para mostrar debe ser escrito,Le nom affiché doit être écrit,Der Anzeigename muss geschrieben werden,Отображаемое имя должно быть указано,Adınız girilmelidir,Gต้องกรอกชื่อที่แสดง
+WIP,작업을 완료중입니다...,Work in progress...,工作进行中...,工作進行中...,作業中...,Trabajo en progreso...,Travaux en cours...,Arbeiten im Gange...,Работа в процессе...,Çalışma devam ediyor...,กำลังดำเนินการ...
+ApplyingTodo,할 일 등록,Register a to-do,注册待办事项,註冊待辦事項,TODOを登録,Registrar una tarea,Enregistrer une tâche,Todo eintragen,Зарегистрировать задачу,To-do kaydı yapılacak,กำหนดงาน
+RemoveTodo,할 일 제거,Remove to-dos,移除待办事项,移除待辦事項,TODOを削除,Eliminar tarea,Retirer la tâche,Aufgabe entfernen,Удалить задачу,To-do'yu kaldır,ลบงาน
+ManageWorker,작업자 관리,Manage workers,管理工作者,管理工作者,作業者を管理,Administrar trabajadores,Gérer les travailleurs,Arbeiter verwalten,Управление работниками,Çalışanları yönet,จัดการคนงาน
+ToggleWorkers,모든 사용자 선택,Select all users,选择所有用户,選擇所有用戶,全てのユーザーを選択,Seleccionar todos los usuarios,Sélectionner tous les utilisateurs,Alle Benutzer auswählen,Выбрать всех пользователей,Tüm kullanıcıları seç,เลือกผู้ใช้ทั้งหมด
+## Subscribes
+Title,채널,Channels,频道,頻道,チャンネル,Canales,Chaînes,Kanäle,Каналы,Kanallar,ช่องทาง
+myProfile,내 프로필,My profile,我的个人资料,我的個人資料,マイプロフィール,Mi perfil,Mon profil,Mein Profil,Мой профиль,Profilim,โปรไฟล์ของฉัน
+RightClickChat,우클릭하여 대화 초대,Right click to invite to chat,右键点击以邀请聊天,右鍵點擊以邀請聊天,右クリックしてチャットに招待,Haz clic derecho para invitar al chat,Clic droit pour inviter au chat,Rechtsklick, um zum Chat einzuladen,Щелкните правой кнопкой мыши, чтобы пригласить в чат,Sağ tıklayıp sohbet davet et,คลิกขวาเพื่อเชิญไปแชท
+OnebyOneChat,1:1 대화 초대,1:1 Chat Invitation,一对一聊天邀请,一對一聊天邀請,1対1チャットの招待,Invitación a chat 1:1,Invitation 1:1,1:1-Chat-Einladung,Приглашение в чат 1:1,1'e 1 Sohbet Daveti,เชิญแชท 1:1
+JoinedChannels,채널 목록,Channel List,加入的频道列表,加入的頻道列表,参加しているチャンネル一覧,Lista de canales,Liste des chaînes,Kanal Liste,Список каналов,Katıldığım Kanallar,รายการช่องที่เข้าร่วม
+has_noties,검토해야할 알림이 있습니다,There are notifications to review,有待审核的通知,有待審核的通知,確認すべき通知があります,Hay notificaciones para revisar,Il y a des notifications à examiner,Es gibt Benachrichtigungen zu überprüfen,Есть уведомления для проверки,İncelenmesi gereken bildirimler var,มีการแจ้งเตือนที่ต้องตรวจสอบ
+NoChat,채널 생성하기,Create a channel,创建频道,創建頻道,チャンネルを作成,Crear canal,Créer un canal,Channel erstellen,Создать канал,Kanallar oluştur,สร้างช่องทาง
+noChatList,참여중인 대화가 없습니다,There are no active conversations,没有参与的对话,沒有參與的對話,参加中の会話はありません,No hay conversaciones activas,Il n'y a pas de conversations actives,Keine aktiven Konversationen,Нет активных разговоров,Aktif sohbet yok,ไม่มีการสนทนาที่เปิดอยู่
+noMessageHistory,기록된 메시지 없음,No messages logged,没有记录的消息,沒有記錄的消息,記録されたメッセージはありません,No hay mensajes registrados,Aucun message enregistré,Keine Nachrichten aufgezeichnet,Нет сообщений,Henüz mesaj kaydı yok,ไม่มีข้อความที่บันทึกไว้
+CameraPermissionDenied,카메라 권한을 얻지 못했습니다,Failed to get camera permission,未能获得相机权限,未能獲得相機權限,カメラの権限を取得できませんでした,No se pudo obtener el permiso de cámara,Échec de l'obtention de l'autorisation de la caméra,Konnte keine Kamera-Berechtigung erhalten,Не удалось получить разрешение на камеру,Telefon kamerasına izin alınamadı,ไม่สามารถขออนุญาตกล้อง
+QRScanInitFailed,스캔을 시작할 수 없음,Unable to start scan,无法启动扫描,無法啟動掃描,スキャンを開始できません,No se pudo iniciar el escaneo,Impossible de démarrer l'analyse,Scan konnte nicht gestartet werden,Не удалось начать сканирование,Tarama başlatılamadı,ไม่สามารถเริ่มการสแกน
+QRScanPlaceholder,QR코드 스캔된 결과 없음,No results from scanning QR code,扫描二维码无结果,掃描QR碼無結果,QRコードのスキャン結果がありません,No hay resultados del escaneo de código QR,Pas de résultats du scan du QR code,Keine Ergebnisse aus dem QR-Code-Scan,Нет результатов сканирования QR-кода,QR kodu taraması sonucu yok,ไม่มีผลลัพธ์จากการสแกน QR โค้ด
+Disconnected,연결된 서버가 없습니다,No server connected,没有连接的服务器,沒有連接的伺服器,接続されたサーバーはありません,No hay servidor conectado,Aucun serveur connecté,Kein Server verbunden,Нет подключенного сервера,Sunucuya bağlanılmadı,ไม่มีเซิร์ฟเวอร์ที่เชื่อมต่อ
+## Community
+Title,게시물,Posts,帖子,貼文,投稿,Publicaciones,Publications,Beiträge,Посты,Paylaşımlar,โพสต์
+NoPosts,게시물 추가하기,Add posts,添加帖子,添加貼文,投稿を追加,Agregar publicaciones,Ajouter des publications,Beiträge hinzufügen,Добавить посты,Paylaşım ekle,เพิ่มโพสต์
+AfterOnline,업로드 예정,Upload scheduled,预定上传,預定上傳,アップロード予定,Subida programada,Téléchargement programmé,Upload geplant,Запланирована загрузка,Planlanan yükleme,กำหนดการอัปโหลด
+WillBeRemove,삭제될 예정,Remove scheduled,将被删除,將被刪除,削除予定,Eliminación programada,Suppression programmée,Entfernen geplant,Запланировано удаление,Silinecek,การลบที่กำหนดไว้
+## Arcade
+Title,아케이드,Arcade,街机,街機,アーケード,Arcade,Arcade,Arcade,Аркада,Arka,อาร์เคด
+AddCustom,이 탭에서 실행,Run in this tab,在此标签页运行,在此標籤頁運行,このタブで実行,Ejecutar en esta pestaña,Exécuter dans cet onglet,In diesem Tab ausführen,In dieser Registerkarte ausführen,Bu sekmede çalıştır,เรียกใช้ในแท็บนี้
+OfficialList,공식 리스트,Official list,官方列表,官方列表,公式リスト,Lista oficial,Liste officielle,Offizielle Liste,Официальный список,Resmi liste,รายการอย่างเป็นทางการ
+DediList,개인 서버로부터 리스트,List from private server,来自私人服务器的列表,來自私人伺服器的列表,プライベートサーバーからのリスト,Lista de servidor privado,Liste du serveur privé,Liste vom privaten Server,Список с частного сервера,Özel sunucudan liste,รายการจากเซิร์ฟเวอร์ส่วนตัว
+Search,검색..,Search..,搜索..,搜尋..,検索..,Buscar..,Rechercher..,Suchen..,Поиск..,Ara..,ค้นหา..
+OpeningCamera,스캔 카메라 준비중,Preparing the scan camera,准备扫描相机,準備掃描相機,スキャンカメラを準備中,Preparando la cámara de escaneo,Préparation de la caméra de scan,Scan-Kamera wird vorbereitet,Подготовка камеры для сканирования,Tarama kamerası hazırlanıyor,กำลังเตรียมกล้องสแกน
+AddedCustom,이 기기에 추가됨,Added to this device,已添加到此设备,已添加到此設備,このデバイスに追加されました,Añadido a este dispositivo,Ajouté à cet appareil,Zu diesem Gerät hinzugefügt,Добавлено на это устройство,Ekleme yapıldı,เพิ่มไปยังอุปกรณ์นี้
+RegAvatar,아바타,Avatar,头像,頭像,アバター,Avatar,Avatar,Avatar,Аватар,Avatar,อวาตาร์
+FromFile,파일뷰어,Viewer,文件查看器,檔案查看器,ファイルビューア,Visor de archivos,Visionneuse de fichiers,Datei-Viewer,Просмотрщик файлов,Dosya görüntüleyici,ตัวดูไฟล์
+BGModeOn,백그라운드 모드를 시작합니다,Start background mode,启动后台模式,啟動背景模式,バックグラウンドモードを開始します,Iniciar el modo en segundo plano,Démarrer le mode arrière-plan,Den Hintergrundmodus starten,Hãy bắt đầu chế độ nền,เริ่มโหมดพื้นหลัง
+BGModeOff,백그라운드 모드를 종료합니다,Stop background mode,停止后台模式,停止背景模式,バックグラウンドモードを停止します,Detener el modo en segundo plano,Arrêter le mode arrière-plan,Den Hintergrundmodus stoppen,Остановить фоновый режим,Arka plan modunu durdur,หยุดโหมดพื้นหลัง
+FromLink,복사된 링크,Copied link,复制的链接,複製的連結,コピーされたリンク,Enlace copiado,Lien copié,Link kopiert,Скопированная ссылка,Kopyalanan bağlantı,ลิงก์ที่คัดลอก
+InputError,파일 입력 오류,File input error,文件输入错误,檔案輸入錯誤,ファイル入力エラー,Error de entrada de archivo,Erreur d'entrée de fichier,Dateifehler,Ошибка ввода файла,Dosya giriş hatası,ข้อผิดพลาดในการป้อนไฟล์
+AlertTitle,아케이드 종료,Arcade exit,退出街机,退出街機,アーケード終了,Salir de Arcade,Sortie d'Arcade,Arcade beenden,Выход из аркады,Arka çıkışı,ออกจากอาร์เคด
+AlertMsg,실행중인 게임을 종료합니다,Quit the running game,退出正在运行的游戏,退出正在運行的遊戲,実行中のゲームを終了します,Salir del juego en ejecución,Quitter le jeu en cours,Beenden des laufenden Spiels,Закрыть запущенную игру,Çalışan oyunu kapat,ออกจากเกมที่กำลังเล่น
+AlertFullscr,집중,Focus,专注,專注,フォーカス,Enfoque,Focalisation,Fokus,Фокус,Odaklan,โฟกัส
+AlertOK,종료,Exit,退出,退出,終了,Salir,Quitter,Beenden,Выход,Çık,ออก
+ArcadeOpened,아케이드가 실행중이어서 파일을 열람하지 못하였습니다,The file could not be opened because the arcade is running,由于街机正在运行，无法打开文件,由於街機正在運行，無法打開檔案,アーケードが実行中のため、ファイルを開くことができませんでした,No se pudo abrir el archivo porque el arcade está en ejecución,Le fichier n'a pas pu être ouvert car l'arcade est en cours d'exécution,Die Datei konnte nicht geöffnet werden, da das Arcade läuft,Файл не может быть открыт, так как аркада запущена,Arcade çalışırken dosya açılamaz,ไม่สามารถเปิดไฟล์ได้เนื่องจากอาร์เคดกำลังทำงาน
+TryingDownload,다운로드중,Trying to download,正在尝试下载,正在嘗試下載,ダウンロード中,Intentando descargar,Essayer de télécharger,Versuch, herunterzuladen,Попытка скачать,İndirilmeye çalışılıyor,กำลังพยายามดาวน์โหลด
+AlreadyUseWS,이미 연결된 서버가 있습니다,There is already a server connected,已经连接服务器,已連接伺服器,すでにサーバーが接続されています,Yá hay un servidor conectado,Un serveur est déjà connecté,Es gibt bereits einen verbundenen Server,Сервер уже подключен,Zaten bağlanmış bir sunucu var,มีเซิร์ฟเวอร์ที่เชื่อมต่ออยู่แล้ว
+## RegAvatar
+Title,사용자 아바타 설정,Set user avatar,设置用户头像,設置用戶頭像,ユーザーアバターを設定,Configurar avatar de usuario,Définir l'avatar de l'utilisateur,Benutzer-Avatar einstellen,Установить аватар пользователя,Profil resmi ayarla,ตั้งค่าอวาตาร์ผู้ใช้
+creator,제작자 이름,Creator name,创作者名称,創作者名稱,制作者名,Nombre del creador,Nom du créateur,Erstellername,Имя создателя,Yaratıcı adı,ชื่อผู้สร้าง
+creator_placeholder,제작자 폴더명과 일치시킵니다,Matches the creator folder name,与创作者文件夹名匹配,與創作者資料夾名稱匹配,作成者フォルダ名と一致,Coincide con el nombre de la carpeta del creador,Correspond au nom du dossier du créateur,Entspricht dem Erstellernamen,Соответствует имени папки создателя,Eşleşir, oluşturucu klasör adıyla,ตรงกับชื่อโฟลเดอร์ผู้สร้าง
+infotitle,아바타 정보,Avatar info,头像信息,頭像信息,アバター情報,Información del avatar,Informations sur l'avatar,Avatar-Informationen,Информация об аватаре,Avatar bilgisi,ข้อมูลอวาตาร์
+wrong_ext,올바르지 않은 확장자,Invalid extension,无效的扩展名,無效的擴展名,無効な拡張子,Extensión no válida,Extension invalide,Ungültige Erweiterung,Неверное расширение,Geçersiz uzantı,นามสกุลไม่ถูกต้อง
+model,아바타 이름,Avatar name,头像名称,頭像名稱,アバター名,Nombre del avatar,Nom de l'avatar,Avatar-Name,Имя аватара,Avatar adı,ชื่ออวาตาร์
+model_placeholder,아바타 폴더명과 일치시킵니다,Matches the avatar folder name,与头像文件夹名匹配,與頭像資料夾名稱匹配,アバターフォルダ名と一致,Coincide con el nombre de la carpeta del avatar,Correspond au nom du dossier de l'avatar,Entspricht dem Avatar-Ordnernamen,Соответствует имени папки аватара,Avatar klasörü adıyla eşleşir,ตรงกับชื่อโฟลเดอร์อวาตาร์
+ApplyReg,이 캐릭터로 등록하기,Register with this character,使用此角色注册,使用此角色註冊,このキャラクターで登録,Registrar con este personaje,Enregistrer avec ce personnage,Mit diesem Charakter registrieren,Зарегистрировать с этим персонажем,Bu karakterle kaydol,ลงทะเบียนกับตัวละครนี้
+Registering,아바타 등록중,Registering avatar,正在注册头像,正在註冊頭像,アバター登録中,Registrando avatar,Enregistrement de l'avatar,Avatar wird registriert,Регистрируется аватар,Avatar kaydediliyor,กำลังลงทะเบียนอวาตาร์
+## AddPost
+Title,새 게시물,New posts,Nuevo帖子,全新帖子,新しい投稿,Publicaciones nuevas,Nouveaux posts,Neue Beiträge,Новые посты,Yeni gönderiler,โพสต์ใหม่
+EditTitle,게시물 편집,Edit post,编辑帖子,編輯帖子,投稿を編集,Editar publicación,Éditer le post,Beitrag bearbeiten,Редактировать пост,Düzenle,แก้ไขโพสต์
+Creator,작성자,Creator,创建者,創建者,作成者,Creador,Créateur,Ersteller,Создатель,Yaratıcı,ผู้เขียน
+AddNewPost,게시물 작성,Write a post,写帖子,寫貼文,投稿を書く,Escribir una publicación,Écrire un post,Beitrag schreiben,Написать пост,Post yaz,เขียนโพสต์
+TitlePlaceholder,게시물 제목을 입력합니다,Enter the title of the post,请输入帖子标题,請輸入帖子標題,投稿のタイトルを入力,Introduce el título del post,Entrez le titre de la publication,Beitragstitel eingeben,Введите заголовок поста,Post başlığını girin,กรุณากรอกหัวข้อโพสต์
+ContentPlaceHolder,마크다운 양식을 지원합니다,Supports Markdown format,支持Markdown格式,支援Markdown格式,Markdown形式に対応,Admite formato Markdown,Prend en charge le format Markdown,Unterstützt Markdown-Format,Поддерживает формат Markdown,Markdown formatını destekler,รองรับรูปแบบ Markdown
+Post,게시하기,Post,发布,發布,投稿,Publicar,Publier,Beitrag veröffentlichen,Опубликовать,Paylaş,โพสต์
+MainPostImage,대표사진,Header,主图,主圖,ヘッダー,Encabezado,En-tête,Kopfzeile,Основное изображение,Üst resim,หัวเรื่อง
+NeedPostTitle,제목을 입력해주세요,Please enter the subject,请输入标题,請輸入標題,タイトルを入力してください,Por favor ingresa el título,Veuillez entrer le titre,Bitte geben Sie den Titel ein,Введите заголовок,Başlık girin,กรุณากรอกหัวข้อ
+RemoveAttach,첨부파일 제거,Remove attachment,移除附件,移除附件,添付ファイルを削除,Eliminar archivo adjunto,Retirer la pièce jointe,Anhang entfernen,Удалить вложение,Ek ekini kaldır,ลบไฟล์แนบ
+AttachError,파일 첨부 오류,File attachment error,文件附件错误,檔案附件錯誤,ファイル添付エラー,Error de adjunto de archivo,Erreur de pièce jointe,Dateianhang-Fehler,Ошибка прикрепления файла,Dosya ekleme hatası,ข้อผิดพลาดในการแนบไฟล์
+WIP,게시물을 등록,Register a post,注册帖子,註冊貼文,投稿を登録,Registrar publicación,Enregistrer un post,Beitrag registrieren,Регистрация поста,Post kaydetme,ลงทะเบียนโพสต์
+SyncMainImage,대표이미지 등록중,Registering representative image,正在注册代表图片,正在註冊代表圖片,代表画像を登録中,Registrando imagen representativa,Enregistrement de l'image représentative,Vertreterbild wird registriert,Регистрация основного изображения,Temsilci resmini kaydediyor,กำลังลงทะเบียนภาพตัวแทน
+SyncAttaches,첨부파일 동기화,Attachment Synchronization,附件同步,附件同步,添付ファイルの同期,Sincronización de archivos adjuntos,Synchronisation des pièces jointes,Anhang-Synchronisierung,Синхронизация вложений,Ekleri senkronize etme,กำลังซิงโครไนซ์ไฟล์แนบ
+SyncErr,게시물 저장 오류,Error saving post,保存帖子时出错,保存帖子時出錯,投稿保存エラー,Error al guardar publicación,Erreur lors de la sauvegarde du post,Fehler beim Speichern des Beitrags,Ошибка при сохранении поста,Post kaydedilirken hata,เกิดข้อผิดพลาดในการบันทึกโพสต์
+NSFW,후방주의,NSFW,不适合工作环境,不適合工作環境,NSFW,NSFW,NSFW,NSFW,NSFW,NSFW,NSFW
+NoOutLink,공개,Public,公开,公開,公開,Publico,Public,Öffentlich,Открыто,Kamusal,สาธารณะ
+UseOutLink,링크,Link,链接,鏈接,リンク,Enlace,Liens,Link,Ссылка,Link,ลิงค์
+OutLinkFailed,외부노출 실패,Create outlink failed,创建外部链接失败,創建外部鏈接失敗,外部リンク作成失敗,Error al crear enlace externo,Échec de la création du lien externe,Fehler beim Erstellen des externen Links,Не удалось создать внешнюю ссылку,Harici bağlantı oluşturulamadı,ไม่สามารถสร้างลิงก์ภายนอกได้
+NoPostOutLink,게시물 정보 없음,No post information,没有帖子信息,沒有帖子信息,投稿情報なし,Sin información del post,Pas d'information sur le post,Keine Beitragsinformationen,Нет информации о посте,Post bilgisi yok,ไม่มีข้อมูลโพสต์
+SavingRecord,녹음을 저장중입니다,Saving the recording,正在保存录音,正在保存錄音,録音を保存中,Guardando la grabación,Enregistrement de l'audio en cours,Aufnahme wird gespeichert,Сохранение записи,Kaydı kaydediyor,กำลังบันทึกการบันทึก
+RecordVoiceTime,녹음시간 기록,Time record,录音时间,錄音時間,録音時間,Tiempo de grabación,Temps d'enregistrement,Aufnahmezeit,Время записи,Ses kaydı süresi,Kเวลาบันทึกเสียง
+FailedToSaveVoice,녹음 저장 실패,Failed to save recording,保存录音失败,保存錄音失敗,録音の保存に失敗しました,Fallo al guardar grabación,Échec de l'enregistrement de l'audio,Fehler beim Speichern der Aufnahme,Не удалось сохранить запись,Ses kaydını kaydedemedim,ไม่สามารถบันทึกการบันทึกเสียงได้
+## PostViewer
+Title,게시물 뷰어,Post viewer,帖子查看器,貼文檢視器,投稿ビューア,Visor de publicaciones,Viseur de publications,Beitragsbetrachter,Просмотр поста,Post görüntüleyici,ตัวดูโพสต์
+CreateTime,작성일,Creation date,创建日期,創建日期,作成日,Fecha de creación,Date de création,Erstellungsdatum,Дата создания,İlk oluşturulma zamanı,วันที่สร้าง
+ModifyTime,수정일,Modification date,修改日期,修改日期,修正日,Fecha de modificación,Date de modification,Änderungsdatum,Дата изменения,Değişiklik tarihi,วันที่แก้ไข
+RemovePost,게시물 삭제,Remove post,删除帖子,刪除貼文,投稿を削除,Eliminar publicación,Retirer le post,Beitrag entfernen,Удалить пост,Post sil,ลบโพสต์
+OpenFromViewer,파일 뷰어에서 보기,View in file viewer,在文件查看器中查看,在檔案檢視器中查看,ファイルビューアで表示,Ver en visor de archivos,Voir dans le visualiseur de fichiers,Im Datei-Viewer anzeigen,Просмотр в просмотрщике файлов,Dosya görüntüleyicide görüntüle,ดูในตัวดูไฟล์
+CannotOpenProfile,사용자 정보를 열 수 없음,Unable to open user information,无法打开用户信息,無法打開用戶信息,ユーザー情報を開けません,No se puede abrir la información del usuario,Impossible d'ouvrir les informations utilisateur,Benutzerdaten können nicht geöffnet werden,Не удалось открыть информацию о пользователе,Profil bilgileri açılamaz,ไม่สามารถเปิดข้อมูลผู้ใช้ได้
+PreparingPost,게시물 준비중,Preparing post,准备帖子,準備帖子,投稿の準備中,Preparando la publicación,Préparation du post,Beitrag wird vorbereitet,Подготовка поста,Post hazırlanıyor,กำลังเตรียมโพสต์
+ReadyToSee,준비됨,Ready,准备就绪,準備就緒,準備完了,Listo,Prêt,Fertig,Готово,Hazır,พร้อมแล้ว
+## Settings
+Title,설정,Settings,设置,設置,設定,Configuración,Paramètres,Einstellungen,Настройки,Ayarlar,การตั้งค่า
+CommunityAds,개발자 광고,Developer Ads,开发者广告,開發者廣告,開発者広告,Anuncios de desarrollador,Publicités des développeurs,Entwicklerwerbung,Рекламные объявления разработчиков,Geliştirici Reklamları,โฆษณานักพัฒนา
+AdsContact,광고 문의,Ads Contact,广告联系,廣告聯繫,広告のお問い合わせ,Contacto de anuncios,Contact publicitaire,Anzeigenkontakt,Контакт с рекламодателями,Reklam İletişimi,ติดต่อโฆษณา
+env_info,사용 환경,Preferences,使用环境,使用環境,使用環境,Preferencias,Préférences,Präferenzen,Предпочтения,Tercihler,การตั้งค่าผู้ใช้
+myInfo,내 정보,My info,我的信息,我的資訊,私の情報,Mi información,Mes informations,Meine Infos,Моя информация,Bilgilerim,ข้อมูลของฉัน
+groupServer,사용자 관리,Manage user info,管理用户信息,管理用戶資訊,ユーザー情報管理,Administrar la información del usuario,Gérer les informations de l'utilisateur,Benutzerdaten verwalten,Управление данными пользователя,Kullanıcı bilgilerini yönet,จัดการข้อมูลผู้ใช้
+useDeviceAsServer,이 기기를 기능 서버로,Use this device as a functional server,将此设备用作功能服务器,將此設備作為功能伺服器,このデバイスを機能サーバーとして使用,Usar este dispositivo como servidor funcional,Utiliser cet appareil comme serveur fonctionnel,Dieses Gerät als funktionalen Server verwenden,Использовать это устройство как функциональный сервер,Bu cihazı fonksiyonel sunucu olarak kullan,ใช้อุปกรณ์นี้เป็นเซิร์ฟเวอร์ฟังก์ชัน
+ShowChnServer,서버 표시,Show servers,显示服务器,顯示伺服器,サーバーを表示,Mostrar servidores,Afficher les serveurs,Server anzeigen,Показать серверы,Sunucuları Göster,แสดงเซิร์ฟเวอร์
+ShowShortCutHint,단축키 힌트 표시,Show shortcut hints,显示快捷键提示,顯示快捷鍵提示,ショートカットヒントを表示,Mostrar pistas de atajos,Afficher les indices de raccourcis,Shortcuts anzeigen,Показать подсказки для сочетаний клавиш,Kısayol ipuçlarını göster,แสดงคำแนะนำทางลัด
+DevKit,보조 도구,Auxiliary tools,辅助工具,輔助工具,補助ツール,Herramientas auxiliares,Outils auxiliaires,Hilfswerkzeuge,Вспомогательные инструменты,Auxilary araçları,เครื่องมือเสริม
+FallbackFS,첫번째 파일 서버,First file server,第一个文件服务器,第一個檔案伺服器,第一ファイルサーバー,Primer servidor de archivos,Premier serveur de fichiers,Erster Datei-Server,Первичный файловый сервер,İlk dosya sunucusu,เซิร์ฟเวอร์ไฟล์แรก
+TryToFallbackFS,FFS 업로드 시도,Try with FFS,尝试使用FFS,嘗試使用FFS,FFSで試す,Intentar con FFS,Essayer avec FFS,Mit FFS versuchen,Попробовать с FFS,FFS ile dene,ลองอัปโหลดด้วย FFS
+BugReport,오류 보고,Bug Report,错误报告,錯誤報告,バグ報告,Informe de error,Signalement de bug,Fehlerbericht,Отчет об ошибке,Hata Raporu,รายงานข้อผิดพลาด
+ServerFiles,사용 설명서,User Manual,用户手册,使用說明書,ユーザーマニュアル,Manual del usuario,Manuel de l'utilisateur,Handbuch des Benutzers,Руководство пользователя,Kullanıcı Kılavuzu,คู่มือผู้ใช้
+InAppExplorer,인앱 탐색기,InApp Explorer,应用内资源管理器,應用內資源管理器,アプリ内エクスプローラー,Explorador en la app,Explorateur intégré,In-App Explorer,Интегрированный проводник,In-App Explorer,ตัวสำรวจในแอป
+EnginePPT,내부망 WebRTC,Internal network WebRTC,内部网络WebRTC,內部網絡WebRTC,内部ネットワークWebRTC,Red interna WebRTC,Réseau interne WebRTC,Internes Netzwerk WebRTC,Внутренняя сеть WebRTC,İç ağ WebRTC,เครือข่ายภายใน WebRTC
+joinDedi_placeholder,기본,Default,默认,預設,デフォルト,Predeterminado,Par défaut,Standard,По умолчанию,Varsayılan,ค่าเริ่มต้น
+admin_tools,관리자 도구,Admin tools,管理员工具,管理員工具,管理者ツール,Herramientas de administrador,Outils d'administration,Administrator-Werkzeuge,Инструменты администратора,Yönetici Araçları,เครื่องมือผู้ดูแลระบบ
+ServerAdmin,서버 관리,Manage server,管理服务器,管理伺服器,サーバー管理,Administrar servidor,Gérer le serveur,Server verwalten,Управление сервером,Sunucu yönetimi,จัดการเซิร์ฟเวอร์
+admin_req_counter,서버 상태,Server status,服务器状态,伺服器狀態,サーバーの状態,Estado del servidor,État du serveur,Server-Status,Статус сервера,Sunucu durumu,สถานะเซิร์ฟเวอร์
+NotificationSetting,알림,Notifications,通知,通知,通知,Notificaciones,Notifications,Benachrichtigungen,Уведомления,Bildirimler,การแจ้งเตือน
+batteryOptimization,배터리 최적화 제외 설정,Battery Optimization Exclusion Settings,电池优化排除设置,電池優化排除設置,バッテリー最適化除外設定,Ajustes de exclusión de optimización de batería,Paramètres d'exclusion de l'optimisation de la batterie,Ausnahmeeinstellungen für die Batterieoptimierung,Настройки исключения оптимизации батареи,Batarya optimizasyonu hariç tutma ayarları,การตั้งค่าการยกเว้นการปรับแต่งแบตเตอรี่
+QRCodeBasic,사설 주소 사용,Use private address,使用私有地址,使用私人地址,プライベートアドレスを使用,Usar dirección privada,Utiliser une adresse privée,Private Adresse verwenden,Использовать частный адрес,Kişisel adres kullan,ใช้ที่อยู่ส่วนตัว
+AppInfo,앱 정보,App info,应用信息,應用程式信息,アプリ情報,Información de la app,Informations de l'app,App-Informationen,Информация о приложении,Uygulama bilgisi,ข้อมูลแอป
+AppCreator,제작자,Creator,创建者,創建者,制作者,Creador,Créateur,Ersteller,Создатель,Yaratıcı,ผู้สร้าง
+AppTranslator,번역가,Translator,翻译者,翻譯者,翻訳者,Traductor,Traducteur,Übersetzer,Переводчик,Çevirmen,ผู้แปล
+StartPageSet,시작 페이지 설정,Set start page,设置开始页,設置開始頁,スタートページ設定,Configurar página de inicio,Définir la page de démarrage,Startseite festlegen,Настройка стартовой страницы,Başlangıç sayfasını ayarlamak,ตั้งค่าหน้าระบบ
+AppLanguage,언어 설정,Languages,语言设置,語言設置,言語設定,Configuración de idioma,Paramètres de langue,Sprachoptionen,Языковые настройки,Dil ayarları,การตั้งค่าภาษา
+MainQuickLink,QRCode 초대,QRCode Invitation,二维码邀请,二維碼邀請,QRコード招待,Invitación QRCode,Invitation QRCode,QRCode-Einladung,Приглашение QRCode,QRCode davetiyesi,คำเชิญ QRCode
+LicenseNotice,라이선스 고지,License Notice,许可证通知,許可證通知,ライセンス通知,Aviso de licencia,Avis de licence,Lizenzhinweis,Уведомление о лицензии,Licens Bildirimi,ประกาศลิขสิทธิ์
+UserGuideLink,사용자 가이드,User guide,用户指南,用戶指南,ユーザーガイド,Guía del usuario,Guide de l'utilisateur,Benutzerhandbuch,Руководство пользователя,Kullanıcı Kılavuzu,คู่มือผู้ใช้
+Sponsorship,후원,Sponsorship,赞助,贊助,スポンサー,Patrocinio,Parrainage,Spenden,Sponsorство,Sponsorluk,การสนับสนุน
+Support,이 프로젝트를 후원합니다,Support this project,支持这个项目,支持這個項目,このプロジェクトを支援,Apoya este proyecto,Supporter ce projet,Unterstützen,Sponsoring этого проекта,Projeyi destekle,สนับสนุนโครงการนี้
+## NotificationSettings
+set_alert,알림 받기,Get notifications,接收通知,接收通知,通知を受け取る,Recibir notificaciones,Recevoir des notifications,Benachrichtigungen erhalten,Получить уведомления,Bildirimleri al,รับการแจ้งเตือน
+set_alert_simple,알림 간소화,Simplify notifications,简化通知,簡化通知,通知を簡素化,Notificaciones simplificadas,Simplifier les notifications,Benachrichtigungen vereinfachen,Упростить уведомления,Notifikasyonları basitleştir,ทำให้การแจ้งเตือนเรียบง่าย
+set_alert_self,인앱 알림으로 전환하기,Switch to in-app notifications,切换到应用内通知,切換到應用內通知,アプリ内通知に切り替える,Cambiar a notificaciones dentro de la app,Passer aux notifications in-app,Auf In-App-Benachrichtigungen umschalten,Переключиться на уведомления внутри приложения,İçerik bildirimlerine geç,สลับไปยังการแจ้งเตือนในแอป
+icon_mono,기본 앱 알림,Default,默认通知,默認通知,デフォルト通知,Notificación predeterminada,Notification par défaut,Standardbenachrichtigung,Уведомление по умолчанию,Varsayılan,การแจ้งเตือนเริ่มต้น
+diychat,Nakama 서버,Nakama server,Nakama服务器,Nakama伺服器,Nakamaサーバー,Servidor Nakama,Serveur Nakama,Nakama-Server,Сервер Nakama,Nakama sunucusu,Nakama เซิร์ฟเวอร์
+simplechat,광장,Square,广场,廣場,広場,Plaza,Place,Platz,Площадка,Alan,จตุรัส
+engineppt,엔진PPT,EnginePPT,引擎PPT,引擎PPT,エンジンPPT,EnginePPT,EnginePPT,EnginePPT,EnginePPT,EnginePPT,EnginePPT
+## Profile
+noname_user,이름 없는 사용자,Unnamed user,无名用户,無名用戶,名前のないユーザー,Usuario sin nombre,Utilisateur sans nom,Unbenannter Benutzer,Безымянный пользователь,İsimsiz kullanıcı,ผู้ใช้ที่ไม่มีชื่อ
+name_placeholder,사용자 이름,Username,用户名,用戶名,ユーザー名,Nombre de usuario,Nom d'utilisateur,Benutzername,Имя пользователя,Kullanıcı adı,ชื่อผู้ใช้
+at_least,최소 8자리,at least 8 digits,至少8位,至少8位,最低8桁,Al menos 8 caracteres,Au moins 8 caractères,Mindestens 8 Zeichen,Не менее 8 символов,En az 8 karakter,อย่างน้อย 8 หลัก
+user_display_name,사용자 표시명,Display name,显示名称,顯示名稱,表示名,Nombre para mostrar,Nom d'affichage,Anzeigename,Отображаемое имя,Görünen ad,ชื่อที่แสดง
+login_toggle,연결 시도,Connect to,连接,連接,接続する,Conectar,Se connecter,Verbinden,Подключиться,Bağlan,เชื่อมต่อ
+LogOut,연결 끊기,Disconnect,断开连接,斷開連接,接続解除,Desconectar,Se déconnecter,Trennen,Отключиться,Ayrıl,ตัดการเชื่อมต่อ
+upload,올리기,Upload,上传,上傳,アップロード,Subir,Charger,Hochladen,Загрузить,Yükle,อัปโหลด
+remove_content,삭제,Remove,删除,刪除,削除,Eliminar,Retirer,Entfernen,Удалить,Sil,ลบ
+need_email,이메일 주소를 입력해주세요,Please enter your email address,请输入您的电子邮件地址,請輸入您的電子郵件地址,メールアドレスを入力してください,Por favor, ingresa tu dirección de correo electrónico,Veuillez entrer votre adresse e-mail,Bitte geben Sie Ihre E-Mail-Adresse ein,Пожалуйста, введите ваш адрес электронной почты,Lütfen e-posta adresinizi girin,กรุณากรอกที่อยู่อีเมลของคุณ
+need_password,비밀번호를 입력해주세요,Please enter a password,请输入密码,請輸入密碼,パスワードを入力してください,Por favor, ingresa tu contraseña,Veuillez entrer votre mot de passe,Bitte geben Sie Ihr Passwort ein,Пожалуйста, введите ваш пароль,Lütfen şifrenizi girin,กรุณากรอกข้อมูลรหัสผ่าน
+user_profile_changed,사용자 프로필 변경,Change user profile,更改用户资料,更改用戶資料,ユーザープロフィールの変更,Cambiar perfil de usuario,Modifier le profil utilisateur,Benutzerprofil ändern,Изменить профиль пользователя,Profil değiştir,เปลี่ยนโปรไฟล์ผู้ใช้
+user_image_changed,사용자 이미지 변경,Change user image,更改用户图像,更改用戶圖像,ユーザー画像の変更,Cambiar imagen de usuario,Modifier l'image de l'utilisateur,Benutzerbild ändern,Изменить изображение пользователя,Profil resmini değiştir,เปลี่ยนรูปผู้ใช้
+## OtherProfile
+Title,사용자 정보,User info,用户信息,用戶信息,ユーザー情報,Información del usuario,Informations de l'utilisateur,Benutzerinfo,Информация о пользователе,Kullanıcı bilgisi,ข้อมูลผู้ใช้
+add_to_group,추가,Add to group,添加到群组,添加到群組,グループに追加,Agregar al grupo,Ajouter au groupe,Zur Gruppe hinzufügen,Добавить в группу,Gruba ekle,เพิ่มไปยังกลุ่ม
+privacy_chat,1:1 대화,Private chat,一对一聊天,一對一聊天,1対1チャット,Chat privado,Discussion privée,Privater Chat,Приватный чат,Özel sohbet,แชทส่วนตัว
+PromoteMember,승급,Promote,提升,提升,昇進,Promover,Promouvoir,Befördern,Повысить,Terfi ettir,เลื่อนตำแหน่ง
+PromoteSucc,사용자 승급,User promoted,用户已提升,用戶已提升,ユーザーが昇進,Usuario promovido,Utilisateur promu,Benutzer befördert,Пользователь повышен,Kullanıcı terfi ettirildi,ผู้ใช้ได้รับการเลื่อนตำแหน่ง
+PromoteFailed,승급 실패,Promotion failed,提升失败,提升失敗,昇進失敗,Promoción fallida,Échec de la promotion,Beförderung fehlgeschlagen,Неудачное повышение,Terfi başarısız,การเลื่อนตำแหน่งล้มเหลว
+DemoteMember,강등,Demote,降级,降級,降格,Degradar,Dégrader,Degradieren,Понизить,Unvan düşürmek,ลดตำแหน่ง
+DemoteSucc,사용자 강등,User Demoted,用户已降级,用戶已降級,ユーザーが降格,Usuario degradado,Utilisateur rétrogradé,Benutzer degradiert,Пользователь понижен,Unvan düşürüldü,ผู้ใช้ถูกลดตำแหน่ง
+DemoteFailed,강등 실패,Demotion failed,降级失败,降級失敗,降格失敗,Degradación fallida,Échec de la dégradation,Degradierung fehlgeschlagen,Неудачное понижение,Unvan düşürme başarısız,การลดตำแหน่งล้มเหลว
+kick_from_group,추방,Kick user,踢出群组,踢出群組,グループから追い出す,Expulsar,Expulser,Rausschmeißen,Кикнуть,Gruptan atmak,เตะผู้ใช้ออกจากกลุ่ม
+added_to_group,사용자가 추가되었습니다,User added,用户已添加,用戶已添加,ユーザーが追加されました,Usuario agregado,Utilisateur ajouté,Benutzer hinzugefügt,Пользователь добавлен,Kullanıcı eklendi,ผู้ใช้ถูกเพิ่ม
+kicked_from_group,사용자를 내보냈습니다,User kicked,用户已被踢出,用戶已被踢出,ユーザーが追い出されました,Usuario expulsado,Utilisateur expulsé,Benutzer gekickt,Пользователь исключен,Grup dışına atılan kullanıcı,ผู้ใช้ถูกเตะออกจากกลุ่ม
+## ChatRoom
+noname_chatroom,이름 없는 채널,Unnamed channel,无名频道,無名頻道,名前のないチャネル,Canal sin nombre,Canal sans nom,Unbenannter Kanal,Безымянный канал,İsimsiz kanal,ช่องที่ไม่มีชื่อ
+fetch_previous_chat,이전 기록 불러오기,Recall previous record,回溯历史记录,回溯歷史記錄,過去の記録を呼び出す,Recuperar registro anterior,Récupérer l'enregistrement précédent,Frühere Aufzeichnung abrufen,Вызвать предыдущую запись,Önceki kaydı çağır,ดึงบันทึกก่อนหน้า
+unknown_ext,검토 불가,No review,无法审查,無法審查,レビュー不可,Aún no revisado,Aucune revue,Keine Überprüfung,Не подлежит рассмотрению,İncelenemez,ไม่สามารถตรวจสอบได้
+ExtSettings,채널설정,Settings,频道设置,頻道設置,チャンネル設定,Ajustes del canal,Paramètres du canal,Kanal-Einstellungen,Настройки канала,Kanal ayarları,การตั้งค่าช่อง
+ExtSoloImage,채널사진,Ch Pic,频道图片,頻道圖片,チャンネル画像,Imagen del canal,Image du canal,Kanalfoto,Изображение канала,Kanal resmi,รูปภาพช่อง
+BackgroundImage,배경사진,BGImg,背景图片,背景圖片,背景画像,Imagen de fondo,Image de fond,Hintergrundbild,Фоновое изображение,Arka plan resmi,ภาพพื้นหลัง
+attachments,첨부파일,Attach,附件,附件,添付ファイル,Archivos adjuntos,Pièces jointes,Anhänge,Вложения,Eklentiler,ไฟล์แนบ
+FileLink,외부링크,Outlink,外部链接,外部鏈接,外部リンク,Enlace externo,Lien externe,Externer Link,Внешняя ссылка,Dış bağlantı,ลิงก์ภายนอก
+FindingMsg,메시지를 찾는중,Looking for messages,查找消息中,查找訊息中,メッセージを探しています,Buscando mensajes,Recherche de messages,Suchen nach Nachrichten,Поиск сообщений,Mesajlar aranıyor,กำลังค้นหาข้อความ
+MsgFound,메시지 찾음,Message found,消息找到,訊息找到,メッセージが見つかりました,Mensaje encontrado,Message trouvé,Nachricht gefunden,Сообщение найдено,Mesaj bulundu,พบข้อความแล้ว
+StartVRecord,녹음을 시작합니다,Start recording,开始录音,開始錄音,録音を開始します,Iniciar grabación,Démarrer l'enregistrement,Aufnahme starten,Начать запись,Kaydı başlat,เริ่มการบันทึก
+VoiceRecord,인앱 음성 녹음,In-app voice record,应用内语音录制,應用內語音錄製,アプリ内音声録音,Grabación de voz en la aplicación,Enregistrement vocal dans l'application,Sprachaufnahme in der App,Запись голоса в приложении,Uygulama içi ses kaydı,การบันทึกเสียงในแอพ
+voidDraw,그림판,Paint,画板,畫板,ペイント,Tablero de dibujo,Tableau de dessin,Zeichenbrett,Доска для рисования,Çizim tahtası,กระดานวาดภาพ
+newText,텍스트,Text,文本,文本,テキスト,Texto,Texte,Text,Текст,Yeni Metin,ข้อความ
+Detour,우회안함,Default,不绕行,不繞行,デフォルト,Sin desvío,Par défaut,Standard,По умолчанию,Varsayılan,ค่าเริ่มต้น
+useFSS,FFS우선,tryFFS,优先使用FFS,優先使用FFS,FFSを優先,Priorizar FFS,Prioriser FFS,FFS bevorzugen,Использовать FFS,FFS'yi öncelikli kullan,ใช้ FFS เป็นอันดับแรก
+forceSQL,SQL강제,useSQL,强制SQL,強制SQL,SQL強制,Forzar SQL,Forcer SQL,SQL erzwingen,Принудительное использование SQL,Zorla SQL kullan,บังคับ SQL
+Camera,카메라,Camera,相机,相機,カメラ, cámara,Appareil photo,Kamera,Камера,Kamera,กล้อง
+LoadImageFromCamera,사진 불러오는중,Loading photos,加载照片,加載照片,写真を読み込んでいます,Cargando fotos,Chargement des photos,Foto wird geladen,Загрузка фотографий,Foto yüklüyor,กำลังโหลดรูปภาพ
+Voice,녹음하기,Mic.,麦克风,麥克風,マイク,Micrófono,Microphone,Mikrofon,Микрофон,Mikrofon,ไมโครโฟน
+VoiceStop,중지,Stop,停止,停止,停止,Detener,Arrêter,Stoppen,Остановить,Durdur,หยุด
+VoiceChat,음성통화,Voice,语音通话,語音通話,音声通話,Llamada de voz,Appel vocal,Sprachchat,Голосовой чат,Sesli sohbet,แชทเสียง
+EmbedFiles,파일들,Files,文件,文件,ファイル,Archivos,Fichiers,Dateien,Файлы,Dosya,ไฟล์
+ShareToOther,채널복제,Copy,复制频道,複製頻道,チャンネルのコピー,Duplicar canal,Dupliquer le canal,Kanäle kopieren,Копировать канал,Kanal kopyala,คัดลอกช่อง
+NoCopyChannelAvailable,복제 가능한 채널이 없습니다,There are no channels available for duplication,没有可复制的频道,沒有可複製的頻道,複製できるチャンネルはありません,No hay canales disponibles para duplicar,Il n'y a pas de canaux disponibles pour la duplication,Es gibt keine Kanäle zum Duplizieren,Нет доступных каналов для дублирования,Duplikasyon için kanal yok,ไม่มีช่องให้คัดลอก
+CopyingChats,메시지를 복제중입니다,Duplicating message,正在复制消息,正在複製訊息,メッセージを複製しています,Duplicando mensaje,Dupliquant le message,Nachrichten werden dupliziert,Сообщение дублируется,Mesaj çoğaltılıyor,กำลังคัดลอกข้อความ
+ReadText,읽어주기,TTS,朗读,朗讀,テキスト読み上げ,TTS,Lire le texte,Text lesen,Чтение текста,TTS,อ่านข้อความ
+LogOut,연결끊기,Disconn.,登出,登出,ログアウト,Desconectar,Coupure,Abmelden,Выйти,Çıkış yap,ออกจากระบบ
+RemoveHistory,기록삭제,Remove,删除历史记录,刪除歷史紀錄,履歴を削除,Eliminar historial,Supprimer l'historique,Löschen des Verlaufs,Удалить историю,Geçmişi sil,ลบประวัติ
+input_placeholder,메시지 입력...,Enter message...,输入消息...,輸入訊息...,メッセージを入力...,Introduzca el mensaje...,Saisir le message...,Nachricht eingeben...,Введите сообщение...,Mesajı girin...,พิมพ์ข้อความ...
+ManageChat,메시지 관리,Manage message,管理消息,管理訊息,メッセージを管理,Administrar mensajes,Gérer les messages,Nachrichten verwalten,Управление сообщениями,Mesaj yönet,จัดการข้อความ
+EditChat,편집,Edit,编辑,編輯,編集,Editar,Modifier,Bearbeiten,Редактировать,Düzenle,แก้ไข
+MsgEdited,편집됨,Edited,已编辑,已編輯,編集済み,Editado,Édité,Bearbeitet,Отредактировано,Düzenlendi,แก้ไขแล้ว
+MsgRemoved,메시지 삭제,Delete message,删除消息,刪除訊息,メッセージを削除,Eliminar mensaje,Supprimer le message,Nachricht löschen,Удалено сообщение,Mesaj silindi,ลบข้อความ
+cannot_open_from_mobile,모바일에서 열 수 없음,Can not open on mobile,无法在手机上打开,無法在手機上打開,モバイルでは開けません,No se puede abrir en el móvil,Impossible à ouvrir sur mobile,Kann nicht auf dem Handy geöffnet werden,Не удается открыть на мобильном,Mobilde açılamaz,ไม่สามารถเปิดได้จากมือถือ
+cannot_open_with_viewer,이 파일은 뷰어로 볼 수 없습니다,This file cannot be viewed with a viewer,此文件无法使用查看器查看,此檔案無法使用檢視器查看,このファイルはビューワーで表示できません,Este archivo no se puede ver con el visor,Ce fichier ne peut pas être vu avec le visualiseur,Diese Datei kann nicht mit dem Viewer angezeigt werden,Этот файл нельзя просматривать в просмотрщике,Bu dosya görüntüleyiciyle açılamaz,ไม่สามารถดูไฟล์นี้ด้วยโปรแกรมดู
+download_anyway,그래도 다운로드,Download anyway,仍然下载,仍然下載,とにかくダウンロード,Descargar de todos modos,Télécharger quand même,Download trotzdem,Скачать все равно,Her şeye rağmen indir,ดาวน์โหลดต่อไป
+uploading,업로드 중,Uploading,正在上传,正在上傳,アップロード中,Subiendo,En cours de téléchargement,Hochladen,Загружается,İndiriliyor,กำลังอัปโหลด
+downloaded,다운로드,Download,已下载,已下載,ダウンロード済み,Descargado,Téléchargé,Heruntergeladen,Загружено,İndirildi,ดาวน์โหลดแล้ว
+FileSaved,파일 저장,Save file,保存文件,保存檔案,ファイルを保存,Guardar archivo,Enregistrer le fichier,Datei speichern,Файл сохранен,Dosya kaydedildi,บันทึกไฟล์
+SavingFile,파일 저장중,Saving file,保存文件中,保存檔案中,ファイルを保存中,Guardando archivo,Enregistrement du fichier,Datei wird gespeichert,Сохранение файла,Dosya kaydediliyor,กำลังบันทึกไฟล์
+SendFile,파일 전송,File sent,发送文件,發送檔案,ファイルを送信,Enviar archivo,Envoyer le fichier,Datei senden,Отправить файл,Dosya gönderildi,ส่งไฟล์
+qouteMsg,답장,Reply to,回复消息,回覆訊息,メッセージに返信,Responder,Répondre,Antworten,Ответить,Yanıtla,ตอบกลับ
+LostOriginMsg,원본 메시지를 찾을 수 없음,Original message not found,无法找到原始消息,無法找到原始訊息,元のメッセージが見つかりません,Mensaje original no encontrado,Message original non trouvé,Originalnachricht nicht gefunden,Исходное сообщение не найдено,Orijinal mesaj bulunamadı,ไม่พบข้อความต้นฉบับ
+viewer_not_support,뷰어가 지원하지 않는 파일,Files not supported by the viewer,查看器不支持的文件,檢視器不支援的檔案,ビューアがサポートしていないファイル,Archivos no compatibles con el visor,Fichiers non pris en charge par le visualiseur,Dateien werden vom Viewer nicht unterstützt,Файлы, которые не поддерживаются просмотрщиком,Viewer'ın desteklemediği dosyalar,โปรแกรมดูไม่รองรับไฟล์
+cannot_open_file,파일을 열람할 수 없습니다,The file cannot be viewed,无法查看文件,無法查看檔案,ファイルを表示できません,No se puede ver el archivo,Impossible d'ouvrir le fichier,Datei kann nicht angezeigt werden,Невозможно просмотреть файл,Dosya görüntülenemiyor,ไม่สามารถเปิดไฟล์ได้
+export_download,추출,Extraction,导出,導出,抽出,Extracción,Extraction,Extraktion,Экспорт,İhracat,การสกัด
+YouReadHereLast,여기까지 읽었습니다,You've read this far,你已经阅读到这里,你已閱讀到這裡,ここまで読んだ,Has leído hasta aquí,Vous avez lu jusqu'ici,Du hast bis hier gelesen,Вы прочитали до этого места,Sonra burayı okudunuz,อ่านจนถึงตรงนี้
+QuickShare,이 곳을 눌러 정보를 공유받습니다,Click here to share information,点击这里分享信息,點擊這裡分享資訊,ここをクリックして情報を共有,Haz clic aquí para compartir información,Cliquez ici pour partager des informations,Hier klicken, um Informationen zu teilen,Buraya tıklayın, bilgi paylaşmak için,คลิกที่นี่เพื่อแชร์ข้อมูล
+QuickShare_placeholder,정보를 공유합니다...,Will share information...,共享信息...,分享資訊...,情報を共有します...,Compartiré la información...,Je vais partager l'information...,Bilgiyi paylaşacağım...,Информацию поделюсь...,Bilgi paylaşılacak...,จะแชร์ข้อมูล...
+FailedToJoinChannel,채널에 참가하지 못했습니다,Failed to join channel,无法加入频道,無法加入頻道,チャンネルに参加できません,No se pudo unir al canal,Échec de l'adhésion au canal,Fehler beim Beitritt zum Kanal,Не удалось присоединиться к каналу,Kanal katılamadı,ไม่สามารถเข้าร่วมช่อง
+FailedToSend,발송 실패,Failed to send,发送失败,發送失敗,送信失敗,Error al enviar,Echec de l'envoi,Fehler beim Senden,Не удалось отправить,Mesaj gönderilemedi,ไม่สามารถส่งได้
+ExternalLinkFile,외부 링크 파일,External link file,外部链接文件,外部鏈接檔案,外部リンクファイル,Archivo de enlace externo,Fichier de lien externe,Externe Link-Datei,Внешний файл ссылки,Harici bağlantı dosyası,ไฟล์ลิงก์ภายนอก
+LongText,긴 글,Long text,长文本,長文本,長文,Texto largo,Texte long,Langer Text,Длинный текст,Uzun metin,ข้อความยาว
+CreateAsTextFile,긴 메시지를 파일로 변환합니다,Convert long messages to file,将长消息转换为文件,將長訊息轉換為檔案,長いメッセージをファイルに変換,Convertir mensajes largos a archivo,Convertir les messages longs en fichier,Konvertieren Sie lange Nachrichten in Datei,Преобразовать длинные сообщения в файл,Uzun mesajları dosyaya dönüştür,แปลงข้อความยาวเป็นไฟล์
+MultipleSend,여러 파일 발송,Send multiple files,发送多个文件,發送多個檔案,複数のファイルを送信,Enviar varios archivos,Envoyer plusieurs fichiers,Mehrere Dateien senden,Отправить несколько файлов,Çoklu dosya gönder,ส่งไฟล์หลายไฟล์
+CountFile,파일 수,Number of files,文件数量,檔案數量,ファイルの数,Número de archivos,Nombre de fichiers,Anzahl der Dateien,Количество файлов,Dosya sayısı,จำนวนไฟล์
+Send,발송,Send,发送,發送,送信,Enviar,Envoyer,Senden,Отправить,Gönder,ส่ง
+GoToRecent,최근 메시지 보기,Go to recent,查看最近的消息,查看最近的訊息,最近のメッセージを見る,Ver mensajes recientes,Aller aux messages récents,Zu den letzten Nachrichten,Перейти к последним сообщениям,Son mesajlara git,ไปที่ข้อความล่าสุด
+TalkMessage,말해주세요,Tell me,告诉我,告訴我,教えてください,Dime,Dites-moi,Erzählen Sie mir,Скажите мне,Bana söyle,Bอกฉันหน่อย
+RemoveChannel,채널 기록 삭제,Remove channel files,删除频道记录,刪除頻道紀錄,チャンネル記録を削除,Eliminar archivos del canal,Supprimer les fichiers du canal,Kanaldaten löschen,Удалить записи канала,Kanaldan verileri sil,ลบประวัติช่อง
+CannotUndone,이 작업은 되돌릴 수 없습니다,This action cannot be undone,此操作无法撤销,此操作無法撤銷,この操作は元に戻せません,Esta acción no se puede deshacer,Cette action ne peut pas être annulée,Diese Aktion kann nicht rückgängig gemacht werden,Это действие нельзя отменить,Bu işlem geri alınamaz,ไม่สามารถย้อนกลับการกระทำนี้ได้
+RemoveChannelLogs,채널 기록을 삭제합니다,Delete channel history,删除频道记录,刪除頻道紀錄,チャンネル履歴を削除,Eliminar historial de canal,Supprimer l'historique du canal,Löschen des Kanalverlaufs,Удалить историю канала,Kanallogları sil,ลบประวัติช่อง
+Delete,삭제,Delete,删除,刪除,削除,Eliminar,Supprimer,Löschen,Удалить,Sil,ลบ
+LocalImageChanged,채널 이미지가 변경되었습니다,Channel image has been changed,频道图片已更改,頻道圖片已更改,チャンネル画像が変更されました,La imagen del canal ha sido cambiada,L'image du canal a été modifiée,Das Kanalbild wurde geändert,Изображение канала изменено,Kanaldaki resim değiştirildi,รูปภาพช่องได้มีการเปลี่ยนแปลง
+LocalImageRemoved,채널 이미지가 삭제되었습니다,Channel image has been deleted,频道图片已删除,頻道圖片已刪除,チャンネル画像が削除されました,La imagen del canal ha sido eliminada,L'image du canal a été supprimée,Das Kanalbild wurde gelöscht,Изображение канала удалено,Kanaldaki resim silindi,รูปภาพช่องถูกลบ
+AlreadyRemoved,이미 정보가 삭제되었습니다,Information has already been removed,信息已被删除,資訊已被刪除,情報はすでに削除されています,La información ya ha sido eliminada,Les informations ont déjà été supprimées,Die Information wurde bereits entfernt,Информация уже удалена,Bilgi zaten silindi,ข้อมูลถูกลบแล้ว
+## ContentViewer
+Title,파일 뷰어,File Viewer,文件查看器,文件檢視器,ファイルビューア,Visor de archivos,Visionneuse de fichiers,Dateivorschau,Просмотр файлов,Dosya Görüntüleyici,ตัวดูไฟล์
+ContentInfo,파일 정보,File info,文件信息,檔案資訊,ファイル情報,Información del archivo,Informations sur le fichier,Dateiinformationen,Информация о файле,Dosya bilgisi,ข้อมูลไฟล์
+FindMessage,메시지 찾기,Find message,查找消息,查找訊息,メッセージを探す,Buscar mensaje,Rechercher un message,Nachricht suchen,Найти сообщение,Mesaj bul,ค้นหาข้อความ
+Edit,이미지 편집,Edit,编辑,編輯,編集,Editar,Modifier,Bearbeiten,Редактировать,Düzenle,แก้ไข
+EditText,문서 편집,Edit text,编辑文本,編輯文本,テキストを編集,Editar texto,Modifier le texte,Text bearbeiten,Редактировать текст,Metin düzenle,แก้ไขข้อความ
+Download,외부에 저장,Save external,保存到外部,保存到外部,外部保存,Guardar externamente,Enregistrer à l'extérieur,Extern speichern,Сохранить внешнее,Harici kaydet,Dl ไปยังภายนอก
+CopyToClipboard,클립보드에 복사,Copy to clipboard,复制到剪贴板,複製到剪貼簿,クリップボードにコピー,Copiar al portapapeles,Copier dans le presse-papier,In die Zwischenablage kopieren,Копировать в буфер обмена,Panoya kopyala,คัดลอกไปยังคลิปบอร์ด
+creator,제작자,Creator,创作者,創作者,クリエーター,Creador,Créateur,Ersteller,Создатель,Yaratıcı,ผู้สร้าง
+related_creator,그 외,Related,相关,相關,関連,Relacionado,Lié,Verwandt,Связанный,İlgili,ที่เกี่ยวข้อง
+Filename,파일 이름,Filename,文件名,檔案名,ファイル名,Nombre de archivo,Nom du fichier,Dateiname,Имя файла,Dosya Adı,ชื่อไฟล์
+OnLoadContent,파일을 불러오는중,Loading file,加载文件,加載檔案,ファイルを読み込んでいます,Loading file,Carga de archivo,Laden der Datei,Загрузка файла,Dosya yükleniyor,กำลังโหลดไฟล์
+OnFailedLoadContent,파일을 열지 못함,Cannot open file,无法打开文件,無法打開文件,ファイルを開けません,Cannot open file,Impossible d'ouvrir le fichier,Datei kann nicht geöffnet werden,Не удается открыть файл,Dosya açılamaz,ไม่สามารถเปิดไฟล์ได้
+saveText,텍스트 파일 저장중,Saving text file,保存文本文件,保存文字檔,テキストファイルを保存中,Guardando archivo de texto,Enregistrement du fichier texte,Speichern der Textdatei,Сохранение текстового файла,Metin dosyası kaydediliyor,กำลังบันทึกไฟล์ข้อความ
+saveFile,저장,Save,保存,保存,保存,Guardar,Enregistrer,Speichern,Сохранить,Kaydet,บันทึก
+ClickToCopy,클릭하여 URL 복사,Click to copy url,点击复制URL,點擊複製URL,URLをコピーする、クリック,Haz clic para copiar URL,Cliquez pour copier l'URL,URL kopieren,Нажмите, чтобы скопировать URL,URL’yi kopyalamak için tıklayın,คลิกเพื่อคัดลอก URL
+AlreadyExist,같은 이름의 파일이 이미 있습니다,A file with the same name already exists,文件已存在,檔案已存在,同じ名前のファイルはすでに存在します,Ya existe un archivo con el mismo nombre,Un fichier avec le même nom existe déjà,Datei mit dem gleichen Namen existiert bereits,Файл с таким именем уже существует,Aynı isimde dosya zaten var,ไฟล์ที่มีชื่อเดียวกันมีอยู่แล้ว
+OverWriteFile,파일 덮어쓰기,Overwrite files,覆盖文件,覆蓋文件,ファイルを上書き,Reemplazar archivo,Écraser le fichier,Dateien überschreiben,Перезаписать файл,Dosyayı üzerine yaz,เขียนทับไฟล์
+fileSaveFailed,파일 저장에 실패했습니다,Failed to save file,保存文件失败,保存檔案失敗,ファイルの保存に失敗しました,Error al guardar archivo,Échec de l'enregistrement du fichier,Fehler beim Speichern der Datei,Не удалось сохранить файл,Dosya kaydedilemedi,ไม่สามารถบันทึกไฟล์ได้
+ShareContent,다른 채널에 공유하기,Share to other channels,分享至其他频道,分享至其他頻道,他のチャンネルに共有する,Compartir en otros canales,Partager dans d'autres canaux,In andere Kanäle teilen,Поделиться в других каналах,Diğer kanallara paylaş,แชร์ไปยังช่องทางอื่น
+FocusMode,집중 모드,Focus mode,专注模式,專注模式,フォーカスモード,Modo de enfoque,Mode de concentration,Fokusmodus,Режим фокуса,Fokus modu,โหมดโฟกัส
+ChangingContent,파일 변경,Replace file to,替换文件,替換檔案,ファイルを置き換え,Reemplazar archivo,Supprimer le fichier,Datei ersetzen,Заменить файл,Dosya değiştirme,กำลังเปลี่ยนไฟล์
+EndOfList,목록의 끝,End of list,列表末尾,列表末端,リストの終わり,Fin de la lista,Fin de la liste,Ende der Liste,Конец списка,Listenin sonu,สิ้นสุดรายการ
+CannotEditFile,편집 불가 파일,Cannot edit file,无法编辑文件,無法編輯文件,ファイルを編集できません,No se puede editar el archivo,Impossible de modifier le fichier,Datei kann nicht bearbeitet werden,Невозможно отредактировать файл,Dosya düzenlenemez,ไม่สามารถแก้ไขไฟล์ได้
+DownloadThisFile,파일 다운로드,Download file,下载文件,下載檔案,ファイルをダウンロード,Descargar archivo,Télécharger le fichier,Datei herunterladen,Скачать файл,Dosya indir,ดาวน์โหลดไฟล์
+FileDownloading,다운받는 중,Downloading,正在下载,正在下載,ダウンロード中,Descargando,En téléchargement,Datei wird heruntergeladen,Загрузка файла,İndiriliyor,กำลังดาวน์โหลด
+RemoveFile,파일 삭제,Remove file,删除文件,刪除檔案,ファイルを削除,Eliminar archivo,Retirer le fichier,Datei entfernen,Удалить файл,Dosya sil,ลบไฟล์
+DownloadToLocal,파일 기록하기,Record files,记录文件,記錄檔案,ファイルを記録,Grabar archivos,Enregistrer les fichiers,Dateien aufzeichnen,Запись файлов,Dosya kaydetme,บันทึกไฟล์
+QuickViewerLink,빠른 진입 링크,Quick viewer link,快速查看链接,快速檢視鏈接,クイックビューアリンク,Enlace de vista rápida,Lien de visionnage rapide,Schnellansicht-Link,Быстрая ссылка на просмотр,Hızlı görüntüleyici bağlantısı,ลิงก์การดูด่วน
+QuickNewWindow,우클릭으로 새 창에서 열기,Right click to open in new window,右键点击以在新窗口打开,右鍵點擊以在新窗口打開,右クリックして新しいウィンドウで開く,Haz clic derecho para abrir en nueva ventana,Clic derecho para abrir en nueva ventana,Klicken Sie mit der rechten Maustaste, um in einem neuen Fenster zu öffnen,Щелкните правой кнопкой мыши, чтобы открыть в новом окне,Yeni pencerede açmak için sağ tıklayın,คลิกขวาเพื่อเปิดในหน้าต่างใหม่
+ForceReadAsText,텍스트로 읽기 시도,Try reading it as text,尝试作为文本读取,嘗試作為文本閱讀,テキストとして読み取ることを試みる,Intentar leer como texto,Essayer de lire en tant que texte,Versuch, als Text zu lesen,Попробовать прочитать как текст,Metin olarak okumaya çalış,พยายามอ่านเป็นข้อความ
+CannotOpenText,열람할 수 없는 파일입니다,This file cannot be viewed,无法查看此文件,無法查看此檔案,このファイルは閲覧できません,Este archivo no se puede ver,Ce fichier ne peut pas être vu,Diese Datei kann nicht geöffnet werden,Этот файл не может быть открыт,Bu dosya görüntülenemiyor,ไม่สามารถเปิดไฟล์นี้ได้
+ReadObject,개체 정보 읽는중,Reading object information,读取对象信息,讀取物件資訊,オブジェクト情報を読み込んでいます,Leer información del objeto,Chargement des informations sur l'objet,Objektinformationen werden gelesen,Чтение информации об объекте,Obje bilgisi okunuyor,กำลังอ่านข้อมูลวัตถุ
+FailedGetBaseColor,색상 불러오기 실패,Failed to load basecolor,加载基础颜色失败,加載基礎顏色失敗,ベースカラーの読み込みに失敗しました,Fallo al cargar el color base,Échec du chargement de la couleur de base,Fehler beim Laden der Basisfarbe,Не удалось загрузить основной цвет,Temel renk yüklenemedi,ไม่สามารถโหลดสีหลัก
+FailedGetEmitColor,이미션 색상 불러오기 실패,Failed to load emit_color,加载发射颜色失败,加載發射顏色失敗,エミッションカラーの読み込みに失敗しました,Fallo al cargar el color de emisión,Échec du chargement de la couleur d'émission,Fehler beim Laden der Emit-Farbe,Не удалось загрузить эмиссионный цвет,Emit renk yüklenemedi,ไม่สามารถโหลดสีการปล่อย
+LoadMeshFailed,메쉬 불러오기 실패,Failed to load mesh,加载网格失败,加載網格失敗,メッシュの読み込みに失敗しました,Fallo al cargar la malla,Échec du chargement du maillage,Fehler beim Laden des Meshes,Не удалось загрузить сетку,Mesh yüklenemedi,ไม่สามารถโหลด Mesh
+LinkedTexFile,텍스처 파일이 내장되어있지 않음,Texture file not embedded,纹理文件未嵌入,紋理檔案未嵌入,テクスチャファイルが埋め込まれていません,El archivo de textura no está incrustado,Le fichier de texture n'est pas intégré,Texturdatei nicht eingebettet,Текстурный файл не встроен,Kaplama dosyası yerleşik değil,ไฟล์เท็กซ์เจอร์ไม่ได้ฝัง
+NoMaterial,등록된 머터리얼 없음,No registered materials,没有注册的材质,沒有註冊的材質,登録されたマテリアルがありません,No hay materiales registrados,Aucun matériau enregistré,Keine Materialien registriert,Нет зарегистрированных материалов,Hiçbir malzeme kaydedilmemiş,ไม่มีวัสดุที่ลงทะเบียน
+OnWorkReadLightMode,포인트 라이트로 대체됨,Replaced by point lights,已被点光源替代,已被點光源替代,ポイントライトに置き換えられました,Sustituido por luces puntuales,Remplacé par des points lumineux,Ersetzt durch Punktlichter,Заменено точечными источниками света,Point ışıklarıyla değiştirildi,Yerine noktaไฟถูกแทนที่
+ReachLightLimit,빛은 최대 5개까지 등록됩니다,Up to 5 lights can be registered,最多可注册5个光源,最多可註冊5個光源,最大5つのライトを登録できます,Se pueden registrar hasta 5 luces,Il est possible d'enregistrer jusqu'à 5 lumières,Es können bis zu 5 Lichter registriert werden,Можно зарегистрировать до 5 источников света,En fazla 5 ışık kaydedilebilir,สามารถลงทะเบียนแสงได้สูงสุด 5 ดวง
+MayGimbalLock,짐벌락 현상으로 각도가 다르게 표현될 수 있음,The angle may be expressed differently due to gimbal lock phenomenon,由于云台锁定现象，角度可能会不同,由於云台鎖定現象，角度可能會不同,ジンバルロック現象により角度が異なって表示される場合があります,El ángulo puede expresarse de manera diferente debido al fenómeno de bloqueo del cardán,En raison du phénomène de verrouillage gimbal, l'angle peut être exprimé différemment,Der Winkel kann aufgrund des Gimbal-Lock-Phänomens unterschiedlich dargestellt werden,Угол может быть выражен по-разному из-за явления зажима кардана,Açı, gimbal kilidi fenomeni nedeniyle farklı şekilde ifade edilebilir,เนื่องจากปรากฏการณ์ล็อคจิมบอล มุมอาจแสดงแตกต่างกัน
+## MinimalChat
+concurrent_users,동시접속자,Concurrent users,并发用户,並發用戶,同時接続者,Usuarios concurrentes,Utilisateurs simultanés, gleichzeitige Benutzer,Одновременные пользователи,Eşzamanlı kullanıcılar,ผู้ใช้พร้อมกัน
+input_placeholder,메시지 입력...,Enter message...,输入消息...,輸入訊息...,メッセージを入力...,Introduce un mensaje...,Entrez le message...,Nachricht eingeben,...Введите сообщение...,Mesaj gir...,ป้อนข้อความ...
+header_title_group,광장,Square,广场,廣場,広場,Círculo,Place,Platz,Площадка,Alan,สแควร์
+WebTitle_group,Project: 광장,Project: Square,项目：广场,項目：廣場,プロジェクト：広場,Proyecto: Cuadrado,Projet : Carré,Projekt: Platz,Проект: Площадка,Proje: Alan,โครงการ: สแควร์
+Noti_Reply,답장,Reply,回复,回覆,返信,Respuesta,Répondre,Antwort,Ответ,Yanıt,ตอบกลับ
+TrashChat,비우기,Empty,清空,清空,空にする,Vaciar,Vider,Leeren,Очистить,Boşalt,ลบการแชท
+TrashChatLog,대화 기록을 비웁니다,Clear your conversation history,清除聊天记录,清除對話紀錄,会話履歴を削除,Limpiar el historial de conversación,Vider l'historique de la conversation,Verlauf löschen,Очистить историю чатов,Konuşma geçmişini temizle,ล้างประวัติการสนทนา
+name_me,나,Me,我,我,私,Yo,Je,Ich,Я,Ben,ฉัน
+name_stranger_group,참여자,Participants,参与者,參與者,参加者,Participantes,Participants,Teilnehmer,Участники,Katılımcılar,ผู้เข้าร่วม
+joinChat_group,광장에 참여합니다,Join the square,加入广场,加入廣場,広場に参加する,Unirse al cuadrado,Rejoindre la place,Dem Platz beitreten,Присоединиться к площади,Alana katıl,เข้าร่วมสแควร์
+user_join,사용자 참여,User joined,用户加入,用戶加入,ユーザーが参加,El usuario se unió,L'utilisateur a rejoint,Der Benutzer ist beigetreten,Пользователь присоединился,Kullanıcı katıldı,ผู้ใช้เข้าร่วม
+user_join_comment,광장에 참여했습니다,joined the square,加入了广场,加入了廣場,広場に参加しました,Se unió al cuadrado,A rejoint la place,Dem Platz beigetreten,Пользователь присоединился к площади,Kullanıcı alana katıldı,ผู้ใช้เข้าร่วมสแควร์
+user_out,사용자 떠남,User out,用户离开,用戶離開,ユーザーが退出,El usuario salió,L'utilisateur est parti,Der Benutzer hat den Platz verlassen,Пользователь покинул площадь,Kullanıcı ayrıldı,ผู้ใช้ออกจากการสนทนา
+user_out_comment,광장을 떠났습니다,leaved the square,离开了广场,離開了廣場,広場を離れました,Dejó la plaza,A quitté la place,Hat den Platz verlassen,Пользователь покинул площадь,Kullanıcı alandan ayrıldı,ผู้ใช้ได้ออกจากสแควร์
+user_send_attach,파일을 보냈습니다,sent a file,发送了文件,發送了文件,ファイルを送りました,Envió un archivo,A envoyé un fichier,Hat eine Datei gesendet,Отправил файл,Dosya gönderdi,ส่งไฟล์
+meet_someone,누군가를 만났습니다,You met someone,你遇到了某人,你遇到了某人,誰かに会いました,Te encontraste con alguien,Vous avez rencontré quelqu'un,Du hast jemanden getroffen,Вы встретили кого-то,Birine rastladınız,คุณพบใครบางคน
+leave_someone,상대방이 나갔습니다,Opponent has gone,对方已离开,對方已離開,相手が退出しました,El oponente se fue,L'adversaire est parti,Der Gegner hat den Platz verlassen,Противник покинул площадь,Rakip ayrıldı,ฝ่ายตรงข้ามออกไปแล้ว
+Noti_Greeting,인사,Greeting,问候,問候,挨拶,Saludo,Salutation,Begrüßung,Приветствие,Selamlaşma,การทักทาย
+failed_to_join,채널 참가에 실패했습니다,Failed to join channel,加入频道失败,加入頻道失敗,チャンネルへの参加に失敗しました,Error al unirse al canal,Échec de rejoindre le canal,Fehler beim Beitreten des Kanals,Не удалось присоединиться к каналу,Kanala katılamadı,ไม่สามารถเข้าร่วมช่องได้
+cannot_join,채널에 참가할 수 없습니다,Unable to join channel,无法加入频道,無法加入頻道,チャンネルに参加できません,No se puede unir al canal,Impossible de rejoindre le canal,Kann dem Kanal nicht beitreten,Не удалось присоединиться к каналу,Kanala katılamazsınız,ไม่สามารถเข้าร่วมช่องได้
+leave_chat_group,광장에서 나옵니다,You leave square,你离开广场,你離開廣場,広場を離れます,Dejas la plaza,Vous quittez la place,Verlassen Sie den Platz,Вы покидаете площадь,Ayrılıyorsunuz,คุณออกจากสแควร์
+## InstantCall
+Title,즉석 통화,Instant call,即时通话,即時通話,インスタント通話,Llamada instantánea,Appel instantané,Sofortanruf,Мгновенный вызов,Anında arama,การโทรทันที
+Waiting,연결 대기중,Waiting for connection,等待连接,等待連接,接続待ち,Esperando conexión,En attente de connexion,Warten auf Verbindung,Ожидание соединения,Bağlantı bekleniyor,รอการเชื่อมต่อ
+MissingInfo,연결 정보가 누락되었습니다,Connection information is missing,连接信息缺失,連接信息缺失,接続情報が欠落しています,Información de conexión faltante,Informations de connexion manquantes,Verbindungsinformationen fehlen,Отсутствуют данные для подключения,Bağlantı bilgisi eksik,ข้อมูลการเชื่อมต่อหายไป
+Connecting,연결중,Connecting,连接中,連接中,接続中,Conectando,Connexion,Verbindung wird hergestellt,Подключение, bağlanılıyor,กำลังเชื่อมต่อ
+Connected,연결됨,Connected,已连接,已連接,接続済み,Conectado,Connecté,Verbunden,Подключено,Bağlantı kuruldu,เชื่อมต่อแล้ว
+CallEnd,통화 종료,End call,结束通话,結束通話,通話終了,Finalizar llamada,Terminer l'appel,Anruf beenden,Завершить вызов,Çağrı sonlandırıldı,สิ้นสุดการโทร
+## GroupServer
+JoinedServerList,참여중인 서버 목록,List of participating servers,参与的服务器列表,參與的伺服器列表,参加しているサーバーのリスト,Lista de servidores participativos,Liste des serveurs participants,Liste der teilnehmenden Server,Список участвующих серверов,Katılımcı sunucular listesi,รายชื่อเซิร์ฟเวอร์ที่เข้าร่วม
+ServerDetail,서버 정보,Server info,服务器信息,伺服器資訊,サーバー情報,Información del servidor,Informations sur le serveur,Server-Informationen,Информация о сервере,Sunucu bilgisi,ข้อมูลเซิร์ฟเวอร์
+RightClickDetail,서버를 우클릭하여 정보 상세,Right click on the server to view detailed information,右键单击服务器查看详细信息,右鍵點擊伺服器查看詳細資訊,サーバーを右クリックして詳細情報を表示,Haz clic derecho en el servidor para ver detalles,Faites un clic droit sur le serveur pour afficher les informations détaillées,Klicken Sie mit der rechten Maustaste auf den Server, um Details anzuzeigen,Щелкните правой кнопкой мыши на сервере, чтобы увидеть подробную информацию,Sunucuya sağ tıklayarak ayrıntıları görüntüleyin,คลิกขวาที่เซิร์ฟเวอร์เพื่อดูข้อมูลรายละเอียด
+RemoveUnofficial,삭제,Delete,删除,刪除,削除,Eliminar,Supprimer,Löschen,Удалить,Sil,ลบ
+RemoveAccount,탈퇴,Leave,离开,離開,退出,Dejar,Quitter,Verlassen,Покинуть,Çık,ออก
+RemoveAccountReally,서버 탈퇴,Leave server,离开服务器,離開伺服器,サーバーを離れる,Dejar el servidor,Quitter le serveur,Server verlassen,Покинуть сервер,Sunucuyu terk et,ออกจากเซิร์ฟเวอร์
+RegisterServer,사설 서버 등록하기,Register private server,注册私人服务器,註冊私人伺服器,プライベートサーバーの登録,Registrar servidor privado,Enregistrer serveur privé,Privaten Server registrieren,Зарегистрировать частный сервер,Özel sunucu kaydet,ลงทะเบียนเซิร์ฟเวอร์ส่วนตัว
+DisplayName,표시명,Display name,显示名称,顯示名稱,表示名,Nombre para mostrar,Nom d'affichage,Anzeigename,Отображаемое имя,Görüntülenen ad,ชื่อแสดง
+DisplayName_placeholder,사용자 사설 서버,User dedicated server,用户专用服务器,用戶專用伺服器,ユーザー専用サーバー,Servidor dedicado de usuario,Serveur dédié de l'utilisateur,Benutzer dedizierter Server,Kullanıcıya özel sunucu,เซิร์ฟเวอร์เฉพาะผู้ใช้
+DivisionName,구분자,Separator,分隔符,分隔符,区切り,Separador,Séparateur,Trennzeichen,Разделитель,Ayrıcı,ตัวคั่น
+DivisionName_placeholder,표시명을 따라감,Follow display name,跟随显示名称,跟隨顯示名稱,表示名に従う,Sigue el nombre de pantalla,Suivre le nom d'affichage,Suis le nom affiché,Следовать за отображаемым именем, Görüntülenen adı takip et,ติดตามชื่อแสดง
+Address,서버 주소,Address,服务器地址,伺服器地址,サーバーアドレス,Dirección del servidor,Adresse du serveur,Server-Adresse,Адрес сервера,Sunucu adresi,ที่อยู่เซิร์ฟเวอร์
+Key,서버 키,Key,服务器密钥,伺服器密鑰,サーバーキー,Clave del servidor,Clé du serveur,Server-Schlüssel,Ключ сервера,Sunucu anahtarı,รหัสเซิร์ฟเวอร์
+Port,Nakama 서버 포트,Nakama server port,奈加马服务器端口,Nakama 伺服器端口,Nakamaサーバーポート,Puerto del servidor Nakama,Port du serveur Nakama,Nakama-Server-Port,Порт Nakama сервера,Nakama sunucu portu,พอร์ตเซิร์ฟเวอร์ Nakama
+cdnPort,파일 서버 포트,File server port,文件服务器端口,文件伺服器端口,ファイルサーバーポート,Puerto del servidor de archivos,Port du serveur de fichiers,Datei-Server-Port,Порт файла сервера,Dosya sunucu portu,พอร์ตเซิร์ฟเวอร์ไฟล์
+apachePort,아파치 서버 포트,Apache port,阿帕奇服务器端口,阿帕奇伺服器端口,アパッチサーバーポート,Puerto del servidor Apache,Port du serveur Apache,Apache-Server-Port,Порт Apache сервера,Apache sunucusu portu,พอร์ตเซิร์ฟเวอร์ Apache
+SquarePort,광장 서버 포트,Square port,广场服务器端口,廣場伺服器端口,スクエアサーバーポート,Puerto del servidor Square,Port du serveur Square,Square-Server-Port,Порт сервера Square,Square sunucusu portu,พอร์ตเซิร์ฟเวอร์ Square
+WebRTCPort,WebRTC 서버 포트,WebRTC server port,WebRTC服务器端口,WebRTC伺服器端口,WebRTCサーバーポート,Puerto del servidor WebRTC,Port du serveur WebRTC,WebRTC-Server-Port,Порт WebRTC сервера,WebRTC sunucu portu,พอร์ตเซิร์ฟเวอร์ WebRTC
+isSSL,SSL 적용여부,use SSL,是否使用SSL,是否使用SSL,SSLを使用するか,Usar SSL,Utiliser SSL,SSL verwenden,Используется SSL,SSL kullanmak,ใช้ SSL
+submit,등록하기,Submit,提交,提交,送信する,Enviar,Envoyer,Absenden,Отправить,Gönder,ส่ง
+NeedSetDIsplayName,이름을 지정해주세요,Please specify a display name,请输入显示名称,請輸入顯示名稱,表示名を指定してください,Por favor, especifique un nombre para mostrar,Veuillez spécifier un nom d'affichage,Bitte einen Anzeigenamen angeben,Пожалуйста, укажите имя для отображения,Lütfen görüntülenecek adı belirtin,โปรดระบุชื่อที่จะแสดง
+## ServerDetail
+copy_scan_below,QR코드를 클릭하여 초대 주소 공유,Click the QR code to share the invitation address,点击二维码分享邀请地址,點擊二維碼分享邀請地址,QRコードをクリックして招待アドレスを共有,Haz clic en el código QR para compartir la dirección de invitación,Cliquez sur le QR code pour partager l'adresse d'invitation,Klicken Sie auf den QR-Code, um die Einladungsadresse zu teilen,Щелкните на QR-код, чтобы поделиться адресом приглашения,Tıkla QR kodu ile davet adresini paylaş,คลิก QR โค้ดเพื่อแชร์ที่อยู่คำเชิญ
+RegenWebRTC,WebRTC 서버 재구성,Reconfigure WebRTC server,重新配置WebRTC服务器,重新配置WebRTC伺服器,WebRTCサーバーを再構成,Reconfigurar servidor WebRTC,Reconfigurer le serveur WebRTC,WebRTC-Server neu konfigurieren,Перенастройка WebRTC сервера,WebRTC sunucusunu yeniden yapılandır,กำหนดค่าใหม่ WebRTC เซิร์ฟเวอร์
+RegenWebRTCDone,WebRTC 서버 정보를 다시 구성하였습니다,Reconfigured WebRTC server information,已重新配置WebRTC服务器信息,已重新配置WebRTC伺服器資訊,WebRTCサーバー情報を再構成しました,La información del servidor WebRTC se ha reconfigurado,Les informations du serveur WebRTC ont été reconfigurées,WebRTC-Serverinformationen wurden neu konfiguriert,Информация о WebRTC сервере была перезагружена,WebRTC sunucusu bilgisi yeniden yapılandırıldı,ข้อมูล WebRTC เซิร์ฟเวอร์ได้รับการกำหนดค่าใหม่
+detailInfo,상세 정보,More information,更多信息,更多資訊,詳細情報,Más información,Plus d'informations,Mehr Informationen,Дополнительная информация,Daha fazla bilgi,ข้อมูลเพิ่มเติม
+ApplyChangeServerInfo,적용하기,Apply,应用,應用,適用する,Aplicar,Appliquer,Anwenden,Применить,Uygula,ใช้
+ServerPresets,서버 사전설정,Server presets,服务器预设,伺服器預設,サーバープリセット,Preajustes del servidor,Paramètres prédéfinis du serveur,Server-Voreinstellungen,Предустановки сервера,Sunucu ön ayarları,การตั้งค่าเซิร์ฟเวอร์ล่วงหน้า
+CreateInfo,같은 서버의 다른 주소를 미리 등록할 수 있습니다,You can pre-register other addresses of the same server,您可以预先注册同一服务器的其他地址,您可以預先註冊同一伺服器的其他地址,同じサーバーの他のアドレスを事前に登録できます,Puede pre-registrar otras direcciones del mismo servidor,Vous pouvez pré-enregistrer d'autres adresses du même serveur,Sie können andere Adressen des gleichen Servers vorab registrieren,Вы можете предварительно зарегистрировать другие адреса того же сервера,Aynı sunucunun diğer adreslerini önceden kaydedebilirsiniz,คุณสามารถลงทะเบียนที่อยู่อื่น ๆ ของเซิร์ฟเวอร์เดียวกันล่วงหน้า
+Add,추가,Add,添加,添加,追加,Agregar,Ajouter,Hinzufügen,Добавить,Ekle,เพิ่ม
+## AddGroup
+Title,새 채널 만들기,Create new channel,创建新频道,創建新頻道,新しいチャンネルを作成,Crear nuevo canal,Créer un nouveau canal,Neuen Kanal erstellen,Создать новый канал,Yeni kanal oluştur,สร้างช่องใหม่
+SelectServer,서버 선택,Select server,选择服务器,選擇伺服器,サーバーを選択,Seleccionar servidor,Sélectionner un serveur,Server auswählen,Выбрать сервер,Sunucu seç,เลือกเซิร์ฟเวอร์
+UseLocalStorage,이 기기에 기록,Record on this device,在此设备上记录,在這個設備上記錄,このデバイスに記録,Registrar en este dispositivo,Enregistrer sur cet appareil,Auf diesem Gerät speichern,Записать на это устройство,Aygıtta kaydet,บันทึกลงในอุปกรณ์นี้
+GroupInfo,채널 정보,Channel info,频道信息,頻道資訊,チャンネル情報,Información del canal,Informations sur le canal,Kanalinformationen,Информация о канале,Kanala bilgi,ข้อมูลช่อง
+DiffFormat,형식 오류,Different format,格式错误,格式錯誤,形式の誤り,Formato diferente,Format différent,Unterschiedliches Format,Неверный формат,Farklı format,Hình thứcไม่ถูกต้อง
+DisplayName,표시명,Display name,显示名称,顯示名稱,表示名,Nombre de visualización,Nom d'affichage,Anzeigename,Отображаемое имя,Görüntüleme adı,ชื่อแสดง
+DisplayName_placeholder,채널 이름,Channel name,频道名称,頻道名稱,チャンネル名,Nombre del canal,Nom du canal,Kanaltitel,Название канала,Kanal adı,ชื่อช่อง
+ClicktoChangeGroupImg,눌러서 채널 이미지 설정,Click to add channel image,点击以添加频道图片,點擊以添加頻道圖片,チャンネル画像を追加する,Haz clic para agregar la imagen del canal,Cliquez pour ajouter l'image du canal,Klicken Sie, um das Kanalbild hinzuzufügen,Нажмите, чтобы добавить изображение канала,Tıklayarak kanal resmi ekleyin,คลิกเพื่อเพิ่มภาพช่อง
+Volatile,휘발성 채널,Volatile channel,易失性频道,易失性頻道,揮発性チャンネル,Canal volátil,Canal volatil,Flüchtiger Kanal,Летучий канал,Geçici kanal,ช่องชั่วคราว
+JoinThisGroup,채널 참여,Join,加入频道,加入頻道,チャンネルに参加,Unirse al canal,Rejoindre le canal,Dem Kanal beitreten,Присоединиться к каналу,Kanala katıl,เข้าร่วมช่อง
+AfterCreateGroup,채널을 생성하여 계속,Continue by creating a channel,创建频道后继续,創建頻道後繼續,チャンネル作成後に続行,Continúa creando un canal,Continuez en créant un canal,Kontinuieren Sie mit der Kanalerstellung,F продолжить созданием канала,Kanala oluşturma ile devam et,สร้างช่องแล้วต่อไป
+GroupDetail,채널 상세,Channel details,频道详细信息,頻道詳細資訊,チャンネル詳細情報,Detalles del canal,Détails du canal,Kanal details,Детали канала,Kanala detay,รายละเอียดช่อง
+GroupDetail_placeholder,채널 설명,Channel description,频道描述,頻道描述,チャンネルの説明,Descripción del canal,Description du canal,Kanalanın açıklaması,Описание канала,Kanala açıklama,คำอธิบายช่อง
+LanguageTag,국가 태그,LangTag,语言标签,語言標籤,言語タグ,Etiqueta de idioma,Tag de langue,Sprach-Tag,Языковой тег,Dil etiketi,แท็กภาษา
+MemberMaxLimit,최대 인원,Maximum member,最大成员,最大成員,最大メンバー,Miembros máximos,Membres maximum,Maximale Mitglieder,Максимум участников,Maksimum üye,จำนวนสมาชิกสูงสุด
+IsOpen,공개 여부,is Open group,是否公开,是否公開,オープングループかどうか,¿Es un grupo abierto?,Est-ce un groupe ouvert ?,Ob offenes Gruppe,Является ли группа открытой,Grup açık mı,กลุ่มเปิดหรือไม่
+submit,위 정보로 추가하기,Submit,提交,提交,送信する,Enviar,Envoyer,Absenden,Отправить,Gönder,ส่ง
+cannot_use_selected_server,선택한 서버를 사용할 수 없습니다,The selected server is unavailable,无法使用所选服务器,無法使用所選伺服器,選択したサーバーは使用できません,El servidor seleccionado no está disponible,Le serveur sélectionné n'est pas disponible,Der ausgewählte Server ist nicht verfügbar,Выбранный сервер недоступен,Seçilen sunucu kullanılamıyor,ไม่สามารถใช้เซิร์ฟเวอร์ที่เลือกได้
+group_created,채널이 생성되었습니다,A channel has been created,频道已创建,頻道已創建,チャンネルが作成されました,Se ha creado el canal,Le canal a été créé,Der Kanal wurde erstellt,Канал был создан,Kanallar oluşturuldu,ช่องถูกสร้างขึ้น
+join_group_succ,채널에 참여했습니다,Joined the channel,已加入频道,已加入頻道,チャンネルに参加しました,Te has unido al canal,Vous avez rejoint le canal,Dem Kanal beigetreten,Присоединился к каналу,Kanala katıldınız,เข้าร่วมช่องแล้ว
+check_group_id,ID를 확인해주세요,Please check the channel ID,请检查频道ID,請檢查頻道ID,チャンネルIDを確認してください,Por favor, verifica el ID del canal,Veuillez vérifier l'ID du canal,Überprüfen Sie die Kanal-ID,Пожалуйста, проверьте ID канала,Kanala ID'sini kontrol edin,กรุณาตรวจสอบ ID ช่อง
+NeedSetGroupName,채널 이름을 작성해주세요,Please write the channel name,请写下频道名称,請寫下頻道名稱,チャンネル名を入力してください,Por favor, escribe el nombre del canal,Veuillez entrer le nom du canal,Bitte geben Sie den Kanalnamen ein,Пожалуйста, напишите название канала,Lütfen kanal adını yazın,กรุณาระบุชื่อช่อง
+AlreadyExist,이미 같은 이름의 채널이 존재합니다,A channel with the same name already exists,已存在相同名称的频道,已存在相同名稱的頻道,同じ名前のチャンネルはすでに存在します,Ya existe un canal con el mismo nombre,Un canal avec le même nom existe déjà,Ein Kanal mit dem gleichen Namen existiert bereits,Канал с таким названием уже существует,Aynı adı taşıyan bir kanal zaten var,ช่องที่มีชื่อเดียวกันมีอยู่แล้ว
+UnexpectedErr,준비되지 않은 오류처리,Unexpected error occured,发生了预料外的错误,發生了預料之外的錯誤,予期しないエラーが発生しました,Ha ocurrido un error inesperado,Une erreur inattendue est survenue,Ein unerwarteter Fehler ist aufgetreten,Произошла непредвиденная ошибка,Beklenmedik bir hata oluştu,เกิดข้อผิดพลาดที่ไม่คาดคิด
+## GroupDetail
+Title,채널 상세,Channel detail,频道详情,頻道詳情,チャンネル詳細,Detalles del canal,Détails du canal,Kanaldetails,Детали канала,Kanaldetay,รายละเอียดช่อง
+IsOpen,공개 여부,Public or not,是否公开,是否公開,公開かどうか,¿Es público o no?,Est-ce public ou non ?,Öffentlich oder nicht,Открыто или нет,Kamusal mı değil mi,เปิดหรือไม่
+NotAcceptYet,아직 수락되지 않았습니다,Not yet accepted,尚未接受,尚未接受,まだ承認されていません,Aún no aceptado,Pas encore accepté,Noch nicht akzeptiert,Не принято,Henüz kabul edilmedi,ยังไม่ยอมรับ
+MissedGroup,더 이상 채널구성원이 아닙니다,No longer a channel member,不再是频道成员,不再是頻道成員,チャンネルメンバーではなくなりました,Ya no es miembro del canal,Vous n'êtes plus membre du canal,Nicht mehr Kanalmitglied,Вы больше не член канала,Artık kanal üyesi değilsiniz,ไม่ใช่สมาชิกช่องอีกต่อไป
+NoDetailGroup,설명 없는 채널,No description,没有描述,沒有描述,説明がありません,Sin descripción,Pas de description,Aucune description,Нет описания,ไม่มีคำอธิบาย
+Members,채널 구성원,Members,频道成员,頻道成員,チャンネルメンバー,Miembros del canal,Membres du canal,Kanalmitglieder,Участники канала,Kanaldaki üyeler,สมาชิกช่อง
+ChangeMaxCount,변경,Change,更改,更改,変更,Modificar,Cambiar,Ändern,Изменить,Değiştir,เปลี่ยนแปลง
+FailedToChangeMax,최대 인원 변경 실패,Failed to change maximum,更改最大人数失败,更改最大人數失敗,最大人数の変更に失敗しました,Error al cambiar el máximo,Faute de changement du maximum,Fehler beim Ändern der Maximalanzahl,Не удалось изменить максимальное количество,Max sayıyı değiştiremedik,ไม่สามารถเปลี่ยนจำนวนสูงสุดได้
+FailedToChangeName,그룹 이름 변경 실패,Failed to change group name,更改群组名称失败,更改群組名稱失敗,グループ名の変更に失敗しました,Error al cambiar el nombre del grupo,Échec du changement de nom du groupe,Fehler beim Ändern des Gruppennamens,Не удалось изменить название группы,Grup adını değiştiremedik,ไม่สามารถเปลี่ยนชื่อกลุ่มได้
+FailedToChangeOpen,그룹 공개 여부 변경 실패,Failed to change group visibility,更改群组公开状态失败,更改群組公開狀態失敗,グループの公開設定変更に失敗しました,Error al cambiar la visibilidad del grupo,Échec du changement de visibilité du groupe,Fehler beim Ändern der Gruppen-Öffentlichkeit,Не удалось изменить видимость группы,Grup görünürlüğünü değiştiremedik,ไม่สามารถเปลี่ยนการมองเห็นกลุ่มได้
+BreakupGroup,채널 해산,Breakup,解散频道,解散頻道,チャンネルを解散,Disolver canal,Fermer le canal,Gruppe auflösen,Распустить канал,Grubu bozuştur,ยุบช่อง
+LeaveGroup,떠나기,Leave group,离开频道,離開頻道,グループを離れる,Dejar el canal,Quitter le canal,Gruppe verlassen,Покинуть канал,Grubu terk et,ออกจากช่อง
+GroupImageChanged,채널 이미지 변경,Change channel image,更改频道图片,更改頻道圖片,チャンネル画像を変更,Cambiar imagen del canal,Changer l'image du canal,Kanalbild ändern,Изменить изображение канала,Kanala resmini değiştirmek,เปลี่ยนภาพช่อง
+GroupRemoved,채널 삭제됨,Channel removed,频道已删除,頻道已刪除,チャンネルが削除されました,Canal eliminado,Canal supprimé,Channel entfernt,Канал удален,Kanaldan kaldırıldı,ช่องถูกลบ
+GroupForceRemoved,채널이 강제 삭제됨,Channel was forcibly deleted,频道被强制删除,頻道被強制刪除,チャンネルが強制削除されました,El canal fue eliminado por fuerza,Le canal a été supprimé de force,Der Kanal wurde zwangsweise gelöscht,Канал был принудительно удален,Kanal zorla silindi,ช่องถูกลบออกโดยบังคับ
+YouAreNotCreator,채널 생성자가 아닙니다,You are not channel creator,你不是频道创建者,你不是頻道創建者,あなたはチャンネル作成者ではありません,No eres el creador del canal,Vous n'êtes pas le créateur du canal,Du bist nicht der Kanal-Ersteller,Вы не являетесь создателем канала,Siz kanal kurucusu değilsiniz,คุณ不是ช่องผู้สร้าง
+## Licenses
+open_link,열기,Open,打开,打開,開く,Abrir,Ouvrir,Öffnen,Открыть,Aç,เปิด
+## QuickQRShare
+GroupServer,서버 정보,Server info,服务器信息,伺服器資訊,サーバー情報,Información del servidor,Infos serveur,Server-Information,Информация о сервере,Sunucu bilgisi,ข้อมูลเซิร์ฟเวอร์
+Group,채널,Channel,频道,頻道,チャンネル,Canal,Canal,Channel,Канал,Grup,ช่อง
+EmptyData,없음,Null,无,無,なし,Ninguno,Aucun,Kein,Нет,Yok,ไม่มี
+success_received,적용하였습니다,Applied,已应用,已應用,適用されました,Aplicado,Appliqué,Angewendet,Применено,Uygulandı,ใช้แล้ว
+## Translator
+TranslatorSpeaking,번역가의 한마디,A word from the translator,来自翻译者的话,來自翻譯者的話,翻訳者からの一言,Una palabra del traductor,Un mot du traducteur,Ein Wort des Übersetzers,Слово от переводчика,Çevirenden bir söz,คำจากผู้แปล
+## CreatorInfo
+creatorComment,제작자의 한마디,A word from the maker,来自制作人的话,來自製作人的話,製作者からの一言,Una palabra del creador,Un mot du créateur,Ein Wort vom Ersteller,Слово от создателя,Üreticiden bir söz,คำจากผู้สร้าง
+contributors,프로젝트 기여자,Contributors,项目贡献者,專案貢獻者,プロジェクトの貢献者,Contribuidores,Contributeurs,Mitwirkende,Участники проекта,Katkıda bulunanlar,ผู้มีส่วนร่วม
+thanks_to,도움주신 분들,Thanks to,感谢,感謝,ありがとうございます,Agradecimientos,Remerciements,Danke an,Благодарности,Teşekkürler,ขอบคุณ
+EmptyPatreons,아직 누구도 후원하지 않았습니다,No one has supported yet,尚未有人支持,尚未有人支持,まだ支援者がいません,Aún nadie ha apoyado,Aucun soutien pour le moment,Es hat noch niemand unterstützt,Еще никто не поддержал,Henüz kimse desteklemedi,ยังไม่มีผู้สนับสนุน
+HowAboutPatreons,첫 후원자가 되어보시는건 어떨까요? :),How about becoming the first supporter? :),你愿意成为第一个支持者吗？:),成為第一位支持者怎麼樣？:),最初の支援者になってみませんか？:),¿Qué tal convertirte en el primer patrocinador? :),Pourquoi ne pas devenir le premier supporter ? :),Wie wäre es, der erste Unterstützer zu werden? :),Как насчет того, чтобы стать первым спонсором? :),İlk destekçi olmayı düşünmez misiniz? :),คุณจะเป็นผู้สนับสนุนคนแรกดีไหม? :)
+## GlobalAct
+CancelText,취소,Cancel,取消,取消,キャンセル,Cancelar,Annuler,Abbrechen,Отмена,İptal,ยกเลิก
+PCClipboard,복사됨,Copied,已复制,已複製,コピーしました,Copiado,Copié,Erfolgreich kopiert,Скопировано,Başarıyla kopyalandı,คัดลอกแล้ว
+ClipboardCopy,클립보드에 복사중,Copying to clipboard,复制到剪贴板,複製到剪貼簿,クリップボードにコピー中,Copiando al portapapeles,En train de copier dans le presse-papiers,In die Zwischenablage kopieren,Копирование в буфер обмена,Panoya kopyalanıyor,กำลังคัดลอกไปที่คลิปบอร์ด
+ClipboardPaste,클립보드로부터 불러오는중,Loading from clipboard,从剪贴板加载,從剪貼簿加載,クリップボードから読み込んでいます,Cargando desde el portapapeles,Chargement depuis le presse-papiers,Laden aus Zwischenablage,Чтение из буфера обмена,Pano'dan yükleniyor,กำลังโหลดจากคลิปบอร์ด
+ClipboardFailed,복사 실패,Failed to copy,复制失败,複製失敗,コピー失敗,Error al copiar,Échec de la copie,Kopieren fehlgeschlagen,Ошибка копирования,Kopyalama hatası,คัดลอกล้มเหลว
+variousCreator,파일 첨부,Attachments,附件,附件,添付ファイル,Archivos adjuntos,Fichiers joints,Dateianhänge,Прикрепленные файлы,Ek dosyalar,ไฟล์แนบ
+FromCamera,카메라로 직접 촬영,From camera,直接拍摄,直接拍攝,カメラから,Desde la cámara,Depuis l'appareil photo,Aus der Kamera,С камеры,Kameradan,จากกล้อง
+ErrorFromCamera,촬영 실패,Failed to film,拍摄失败,拍攝失敗,撮影に失敗しました,Error al filmar,Échec de l'enregistrement,Fehler beim Filmen,Ошибка съемки,Çekim hatası,ถ่ายรูปล้มเหลว
+FromVoidDraw,앱 그림판에서 작업,From in-app painter,来自应用程序绘图板,來自應用程式繪圖板,アプリ内ペイントから,Desde el pintor de la app,Du pinceau de l'application,Aus der In-App-Zeichnung,Из рисования в приложении,App içi çizimden,Unggahจากเครื่องมือวาดในแอป
+FromAutoLongText,긴 글 파일,Long text file,长文本文件,長文本檔案,長文ファイル,Archivo de texto largo,Long fichier texte,Langer Textdatei,Длинный текстовый файл,Uzun metin dosyası,ไฟล์ข้อความยาว
+FromTextEditor,텍스트 편집기,From text editor,来自文本编辑器,來自文本編輯器,テキストエディタから,Desde el editor de texto,Depuis l'éditeur de texte,Aus dem Texteditor,Из текстового редактора,Metin düzenleyicisinden,จากตัวแก้ไขข้อความ
+SharedContent,다른 채널로부터 공유받음,Shared from other channels,来自其他频道的分享,來自其他頻道的分享,他のチャンネルからの共有,Compartido desde otros canales,Partagé depuis d'autres canaux,Geteilt von anderen Kanälen,Поделено другими каналами,Diğer kanallardan paylaşıldı,แบ่งปันจากช่องทางอื่น
+UnknownSource,알 수 없는 출처,Unknown source,未知来源,未知來源,不明なソース,Fuente desconocida,Source inconnue,Unbekannte Quelle,Неизвестный источник,Bilinmeyen kaynak,แหล่งที่มาไม่รู้จัก
+failed_to_gen_qr,QRCode 생성 실패,QRCode generation failed,二维码生成失败,二維碼生成失敗,QRコードの生成に失敗しました,Fallo al generar QR,Échec de la génération du QR,Fehler bei der QR-Code-Erstellung,Ошибка генерации QR,QR oluşturulamadı,ไม่สามารถสร้าง QR
+UploadFailed,파일 서버에 업로드 실패: 요청 시간 초과,Upload to file server failed: request timed out,文件服务器上传失败：请求超时,文件伺服器上傳失敗：請求超時,ファイルサーバーへのアップロードに失敗しました：リクエストタイムアウト,Fallo al subir al servidor de archivos: solicitud agotada,Échec de l'upload sur le serveur de fichiers : délai de demande expiré,Fehler beim Hochladen auf den Dateiserver: Zeitüberschreitung der Anfrage,Не удалось загрузить на файловый сервер: истекло время ожидания,Dosya sunucusuna yükleme başarısız oldu: istek zaman aşımına uğradı,อัพโหลดไปยังเซิร์ฟเวอร์ไฟล์ล้มเหลว: การร้องขอหมดเวลา
+FailedToReadClipboard,클립보드 읽기 실패,Failed to read clipboard,读取剪贴板失败,讀取剪貼簿失敗,クリップボードの読み取りに失敗しました,Fallo al leer el portapapeles,Échec de la lecture du presse-papiers,Fehler beim Lesen aus der Zwischenablage,Ошибка чтения из буфера обмена,Panoyu okuma hatası,ไม่สามารถอ่านคลิปบอร์ด
+TodoRecording,할 일에서 녹음중,Recording from To Do,在待办事项中录音,在待辦事項中錄音,To Doから録音中,Grabando desde To Do,Enregistrement depuis les tâches,Aufnahme aus "To Do",Запись из "To Do","To Do"dan kayıt yapılıyor,กำลังบันทึกจาก To Do
+ChatRoomRecording,채팅에서 녹음중,Recording in chat,聊天室录音中,聊天室錄音中,チャットで録音中,Grabando en el chat,Enregistrement dans le chat,Aufnahme im Chat,Запись в чате,Sohbette kayıt yapılıyor,กำลังบันทึกในแชท
+PostRecording,게시물에서 녹음중,Recording from post,从帖子中录音,從帖子中錄音,投稿から録音中,Grabando desde la publicación,Enregistrement depuis la publication,Aufnahme aus dem Beitrag,Запись из поста,Paylaşımdan kayıt yapılıyor,กำลังกำลังบันทึกจากโพสต์
+SquareRecording,광장 채널에서 녹음중,Recording on the square channel,在广场频道录音,在廣場頻道錄音,広場チャンネルで録音中,Grabando en el canal de la plaza,Enregistrement sur le canal de la place,Aufnahme im Square-Kanal,Запись на канале площади,Kare kanalında kayıt yapılıyor,กำลังบันทึกในช่อง Square
+CheckCdnServer,파일 업로드 시도중,Attempting to upload file,尝试上传文件,嘗試上傳文件,ファイルをアップロードしようとしています,Intentando subir el archivo,Essayer de télécharger le fichier,Versuch, die Datei hochzuladen,Попытка загрузки файла,Dosya yüklemeye çalışılıyor,พยายามอัพโหลดไฟล์
+CheckFileAddress,파일 주소를 기다리는중,Waiting for file address,等待文件地址,等待文件地址,ファイルアドレスを待機中,Esperando la dirección del archivo,En attente de l'adresse du fichier,Warten auf die Dateiadresse,Ожидание адреса файла,Dosya adresi bekleniyor,รอที่อยู่ไฟล์
+CancelingUpload,업로드 시도 우회,Attempt to upload bypass,绕过上传尝试,繞過上傳嘗試,アップロード試行の回避,Intento de subida por omisión,Intento de carga por bypass,Versuch, das Hochladen zu umgehen,Попытка обойти загрузку,Yüklemeyi geçici olarak atlatma,กำลังพยายามหลีกเลี่ยงการอัพโหลด
+## IndexedDB
+FailedToDownloadFile,다운받기 오류,Failed to download file,下载文件失败,下載檔案失敗,ファイルのダウンロードに失敗しました,Fallo al descargar el archivo,Échec du téléchargement du fichier,Fehler beim Herunterladen der Datei,Не удалось скачать файл,Dosya indirme hatası,ไม่สามารถดาวน์โหลดไฟล์ได้
+## Nakama
+DevTestServer,개발 테스트 서버,Development test server,开发测试服务器,開發測試伺服器,開発テストサーバー,Servidor de prueba de desarrollo,Serveur de test de développement,Entwicklungs-Testserver,Сервер для разработки,Test Sunucusu,Geliştirme test sunucusu
+ServerAdded,서버가 추가되었습니다,Server added,服务器已添加,伺服器已添加,サーバーが追加されました,Servidor añadido,Serveur ajouté,Server hinzugefügt,Сервер добавлен,Sunucu eklendi,เซิร์ฟเวอร์ถูกเพิ่ม
+SyncingChannel,동기화중,Syncing,同步中,同步中,同期中,Sincronizando,En synchronisation,Synchronisieren,Синхронизация,Senkranize ediliyor,กำลังซิงค์
+AccessTestServer,테스트 서버에 연결합니다,Connect to Test server,连接到测试服务器,連接到測試伺服器,テストサーバーに接続,Conectar al servidor de prueba,Se connecter au serveur de test,Mit dem Testserver verbinden,Подключение к тестовому серверу,Test sunucusuna bağlanıyor,เชื่อมต่อกับเซิร์ฟเวอร์ทดสอบ
+AlreadyHaveTargetName,이미 같은 이름의 서버가 있습니다,There already exists a server with the same name,已经存在相同名称的服务器,已經存在相同名稱的伺服器,同じ名前のサーバーがすでに存在します,Ya existe un servidor con el mismo nombre,Un serveur avec le même nom existe déjà,Es gibt bereits einen Server mit diesem Namen,Сервер с таким именем уже существует,Aynı isme sahip bir sunucu zaten var,มีเซิร์ฟเวอร์ที่มีชื่อเดียวกันแล้ว
+NeedLoginInfo,사용자 정보를 확인해주세요,Please check your user information,请检查您的用户信息,請檢查您的用戶信息,ユーザー情報を確認してください,Por favor, verifique su información de usuario,Veuillez vérifier vos informations utilisateur,Bitte überprüfen Sie Ihre Benutzerinformationen,Пожалуйста, проверьте вашу информацию о пользователе,Lütfen kullanıcı bilgilerinizi kontrol edin,โปรดตรวจสอบข้อมูลผู้ใช้ของคุณ
+NeedLinkUser,사용자를 연결해주세요,Please link user device info,请连接用户设备信息,請連接用戶設備信息,ユーザーのデバイス情報をリンクしてください,Por favor, vincule la información del dispositivo del usuario,Veuillez lier les informations de l'appareil utilisateur,Bitte verknüpfen Sie die Geräteinformationen des Benutzers,Пожалуйста, свяжите информацию устройства пользователя,Lütfen kullanıcı cihaz bilgilerini bağlayın,กรุณาเชื่อมต่อข้อมูลอุปกรณ์ของผู้ใช้
+NeedAccountReset,비밀번호를 확인해주세요,Please check your password,请检查您的密码,請檢查您的密碼,パスワードを確認してください,Por favor, verifique su contraseña,Veuillez vérifier votre mot de passe,Bitte überprüfen Sie Ihr Passwort,Пожалуйста, проверьте ваш пароль,Lütfen şifrenizi kontrol edin,โปรดตรวจสอบรหัสผ่านของคุณ
+ServerNoti,서버 알림,Server notification,服务器通知,伺服器通知,サーバー通知,Notificación del servidor,Notification du serveur,Serverbenachrichtigung,Уведомление сервера,Sunucu bildirimi,การแจ้งเตือนจากเซิร์ฟเวอร์
+RegisterUserSucc,서버 이용자로 등록되었습니다,You are registered as a server user,您已注册为服务器用户,您已註冊為伺服器用戶,サーバーユーザーとして登録されました,Está registrado como usuario del servidor,Vous êtes inscrit en tant qu'utilisateur du serveur,Sie sind als Serverbenutzer registriert,Вы зарегистрированы как пользователь сервера,Sunucu kullanıcısı olarak kaydoldunuz,คุณได้รับการลงทะเบียนเป็นผู้ใช้เซิร์ฟเวอร์
+UnexpectedLoginErr,준비되지 않은 오류 유형,Unexpected error type,未准备好的错误类型,未準備好的錯誤類型,予期しないエラータイプ,Tipo de error inesperado,Type d'erreur inattendu,Unerwarteter Fehler,Неожиданный тип ошибки,Beklenmeyen hata türü,ชนิดข้อผิดพลาดที่ไม่ได้เตรียมไว้
+CannotOpenImg,유효한 이미지가 아닙니다,Not a valid image,不是有效的图片,不是有效的圖片,無効な画像です,No es una imagen válida,Ce n'est pas une image valide,Kein gültiges Bild,Это не действительное изображение,Geçerli bir resim değil,ไม่ใช่ภาพที่ถูกต้อง
+UserNotFound,만료된 알림: 사용자 없음,Notification expired: no users,通知已过期：没有用户,通知過期：沒有用戶,通知期限切れ：ユーザーがいません,Notificación caducada: no hay usuarios,Notification expirée : pas d'utilisateurs,Mitteilung abgelaufen: keine Benutzer,Уведомление истекло: нет пользователей,Bildirim süresi dolmuş: kullanıcı yok,การแจ้งเตือนหมดอายุ: ไม่มีผู้ใช้
+MissingFile,이 파일은 서버에서 삭제되었습니다,This file has been deleted from the server,该文件已从服务器删除,該檔案已從伺服器刪除,このファイルはサーバーから削除されました,Este archivo ha sido eliminado del servidor,Ce fichier a été supprimé du serveur,Die Datei wurde vom Server gelöscht,Этот файл был удален с сервера,Bu dosya sunucudan silindi,ไฟล์นี้ถูกลบออกจากเซิร์ฟเวอร์แล้ว
+RemovingAccount,사용자 삭제중,Deleting user,正在删除用户,正在刪除用戶,ユーザーを削除しています,Eliminando usuario,Suppression de l'utilisateur,Benutzer wird gelöscht,Удаление пользователя,Kullanıcı siliniyor,กำลังลบผู้ใช้
+LogoutAccount,세션 삭제중,Deleting session,正在删除会话,正在刪除會話,セッションを削除しています,Eliminando sesión,Suppression de session,Session wird gelöscht,Удаление сессии,Oturum siliniyor,กำลังลบเซสชั่น
+RemovingNotification,알림 삭제중,Deleting notifications,正在删除通知,正在刪除通知,通知を削除しています,Eliminando notificaciones,Suppression des notifications,Benachrichtigungen werden gelöscht,Удаление уведомлений,Bildirimler siliniyor,กำลังกำจัดการแจ้งเตือน
+MissingChannels,채널 손상처리,Processing channel damage,处理频道损坏,處理頻道損壞,チャネルの破損を処理中,Procesando daños del canal,En traitement des dommages du canal,Kanalbeschädigung wird bearbeitet,Обработка повреждений канала,Kanallarla ilgili hasar işleniyor,กำลังประมวลผลความเสียหายของช่อง
+MissingChannelFiles,파일 이관중,Transferring file,正在转移文件,正在轉移檔案,ファイルを転送しています,Transfiriendo archivo,Transfert de fichier,Datei wird übertragen,Перенос файла,Dosya taşınıyor,กำลังถ่ายโอนไฟล์
+MissingGroups,그룹 손상처리,Processing channel group,处理频道组损坏,處理頻道組損壞,グループの破損を処理中,Procesando daños del grupo,En traitement des dommages du groupe,Verarbeitung von Gruppenschäden,Обработка повреждений группы,Grup hasarları işleniyor,กำลังประมวลผลความเสียหายของกลุ่ม
+DeletingServerInfo,서버 정보 삭제,Delete server information,删除服务器信息,刪除伺服器資訊,サーバー情報を削除しています,Eliminando información del servidor,Suppression des informations du serveur,Serverinformationen löschen,Удаление информации о сервере,Sunucu bilgileri siliniyor,กำลังลบข้อมูลเซิร์ฟเวอร์
+DamagedChannel,손상된 로컬 채널,Damaged local channel,损坏的本地频道,損壞的本地頻道,破損したローカルチャンネル,Canal local dañado,Canal local endommagé,Beschädigter lokaler Kanal,Поврежденный локальный канал,Zarar görmüş yerel kanal,ช่องท้องถิ่นที่เสียหาย
+DeletedServer,삭제된 서버,Deleted server,已删除的服务器,已刪除的伺服器,削除されたサーバー,Servidor eliminado,Serveur supprimé,Löschserver,Удалённый сервер,Silinmiş sunucu,เซิร์ฟเวอร์ที่ถูกลบแล้ว
+GroupUserJoin,사용자 채널참여,User joined,用户已加入频道,用戶已加入頻道,ユーザーがチャンネルに参加しました,Usuario se unió al canal,L'utilisateur a rejoint le canal,Der Benutzer ist dem Kanal beigetreten,Пользователь присоединился к каналу,Kullanıcı kanala katıldı,ผู้ใช้เข้าร่วมช่อง
+GroupUserOut,사용자 채널탈퇴,User leaved,用户已退出频道,用戶已退出頻道,ユーザーがチャンネルを退会しました,Usuario salió del canal,L'utilisateur a quitté le canal,Der Benutzer hat den Kanal verlassen,Пользователь покинул канал,Kullanıcı kanaldan çıktı,ผู้ใช้ได้ออกจากช่อง
+GroupUserKick,사용자 강제퇴장,User kicked,用户已被踢出频道,用戶已被踢出頻道,ユーザーがチャンネルから追い出されました,Usuario expulsado,L'utilisateur a été expulsé,Der Benutzer wurde aus dem Kanal geworfen,Пользователь был исключен из канала,Kullanıcı kanaldan atıldı,ผู้ใช้ถูกเตะออกจากช่อง
+ReqContServer,서버,Server,服务器,伺服器,サーバー,Servidor,Serveur,Server,Сервер,Sunucu,เซิร์ฟเวอร์
+ReqContUserName,사용자명,User name,用户名,用戶名,ユーザー名,Nombre de usuario,Nom d'utilisateur,Benutzername,Имя пользователя,Kullanıcı adı,ชื่อผู้ใช้
+ReqContTitle,채널 참가 요청,Request to join,加入频道请求,加入頻道請求,チャンネル参加リクエスト,Solicitud para unirse al canal,Demande de rejoindre le canal,Anfrage zum Beitritt zum Kanal,Запрос на присоединение к каналу,Kanala katılma isteği,คำขอเข้าร่วมช่อง
+ReqContAccept,수락,Accept,接受,接受,受け入れる,Aceptar,Accepter,Akzeptieren,Принять,Kabul et,ยอมรับ
+ReqContReject,거절,Reject,拒绝,拒絕,拒否する,Rechazar,Rejeter,Abgelehnt,Отклонить,Reddetmek,ปฏิเสธ
+LocalNotiTitle,채널 참가,Join channel,加入频道,加入頻道,チャンネルに参加,Unirse al canal,Rejoindre le canal,Dem Kanal beitreten,Присоединиться к каналу,Kanal katıl,เข้าร่วมช่อง
+LocalNotiOK,확인,OK,确认,確認,OK,Aceptar,OK,OK,ОК,Tamam,ตกลง
+LocalNotiCheck,검토,Check,检查,檢查,確認,Revisar,Vérifier,Überprüfen,Проверить,Kontrol et,ตรวจสอบ
+AddChannelFailed,채널 추가 실패,Failed to add channel,添加频道失败,添加頻道失敗,チャンネルの追加に失敗しました,No se pudo agregar el canal,Échec de l'ajout du canal,Kanal hinzufügen fehlgeschlagen,Не удалось добавить канал,Kanala ekleme başarısız,ไม่สามารถเพิ่มช่องได้
+AddChannelFailed_Code3,사용자 삭제,Delete user,删除用户,刪除用戶,ユーザーを削除,Eliminar usuario,Supprimer l'utilisateur,Benutzer löschen,Удалить пользователя,Kullanıcıyı sil,ลบผู้ใช้
+FailedUpload,업로드 실패,Failed to upload,上传失败,上傳失敗,アップロードに失敗しました,Error al subir,Échec du téléchargement,Fehler beim Hochladen,Не удалось загрузить,İndirme başarısız,การอัปโหลดล้มเหลว
+FailedDownload,다운로드 실패,Failed to download,下载失败,下載失敗,ダウンロードに失敗しました,Error al descargar,Échec du téléchargement,Fehler beim Herunterladen,Не удалось скачать,İndirme başarısız,การดาวน์โหลดล้มเหลว
+FailedToAddGroup,그룹 추가 실패,Failed to add group,添加群组失败,添加群組失敗,グループの追加に失敗しました,No se pudo agregar el grupo,Échec de l'ajout du groupe,Gruppe hinzufügen fehlgeschlagen,Не удалось добавить группу,Grup ekleme başarısız,ไม่สามารถเพิ่มกลุ่มได้
+SaveWebRTCServer,WebRTC 서버 정보가 저장되었습니다,WebRTC server information has been saved,WebRTC服务器信息已保存,WebRTC伺服器信息已保存,WebRTCサーバー情報が保存されました,La información del servidor WebRTC ha sido guardada,L'information du serveur WebRTC a été enregistrée,WebRTC-Serverinformationen wurden gespeichert,Информация о сервере WebRTC сохранена,WebRTC sunucu bilgileri kaydedildi,ข้อมูลเซิร์ฟเวอร์ WebRTC ได้รับการบันทึก
+GroupAllListDone,없는 그룹 정보,There is no group,没有群组信息,沒有群組信息,グループ情報がありません,No hay información de grupos,Pas d'information sur le groupe,Aucune information sur le groupe,Keine Gruppeninformationen vorhanden,Нет информации о группе,Grup bilgisi yok,ไม่มีข้อมูลกลุ่ม
+GroupAlreadyJoined,이미 참가한 그룹,Already joined group,已经加入的群组,已加入的群組,すでに参加したグループ,Grupo ya unido,Le groupe a déjà été rejoint,Gruppe bereits beigetreten,Группа уже присоединена,Gruba zaten katıldınız,เข้าร่วมกลุ่มแล้ว
+SessionLogout,로그아웃됨,Logged out,已注销,已登出,ログアウトしました,Cerrado sesión,Déconnecté,Abgemeldet,Выход из системы,Çıkış yapıldı,ออกจากระบบ
+LoginAgain,이 서버에 다시 연결합니다,Reconnect to this server,重新连接到此服务器,重新連接到此伺服器,このサーバーに再接続しています,Reconectando a este servidor,Se reconnecter à ce serveur,Mit diesem Server erneut verbinden,Переподключение к серверу,Sunucuya tekrar bağlanılıyor,กำลังเชื่อมต่อกับเซิร์ฟเวอร์นี้อีกครั้ง
+PendingLogin,연결을 시도합니다,Trying to connect,正在尝试连接,正在嘗試連接,接続を試みています,Intentando conectar,Essayer de se connecter,Verbindung wird hergestellt,Попытка подключения,Bağlanmaya çalışılıyor,พยายามเชื่อมต่อ
+AddNewServer,새 서버의 이름을 지정해주세요,Please specify a name for your new server,请为您的新服务器指定名称,請為您的新伺服器指定名稱,新しいサーバーの名前を指定してください,Por favor, especifique un nombre para su nuevo servidor,Veuillez spécifier un nom pour votre nouveau serveur,Bitte geben Sie einen Namen für den neuen Server an,Lütfen yeni sunucunuz için bir isim belirleyin,Yeni sunucunuz için bir isim belirtin,กรุณากำหนดชื่อสำหรับเซิร์ฟเวอร์ใหม่ของคุณ
+NeedLogin,로그인해주십시오,Please log in,请登录,請登入,ログインしてください,Por favor, inicie sesión,Veuillez vous connecter,Bitte melden Sie sich an,Пожалуйста, войдите в систему,Lütfen giriş yapın,กรุณาล็อกอิน
+NoLoginServer,연결할 서버가 없습니다,There is no server to connect to,没有可连接的服务器,沒有可連接的伺服器,接続するサーバーがありません,No hay servidores a los que conectarse,Il n'y a pas de serveur auquel se connecter,Es gibt keinen Server, mit dem verbunden werden kann,Нет сервера для подключения,Sunucuya bağlanacak sunucu yok,ไม่มีเซิร์ฟเวอร์ที่สามารถเชื่อมต่อได้
+TryOnline,온라인 처리 시도,Online processing attempt,尝试在线处理,嘗試線上處理,オンライン処理を試みています,Intento de procesamiento en línea,Essai de traitement en ligne,Online-Verarbeitungsversuch,Попытка обработки онлайн,Çevrim içi işleme denemesi,ลองประมวลผลออนไลน์
+## voidDraw
+sideSIzeIssue,캔버스의 모든 변은 0보다 커야합니다,All sides of the canvas must be greater than 0,画布的所有边必须大于0,畫布的所有邊必須大於0,キャンバスのすべての辺は0より大きくなければなりません,Todos los lados del lienzo deben ser mayores que 0,Toutes les faces du canevas doivent être supérieures à 0,Alle Seiten der Leinwand müssen größer als 0 sein,Все стороны холста должны быть больше 0,Kanvasın tüm kenarları 0'dan büyük olmalıdır,ทุกด้านของผืนผ้าใบต้องมีค่ามากกว่า 0
+UseThisImage,이미지를 준비중...,Preparing image to send...,正在准备图片发送中,正在準備圖片發送中,画像を送信する準備をしています,Preparando la imagen para enviar,Préparation de l'image pour l'envoi,Vorbereiten des Bildes zum Senden,Подготовка изображения для отправки,Resim göndermek için hazırlık yapılıyor,กำลังเตรียมภาพสำหรับส่ง
+newDraw,새 그림,New draw,新画,新圖,新しい絵,Nuevo dibujo,Nouvelle illustration,Neue Zeichnung,Новый рисунок,Yeni çizim,ภาพวาดใหม่
+CreateNew,새로 만들기,New,新建,新增,新規作成,Nuevo,Créer un nouveau,Nueva creación,Neu erstellen,Создать новый,Yeni oluştur,สร้างใหม่
+ColorpickDetail,그리기 상세 조정,Drawing detail adjustment,绘画详细调整,繪圖詳細調整,描画の詳細調整,Ajuste de detalles del dibujo,Ajustement des détails du dessin,Zeichnungsdetailanpassung,Корректировка деталей рисования,Ayrıntılı çizim ayarı,ปรับรายละเอียดการวาด
+ColorpickRed,빨강,Red,红色,紅色,赤,Rojo,Rouge,Rot,Красный,Kırmızı,แดง
+ColorpickGreen,초록,Green,绿色,綠色,緑,Verde,Vert,Grün,Зеленый,Yeşil,เขียว
+ColorpickBlue,파랑,Blue,蓝色,藍色,青,Azul,Bleu,Blau,Синий,Mavi,น้ำเงิน
+ColorpickAlpha,투명도,Alpha,透明度,透明度,アルファ,Transparencia,Alpha,Alpha,Прозрачность,Alpha,ความโปร่งใส
+ResolutionDetail,해상도 조정,Adjust resolution,调整分辨率,調整解析度,解像度調整,Ajuste de resolución,Ajuster la résolution,Auflösung anpassen,Настройка разрешения,Çözünürlük ayarı,ปรับความละเอียด
+ResolutionRatio,비율,Ratio,比率,比例,比率,Relación,Ratio,Verhältnis,Соотношение,Oran,อัตราส่วน
+AutoResolution,항상 표시된 대로 해상도 자동 조정,Always auto-adjust res. as displayed,始终按显示的方式自动调整分辨率,始終按顯示的方式自動調整解析度,表示された通りに常に解像度を自動調整,Siempre ajustar la resolución automáticamente según se muestra,Toujours ajuster la résolution comme affichée,Immer automatisch die Auflösung anpassen,Всегда автоматически настраивать разрешение,Her zaman görüntülenene göre çözünürlüğü otomatik ayarla,ปรับความละเอียดอัตโนมัติตามที่แสดง
+width,가로,Width,宽度,寬度,幅,Ancho,Largeur,Breite,Ширина,Genislik,ความกว้าง
+height,세로,Height,高度,高度,高さ,Altura,Hauteur,Höhe,Высота,Yükseklik,ความสูง
+weight,선 두께,Stroke weight,笔触粗细,筆觸粗細,ストロークの太さ,Peso del trazo,Épaisseur du trait,Strichstärke,Толщина линии,Çizgi kalınlığı,ความหนาของเส้น
+quickSetup,빠른 설정 기본값,Quick setup defaults,快速设置默认值,快速設定預設值,クイックセットアップのデフォルト,Valores predeterminados de configuración rápida,Paramètres par défaut de configuration rapide,Schnelleinstellungen-Standardeinstellungen,Быстрая настройка по умолчанию,Hızlı ayar varsayılanları,การตั้งค่าเริ่มต้นอย่างรวดเร็ว
+quickTransparent,투명도,Transparency,透明度,透明度,透明度,Transparencia,Transparence,Transparenz,Прозрачность,Şeffaflık,ความโปร่งใส
+apply,적용,Apply,应用,應用,適用,Aplicar,Appliquer,Anwenden,Применить,Uygula,ใช้
+CreateChannel,새 채널 생성,Create new channel,创建新频道,創建新頻道,新しいチャンネルを作成,Crear un nuevo canal,Créer un nouveau canal,Neuen Kanal erstellen,Создать новый канал,Yeni kanal oluştur,สร้างช่องใหม่
+InputAddress,주소 입력,Input address,输入地址,輸入地址,アドレスを入力,Introduzca la dirección,Entrez l'adresse,Geben Sie die Adresse ein,Введите адрес,Adres girin,กรอกที่อยู่
+ChannelIdAddress,채널id 입력,Input channel id,输入频道ID,輸入頻道ID,チャンネルIDを入力,Introduzca el ID del canal,Entrez l'ID du canal,Geben Sie die Kanal-ID ein,Введите ID канала,Kanallar kimliği girin,กรอก ID ช่อง
+ConnectToAddress,연결하기,Connect,连接,連接,接続,Conectar,Se connecter,Verbinden,Подключиться,Bağlan,เชื่อมต่อ
+LocalAddrInput,주소 직접 입력하기,Enter address directly,直接输入地址,直接輸入地址,アドレスを直接入力,Ingresar dirección directamente,Entrer l'adresse directement,Adresse direkt eingeben,Ввести адрес напрямую,Adresi doğrudan gir,กรอกที่อยู่โดยตรง
+ServerStarted,공유 그림판 서버 켜짐,Shared paint server turned on,共享画板服务器已启动,共享畫板伺服器已啟動,共有ペイントサーバーが起動しました,Servidor de pintura compartido encendido,Serveur de peinture partagé activé,Freigegebener Malserver gestartet,Сервер общего рисования запущен,Açık boyama sunucusu açıldı,เปิดเซิร์ฟเวอร์วาดภาพที่แชร์
+Confirm,연결,Confirm,确认,確認,接続確認,Confirmar,Confirmer,Bestätigen,Подтвердить,Onayla,ยืนยัน
+WaitingConnection,연결을 기다리는중,Waiting for connection,等待连接,等待連接,接続待機中,Esperando conexión,En attente de la connexion,Warten auf Verbindung,Ожидание подключения,Bağlantı bekleniyor,รอการเชื่อมต่อ
+FailedToOpenServer,서버 생성 실패,Failed to create server,创建服务器失败,創建伺服器失敗,サーバーの作成に失敗しました,Fallo al crear el servidor,Échec de la création du serveur,Fehler beim Erstellen des Servers,Не удалось создать сервер,Sunucu oluşturulamadı,ไม่สามารถสร้างเซิร์ฟเวอร์ได้
+Connected,연결됨,Connected,已连接,已連接,接続済み,Conectado,Connecté,Verbunden,Подключено,Bağlantı kuruldu,เชื่อมต่อแล้ว
+InternalConn,직접 연결,Connect directly,直接连接,直接連接,直接接続,Conectar directamente,Connecter directement,Direkt verbinden,Подключиться напрямую,Doğrudan bağlantı kur,เชื่อมต่อโดยตรง
+WebRTC_Waiting,WebRTC 연결 대기중,Waiting WebRTC connection,等待WebRTC连接,等待WebRTC連接,WebRTC接続待機中,Esperando conexión WebRTC,En attente de la connexion WebRTC,Warten auf WebRTC-Verbindung,Ожидание WebRTC-соединения,WebRTC bağlantısı bekleniyor,รอการเชื่อมต่อ WebRTC
+WebRTC_Init,WebRTC 초기화중,Initialize WebRTC,初始化WebRTC,初始化WebRTC,WebRTC初期化中,Inicializando WebRTC,Initialisation de WebRTC,WebRTC wird initialisiert,Инициализация WebRTC,WebRTC başlatılıyor,กำลังเริ่มต้น WebRTC
+WebRTC_Offer,제의 교환중,Sharing offer,交换提议,交換提議,提案の交換,Intercambiando oferta,Échange de proposition,Angebot austauschen,Обмен предложениями,Öneri paylaşımı,แลกเปลี่ยนข้อเสนอ
+WebRTC_datachannel,데이터채널 구성중,Configuring data channel,配置数据通道,配置數據通道,データチャネルの構成中,Configurando canal de datos,Configuration du canal de données,Konfigurieren des Datenkanals,Конфигурация канала данных,Veri kanalı yapılandırılıyor,กำลังตั้งค่าช่องข้อมูล
+WebRTC_ShareBG,배경이미지 교환중,Exchanging background images,交换背景图像,交換背景圖像,背景画像の交換中,Intercambiando imágenes de fondo,Échange d'images de fond,Hintergrundbilder austauschen,Обмен фоновыми изображениями,Arka plan resimleri değiştiriliyor,กำลังแลกเปลี่ยนภาพพื้นหลัง
+FailedGetBG,배경이미지 교환 실패,Background image exchange failed,背景图像交换失败,背景圖像交換失敗,背景画像の交換に失敗しました,Fallo al intercambiar imágenes de fondo,Échec de l'échange des images de fond,Fehler beim Austausch des Hintergrundbildes,Не удалось обменять фоновое изображение,Arka plan resmi değişimi başarısız,การแลกเปลี่ยนภาพพื้นหลังล้มเหลว
+WebRTC_Reply,주소 정보 교환중,Receiving information reply,接收地址信息,接收地址資訊,アドレス情報を受信中,Recibiendo respuesta de información,Recevoir la réponse d'information,Empfangen der Adressinformationen,Получение информации о адресе,Adres bilgisi alınıyor,กำลังรับข้อมูลการตอบกลับที่อยู่
+WebRTC_Ice,ICE 정보 교환중,Exchanging ICE information,交换ICE信息,交換ICE資訊,ICE情報の交換中,Intercambiando información ICE,Échange d'informations ICE,ICE-Informationen austauschen,Обмен информацией о ICE,ICE bilgisi değiş tokuş ediliyor,กำลังแลกเปลี่ยนข้อมูล ICE
+## UserFsDir
+CreateFolder,폴더 생성,Create folder,创建文件夹,創建文件夾,フォルダ作成,Crear carpeta,Créer un dossier,Ordner erstellen,Создать папку,Klasör oluştur,สร้างโฟลเดอร์
+Create,생성,Create,创建,創建,作成,Crear,Créer,Erstellen,Создать,Olustur,สร้าง
+NeedFolderName,폴더 이름을 작성해주세요,Please write the folder name,请输入文件夹名称,請輸入文件夾名稱,フォルダ名を入力してください,Por favor, escriba el nombre de la carpeta,Veuillez écrire le nom du dossier,Bitte geben Sie den Ordnernamen ein,Пожалуйста, введите имя папки,Lütfen klasör adını yazın,กรุณาเขียนชื่อโฟลเดอร์
+FailedToCreateFolder,폴더 생성 실패,Folder creation failed,文件夹创建失败,文件夾創建失敗,フォルダ作成に失敗しました,Fallo al crear la carpeta,Échec de la création du dossier,Fehler beim Erstellen des Ordners,Не удалось создать папку,Sunucu oluşturulamadı,ไม่สามารถสร้างโฟลเดอร์ได้
+FolderName,폴더 이름 작성,Enter folder name,输入文件夹名称,輸入文件夾名稱,フォルダ名を入力,Introduzca el nombre de la carpeta,Entrez le nom du dossier,Ordnername eingeben,Введите имя папки,Klasör adını yazın,กรุณาใส่ชื่อโฟลเดอร์
+AlreadyExistFolder,이미 있는 폴더,Folder that already exists,文件夹已存在,文件夾已存在,すでに存在するフォルダ,La carpeta ya existe,Le dossier existe déjà,Ordner existiert bereits,Папка уже существует,Zaten var olan klasör,โฟลเดอร์ที่มีอยู่แล้ว
+MultipleSave,여러 파일 저장,Save multiple files,保存多个文件,保存多個文件,複数のファイルを保存,Guardar varios archivos,Enregistrer plusieurs fichiers,Mehrere Dateien speichern,Сохранить несколько файлов,Çoklu dosyalar kaydedildi,บันทึกหลายไฟล์
+OK,확인,OK,确认,確認,OK,Aceptar,OK,OK,ОК,Onayla,ตกลง
+ResetDB,모든 파일 삭제,Delete all files,删除所有文件,刪除所有檔案,すべてのファイルを削除,Eliminar todos los archivos,Supprimer tous les fichiers,Alle Dateien löschen,Удалить все файлы,Tüm dosyaları sil,ลบไฟล์ทั้งหมด
+LoadingExplorer,준비중,Explorer,加载资源管理器,加載資源管理器,エクスプローラーを準備中,Explorador de carga,Chargement de l'explorateur,Explorer wird geladen,Загрузка проводника,Geçici açılış,กำลังโหลดตัวจัดการไฟล์
+DeleteFile,파일 삭제,Delete file,删除文件,刪除檔案,ファイルを削除,Eliminar archivo,Supprimer le fichier,Datei löschen,Удалить файл,Dosya sil,ลบไฟล์
+DeleteAccept,삭제,Delete,删除,刪除,削除,Eliminar,Supprimer,Löschen,Удалить,Sil,ลบ
+Action,이 파일을..,Action..,对这个文件..,對這個檔案..,このファイルを..,Acción sobre este archivo,Action sur ce fichier,Aktion über diese Datei,Действие над файлом,Bu dosyayla işlem,การดำเนินการเกี่ยวกับไฟล์นี้
+Use,사용하기,Use,使用,使用,使用,Usar,Utiliser,Verwenden,Использовать,Kullanmak,ใช้
+Open,열기,Open,打开,打開,開く,Abrir,Ouvrir,Öffnen,Открыть,Açmak,เปิด
+Select,선택,Select,选择,選擇,選ぶ,Seleccionar,Sélectionner,Auswählen,Выбрать,Seç,เลือก
+Download,받기,Download,下载,下載,ダウンロード,Descargar,Télécharger,Herunterladen,Скачать,İndir,ดาวน์โหลด
+Import,수입,Import,导入,導入,インポート,Importar,Importer,Importieren,Импортировать,İçe aktarma,นำเข้า
+ImportFailed,수입 실패,Import failed,导入失败,導入失敗,インポートに失敗しました,Fallo al importar,Échec de l'importation,Import fehlgeschlagen,Не удалось импортировать,İçe aktarma hatası,ไม่สามารถนำเข้าได้
+Delete,삭제,Delete,删除,刪除,削除,Eliminar,Supprimer,Löschen,Удалить,Sil,ลบ
+CreateAt,생성일시,Creation date,创建日期,創建日期,作成日時,Fecha de creación,Date de création,Erstellungsdatum,Дата создания,Yaratılma tarihi,วันที่สร้าง
+ImportFolder,폴더 수입,Import folder,导入文件夹,導入文件夾,フォルダをインポート,Importar carpeta,Importer un dossier,Ordner importieren,Импортировать папку,İçeri aktarılan klasör,นำเข้าโฟลเดอร์
+RemoveThisFolder,이 폴더와 하위 폴더 및 파일들을 삭제합니다,Delete this folder and subfolders and files,删除该文件夹及其子文件夹和文件,刪除此文件夾及其子文件夾和檔案,このフォルダおよびサブフォルダとファイルを削除します,Eliminar esta carpeta y subcarpetas y archivos,Supprimer ce dossier et ses sous-dossiers et fichiers,Dieser Ordner und Unterordner sowie Dateien werden gelöscht,Удалить эту папку и подпапки с файлами,Bu klasörü ve alt klasörlerini ve dosyaları sil,ลบโฟลเดอร์นี้และโฟลเดอร์ย่อยและไฟล์
+RemoveApply,삭제,Remove,删除,刪除,削除,Eliminar,Supprimer,Löschen,Удалить,Sil,ลบ
+OpenExtFolder,외부 저장소 보기,View external storage,查看外部存储,查看外部儲存,外部ストレージを表示,Ver almacenamiento externo,Afficher le stockage externe,Externen Speicher anzeigen,Посмотреть внешнее хранилище,Harici depolamayı görüntüle,ดูที่เก็บข้อมูลภายนอก
+PrivateAccessDenied,사용자 정보가 포함된 파일이므로 접근이 제한됩니다 ,Access is restricted as this file contains user information,该文件包含用户信息，访问受到限制,該檔案包含用戶信息，無法訪問,このファイルにはユーザー情報が含まれているため、アクセスが制限されています,El acceso está restringido ya que este archivo contiene información del usuario,L'accès est restreint car ce fichier contient des informations utilisateur,Der Zugriff ist eingeschränkt, da diese Datei Benutzerdaten enthält,Доступ ограничен, так как этот файл содержит информацию о пользователе,Bu dosya kullanıcı bilgisi içerdiği için erişim kısıtlanmıştır,เนื่องจากไฟล์นี้มีข้อมูลผู้ใช้ จึงไม่สามารถเข้าถึงได้
+NeedResetToApply,앱을 재시작하면 적용됩니다,Takes effect when you restart the app,重新启动应用程序后生效,重新啟動應用程式後生效,アプリを再起動すると適用されます,Se aplicará cuando reinicie la aplicación,Les modifications prennent effet après avoir redémarré l'application,Änderungen werden nach dem Neustart der App übernommen,Изменения вступят в силу после перезапуска приложения,Değişiklikler uygulamayı yeniden başlattığınızda uygulanır,การเปลี่ยนแปลงจะมีผลเมื่อคุณรีสตาร์ทแอป
+## AdminTools
+ArcadeSet,아케이드 설정,Arcade setting,街机设置,街機設置,アーケード設定,Configuración del arcade,Paramètres d'arcade,Arcade-Einstellungen,Настройки аркады,Arkadayı ayarla,การตั้งค่าอาเขต
+ArcadeListURL,리스트 주소,List URL,列表地址,列表地址,リストURL,URL de la lista,URL de la liste,Listen-URL,Список URL,Liste URL,ลิงก์รายการ
+ArcadeURLPlaceholder,아케이드 리스트 파일 URL,Arcade list file URL,街机列表文件URL,街機列表檔案URL,アーケードリストファイルURL,URL del archivo de lista del arcade,URL du fichier de la liste de l'arcade,Arcade-Liste-Datei-URL,URL файла списка аркады,Arcade liste dosyası URL'si,URL ของไฟล์รายการอาเขต
+SuccSetArcadeURL,아케이드 리스트 변경 성공,Arcade list change successful,街机列表更改成功,街機列表更改成功,アーケードリストの変更が成功しました,Cambio de la lista de arcade exitoso,Changement de la liste d'arcade réussi,Änderung der Arcade-Liste erfolgreich,Успешно изменен список аркад,Arkadalar listesi başarıyla değiştirildi,การเปลี่ยนแปลงรายการอาเขตสำเร็จ
+FailedSetArcadeURL,아케이드 리스트 변경 실패,Failed to change arcade list,街机列表更改失败,街機列表更改失敗,アーケードリストの変更に失敗しました,Fallo al cambiar la lista de arcade,Échec de la modification de la liste de l'arcade,Fehler beim Ändern der Arcade-Liste,Не удалось изменить список аркад,Arkadalar listesi değiştirilirken hata oluştu,ไม่สามารถเปลี่ยนแปลงรายการอาเขตได้
+GlobalNoti,전체알림 발송,Send all notifications,发送全部通知,發送所有通知,全体通知の送信,Enviar todas las notificaciones,Envoyer toutes les notifications,Alle Benachrichtigungen senden,Отправить все уведомления,Tüm bildirimleri gönder,ส่งการแจ้งเตือนทั้งหมด
+ImageURL,이미지 URL,Image URL,图片URL,圖片URL,画像URL,URL de la imagen,URL de l'image,Image-URL,URL изображения,Resim URL'si,URL รูปภาพ
+EnterURI,이미지 주소 입력,Enter image url,输入图片地址,輸入圖片地址,画像URLを入力,Introduzca la URL de la imagen,Entrez l'URL de l'image,Geben Sie die Bild-URL ein,Введите URL изображения,Görsel URL'sini girin,กรอกที่อยู่ URL ของรูปภาพ
+NoNotiMsg,전달할 메시지를 입력해주세요,Please enter your message,请输入消息,請輸入訊息,メッセージを入力してください,Por favor, ingrese su mensaje,Veuillez entrer votre message,Bitte geben Sie Ihre Nachricht ein,Введите ваше сообщение,Mesajınızı girin,กรุณากรอกข้อความของคุณ
+Send,발송,Send,发送,發送,送信,Enviar,Envoyer,Senden,Отправить,Gönder,ส่ง
+Requesting,정보 없음,No information,暂无信息,暫無訊息,情報なし,Sin información,Pas d'information,Keine Informationen,Нет информации,Bilgi yok,ไม่มีข้อมูล
+SendFailed,발송 실패,Send failed,发送失败,發送失敗,送信失敗,Error al enviar,Échec de l'envoi,Fehler beim Senden,Ошибка отправки,Gönderme hatası,ส่งล้มเหลว
+isPersistent,오프라인 사용자에게도 전달,Persistent,离线用户也传送,離線用戶也傳送,オフラインユーザーにも送信,Persistente,Envoyer aux utilisateurs hors ligne,Persistieren,Передача пользователю в оффлайне,Çevrimdışı kullanıcıya gönderilmesi,ส่งต่อให้ผู้ใช้แบบออฟไลน์
+UserList,사용자 목록,Users,用户列表,用戶列表,ユーザーリスト,Lista de usuarios,Liste des utilisateurs,Benutzerliste,Список пользователей,Kullanıcı listesi,รายการผู้ใช้
+AboutMe,나,Me,我,我,私,Yo,Je,Ich,Я,Ben,ฉัน
+UserCreate,생성일시,Create at,创建日期,創建日期,作成日時,Fecha de creación,Date de création,Erstellungsdatum,Дата создания,Yaratılma tarihi,วันที่สร้าง
+ForceLeave,이 사용자를 삭제합니다,Delete this user,删除此用户,刪除此用戶,このユーザーを削除します,Eliminar este usuario,Supprimer cet utilisateur,Benutzer löschen,Удалить этого пользователя,Bu kullanıcıyı sil,ลบผู้ใช้คนนี้
+ApplyLeave,탈퇴,Withdraw,退出,退出,退会,Retirarse,Se retirer,Verlassen,Выход,Çıkış,ออกจากระบบ
+UserLeaved,사용자 탈퇴됨,Withdrawn,用户已退出,用戶已退出,ユーザーが退会しました,Usuario retirado,Utilisateur parti,Benutzer abgemeldet,Пользователь вышел,Çıkış yapan kullanıcı,ผู้ใช้ที่ถอนตัว
+UserLeavedFailed,사용자 탈퇴 실패,Withdrawn failed,用户退会失败,用戶退會失敗,ユーザー退会失敗,El retiro del usuario falló,Échec de la déconnexion de l'utilisateur,Fehler beim Verlassen des Benutzers,Ошибка выхода пользователя,Kullanıcı çıkışı başarısız,การถอนตัวของผู้ใช้ล้มเหลว
+GroupList,그룹채널 목록,Group channels,组频道列表,組頻道列表,グループチャンネル一覧,Lista de canales de grupo,Liste des canaux de groupe,Gruppenkanäle,Список групповых каналов,Grup kanalları,รายการช่องกลุ่ม
+GroupCreator,생성자,Creator,创建者,創建者,作成者,Creador,Créateur,Ersteller,Создатель,Yaratıcı,ผู้สร้าง
+GroupUserCounter,그룹 인원,Group members,组成员,組成員,グループメンバー,Miembros del grupo,Membres du groupe,Gruppenmitglieder,Члены группы,Grup üyeleri,สมาชิกกลุ่ม
+ForceBreakUp,이 그룹을 해산합니다,Disband this group,解散该组,解散此組,このグループを解散します,Disolver este grupo,Disbander ce groupe,Gruppe auflösen,Роспуск группы,Grubu feshet,ยุบกลุ่มนี้
+ForceBreaked,그룹 해산됨,Group breakup,组已解散,組已解散,グループが解散しました,Grupo disuelto,Groupe dissous,Gruppe aufgelöst,Группа распущена,Grup feshedildi,กลุ่มถูกยกเลิก
+ClearFFSKey,FFS 파일 삭제,Delete FFS files,删除FFS文件,刪除FFS文件,FFSファイルを削除,Eliminar archivos FFS,Supprimer les fichiers FFS,FFS-Dateien löschen,Удалить FFS файлы,FFS dosyalarını sil,ลบไฟล์ FFS
+ClearCDN,파일 일괄 삭제,Delete files in bulk,批量删除文件,批量刪除檔案,ファイルを一括削除,Borrar archivos en masa,Supprimer les fichiers en masse,Dateien in großen Mengen löschen,Удалить файлы оптом,Toplu dosya sil,ลบไฟล์ทั้งหมด
+FailedFFSClear,FFS 파일 삭제 실패,Failed to delete FFS file,删除FFS文件失败,刪除FFS文件失敗,FFSファイルの削除に失敗,Error al eliminar los archivos FFS,Échec de la suppression des fichiers FFS,Fehler beim Löschen von FFS-Dateien,Не удалось удалить FFS файл,FFS dosyasını silme başarısız,ลบไฟล์ FFS ล้มเหลว
+FailedClear,파일 삭제 실패,Failed to delete file,删除文件失败,刪除檔案失敗,ファイルの削除に失敗,Error al eliminar el archivo,Échec de la suppression du fichier,Fehler beim Löschen der Datei,Не удалось удалить файл,Dosya silme başarısız,ไม่สามารถลบไฟล์ได้
+ForceBreakedFailed,그룹 해산 실패,Breakup failed,解散组失败,解散組失敗,グループ解散に失敗,Error al disolver el grupo,Échec de la dissolution du groupe,Fehler beim Auflösen der Gruppe,Ошибка распуска группы,Grup feshi başarısız,ไม่สามารถยุบกลุ่มได้
+PromoteAsWell,승격 설정이 적용되었습니다,Promotion settings have been applied,晋升设置已应用,升級設置已應用,昇進設定が適用されました,Se han aplicado los ajustes de promoción,Les paramètres de promotion ont été appliqués,Die Beförderungseinstellungen wurden angewendet,Настройки повышения были применены,Terfi ayarları uygulandı,การตั้งค่าส่งเสริมการขายได้รับการประยุกต์ใช้
+PromoteError,승격 설정이 이루어지지 않았습니다,Promotion settings are not established,晋升设置未设置,升級設置未設置,昇進設定が行われていません,No se establecieron los ajustes de promoción,Les paramètres de promotion n'ont pas été définis,Die Beförderungseinstellungen wurden nicht festgelegt,Настройки повышения не установлены,Terfi ayarları yapılmadı,การตั้งค่าส่งเสริมการขายไม่ได้รับการกำหนด
+AlreadyAdmin,이미 관리자입니다,You are already an administrator,你已经是管理员,你已經是管理員,あなたはすでに管理者です,Ya eres un administrador,Vous êtes déjà administrateur,Du bist bereits ein Administrator,Вы уже администратор,Zaten yöneticisiniz,คุณเป็นผู้ดูแลระบบอยู่แล้ว
+## ShareContentToOther
+Title,파일 공유하기,Share file,分享文件,分享檔案,ファイルを共有,Compartir archivo,Partager le fichier,Datei teilen,Поделиться файлом,Dosya paylaş,แชร์ไฟล์
+NoChannelToShare,가용 채널이 없습니다,No channels available,没有可用的频道,沒有可用的頻道,利用可能なチャンネルはありません,No hay canales disponibles,Aucun canal disponible,Keine Kanäle verfügbar,Нет доступных каналов,Mevcut kanal yok,ไม่มีช่องที่ใช้งานได้
+AvailableChannels,공유 가능한 채널,Shareable channels,可分享的频道,可分享的頻道,共有可能なチャンネル,Canales compartibles,Canaux partageables,Freigabekanäle,Доступные каналы для обмена,Paylaşılabilir kanallar,ช่องที่สามารถแชร์ได้
+## ContentInfo
+WorkLogs,작업 기록,Work logs,工作日志,工作記錄,作業記録,Registros de trabajo,Journal de travail,Arbeitsprotokolle,Журнал работы,İş kayıtları,บันทึกงาน
+LastPost,최종 게시자,Last post by,最后发布,最後發佈,最後の投稿,Última publicación por,Dernier message de,Letzte Veröffentlichung,Последний пост,Son gönderi,โพสต์สุดท้ายโดย
+TimeAt,일시,Date,时间,時間,時間,Fecha,Date,Datum,Дата,Tarih,วันที่
+WorkHistory,이전 작업 기록,Previous work history,之前的工作记录,之前的工作記錄,以前の作業履歴,Historial de trabajo anterior,Historique de travail précédent,Frühere Arbeitsgeschichte,Предыдущая история работы,Önceki iş geçmişi,ประวัติการทำงานก่อนหน้า
+FileSize,파일 크기,File size,文件大小,檔案大小,ファイルサイズ,Tamaño del archivo,Taille du fichier,Dateigröße,Размер файла,Dosya boyutu,ขนาดไฟล์
+SourceFrom,출처,Source,来源,來源,出典,Fuente,Source,Quelle,Источник,Kaynak,แหล่งที่มา
+Publisher,게시자,Publisher,发布者,發佈者,発行者,Editor,Éditeur,Herausgeber,Издатель,Yayımcı,ผู้เผยแพร่
+CloseModal,닫기,Close,关闭,關閉,閉じる,Cerrar,Fermer,Schließen,Закрыть,Kapat,ปิด
+## QuickShareReview
+Title,빠른 공유 검토,Quick share review,快速共享审查,快速共享檢查,クイックシェアレビュー,Revisión rápida de compartición,Revue de partage rapide,Quick Share-Überprüfung,Быстрая проверка обмена,Hızlı paylaşım incelemesi,การตรวจสอบการแชร์อย่างรวดเร็ว
+Servers,서버,Servers,服务器,伺服器,サーバー,Servidores,Serveurs,Server,Серверы,Sunucular,เซิร์ฟเวอร์
+Channels,채널,Channel,频道,頻道,チャンネル,Canales,Canaux,Kanal,Kаналы,Kanal,ช่อง
+QuickShareGrant,이 정보를 공유받기,Get this information shared,获取此信息共享,獲取此信息共享,この情報を共有する,Obtener esta información compartida,Obtenir ces informations partagées,Teilen Sie diese Informationen,Получить информацию,Paylaşılacak bu bilgiyi al
+ApplyChecked,선택한 정보를 적용,Apply selected information,应用所选信息,應用所選資訊,選択した情報を適用,Aplicar la información seleccionada,Appliquer les informations sélectionnées,Ausgewählte Informationen anwenden,Применить выбранную информацию,Seçilen bilgiyi uygula,ใช้ข้อมูลที่เลือก
+## WebRTCDevManager
+Title,WebRTC 관리,Manage WebRTC,管理WebRTC,管理WebRTC,WebRTC管理,Administrar WebRTC,Gestion de WebRTC,WebRTC verwalten,Управление WebRTC,WebRTC yönetimi,จัดการ WebRTC
+VideoIn,비디오 입력 장치,Video input,视频输入设备,視頻輸入設備,ビデオ入力機器,Dispositivo de entrada de video,Appareil d'entrée vidéo,Videoeingabegerät,Видеоввод,Video giriş cihazı,อุปกรณ์รับสัญญาณวิดีโอ
+AudioIn,오디오 입력 장치,Audio input,音频输入设备,音頻輸入設備,オーディオ入力機器,Dispositivo de entrada de audio,Appareil d'entrée audio,Audioeingabegerät,Аудиоввод,Audio giriş cihazı,อุปกรณ์รับสัญญาณเสียง
+AudioOut,오디오 출력 장치,Audio output,音频输出设备,音頻輸出設備,オーディオ出力機器,Dispositivo de salida de audio,Appareil de sortie audio,Audioausgabegerät,Аудиовыход,Audio çıkış cihazı,อุปกรณ์ส่งออกเสียง
+saveSetup,설정 저장하기,Save setting,保存设置,保存設置,設定を保存,Guardar configuración,Enregistrer les paramètres,Einstellungen speichern,Сохранить настройки,Ayarlari kaydet,บันทึกการตั้งค่า
+IgnoreSave,서버 정보를 입력해주세요,Please enter server information,请输入服务器信息,請輸入伺服器資訊,サーバー情報を入力してください,Por favor ingrese la información del servidor,Veuillez entrer les informations du serveur,Bitte geben Sie die Serverinformationen ein,Пожалуйста, введите информацию о сервере,Lütfen sunucu bilgilerini girin,กรุณากรอกข้อมูลเซิร์ฟเวอร์
+InitErr,초기화 실패,Failed to initialize,初始化失败,初始化失敗,初期化に失敗しました,Error de inicialización,Échec de l'initialisation,Initialisierung fehlgeschlagen,Ошибка инициализации,Hata ile başlatılamadı,ไม่สามารถเริ่มการตั้งค่าได้
+AlreadyCalling,다른 통화가 진행중입니다,Another call is in progress,正在进行其他通话,正在進行其他通話,他の通話が進行中です,Otra llamada en curso,Un autre appel est en cours,Ein anderer Anruf ist im Gange,Другой звонок в процессе,Başka bir çağrı yapılıyor,มีการโทรอื่นๆ กำลังดำเนินการ
+ManageServer,서버 관리,Manage servers,管理服务器,管理伺服器,サーバー管理,Administrar servidores,Gérer les serveurs,Server verwalten,Управление серверами,Sunucuları yönet,จัดการเซิร์ฟเวอร์
+Modify,서버 정보 수정,Modify server info,修改服务器信息,修改伺服器資訊,サーバー情報の変更,Modificar la información del servidor,Modifier les informations du serveur,Serverinformationen ändern,Изменить информацию о сервере,Sunucu bilgisini değiştir,แก้ไขข้อมูลเซิร์ฟเวอร์
+Remove,서버 정보 삭제,Remove server info,删除服务器信息,刪除伺服器資訊,サーバー情報を削除,Eliminar la información del servidor,Supprimer les informations du serveur,Serverinformationen entfernen,Удалить информацию о сервере,Sunucu bilgisini sil,ลบข้อมูลเซิร์ฟเวอร์
+AddServer,가용 서버 추가,Add available servers,添加可用服务器,添加可用伺服器,利用可能なサーバーを追加,Agregar servidores disponibles,Ajouter des serveurs disponibles,Verfügbare Server hinzufügen,Добавить доступные серверы,Ekleme yapılabilir sunucular,เพิ่มเซิร์ฟเวอร์ที่สามารถใช้งานได้
+ServerInfo,서버 정보,Server info,服务器信息,伺服器資訊,サーバー情報,Información del servidor,Informations sur le serveur,Serverinformationen,Информация о сервере,Sunucu bilgisi,ข้อมูลเซิร์ฟเวอร์
+Urls,주소,Urls,网址,網址,URL,URLs,URL,URLs,URLs,URL,URLs
+Username,사용자명,Username,用户名,用戶名,ユーザー名,Nombre de usuario,Nom d'utilisateur,Benutzername,Имя пользователя,Kullanıcı adı,ชื่อผู้ใช้
+Credential,인증,credential,凭证,憑證,認証情報,Credencial,Identifiant,Anmeldeinformationen,Учётные данные,Kimlik bilgisi,ข้อมูลการรับรอง
+Save,저장하기,Save,保存,保存,保存する,Guardar,Enregistrer,Speichern,Сохранить,Kaydet,บันทึก
+NoRegServer,등록된 서버가 없습니다,There are no registered servers,没有注册的服务器,沒有註冊的伺服器,登録されたサーバーはありません,No hay servidores registrados,Pas de serveurs enregistrés,Keine registrierten Server,Нет зарегистрированных серверов,Kayıtlı sunucu yok,ไม่มีเซิร์ฟเวอร์ที่ลงทะเบียน
+SecurityError,보안상 동작 불가,Impossible to operate due to security reasons,由于安全原因无法操作,由於安全原因無法操作,セキュリティ上の理由で操作できません,No es posible operar debido a razones de seguridad,Impossible d'opérer pour des raisons de sécurité,Aufgrund von Sicherheitsgründen nicht möglich,Невозможно выполнить операцию по соображениям безопасности,Güvenlik nedenleriyle işlem yapılamaz,ไม่สามารถดำเนินการได้เนื่องจากเหตุผลด้านความปลอดภัย

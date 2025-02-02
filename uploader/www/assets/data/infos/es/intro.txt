@@ -1,0 +1,5 @@
+Se puede usar como una aplicación de navegador. No se puede instalar en el modo de navegación privada. (Navegador recomendado: Google Chrome)
+
+[Móvil] Se puede instalar presionando 'Instalar aplicación' o 'Añadir a la pantalla de inicio' en el menú del navegador. En iOS, se puede instalar presionando 'Añadir a la pantalla de inicio' en el navegador Safari.
+
+[PC] Si el navegador es compatible, se puede instalar haciendo clic en el icono de instalación al final de la barra de direcciones. Si no se ve el icono al final de la barra de direcciones, se puede instalar desde el menú del navegador.

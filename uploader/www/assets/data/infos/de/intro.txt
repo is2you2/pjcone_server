@@ -1,0 +1,5 @@
+Sie können es als Browser-App verwenden. Es kann im privaten Modus nicht installiert werden. (Empfohlener Browser: Google Chrome)
+
+[Mobil] Sie können es installieren, indem Sie im Browser-Menü 'App installieren' oder 'Zum Home-Bildschirm hinzufügen' auswählen. Auf iOS können Sie es installieren, indem Sie im Safari-Browser 'Zum Home-Bildschirm hinzufügen' auswählen.
+
+[PC] Wenn Ihr Browser dies unterstützt, können Sie es installieren, indem Sie auf das Installationssymbol am Ende der Adressleiste klicken. Wenn das Symbol am Ende der Adressleiste nicht angezeigt wird, können Sie es über das Browser-Menü installieren.

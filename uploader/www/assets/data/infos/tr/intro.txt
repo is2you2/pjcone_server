@@ -1,0 +1,5 @@
+Tarayıcı uygulaması olarak kullanabilirsiniz. Gizli gezinti modunda kurulamaz. (Tavsiye edilen tarayıcı: Google Chrome)
+
+[Mobil] Tarayıcı menüsünden 'Uygulamayı Yükle' veya 'Ana Ekrana Ekle'ye tıklayarak yükleyebilirsiniz. iOS'ta, Safari tarayıcısında 'Ana Ekrana Ekle'ye tıklayarak yükleyebilirsiniz.
+
+[PC] Tarayıcınız bunu destekliyorsa, adres çubuğunun sonunda eklenen yükleme simgesine tıklayarak yükleyebilirsiniz. Eğer adres çubuğunun sonunda simge görünmüyorsa, tarayıcı menüsünden yükleyebilirsiniz.
