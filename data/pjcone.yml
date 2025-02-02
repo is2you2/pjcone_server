@@ -14,7 +14,7 @@ runtime:
     http_key: 'defaultkey'
 
 session:
-    token_expiry_sec: 300
+    token_expiry_sec: 7200
     # single_socket: true
 
 logger:
@@ -24,5 +24,6 @@ logger:
 
 console:
     idle_timeout_ms: 300000
+    # port: 7351
     username: "username"
     password: "passwd"
