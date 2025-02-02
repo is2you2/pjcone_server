@@ -223,7 +223,7 @@ async function isValidImageUrl(url) {
         if (!hasImageExtension) return false;  // 이미지 확장자가 아니면 유효하지 않다고 판단
 
         // URL을 HEAD 요청을 보내서 상태 코드 확인
-        const response = await fetch(url);
+        const response = await fetch(url, { method: 'HEAD' });
         return response.status === 200;  // 200 OK이면 유효한 URL
     } catch (error) {
         return false;  // 오류 발생시 유효하지 않음
@@ -258,12 +258,32 @@ async function getImageSrcRecursive($, len, index = 0) {
     }
 }
 
+/** 파일이 웹 페이지인지 확인하는 함수 */
+async function CheckifWebPage(url) {
+    try {
+        const response = await fetch(url, { method: 'HEAD' });
+        const contentType = response.headers.get('Content-Type');
+
+        // 웹 페이지인 경우 'text/html' MIME 타입을 확인
+        if (contentType && contentType.startsWith('text/html')) {
+            return true;  // 웹 페이지라면 true 반환
+        }
+        return false;  // 웹 페이지가 아니라면 false 반환
+    } catch (error) {
+        return false;  // 오류 발생 시 웹 페이지가 아님
+    }
+}
+
 app.use('/get-page-info', async (req, res) => {
     const url = req.query.url;
 
     if (!url) return res.status(400).json({ error: 'URL is required' });
 
     try {
+        // 먼저 URL이 미디어 파일인지 확인
+        const isWebPage = await CheckifWebPage(url);
+        if (!isWebPage) return res.status(400).json({ error: 'URL points to a media file, not a webpage' });
+
         const response = await fetch(url);
         let asText = await response.text();
         const $ = cheerio.load(asText);

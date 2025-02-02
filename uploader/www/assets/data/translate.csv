@@ -479,7 +479,7 @@ FailedToDownloadFile,다운받기 오류,Failed to download file
 ## Nakama,,
 DevTestServer,개발 테스트 서버,Development test server
 ServerAdded,서버가 추가되었습니다,Server added
-SyncingChannel,채널 동기화중,Syncing channels
+SyncingChannel,동기화중,Syncing
 AccessTestServer,테스트 서버에 연결합니다,Connect to Test server
 AlreadyHaveTargetName,이미 같은 이름의 서버가 있습니다,There already exists a server with the same name
 NeedLoginInfo,사용자 정보를 확인해주세요,Please check your user information
