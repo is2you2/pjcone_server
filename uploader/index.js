@@ -39,6 +39,8 @@ let apachePort = 9002;
 let squarePort = 12013;
 /** 보안 프로토콜 사용 여부 */
 let UseSSL = true;
+/** 임의의 사용자가 직접 입력하여 진입하는 것을 제한함 */
+let BlockAnonymous = true;
 { // 설정파일을 불러와서 사용할 정보에 대입
     let useSSLFile = fs.readFileSync('./config.txt');
     let ReadSetup = useSSLFile.toString('utf-8');
@@ -62,6 +64,9 @@ let UseSSL = true;
                 squarePort = Number(sep[1]);
             case 'UseSSL':
                 UseSSL = sep[1] == 'true';
+                break;
+            case 'BlockAnonymous':
+                BlockAnonymous = sep[1] == 'true';
                 break;
         }
     }
@@ -470,8 +475,14 @@ wss.on('connection', (ws, req) => {
                 case 'join':
                     // 참여 예정 채널이 없다면 사용자 아이디로 새 채널 만들기
                     // 이 경우 사용자는 방장으로서 동작한다
-                    if (!json['channel'])
+                    const isCreateChannel = !json['channel'];
+                    if (isCreateChannel)
                         channel_id = clientId;
+                    // 직접 입력으로 들어왔으나 서버에서 익명 사용자 행동을 제한하는 경우
+                    if (json['customInput'] && BlockAnonymous) {
+                        ws.close(1000, 'BlockAnonymous');
+                        return;
+                    }
                     // 진입한 채널은 사용자 별로 중복 관리한다
                     joined_channel[clientId] = channel_id;
                     if (!dedi_client[channel_id]) {
@@ -479,6 +490,10 @@ wss.on('connection', (ws, req) => {
                             users: {},
                         };
                         logger.info('채널 생성: ', channel_id);
+                    }
+                    // 채널 생성 정보라면 추가 정보 입력하기
+                    if (isCreateChannel) {
+                        if (json['max']) dedi_client[channel_id]['max'] = json.max;
                     }
                     // 최대 인원이 지정된 경우 진입 막기
                     if (dedi_client[channel_id]['max']) {
@@ -550,7 +565,7 @@ wss.on('connection', (ws, req) => {
             for (let key of keys)
                 // 방장이 나갔다면 모든 사람들 탈퇴처리
                 if (isHostLeft) {
-                    dedi_client[channel_id]['users'][key]['ws'].close(1000);
+                    dedi_client[channel_id]['users'][key]['ws'].close(1000, 'HostLeft');
                 } else {
                     // 그게 아니라면 사용자 퇴장 알림처리
                     let count = {
