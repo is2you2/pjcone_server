@@ -113,6 +113,8 @@ AlertOK,종료,Exit,退出,退出,終了,Salir,Quitter,Beenden,Выход,Çık,
 ArcadeOpened,아케이드가 실행중이어서 파일을 열람하지 못하였습니다,The file could not be opened because the arcade is running,由于街机正在运行，无法打开文件,由於街機正在運行，無法打開檔案,アーケードが実行中のため、ファイルを開くことができませんでした,No se pudo abrir el archivo porque el arcade está en ejecución,Le fichier n'a pas pu être ouvert car l'arcade est en cours d'exécution,Die Datei konnte nicht geöffnet werden, da das Arcade läuft,Файл не может быть открыт, так как аркада запущена,Arcade çalışırken dosya açılamaz,ไม่สามารถเปิดไฟล์ได้เนื่องจากอาร์เคดกำลังทำงาน
 TryingDownload,다운로드중,Trying to download,正在尝试下载,正在嘗試下載,ダウンロード中,Intentando descargar,Essayer de télécharger,Versuch, herunterzuladen,Попытка скачать,İndirilmeye çalışılıyor,กำลังพยายามดาวน์โหลด
 AlreadyUseWS,이미 연결된 서버가 있습니다,There is already a server connected,已经连接服务器,已連接伺服器,すでにサーバーが接続されています,Yá hay un servidor conectado,Un serveur est déjà connecté,Es gibt bereits einen verbundenen Server,Сервер уже подключен,Zaten bağlanmış bir sunucu var,มีเซิร์ฟเวอร์ที่เชื่อมต่ออยู่แล้ว
+GameLang,언어,Language,语言,語言,言語,Idioma,Langue,Sprache,Язык,Dil,ภาษา
+StartGame,게임 시작,Start Game,开始游戏,開始遊戲,ゲーム開始,Iniciar juego,Démarrer le jeu,Spiel starten,Начать игру,Oyunu başlat,เริ่มเกม
 ## RegAvatar
 Title,사용자 아바타 설정,Set user avatar,设置用户头像,設置用戶頭像,ユーザーアバターを設定,Configurar avatar de usuario,Définir l'avatar de l'utilisateur,Benutzer-Avatar einstellen,Установить аватар пользователя,Profil resmi ayarla,ตั้งค่าอวาตาร์ผู้ใช้
 creator,제작자 이름,Creator name,创作者名称,創作者名稱,制作者名,Nombre del creador,Nom du créateur,Erstellername,Имя создателя,Yaratıcı adı,ชื่อผู้สร้าง
@@ -335,7 +337,6 @@ ReachLightLimit,빛은 최대 5개까지 등록됩니다,Up to 5 lights can be r
 MayGimbalLock,짐벌락 현상으로 각도가 다르게 표현될 수 있음,The angle may be expressed differently due to gimbal lock phenomenon,由于云台锁定现象，角度可能会不同,由於云台鎖定現象，角度可能會不同,ジンバルロック現象により角度が異なって表示される場合があります,El ángulo puede expresarse de manera diferente debido al fenómeno de bloqueo del cardán,En raison du phénomène de verrouillage gimbal, l'angle peut être exprimé différemment,Der Winkel kann aufgrund des Gimbal-Lock-Phänomens unterschiedlich dargestellt werden,Угол может быть выражен по-разному из-за явления зажима кардана,Açı, gimbal kilidi fenomeni nedeniyle farklı şekilde ifade edilebilir,เนื่องจากปรากฏการณ์ล็อคจิมบอล มุมอาจแสดงแตกต่างกัน
 ## MinimalChat
 concurrent_users,동시접속자,Concurrent users,并发用户,並發用戶,同時接続者,Usuarios concurrentes,Utilisateurs simultanés, gleichzeitige Benutzer,Одновременные пользователи,Eşzamanlı kullanıcılar,ผู้ใช้พร้อมกัน
-input_placeholder,메시지 입력...,Enter message...,输入消息...,輸入訊息...,メッセージを入力...,Introduce un mensaje...,Entrez le message...,Nachricht eingeben,...Введите сообщение...,Mesaj gir...,ป้อนข้อความ...
 header_title_group,광장,Square,广场,廣場,広場,Círculo,Place,Platz,Площадка,Alan,สแควร์
 WebTitle_group,Project: 광장,Project: Square,项目：广场,項目：廣場,プロジェクト：広場,Proyecto: Cuadrado,Projet : Carré,Projekt: Platz,Проект: Площадка,Proje: Alan,โครงการ: สแควร์
 OwnChannel,개인 채널 개설,Create Personal Channel,创建个人频道,創建個人頻道,個人チャンネル作成,Crear canal personal,Créer un canal personnel,Erstelle persönlichen Kanal,Создать личный канал,Kişisel Kanal Oluştur,สร้างช่องส่วนตัว

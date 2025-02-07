@@ -9,13 +9,16 @@ socket:
     ssl_certificate: '/nakama/data/public.crt'
     ssl_private_key: '/nakama/data/private.key'
     server_key: 'defaultkey'
+    # port: 7350
 
 runtime:
     http_key: 'defaultkey'
 
-session:
-    token_expiry_sec: 7200
-    # single_socket: true
+# session:
+#     token_expiry_sec: 60
+#     refresh_token_expiry_sec: 3600
+#     single_session: true
+#     single_socket: true
 
 logger:
     stdout: true

@@ -435,7 +435,6 @@ wss.on('connection', (ws, req) => {
                 json_duplicate['part'] = `${json_duplicate['part'].substring(0, 10)}... ${json_duplicate['part'].length} characters`;
             logger.info(`${clientId}_사용자가 다음과 같은 행동 요청: `, json_duplicate);
             let channel_id = json['channel'] || joined_channel[clientId];
-            let additional_info = {};
             switch (json['type']) {
                 // 사용자가 생성한 정보를 요청하는 경우
                 // 요청한 정보만 반환하고 추가작업을 하지 않음
@@ -444,13 +443,30 @@ wss.on('connection', (ws, req) => {
                     return;
                 // 사용자가 아케이드를 생성하면 자신의 pid 및 pck 정보를 기록시키고
                 // 새 채널을 구성하여 돌려주기
-                case 'initInfo':
+                case 'initInfo': {
+                    let additional_info = {};
                     let socketId = generateUniqueRandomString();
                     regInfo[socketId] = {};
                     regInfo[socketId]['type'] = 'req_info';
                     regInfo[socketId]['arcade_url'] = json?.arcade_url;
                     additional_info['socketId'] = socketId;
                     additional_info['arcade_url'] = json?.arcade_url;
+                    let new_channel_id = CreateUUIDv4();
+                    regInfo[socketId]['channel_id'] = new_channel_id;
+                    let init = {
+                        type: 'init_id',
+                        id: new_channel_id,
+                        uid: clientId,
+                        ...additional_info,
+                    }
+                    dedi_client[new_channel_id] = {
+                        users: {},
+                    };
+                    // 최대 인원이 제한된 경우 설정처리
+                    if (json['max']) dedi_client[new_channel_id]['max'] = json.max;
+                    ws.send(JSON.stringify(init));
+                    return;
+                }
                 // 사용자에게 새 채널 id를 구성하여 전달
                 // 채널만 생성되고 클라이언트 쪽에서 'init_id' 타입을 받으면 채널 진입을 따로 진행한다
                 case 'init':
@@ -459,7 +475,6 @@ wss.on('connection', (ws, req) => {
                         type: 'init_id',
                         id: new_channel_id,
                         uid: clientId,
-                        ...additional_info,
                     }
                     dedi_client[new_channel_id] = {
                         users: {},
