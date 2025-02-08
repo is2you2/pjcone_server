@@ -537,6 +537,39 @@ wss.on('connection', (ws, req) => {
                             dedi_client[channel_id]['users'][keys[i]]['ws'].send(JSON.stringify({ count: j }));
                     }
                     break;
+                // 사용자 정보를 추가로 업데이트함
+                case 'update':
+                    if (!dedi_client[channel_id]['users'][clientId]) {
+                        dedi_client[channel_id]['users'][clientId] = {};
+                        dedi_client[channel_id]['users'][clientId]['ws'] = ws;
+                    }
+                    const keys = json['keys'];
+                    for (const key of keys)
+                        dedi_client[channel_id]['users'][clientId][key] = json[key];
+                    return;
+                // 사용자 정보 중 일부를 수집하기
+                case 'userInfo':
+                    const targetUser = json['target'];
+                    let result = {
+                        type: 'userInfo',
+                    };
+                    // 채널이 남아있는지 검토
+                    if (dedi_client[channel_id]) {
+                        // 존재하는 사용자라면 정보 수집해서 반환
+                        if (dedi_client[channel_id]['users']?.[targetUser]) {
+                            const keys = json['keys'];
+                            for (const key of keys)
+                                result[key] = dedi_client[channel_id]['users'][targetUser][key];
+                            ws.send(JSON.stringify(result));
+                        } else {
+                            result['error'] = 'User not exist';
+                            ws.send(JSON.stringify(result));
+                        }
+                    } else {
+                        result['error'] = 'Channel not exist';
+                        ws.send(JSON.stringify(result));
+                    }
+                    return;
                 default:
                     break;
             }

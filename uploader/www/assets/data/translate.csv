@@ -396,9 +396,6 @@ RegenWebRTC,WebRTC 서버 재구성,Reconfigure WebRTC server,重新配置WebRTC
 RegenWebRTCDone,WebRTC 서버 정보를 다시 구성하였습니다,Reconfigured WebRTC server information,已重新配置WebRTC服务器信息,已重新配置WebRTC伺服器資訊,WebRTCサーバー情報を再構成しました,La información del servidor WebRTC se ha reconfigurado,Les informations du serveur WebRTC ont été reconfigurées,WebRTC-Serverinformationen wurden neu konfiguriert,Информация о WebRTC сервере была перезагружена,WebRTC sunucusu bilgisi yeniden yapılandırıldı,ข้อมูล WebRTC เซิร์ฟเวอร์ได้รับการกำหนดค่าใหม่
 detailInfo,상세 정보,More information,更多信息,更多資訊,詳細情報,Más información,Plus d'informations,Mehr Informationen,Дополнительная информация,Daha fazla bilgi,ข้อมูลเพิ่มเติม
 ApplyChangeServerInfo,적용하기,Apply,应用,應用,適用する,Aplicar,Appliquer,Anwenden,Применить,Uygula,ใช้
-ServerPresets,서버 사전설정,Server presets,服务器预设,伺服器預設,サーバープリセット,Preajustes del servidor,Paramètres prédéfinis du serveur,Server-Voreinstellungen,Предустановки сервера,Sunucu ön ayarları,การตั้งค่าเซิร์ฟเวอร์ล่วงหน้า
-CreateInfo,같은 서버의 다른 주소를 미리 등록할 수 있습니다,You can pre-register other addresses of the same server,您可以预先注册同一服务器的其他地址,您可以預先註冊同一伺服器的其他地址,同じサーバーの他のアドレスを事前に登録できます,Puede pre-registrar otras direcciones del mismo servidor,Vous pouvez pré-enregistrer d'autres adresses du même serveur,Sie können andere Adressen des gleichen Servers vorab registrieren,Вы можете предварительно зарегистрировать другие адреса того же сервера,Aynı sunucunun diğer adreslerini önceden kaydedebilirsiniz,คุณสามารถลงทะเบียนที่อยู่อื่น ๆ ของเซิร์ฟเวอร์เดียวกันล่วงหน้า
-Add,추가,Add,添加,添加,追加,Agregar,Ajouter,Hinzufügen,Добавить,Ekle,เพิ่ม
 ## AddGroup
 Title,새 채널 만들기,Create new channel,创建新频道,創建新頻道,新しいチャンネルを作成,Crear nuevo canal,Créer un nouveau canal,Neuen Kanal erstellen,Создать новый канал,Yeni kanal oluştur,สร้างช่องใหม่
 SelectServer,서버 선택,Select server,选择服务器,選擇伺服器,サーバーを選択,Seleccionar servidor,Sélectionner un serveur,Server auswählen,Выбрать сервер,Sunucu seç,เลือกเซิร์ฟเวอร์
