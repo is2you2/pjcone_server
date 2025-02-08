@@ -439,7 +439,9 @@ wss.on('connection', (ws, req) => {
                 // 사용자가 생성한 정보를 요청하는 경우
                 // 요청한 정보만 반환하고 추가작업을 하지 않음
                 case 'reqInfo':
-                    ws.send(JSON.stringify(regInfo[json.socketId]));
+                    const copied = JSON.parse(JSON.stringify(regInfo[json.socketId]));
+                    copied['uid'] = clientId;
+                    ws.send(JSON.stringify(copied));
                     return;
                 // 사용자가 아케이드를 생성하면 자신의 pid 및 pck 정보를 기록시키고
                 // 새 채널을 구성하여 돌려주기
