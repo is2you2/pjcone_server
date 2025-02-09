@@ -102,6 +102,7 @@ Search,검색..,Search..,搜索..,搜尋..,検索..,Buscar..,Rechercher..,Suchen
 OpeningCamera,스캔 카메라 준비중,Preparing the scan camera,准备扫描相机,準備掃描相機,スキャンカメラを準備中,Preparando la cámara de escaneo,Préparation de la caméra de scan,Scan-Kamera wird vorbereitet,Подготовка камеры для сканирования,Tarama kamerası hazırlanıyor,กำลังเตรียมกล้องสแกน
 AddedCustom,이 기기에 추가됨,Added to this device,已添加到此设备,已添加到此設備,このデバイスに追加されました,Añadido a este dispositivo,Ajouté à cet appareil,Zu diesem Gerät hinzugefügt,Добавлено на это устройство,Ekleme yapıldı,เพิ่มไปยังอุปกรณ์นี้
 RegAvatar,아바타,Avatar,头像,頭像,アバター,Avatar,Avatar,Avatar,Аватар,Avatar,อวาตาร์
+AddTest,테스트,Test,测试,測試,テスト,Prueba,Test,Test,Тест,Sınav,ทดสอบ
 FromFile,파일뷰어,Viewer,文件查看器,檔案查看器,ファイルビューア,Visor de archivos,Visionneuse de fichiers,Datei-Viewer,Просмотрщик файлов,Dosya görüntüleyici,ตัวดูไฟล์
 BGModeOn,백그라운드 모드를 시작합니다,Start background mode,启动后台模式,啟動背景模式,バックグラウンドモードを開始します,Iniciar el modo en segundo plano,Démarrer le mode arrière-plan,Den Hintergrundmodus starten,Hãy bắt đầu chế độ nền,เริ่มโหมดพื้นหลัง
 BGModeOff,백그라운드 모드를 종료합니다,Stop background mode,停止后台模式,停止背景模式,バックグラウンドモードを停止します,Detener el modo en segundo plano,Arrêter le mode arrière-plan,Den Hintergrundmodus stoppen,Остановить фоновый режим,Arka plan modunu durdur,หยุดโหมดพื้นหลัง
