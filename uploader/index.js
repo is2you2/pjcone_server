@@ -72,6 +72,10 @@ let BlockAnonymous = true;
     }
 }
 
+if (!BlockAnonymous) {
+    logger.warn('BlockAnonymous: 익명의 사용자가 서버 자원을 자유롭게 사용할 수 있도록 설정되어있습니다.');
+}
+
 app.use(cors());
 
 app.use((req, res, next) => {
@@ -538,15 +542,25 @@ wss.on('connection', (ws, req) => {
                     }
                     break;
                 // 사용자 정보를 추가로 업데이트함
-                case 'update':
-                    if (!dedi_client[channel_id]['users'][clientId]) {
-                        dedi_client[channel_id]['users'][clientId] = {};
-                        dedi_client[channel_id]['users'][clientId]['ws'] = ws;
-                    }
+                case 'update': {
                     const keys = json['keys'];
                     for (const key of keys)
                         dedi_client[channel_id]['users'][clientId][key] = json[key];
-                    return;
+                    ws.send(JSON.stringify({
+                        type: 'update',
+                        result: true,
+                    }));
+                } return;
+                // 채널 정보를 추가로 업데이트함
+                case 'update_channel': {
+                    const keys = json['keys'];
+                    for (const key of keys)
+                        dedi_client[channel_id][key] = json[key];
+                    ws.send(JSON.stringify({
+                        type: 'update_channel',
+                        result: true,
+                    }));
+                } return;
                 // 사용자 정보 중 일부를 수집하기
                 case 'userInfo':
                     const targetUser = json['target'];
