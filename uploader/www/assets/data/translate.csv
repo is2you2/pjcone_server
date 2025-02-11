@@ -369,6 +369,7 @@ Waiting,연결 대기중,Waiting for connection,等待连接,等待連接,接続
 MissingInfo,연결 정보가 누락되었습니다,Connection information is missing,连接信息缺失,連接信息缺失,接続情報が欠落しています,Información de conexión faltante,Informations de connexion manquantes,Verbindungsinformationen fehlen,Отсутствуют данные для подключения,Bağlantı bilgisi eksik,ข้อมูลการเชื่อมต่อหายไป
 Connecting,연결중,Connecting,连接中,連接中,接続中,Conectando,Connexion,Verbindung wird hergestellt,Подключение, bağlanılıyor,กำลังเชื่อมต่อ
 Connected,연결됨,Connected,已连接,已連接,接続済み,Conectado,Connecté,Verbunden,Подключено,Bağlantı kuruldu,เชื่อมต่อแล้ว
+ExpiredChannel,만료된 채널,Expired Channel,已过期频道,已過期頻道,期限切れチャンネル,Canal Expirado,Canal Expiré,Abgelaufener Kanal,Истекший канал,Geçmiş Kanal,ช่องหมดอายุ
 CallEnd,통화 종료,End call,结束通话,結束通話,通話終了,Finalizar llamada,Terminer l'appel,Anruf beenden,Завершить вызов,Çağrı sonlandırıldı,สิ้นสุดการโทร
 ## GroupServer
 JoinedServerList,참여중인 서버 목록,List of participating servers,参与的服务器列表,參與的伺服器列表,参加しているサーバーのリスト,Lista de servidores participativos,Liste des serveurs participants,Liste der teilnehmenden Server,Список участвующих серверов,Katılımcı sunucular listesi,รายชื่อเซิร์ฟเวอร์ที่เข้าร่วม

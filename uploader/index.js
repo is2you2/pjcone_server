@@ -507,6 +507,13 @@ wss.on('connection', (ws, req) => {
                     // 진입한 채널은 사용자 별로 중복 관리한다
                     joined_channel[clientId] = channel_id;
                     if (!dedi_client[channel_id]) {
+                        // 빠른 진입으로 들어왔는데 채널이 없다면 만료된 채널로 알리기
+                        if (json['quick']) {
+                            ws.send(JSON.stringify({
+                                type: 'expired',
+                            }));
+                            return;
+                        }
                         dedi_client[channel_id] = {
                             users: {},
                         };
