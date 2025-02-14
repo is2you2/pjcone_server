@@ -443,30 +443,38 @@ wss.on('connection', (ws, req) => {
                 // 사용자가 생성한 정보를 요청하는 경우
                 // 요청한 정보만 반환하고 추가작업을 하지 않음
                 case 'reqInfo':
-                    const copied = JSON.parse(JSON.stringify(regInfo[json.socketId]));
-                    copied['uid'] = clientId;
-                    ws.send(JSON.stringify(copied));
+                    if (regInfo[json.socketId]) {
+                        const copied = JSON.parse(JSON.stringify(regInfo[json.socketId]));
+                        copied['uid'] = clientId;
+                        ws.send(JSON.stringify(copied));
+                    } else {
+                        logger.log('만료된 채널에 접근중: ', json.socketId);
+                        ws.send(JSON.stringify({
+                            type: 'req_info',
+                            error: true,
+                        }));
+                    }
                     return;
                 // 사용자가 아케이드를 생성하면 자신의 pid 및 pck 정보를 기록시키고
                 // 새 채널을 구성하여 돌려주기
                 case 'initInfo': {
-                    let additional_info = {};
-                    let socketId = generateUniqueRandomString();
+                    const socketId = generateUniqueRandomString();
                     regInfo[socketId] = {};
                     regInfo[socketId]['type'] = 'req_info';
-                    regInfo[socketId]['arcade_url'] = json?.arcade_url;
-                    additional_info['socketId'] = socketId;
-                    additional_info['arcade_url'] = json?.arcade_url;
-                    let new_channel_id = CreateUUIDv4();
+                    regInfo[socketId]['url'] = json.url;
+                    regInfo[socketId]['act'] = json.act;
+                    const new_channel_id = CreateUUIDv4();
                     regInfo[socketId]['channel_id'] = new_channel_id;
                     let init = {
                         type: 'init_id',
                         id: new_channel_id,
                         uid: clientId,
-                        ...additional_info,
+                        socketId: socketId,
+                        url: json?.url,
                     }
                     dedi_client[new_channel_id] = {
                         users: {},
+                        socketId: socketId,
                     };
                     // 최대 인원이 제한된 경우 설정처리
                     if (json['max']) dedi_client[new_channel_id]['max'] = json.max;
@@ -568,6 +576,16 @@ wss.on('connection', (ws, req) => {
                         result: true,
                     }));
                 } return;
+                case 'update_reqInfo': {
+                    const keys = json['keys'];
+                    const socketId = json.socketId;
+                    for (const key of keys)
+                        regInfo[socketId][key] = json[key];
+                    ws.send(JSON.stringify({
+                        type: 'update_reqInfo',
+                        result: true,
+                    }));
+                } return;
                 // 사용자 정보 중 일부를 수집하기
                 case 'userInfo':
                     const targetUser = json['target'];
@@ -602,7 +620,7 @@ wss.on('connection', (ws, req) => {
                     dedi_client[channel_id]['users'][keys[i]]['ws'].send(json);
             }
         } catch (e) {
-            logger.error(`json 변환 오류: ${e} // msg: ${msg}`);
+            logger.error(`json 행동 오류: ${e} // msg: ${msg}`);
             // 클라이언트에게 메시지 반환
             ws.send('서버에서 받은 메시지: ' + msg);
         }
@@ -658,6 +676,11 @@ wss.on('connection', (ws, req) => {
                     dedi_client[channel_id]['users'][keys[i]]['ws'].send(JSON.stringify({ count: j }));
                 // 사람이 없으면 채널 삭제처리
                 if (keys.length < 1) {
+                    const CreatedSocketId = dedi_client[channel_id]['socketId'];
+                    if (CreatedSocketId && regInfo[CreatedSocketId]) {
+                        logger.log('토큰 정보 삭제: ', CreatedSocketId);
+                        delete regInfo[CreatedSocketId];
+                    }
                     delete dedi_client[channel_id];
                     logger.info('채널 삭제: ', channel_id);
                 }
