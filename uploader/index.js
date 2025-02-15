@@ -477,7 +477,7 @@ wss.on('connection', (ws, req) => {
                         socketId: socketId,
                     };
                     // 최대 인원이 제한된 경우 설정처리
-                    if (json['max']) dedi_client[new_channel_id]['max'] = json.max;
+                    if (json['max'] !== undefined) dedi_client[new_channel_id]['max'] = json.max;
                     ws.send(JSON.stringify(init));
                     return;
                 }
@@ -494,7 +494,7 @@ wss.on('connection', (ws, req) => {
                         users: {},
                     };
                     // 최대 인원이 제한된 경우 설정처리
-                    if (json['max']) dedi_client[new_channel_id]['max'] = json.max;
+                    if (json['max'] !== undefined) dedi_client[new_channel_id]['max'] = json.max;
                     ws.send(JSON.stringify(init));
                     return;
                 // 광장 채널에서 FFS 우선처리가 된 경우 별도 클라이언트 연결
@@ -528,9 +528,8 @@ wss.on('connection', (ws, req) => {
                         logger.info('채널 생성: ', channel_id);
                     }
                     // 채널 생성 정보라면 추가 정보 입력하기
-                    if (isCreateChannel) {
-                        if (json['max']) dedi_client[channel_id]['max'] = json.max;
-                    }
+                    if (isCreateChannel)
+                        if (json['max'] !== undefined) dedi_client[channel_id]['max'] = json.max;
                     // 최대 인원이 지정된 경우 진입 막기
                     if (dedi_client[channel_id]['max']) {
                         const MAX_COUNT = dedi_client[channel_id]['max'];
