@@ -8,6 +8,7 @@ Title,해야할 일,Todos,待办事项,待辦事項,やること,Lista de tareas
 NoTodo,할 일 추가하기,Add todo,添加待办事项,添加待辦事項,TODOを追加,Agregar tarea,Ajouter une tâche,Aufgabe hinzufügen,Добавить задачу,Ekle,เพิ่มงาน
 WorkerDone,할 일 완료,Todo completed,任务完成,任務完成,タスク完了,Tarea completada,Tâche terminée,Aufgabe abgeschlossen,Задача выполнена,Görev tamamlandı,งานเสร็จ
 WorkerAbandon,할 일 포기,Give up todo,放弃任务,放棄任務,タスクを放棄,Abandonar tarea,Abandonner la tâche,Aufgabe aufgeben,Отказаться от задачи,Görevden vazgeç,ยกเลิกงาน
+MigrateRemote,모든 로컬 할 일을 서버로 이관,All local tasks will be migrated to the server,将所有本地任务迁移到服务器,將所有本地任務遷移到伺服器,すべてのローカルタスクをサーバーに移行,Se migrarán todas las tareas locales al servidor,Toutes les tâches locales seront migrées vers le serveur,Alle lokalen Aufgaben werden auf den Server migriert,Все локальные задачи будут перенесены на сервер,Tüm yerel görevler sunucuya taşınacak,ทุกงานในเครื่องจะถูกย้ายไปยังเซิร์ฟเวอร์
 ## TodoDetail
 Title,할 일 상세,Todo detail,任务详情,任務詳情,タスクの詳細,Detalles de la tarea,Détails de la tâche,Aufgabendetails,Детали задачи,Görev detayı,รายละเอียดงาน
 FilterCat_0,없음,None,无,None,なし,Ninguno,Aucun,Keine,Нет,Ninguno,ไม่มี
