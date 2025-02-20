@@ -404,8 +404,8 @@ picomatch@4.0.2 [license(s): MIT]
 ├── package.json:  MIT
 └── license files: MIT
 
-project_cone@0.84.51 [license(s): Apache, BSD, ISC, MIT, Public Domain]
-├── license files: Apache, BSD, ISC, MIT, Public Domain
+project_cone@0.84.52 [license(s): Apache, BSD, Eclipse Public License, GPL, ISC, LGPL, MIT, MPL, Public Domain]
+├── license files: Apache, BSD, Eclipse Public License, GPL, ISC, LGPL, MIT, MPL, Public Domain
 └── readme files: MIT
 
 punycode@2.3.1 [license(s): MIT]
@@ -520,5 +520,5 @@ zone.js@0.14.8 [license(s): MIT]
 ├── license files: MIT
 └── readme files: MIT
 
-LICENSES: 0BSD, Apache, Apache-2.0, BSD, BSD-2-Clause, BSD-3-Clause, ISC, LGPL-2.1, MIT, Public Domain
+LICENSES: 0BSD, Apache, Apache-2.0, BSD, BSD-2-Clause, BSD-3-Clause, Eclipse Public License, GPL, ISC, LGPL, LGPL-2.1, MIT, MPL, Public Domain
 

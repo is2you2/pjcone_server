@@ -653,6 +653,8 @@ QuickShareGrant,이 정보를 공유받기,Get this information shared,获取此
 ApplyChecked,선택한 정보를 적용,Apply selected information,应用所选信息,應用所選資訊,選択した情報を適用,Aplicar la información seleccionada,Appliquer les informations sélectionnées,Ausgewählte Informationen anwenden,Применить выбранную информацию,Seçilen bilgiyi uygula,ใช้ข้อมูลที่เลือก
 ## WebRTCDevManager
 Title,WebRTC 관리,Manage WebRTC,管理WebRTC,管理WebRTC,WebRTC管理,Administrar WebRTC,Gestion de WebRTC,WebRTC verwalten,Управление WebRTC,WebRTC yönetimi,จัดการ WebRTC
+ManageInput,입력장치 관리,Input Device Management,输入设备管理,輸入設備管理,入力デバイスの管理,Gestión de dispositivos de entrada,Gestion des périphériques d'entrée,Eingabegeräteverwaltung,Управление входными устройствами,Giriş Aygıtı Yönetimi,การจัดการอุปกรณ์อินพุต
+ScreenIn,화면 공유하기,Share Screen,共享屏幕,共享螢幕,画面共有,Compartir pantalla,Partager l'écran,Bildschirm freigeben,Поделиться экраном,Ekran Paylaşımı,แชร์หน้าจอ
 VideoIn,비디오 입력 장치,Video input,视频输入设备,視頻輸入設備,ビデオ入力機器,Dispositivo de entrada de video,Appareil d'entrée vidéo,Videoeingabegerät,Видеоввод,Video giriş cihazı,อุปกรณ์รับสัญญาณวิดีโอ
 AudioIn,오디오 입력 장치,Audio input,音频输入设备,音頻輸入設備,オーディオ入力機器,Dispositivo de entrada de audio,Appareil d'entrée audio,Audioeingabegerät,Аудиоввод,Audio giriş cihazı,อุปกรณ์รับสัญญาณเสียง
 AudioOut,오디오 출력 장치,Audio output,音频输出设备,音頻輸出設備,オーディオ出力機器,Dispositivo de salida de audio,Appareil de sortie audio,Audioausgabegerät,Аудиовыход,Audio çıkış cihazı,อุปกรณ์ส่งออกเสียง
