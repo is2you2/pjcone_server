@@ -440,6 +440,16 @@ wss.on('connection', (ws, req) => {
             logger.info(`${clientId}_사용자가 다음과 같은 행동 요청: `, json_duplicate);
             let channel_id = json['channel'] || joined_channel[clientId];
             switch (json['type']) {
+                // 사용자 핑 알려주기, 같은 채널 내 다른 사용자의 핑 정보도 표기
+                case 'ping':
+                    if (!dedi_client[channel_id]['ping'])
+                        dedi_client[channel_id]['ping'] = {};
+                    dedi_client[channel_id]['ping'][clientId] = json['ping'];
+                    ws.send(JSON.stringify({
+                        type: 'pong',
+                        others: dedi_client[channel_id]['ping'],
+                    }));
+                    return;
                 // 사용자가 생성한 정보를 요청하는 경우
                 // 요청한 정보만 반환하고 추가작업을 하지 않음
                 case 'reqInfo':
@@ -666,6 +676,7 @@ wss.on('connection', (ws, req) => {
                     dedi_client[channel_id]['users'][key]['ws'].send(msg);
                 }
             delete dedi_client[channel_id]['users'][clientId];
+            delete dedi_client[channel_id]['ping'][clientId];
             if (joined_channel[clientId]['socketId'])
                 delete regInfo[joined_channel[clientId]['socketId']];
             delete joined_channel[clientId];
