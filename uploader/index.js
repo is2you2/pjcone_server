@@ -538,8 +538,11 @@ wss.on('connection', (ws, req) => {
                         logger.info('채널 생성: ', channel_id);
                     }
                     // 채널 생성 정보라면 추가 정보 입력하기
-                    if (isCreateChannel)
+                    if (isCreateChannel) {
                         if (json['max'] !== undefined) dedi_client[channel_id]['max'] = json.max;
+                        dedi_client[channel_id]['isOwnChannel'] = true;
+                    }
+                    if (json['max'] === undefined) json['max'] = dedi_client[channel_id]['max'];
                     // 최대 인원이 지정된 경우 진입 막기
                     if (dedi_client[channel_id]['max']) {
                         const MAX_COUNT = dedi_client[channel_id]['max'];
@@ -559,11 +562,10 @@ wss.on('connection', (ws, req) => {
                         dedi_client[channel_id]['users'][clientId]['name'] = json['name'];
                     }
                     json['channel'] = channel_id;
-                    { // 진입시 채널 내 사용자에게 현재 총 인원 수를 전파
-                        let keys = Object.keys(dedi_client[channel_id]['users']);
-                        for (let i = 0, j = keys.length; i < j; i++)
-                            dedi_client[channel_id]['users'][keys[i]]['ws'].send(JSON.stringify({ count: j }));
-                    }
+                    // 진입시 채널 내 사용자에게 현재 총 인원 수를 전파
+                    json['count'] = Object.keys(dedi_client[channel_id]['users']).length;
+                    // 진입시 개인화된 채널인지 (방장 채널인지) 여부를 회신
+                    json['isOwnChannel'] = dedi_client[channel_id]['isOwnChannel'];
                     break;
                 // 사용자 정보를 추가로 업데이트함
                 case 'update': {
