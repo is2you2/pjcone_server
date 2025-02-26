@@ -670,7 +670,7 @@ wss.on('connection', (ws, req) => {
                         uid: clientId,
                         name: catch_name,
                         type: 'leave',
-                        count: keys.length,
+                        count: keys.length - 1,
                     }
                     let msg = JSON.stringify(count);
                     dedi_client[channel_id]['users'][key]['ws'].send(msg);
