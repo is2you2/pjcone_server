@@ -2,7 +2,7 @@ version: '3'
 services:
   postgres:
     container_name: postgres
-    image: postgres:12.2-alpine
+    image: docker.io/postgres:12.2-alpine
     environment:
       - POSTGRES_DB=nakama
       - POSTGRES_PASSWORD=localdb
@@ -21,7 +21,7 @@ services:
       retries: 5
   nakama:
     container_name: nakama
-    image: registry.heroiclabs.com/heroiclabs/nakama:3.22.0
+    image: docker.io/registry.heroiclabs.com/heroiclabs/nakama:3.22.0
     entrypoint:
       - "/bin/sh"
       - "-ecx"
@@ -51,7 +51,7 @@ services:
       retries: 5
   nodejs: # 파일 업로드 공개 서버
     container_name: nodejs
-    image: node
+    image: docker.io/node
     volumes:
       - "./uploader:/root/uploader"
       - "./data/public.crt:/root/public.crt"
@@ -64,7 +64,7 @@ services:
     command: /bin/bash /root/uploader/setup_uploader.sh
   coturn: # WebRTC 서버 (사용시 등록 필요)
     container_name: coturn
-    image: coturn/coturn
+    image: docker.io/coturn/coturn
     network_mode: host
     volumes:
       - ./data/:/etc/coturn/
