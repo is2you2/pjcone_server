@@ -190,21 +190,22 @@ app.use('/remove_key/', (req, res) => {
     const keys = target_key.split('_');
     let target_path = '';
     keys.forEach(key => target_path = target_path ? `${target_path}/${key}` : key);
-    let listAll = getFilesInDirectory('./cdn/' + target_path);
+    let listAll = getFilesInDirectory('./cdn/');
     while (listAll?.length) {
         const path = listAll.pop();
-        try {
-            const stats = fs.statSync(path);
-            // 디렉토리인 경우 재귀적으로 내부 파일 탐색
-            if (stats.isDirectory()) {
-                try {
-                    fs.rmdirSync(path);
-                } catch (e) { }
-            } else fs.unlinkSync(path);
-            if (!listAll?.length) RecursiveOutDirRemove(`./${path}`);
-        } catch (e) {
-            logger.warn('key로 파일 삭제하기 오류: ', e);
-        }
+        if (path.indexOf(target_path) >= 0)
+            try {
+                const stats = fs.statSync(path);
+                // 디렉토리인 경우 재귀적으로 내부 파일 탐색
+                if (stats.isDirectory()) {
+                    try {
+                        fs.rmdirSync(path);
+                    } catch (e) { }
+                } else fs.unlinkSync(path);
+                RecursiveOutDirRemove(`./${path}`);
+            } catch (e) {
+                logger.warn('key로 파일 삭제하기 오류: ', e);
+            }
     }
     // 아래, 구버전 호환 코드
     fs.readdir('./cdn', (err, files) => {
