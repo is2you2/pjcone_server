@@ -438,9 +438,13 @@ wss.on('connection', (ws, req) => {
             const json_duplicate = JSON.parse(JSON.stringify(json));
             if (json_duplicate['part'])
                 json_duplicate['part'] = `${json_duplicate['part'].substring(0, 10)}... ${json_duplicate['part'].length} characters`;
-            logger.info(`${clientId}_사용자가 다음과 같은 행동 요청: `, json_duplicate);
+            // logger.info(`${clientId}_사용자가 다음과 같은 행동 요청: `, json_duplicate);
             let channel_id = json['channel'] || joined_channel[clientId];
             switch (json['type']) {
+                // WebRTC 정보 교신시 발신자 명시처리
+                case 'socket_react':
+                    json['sender'] = clientId;
+                    break;
                 // 사용자 핑 알려주기, 같은 채널 내 다른 사용자의 핑 정보도 표기
                 case 'ping':
                     if (!dedi_client[channel_id]['ping'])
@@ -457,13 +461,11 @@ wss.on('connection', (ws, req) => {
                     if (regInfo[json.socketId]) {
                         const copied = JSON.parse(JSON.stringify(regInfo[json.socketId]));
                         copied['uid'] = clientId;
+                        copied['users'] = Object.keys(dedi_client[regInfo[json.socketId]['channel_id']]['users']);
                         ws.send(JSON.stringify(copied));
                     } else {
                         logger.log('만료된 채널에 접근중: ', json.socketId);
-                        ws.send(JSON.stringify({
-                            type: 'req_info',
-                            error: true,
-                        }));
+                        ws.close(1000, 'expired');
                     }
                     return;
                 // 사용자가 아케이드를 생성하면 자신의 pid 및 pck 정보를 기록시키고
@@ -549,11 +551,10 @@ wss.on('connection', (ws, req) => {
                         const MAX_COUNT = dedi_client[channel_id]['max'];
                         const CURRENT_COUNT = Object.keys(dedi_client[channel_id]['users']).length;
                         if (CURRENT_COUNT >= MAX_COUNT) {
-                            delete joined_channel[clientId];
-                            ws.send(JSON.stringify({
-                                type: 'block',
-                                reason: 'max_limit',
-                            }));
+                            logger.warn('최대 인원 초과로 막힘: ', clientId);
+                            setTimeout(() => {
+                                ws.close(1000, 'max_limit');
+                            }, 500);
                             return;
                         }
                     }
@@ -625,14 +626,17 @@ wss.on('connection', (ws, req) => {
                     break;
             }
             json['uid'] = clientId;
-            json = JSON.stringify(json);
-            { // 채널 내 메시지 전파
+            json_str = JSON.stringify(json);
+            // 특정인에게 보내기가 지정되어있으면 특정인에게만 보냄
+            if (json['send_to'] && dedi_client[channel_id]['users'][json['send_to']]) {
+                dedi_client[channel_id]['users'][json['send_to']]['ws'].send(json_str);
+            } else { // 채널 내 메시지 전파
                 let keys = Object.keys(dedi_client[channel_id]['users']);
                 for (let i = 0, j = keys.length; i < j; i++)
-                    dedi_client[channel_id]['users'][keys[i]]['ws'].send(json);
+                    dedi_client[channel_id]['users'][keys[i]]['ws'].send(json_str);
             }
         } catch (e) {
-            logger.error(`json 행동 오류: ${e} // msg: ${msg}`);
+            logger.error(`json 행동 오류: ${e} // msg: ${msg} // `, e);
             // 클라이언트에게 메시지 반환
             ws.send('서버에서 받은 메시지: ' + msg);
         }
@@ -678,10 +682,8 @@ wss.on('connection', (ws, req) => {
                     let msg = JSON.stringify(count);
                     dedi_client[channel_id]['users'][key]['ws'].send(msg);
                 }
-            delete dedi_client[channel_id]['users'][clientId];
-            delete dedi_client[channel_id]['ping'][clientId];
-            if (joined_channel[clientId]['socketId'])
-                delete regInfo[joined_channel[clientId]['socketId']];
+            delete dedi_client[channel_id]['users']?.[clientId];
+            delete dedi_client[channel_id]['ping']?.[clientId];
             delete joined_channel[clientId];
             { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
                 let keys = Object.keys(dedi_client[channel_id]['users']);
@@ -697,6 +699,10 @@ wss.on('connection', (ws, req) => {
                     delete dedi_client[channel_id];
                     logger.info('채널 삭제: ', channel_id);
                 }
+            }
+            if (joined_channel[clientId]['socketId']) {
+                logger.log('토큰 정보 삭제 (최종): ', CreatedSocketId);
+                delete regInfo[joined_channel[clientId]['socketId']];
             }
         } catch (e) {
             logger.info('사용자 퇴장 정보: ', e);
