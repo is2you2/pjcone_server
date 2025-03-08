@@ -62,6 +62,7 @@ let BlockAnonymous = true;
                 break;
             case 'squarePort':
                 squarePort = Number(sep[1]);
+                break;
             case 'UseSSL':
                 UseSSL = sep[1] == 'true';
                 break;
