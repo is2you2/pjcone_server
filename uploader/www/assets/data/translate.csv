@@ -19,13 +19,13 @@ ColorFilterCyan,청록,Cyan,青色,青色,シアン,Cian,Cyan,Türkis,Голуб
 ColorFilterBlue,파랑,Blue,蓝色,藍色,青,Azul,Bleu,Blau,Синий,Mavi,น้ำเงิน
 ColorFilterMagenta,자주,Magenta,洋红,洋紅,マゼンタ,Magenta,Magenta,Magenta,Пурпурный,Mor,ม่วง
 FilterByCreator,생성자,Creator,创建者,創建者,作成者,Creador,Créateur,Ersteller,Создатель,Yaratıcı,ผู้สร้าง
-Deadline,기한,Deadline,截止日期,截止日期,締切日,Plazo,Ligne de fin,Frist,Срок,Son teslim,กำหนดเวลา
+Status,상태,Status,状态,狀態,状態,Estado,Statut,Status,Статус,Durum,สถานะ
 TimeBefore,준비중,Preparing,准备中,準備中,準備中,Preparando,En préparation,Vorbereitung,Подготовка,Hazırlıkta,กำลังเตรียม
 TimeIn,진행중,Ongoing,进行中,進行中,進行中,En curso,En cours,Laufend,В процессе,Devam ediyor,กำลังดำเนินการ
 TimeOut,만료됨,Expired,已过期,已過期,期限切れ,Vencido,Expiré,Abgelaufen,Истек,Sonuçlandı,หมดอายุ
-Yesterday,어제까지,Until yesterday,直到昨天,直到昨天,昨日まで,Hasta ayer,Jusqu'à hier,Bis gestern,До вчерашнего дня, Dün'e kadar,เมื่อวานนี้
-Today,오늘까지,Until today,直到今天,直到今天,今日まで,Hasta hoy,Jusqu'à aujourd'hui,Bis heute,До сегодняшнего дня, Bugün'e kadar,จนถึงวันนี้
-Tomorrow,내일까지,Until tomorrow,直到明天,直到明天,明日まで,Hasta mañana,Jusqu'à demain,Bis morgen,До завтра,Yarın'a kadar,พรุ่งนี้
+Yesterday,어제,Yesterday,昨天,昨天,昨日,Ayer,Hier,Gestern,Вчера,Dün,เมื่อวาน
+Today,오늘,Today,今天,今天,今日,Hoy,Aujourd'hui,Heute,Сегодня,Bugün,วันนี้
+Tomorrow,내일,Tomorrow,明天,明天,明日,Mañana,Demain,Morgen,Завтра,Yarın,พรุ่งนี้
 CreatorLocal,로컬에 생성,Create locally,本地创建,本地創建,ローカルで作成,Crear localmente,Créer localement,Lokal erstellen,Создано локально,Yerel olarak oluştur,สร้างในเครื่อง
 CreatorMe,서버에 생성,Created on server,在服务器上创建,在伺服器上創建,サーバーで作成,Creado en el servidor,Créé sur le serveur,Auf dem Server erstellt,Создано на сервере,Sunucuda oluştur,สร้างบนเซิร์ฟเวอร์
 Requested,지시함,Requested,已请求,已請求,依頼済み,Solicitado,Demande,Angefordert,Запрашиваемый,Talep edildi,คำขอ
