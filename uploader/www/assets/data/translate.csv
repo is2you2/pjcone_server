@@ -390,8 +390,8 @@ DivisionName_placeholder,표시명을 따라감,Follow display name,跟随显示
 Address,서버 주소,Address,服务器地址,伺服器地址,サーバーアドレス,Dirección del servidor,Adresse du serveur,Server-Adresse,Адрес сервера,Sunucu adresi,ที่อยู่เซิร์ฟเวอร์
 Key,서버 키,Key,服务器密钥,伺服器密鑰,サーバーキー,Clave del servidor,Clé du serveur,Server-Schlüssel,Ключ сервера,Sunucu anahtarı,รหัสเซิร์ฟเวอร์
 Port,Nakama 서버 포트,Nakama server port,奈加马服务器端口,Nakama 伺服器端口,Nakamaサーバーポート,Puerto del servidor Nakama,Port du serveur Nakama,Nakama-Server-Port,Порт Nakama сервера,Nakama sunucu portu,พอร์ตเซิร์ฟเวอร์ Nakama
-cdnPort,파일 서버 포트,File server port,文件服务器端口,文件伺服器端口,ファイルサーバーポート,Puerto del servidor de archivos,Port du serveur de fichiers,Datei-Server-Port,Порт файла сервера,Dosya sunucu portu,พอร์ตเซิร์ฟเวอร์ไฟล์
-apachePort,아파치 서버 포트,Apache port,阿帕奇服务器端口,阿帕奇伺服器端口,アパッチサーバーポート,Puerto del servidor Apache,Port du serveur Apache,Apache-Server-Port,Порт Apache сервера,Apache sunucusu portu,พอร์ตเซิร์ฟเวอร์ Apache
+cdnPort,파일 업로드 포트,File upload port,文件上传端口,文件上傳端口,ファイルアップロードポート,Puerto de carga de archivos,Port d'upload de fichiers,Datei-Upload-Port,Порт загрузки файлов,Dosya yükleme portu,พอร์ตอัปโหลดไฟล์
+apachePort,파일 다운로드 포트,File download port,文件下载端口,文件下載端口,ファイルダウンロードポート,Puerto de descarga de archivos,Port de téléchargement de fichiers,Datei-Download-Port,Порт загрузки файлов,Port de descarga de archivos,พอร์ตดาวน์โหลดไฟล์
 SquarePort,광장 서버 포트,Square port,广场服务器端口,廣場伺服器端口,スクエアサーバーポート,Puerto del servidor Square,Port du serveur Square,Square-Server-Port,Порт сервера Square,Square sunucusu portu,พอร์ตเซิร์ฟเวอร์ Square
 WebRTCPort,WebRTC 서버 포트,WebRTC server port,WebRTC服务器端口,WebRTC伺服器端口,WebRTCサーバーポート,Puerto del servidor WebRTC,Port du serveur WebRTC,WebRTC-Server-Port,Порт WebRTC сервера,WebRTC sunucu portu,พอร์ตเซิร์ฟเวอร์ WebRTC
 isSSL,SSL 적용여부,use SSL,是否使用SSL,是否使用SSL,SSLを使用するか,Usar SSL,Utiliser SSL,SSL verwenden,Используется SSL,SSL kullanmak,ใช้ SSL
