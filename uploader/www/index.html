@@ -18,6 +18,12 @@
     let base = document.getElementById('site_base');
     var sub_path = base.getAttribute('href');
     var swReg;
+    // 캐시 사용 안하는 경우 아래 코드 사용
+    // caches.keys().then(function (names) {
+    //   names.forEach(function (name) {
+    //     caches.delete(name); // 각 캐시를 삭제
+    //   });
+    // });
     // 웹 알림의 행동을 미리 기록해두었다가 서비스 워커로부터 신호를 받으면 함수 행동 후 해당 함수 삭제
     var swRegListenerCallback = {};
     if ('serviceWorker' in navigator) {
@@ -45,6 +51,6 @@
 <body>
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script src="runtime.c2f99d9fab4e002f.js" type="module"></script><script src="polyfills.c3a9e4b87df5be46.js" type="module"></script><script src="main.c8c26074a7e2a822.js" type="module"></script></body>
+<script src="runtime.951606d97fdcee11.js" type="module"></script><script src="polyfills.c3a9e4b87df5be46.js" type="module"></script><script src="main.62c2640624d65926.js" type="module"></script></body>
 
 </html>
