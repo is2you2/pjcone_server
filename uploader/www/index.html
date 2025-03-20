@@ -15,8 +15,9 @@
   <!-- https 일 때, localhost 일 때 동작함 -->
   <script>
     // 예하 경로에 의한 경로찾기 오류 완화용
-    let base = document.getElementById('site_base');
-    const sub_path = base.getAttribute('href');
+    const base = document.getElementById('site_base');
+    // window['sub_path'] 로 읽으려면 var 여야함
+    var sub_path = base.getAttribute('href');
     var swReg;
     const useCache = localStorage.getItem('useCache');
     // 캐시 사용 안하는 경우 모든 캐시 삭제 처리
@@ -53,6 +54,6 @@
 <body>
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script src="runtime.e22fd8c1ae1b2689.js" type="module"></script><script src="polyfills.c3a9e4b87df5be46.js" type="module"></script><script src="main.4e7c8bdeb157cdcc.js" type="module"></script></body>
+<script src="runtime.04cb8d4c734ec92e.js" type="module"></script><script src="polyfills.c3a9e4b87df5be46.js" type="module"></script><script src="main.4e7c8bdeb157cdcc.js" type="module"></script></body>
 
 </html>
