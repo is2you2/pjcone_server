@@ -1,7 +1,0 @@
-You can use it as a browser app.
-It cannot be installed in private browsing mode.
-(Recommended browser: Google Chrome)
-
-[Mobile] You can install it by pressing 'Install App' or 'Add to Home Screen' in the browser menu. On iOS, you can install it by pressing 'Add to Home Screen' in Safari browser.
-
-[PC] If your browser supports it, you can install it by clicking the installation icon at the end of the address bar. If the icon is not visible at the end of the address bar, you can install it from the browser menu.

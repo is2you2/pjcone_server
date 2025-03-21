@@ -1,8 +1,5 @@
 ﻿#,ko,en,zh-CN,zh-TW,ja,es,fr,de,ru,tr,th
 SystemLangTarget,한국어,English,简体中文,繁體中文,日本語,Español,Français,Deutsch,Русский,Türkçe,ไทย
-## Front
-HeaderLabel,브라우저앱 설치 안내,Browser app installation instructions,浏览器应用安装指南,瀏覽器應用安裝指南,ブラウザアプリインストールガイド,Instrucciones de instalación de la aplicación del navegador,Instructions d'installation de l'application du navigateur,Browser-App-Installationsanweisungen,Инструкции по установке браузерного приложения,Brauzer uygulaması kurulum talimatları,คำแนะนำในการติดตั้งแอปเบราว์เซอร์
-UseAnyway,어쨌든 앱 실행,Run app anyway,无论如何运行应用,無論如何運行應用,アプリを実行する,Ejecutar la aplicación de todos modos,Exécuter l'application de toute façon,App trotzdem ausführen,Запустить приложение в любом случае,Uygulamayı yine de çalıştırın,เรียกใช้แอปพลิเคชันต่อไป
 ## Main
 Title,해야할 일,Todos,待办事项,待辦事項,やること,Lista de tareas,À faire,Aufgaben,Дела,To-dos,Yapılacaklar,สิ่งที่ต้องทำ
 NoTodo,할 일 추가하기,Add todo,添加待办事项,添加待辦事項,TODOを追加,Agregar tarea,Ajouter une tâche,Aufgabe hinzufügen,Добавить задачу,Ekle,เพิ่มงาน
