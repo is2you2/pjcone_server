@@ -272,6 +272,10 @@ fill-range@7.1.1 [license(s): MIT]
 get-blob-duration@1.2.0 [license(s): ISC]
 └── package.json:  ISC
 
+gif.js@0.2.0 [license(s): MIT]
+├── package.json:  MIT
+└── readme files: MIT
+
 glob-parent@5.1.2 [license(s): ISC]
 ├── package.json:  ISC
 ├── license files: ISC
@@ -404,7 +408,7 @@ picomatch@4.0.2 [license(s): MIT]
 ├── package.json:  MIT
 └── license files: MIT
 
-project_cone@0.85.23 [license(s): Apache, BSD, Eclipse Public License, GPL, ISC, LGPL, MIT, MPL, Public Domain]
+project_cone@0.86.0 [license(s): Apache, BSD, Eclipse Public License, GPL, ISC, LGPL, MIT, MPL, Public Domain]
 ├── license files: Apache, BSD, Eclipse Public License, GPL, ISC, LGPL, MIT, MPL, Public Domain
 └── readme files: MIT
 
