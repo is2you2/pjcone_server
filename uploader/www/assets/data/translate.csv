@@ -470,6 +470,7 @@ UnknownSource,알 수 없는 출처,Unknown source,未知来源,未知來源,不
 failed_to_gen_qr,QRCode 생성 실패,QRCode generation failed,二维码生成失败,二維碼生成失敗,QRコードの生成に失敗しました,Fallo al generar QR,Échec de la génération du QR,Fehler bei der QR-Code-Erstellung,Ошибка генерации QR,QR oluşturulamadı,ไม่สามารถสร้าง QR
 FailedToReadClipboard,클립보드 읽기 실패,Failed to read clipboard,读取剪贴板失败,讀取剪貼簿失敗,クリップボードの読み取りに失敗しました,Fallo al leer el portapapeles,Échec de la lecture du presse-papiers,Fehler beim Lesen aus der Zwischenablage,Ошибка чтения из буфера обмена,Panoyu okuma hatası,ไม่สามารถอ่านคลิปบอร์ด
 ToggleWireframe,와이어프레임 보기,Toggle Wireframe,显示线框,顯示線框,ワイヤーフレームを表示,Mostrar wireframe,Afficher le wireframe,Wireframe anzeigen,Показать каркас,Telafi telini göster,แสดงกรอบ
+ToggleObjVisible,개체 숨기기,Hide Object,隐藏对象,隱藏物件,オブジェクトを隠す,Ocultar objeto,Cacher l'objet,Objekt ausblenden,Скрыть объект,Objeyi gizle,ซ่อนวัตถุ
 ToggleSkeleton,스켈레톤 보기,Toggle Skeleton,显示骨架,顯示骨架,スケルトン表示,Mostrar esqueleto,Afficher le squelette,Skelett anzeigen,Показать скелет,İskeleti aç,แสดงโครงกระดูก
 PlayAnim,애니메이션,Play Animation,播放动画,播放動畫,アニメーション再生,Reproducir animación,Lire l'animation,Animation abspielen,Играть анимацию,Oynat animasyonu,เล่นอนิเมชั่น
 TodoRecording,할 일에서 녹음중,Recording from To Do,在待办事项中录音,在待辦事項中錄音,To Doから録音中,Grabando desde To Do,Enregistrement depuis les tâches,Aufnahme aus "To Do",Запись из "To Do","To Do"dan kayıt yapılıyor,กำลังบันทึกจาก To Do
