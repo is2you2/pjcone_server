@@ -392,7 +392,7 @@ ora@5.4.1 [license(s): MIT]
 ├── package.json:  MIT
 └── license files: MIT
 
-p5@1.10.0 [license(s): LGPL-2.1]
+p5@1.11.3 [license(s): LGPL-2.1]
 └── package.json:  LGPL-2.1
 
 path-type@4.0.0 [license(s): MIT]
@@ -408,7 +408,7 @@ picomatch@4.0.2 [license(s): MIT]
 ├── package.json:  MIT
 └── license files: MIT
 
-project_cone@0.86.12 [license(s): Apache, BSD, ISC, MIT, Public Domain]
+project_cone@0.86.13 [license(s): Apache, BSD, ISC, MIT, Public Domain]
 ├── license files: Apache, BSD, ISC, MIT, Public Domain
 └── readme files: MIT
 
