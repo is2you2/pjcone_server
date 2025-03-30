@@ -366,6 +366,8 @@ Connecting,연결중,Connecting,连接中,連接中,接続中,Conectando,Connexi
 Connected,연결됨,Connected,已连接,已連接,接続済み,Conectado,Connecté,Verbunden,Подключено,Bağlantı kuruldu,เชื่อมต่อแล้ว
 ExpiredChannel,만료된 채널,Expired Channel,已过期频道,已過期頻道,期限切れチャンネル,Canal Expirado,Canal Expiré,Abgelaufener Kanal,Истекший канал,Geçmiş Kanal,ช่องหมดอายุ
 useVideo,화상 통화,Video call,视频通话,視訊通話,ビデオ通話,Llamada de video,Appel vidéo,Videoanruf,Видеозвонок,Video araması,การโทรวิดีโอ
+useAsCCVideo,감시카메라로 사용하기,Use as surveillance camera,用作监控摄像头,用作監控攝像頭,監視カメラとして使用,Usar como cámara de vigilancia,Utiliser comme caméra de surveillance,Als Überwachungskamera verwenden,Использовать как камеру видеонаблюдения,Gözetleme kamerası olarak kullanmak,ใช้เป็นกล้องวงจรปิด
+CurrentTime,현재 시간,Current time,当前时间,當前時間,現在の時間,Hora actual,Heure actuelle,Aktuelle Zeit,Текущее время,Şu anki zaman,เวลาปัจจุบัน
 CallEnd,통화 종료,End call,结束通话,結束通話,通話終了,Finalizar llamada,Terminer l'appel,Anruf beenden,Завершить вызов,Çağrı sonlandırıldı,สิ้นสุดการโทร
 ## GroupServer
 JoinedServerList,참여중인 서버 목록,List of participating servers,参与的服务器列表,參與的伺服器列表,参加しているサーバーのリスト,Lista de servidores participativos,Liste des serveurs participants,Liste der teilnehmenden Server,Список участвующих серверов,Katılımcı sunucular listesi,รายชื่อเซิร์ฟเวอร์ที่เข้าร่วม
