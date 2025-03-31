@@ -552,7 +552,15 @@ ResolutionRatio,비율,Ratio,比率,比例,比率,Relación,Ratio,Verhältnis,С
 SetFrameRate,프레임 간격 지정,Set Frame Rate,设置帧率,設定幀率,フレームレート設定,Establecer tasa de fotogramas,Définir le taux de trame,Framerate einstellen,Установить частоту кадров,Çerçeve hızı ayarla,กำหนดอัตราเฟรม
 Millis,밀리초,Milliseconds,毫秒,毫秒,ミリ秒,Milisegundos,Millisecondes,Millisekunden,Миллисекунды,Milisaniye,มิลลิวินาที
 AutoResolution,항상 표시된 대로 해상도 자동 조정,Always auto-adjust res. as displayed,始终按显示的方式自动调整分辨率,始終按顯示的方式自動調整解析度,表示された通りに常に解像度を自動調整,Siempre ajustar la resolución automáticamente según se muestra,Toujours ajuster la résolution comme affichée,Immer automatisch die Auflösung anpassen,Всегда автоматически настраивать разрешение,Her zaman görüntülenene göre çözünürlüğü otomatik ayarla,ปรับความละเอียดอัตโนมัติตามที่แสดง
-UseTransparentBG,투명한 배경 사용,Use Transparent Background,使用透明背景,使用透明背景,透明な背景を使用,Usar fondo transparente,Utiliser un fond transparent,Verwenden Sie einen transparenten Hintergrund,Использовать прозрачный фон,Şeffaf arka plan kullan,ใช้พื้นหลังโปร่งใส
+UseTransparentBG,투명한 배경색 지정,Set transparent background color,设置透明背景色,設置透明背景色,透明背景色を設定,Establecer color de fondo transparente,Définir la couleur de fond transparente,Transparente Hintergrundfarbe festlegen,Установить прозрачный цвет фона,Şeffaf arka plan rengi ayarla,กำหนดสีพื้นหลังโปร่งใส
+useAutoGenerateGif,애니메이션 자동 생성,Auto generate animation,自动生成动画,自动生成動畫,アニメーション自動生成,Generación automática de animación,Génération automatique d'animation,Automatische Animationserstellung,Автоматическая генерация анимации,Animasyon otomatik oluşturma,สร้างอนิเมชันอัตโนมัติ
+DrawTrace,따라그리기,Draw Trace,描摹,描摹,トレース,Traza,Trace,Nachzeichnen,Трассировка,İzle,การวาดตาม
+TraceDuration,소요시간,Duration,持续时间,持續時間,時間,Duración,Durée,Dauer,Продолжительность,Süre,ระยะเวลา
+StopFrame,유지시간,Hold Time,保持时间,保持時間,保持時間,Tiempo de retención,Temps de maintien,Halten Zeit,Время удержания,Hold Süresi,เวลาหยุด
+Scribbles,손떨림,Scribbles,涂鸦,塗鴉,落書き,Garabatos,Gribouillages, Kritzeleien,Каляки-Маляки,Karalamalar,ขีดเขียน
+ScribbleExtent,손떨림 정도,Tremor Level,颤抖程度,顫抖程度,震えの程度,Nivel de temblor,Niveau de tremblement,Erzitterniveau,Уровень дрожи,Titreme Seviyesi,ระดับการสั่น
+ProcessingAnim,애니메이션 작업중,Processing animation,处理中动画,處理中動畫,アニメーション処理中,Procesando animación,Traitement de l'animation,Verarbeitung der Animation,Обработка анимации,Animasyon işleniyor,กำลังประมวลผลแอนิเมชัน
+DrawOver,겹치기,Overlap,重叠,重疊,オーバーラップ,Superposición,Superposition,Überlappen,Наложение,Ü
 width,가로,Width,宽度,寬度,幅,Ancho,Largeur,Breite,Ширина,Genislik,ความกว้าง
 height,세로,Height,高度,高度,高さ,Altura,Hauteur,Höhe,Высота,Yükseklik,ความสูง
 weight,선 두께,Stroke weight,笔触粗细,筆觸粗細,ストロークの太さ,Peso del trazo,Épaisseur du trait,Strichstärke,Толщина линии,Çizgi kalınlığı,ความหนาของเส้น
