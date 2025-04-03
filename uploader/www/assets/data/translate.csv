@@ -568,6 +568,10 @@ Scribbles,손떨림,Scribbles,涂鸦,塗鴉,落書き,Garabatos,Gribouillages, K
 ScribbleExtent,손떨림 정도,Tremor Level,颤抖程度,顫抖程度,震えの程度,Nivel de temblor,Niveau de tremblement,Erzitterniveau,Уровень дрожи,Titreme Seviyesi,ระดับการสั่น
 CrayonDraw,크레용선,Crayon Line,蜡笔线,蠟筆線,クレヨン線,Línea de crayón,Ligne de crayon,Kratzlinie,Карандашная линия,Krayon çizgisi,เส้นสีเทียน
 ProcessingAnim,애니메이션 작업중,Processing animation,处理中动画,處理中動畫,アニメーション処理中,Procesando animación,Traitement de l'animation,Verarbeitung der Animation,Обработка анимации,Animasyon işleniyor,กำลังประมวลผลแอนิเมชัน
+ProgressTrace,따라그리기 처리,Trace Processing,描摹处理,描摹處理,トレース処理,Procesamiento de trazado,Traitement de suivi,Nachverarbeitung,Обработка трассировки,İz İşleme,การประมวลผลการติดตาม
+ProgressLast,기다리기 처리,Waiting Processing,等待处理,等待處理,待機処理,Procesamiento de espera,Traitement d'attente,Warten-Verarbeitung,Обработка ожидания,Bekleme İşlemi,การประมวลผลการรอ
+ProgressCrayonTrace,따라그리기 크레용 선처리,Crayon Trace Processing,彩色铅笔描摹处理,彩色鉛筆描摹處理,クレヨントレース処理,Procesamiento de trazado con crayón,Traitement de trace au crayon,Crayon-Nachbearbeitung,Обработка трассировки карандашом,Kürek İzleme İşlemi,การประมวลผลการติดตามด้วยเครยอน
+ProgressCrayonLast,기다리기 크레용 선처리,Crayon Waiting Processing,等待的彩色铅笔描摹处理,等待的彩色鉛筆描摹處理,待機クレヨントレース処理,Procesamiento de espera con crayón,Traitement d'attente avec crayon,Crayon-Warten-Verarbeitung,Обработка ожидания с карандашом,Bekleme Çizimi İşlemi,การประมวลผลการรอด้วยเครยอน
 DrawOver,겹치기,Overlap,重叠,重疊,オーバーラップ,Superposición,Superposition,Überlappen,Наложение,Ü
 width,가로,Width,宽度,寬度,幅,Ancho,Largeur,Breite,Ширина,Genislik,ความกว้าง
 height,세로,Height,高度,高度,高さ,Altura,Hauteur,Höhe,Высота,Yükseklik,ความสูง
