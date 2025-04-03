@@ -566,6 +566,7 @@ TraceDuration,소요시간,Duration,持续时间,持續時間,時間,Duración,D
 StopFrame,유지시간,Hold Time,保持时间,保持時間,保持時間,Tiempo de retención,Temps de maintien,Halten Zeit,Время удержания,Hold Süresi,เวลาหยุด
 Scribbles,손떨림,Scribbles,涂鸦,塗鴉,落書き,Garabatos,Gribouillages, Kritzeleien,Каляки-Маляки,Karalamalar,ขีดเขียน
 ScribbleExtent,손떨림 정도,Tremor Level,颤抖程度,顫抖程度,震えの程度,Nivel de temblor,Niveau de tremblement,Erzitterniveau,Уровень дрожи,Titreme Seviyesi,ระดับการสั่น
+CrayonDraw,크레용선,Crayon Line,蜡笔线,蠟筆線,クレヨン線,Línea de crayón,Ligne de crayon,Kratzlinie,Карандашная линия,Krayon çizgisi,เส้นสีเทียน
 ProcessingAnim,애니메이션 작업중,Processing animation,处理中动画,處理中動畫,アニメーション処理中,Procesando animación,Traitement de l'animation,Verarbeitung der Animation,Обработка анимации,Animasyon işleniyor,กำลังประมวลผลแอนิเมชัน
 DrawOver,겹치기,Overlap,重叠,重疊,オーバーラップ,Superposición,Superposition,Überlappen,Наложение,Ü
 width,가로,Width,宽度,寬度,幅,Ancho,Largeur,Breite,Ширина,Genislik,ความกว้าง
