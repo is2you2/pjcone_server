@@ -562,6 +562,7 @@ UseTransparentBG,투명한 배경색 지정,Set transparent background color,设
 NoTransparent,투명하지 않게,Not transparent,不透明,不透明,透明でない,No transparente,Non transparent,Undurchsichtig,Непрозрачный,Şeffaf olmayan,ไม่โปร่งใส
 useAutoGenerateGif,애니메이션 자동 생성,Auto generate animation,自动生成动画,自动生成動畫,アニメーション自動生成,Generación automática de animación,Génération automatique d'animation,Automatische Animationserstellung,Автоматическая генерация анимации,Animasyon otomatik oluşturma,สร้างอนิเมชันอัตโนมัติ
 PlayAnimErr,애니메이션 생성 오류,Animation creation error,动画创建错误,動畫創建錯誤,アニメーション作成エラー,Error de creación de animación,Erreur de création d'animation,Fehler bei der Animationsgenerierung,Ошибка создания анимации,Animasyon oluşturma hatası,ข้อผิดพลาดในการสร้างแอนิเมชัน
+AutoSendMsg,완료 후 메시지 발송,Send message after completion,完成后发送消息,完成後發送消息,完了後メッセージ送信,Enviar mensaje después de completar,Envoyer un message après la fin,Nach Abschluss Nachricht senden,Отправить сообщение после завершения,İşlem sonrası mesaj gönder,ส่งข้อความหลังจากเสร็จสิ้น
 DrawTrace,따라그리기,Draw Trace,描摹,描摹,トレース,Traza,Trace,Nachzeichnen,Трассировка,İzle,การวาดตาม
 TraceDuration,소요시간,Duration,持续时间,持續時間,時間,Duración,Durée,Dauer,Продолжительность,Süre,ระยะเวลา
 StopFrame,유지시간,Hold Time,保持时间,保持時間,保持時間,Tiempo de retención,Temps de maintien,Halten Zeit,Время удержания,Hold Süresi,เวลาหยุด
