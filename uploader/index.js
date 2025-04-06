@@ -570,6 +570,10 @@ wss.on('connection', (ws, req) => {
                     // 진입시 개인화된 채널인지 (방장 채널인지) 여부를 회신
                     json['isOwnChannel'] = dedi_client[channel_id]['isOwnChannel'];
                     break;
+                // 특정 사용자를 내보냄
+                case 'kick': {
+                    dedi_client[channel_id]['users'][pid]['ws'].close(1000, 'kick');
+                } return;
                 // 사용자 정보를 추가로 업데이트함
                 case 'update': {
                     const keys = json['keys'];
@@ -720,10 +724,27 @@ if (UseSSL)
 // 앱에서 비보안 서버에 접속할 때 기능에 제한 없이 사용할 수 있습니다.
 try {
     if (!UseCustomSite) throw '사이트를 운영하지 않기로 설정됨';
-    app.use(express.static(path.join(__dirname, './www')));
-    app.listen(SitePort, () => {
-        logger.info(`서버가 http://localhost:${SitePort}에서 실행 중입니다.`);
-    });
+    if (UseSSL) {
+        const options = {
+            key: fs.readFileSync('/root/private.key'),
+            cert: fs.readFileSync('/root/public.crt'),
+        };
+        // 정적 파일 제공: /www 폴더의 파일을 / 경로로 제공
+        app.use(express.static('./www'));
+        // 간단한 라우터 설정
+        app.get('/', (req, res) => {
+            res.send('Hello, Secure World!');
+        });
+        // https.createServer()로 SSL을 적용한 서버 실행
+        https.createServer(options, app).listen(SitePort, () => {
+            logger.info('HTTPS server is running on https://localhost');
+        });
+    } else {
+        app.use(express.static(path.join(__dirname, './www')));
+        app.listen(SitePort, () => {
+            logger.info(`서버가 http://localhost:${SitePort}에서 실행 중입니다.`);
+        });
+    }
 } catch (e) {
     logger.warn('사설 사이트 켜기 오류: ', e);
 }
