@@ -168,7 +168,6 @@ env_info,사용 환경,Preferences,使用环境,使用環境,使用環境,Prefer
 myInfo,내 정보,My info,我的信息,我的資訊,私の情報,Mi información,Mes informations,Meine Infos,Моя информация,Bilgilerim,ข้อมูลของฉัน
 groupServer,사용자 관리,Manage user info,管理用户信息,管理用戶資訊,ユーザー情報管理,Administrar la información del usuario,Gérer les informations de l'utilisateur,Benutzerdaten verwalten,Управление данными пользователя,Kullanıcı bilgilerini yönet,จัดการข้อมูลผู้ใช้
 useDeviceAsServer,이 기기를 기능 서버로,Use this device as a functional server,将此设备用作功能服务器,將此設備作為功能伺服器,このデバイスを機能サーバーとして使用,Usar este dispositivo como servidor funcional,Utiliser cet appareil comme serveur fonctionnel,Dieses Gerät als funktionalen Server verwenden,Использовать это устройство как функциональный сервер,Bu cihazı fonksiyonel sunucu olarak kullan,ใช้อุปกรณ์นี้เป็นเซิร์ฟเวอร์ฟังก์ชัน
-ShowChnServer,서버 표시,Show servers,显示服务器,顯示伺服器,サーバーを表示,Mostrar servidores,Afficher les serveurs,Server anzeigen,Показать серверы,Sunucuları Göster,แสดงเซิร์ฟเวอร์
 ShowShortCutHint,단축키 힌트 표시,Show shortcut hints,显示快捷键提示,顯示快捷鍵提示,ショートカットヒントを表示,Mostrar pistas de atajos,Afficher les indices de raccourcis,Shortcuts anzeigen,Показать подсказки для сочетаний клавиш,Kısayol ipuçlarını göster,แสดงคำแนะนำทางลัด
 useOfflineCache,오프라인 캐시 사용,Use offline cache,使用离线缓存,使用離線緩存,オフラインキャッシュを使用,Usar caché sin conexión,Utiliser le cache hors ligne,Offline-Cache verwenden,Использовать офлайн-кэш,Çevrimdışı önbelleği kullan,ใช้แคชออฟไลน์
 ApplyAfterRestart,앱을 다시 시작하면 적용됩니다,The changes will apply after restarting the app,应用更改后需要重启应用,应用更改後需要重啟應用,アプリを再起動すると適用されます,Los cambios se aplicarán después de reiniciar la aplicación,Les changements seront appliqués après le redémarrage de l'application,Die Änderungen werden nach einem Neustart der App angewendet,Изменения будут применены после перезапуска приложения,Değişiklikler uygulama yeniden başlatıldığında uygulanacaktır,การเปลี่ยนแปลงจะถูกนำไปใช้หลังจากรีสตาร์ทแอป
@@ -377,6 +376,7 @@ CurrentTime,현재 시간,Current time,当前时间,當前時間,現在の時間
 CallEnd,통화 종료,End call,结束通话,結束通話,通話終了,Finalizar llamada,Terminer l'appel,Anruf beenden,Завершить вызов,Çağrı sonlandırıldı,สิ้นสุดการโทร
 ## GroupServer
 JoinedServerList,참여중인 서버 목록,List of participating servers,参与的服务器列表,參與的伺服器列表,参加しているサーバーのリスト,Lista de servidores participativos,Liste des serveurs participants,Liste der teilnehmenden Server,Список участвующих серверов,Katılımcı sunucular listesi,รายชื่อเซิร์ฟเวอร์ที่เข้าร่วม
+AutoConnect,앱 시작시 자동으로 연결 시도,Attempt to connect automatically when the app starts,在应用启动时自动连接,在應用啟動時自動連接,アプリ起動時に自動で接続を試みる,Intentar conectarse automáticamente al iniciar la aplicación,Tenter de se connecter automatiquement au démarrage de l'application,Versuch, beim Start der App automatisch eine Verbindung herzustellen,Попытаться подключиться автоматически при запуске приложения, Uygulama başlatıldığında otomatik olarak bağlantı kurmaya çalışın,พยายามเชื่อมต่อโดยอัตโนมัติเมื่อแอปเริ่มต้น
 ServerDetail,서버 정보,Server info,服务器信息,伺服器資訊,サーバー情報,Información del servidor,Informations sur le serveur,Server-Informationen,Информация о сервере,Sunucu bilgisi,ข้อมูลเซิร์ฟเวอร์
 RightClickDetail,서버를 우클릭하여 정보 상세,Right click on the server to view detailed information,右键单击服务器查看详细信息,右鍵點擊伺服器查看詳細資訊,サーバーを右クリックして詳細情報を表示,Haz clic derecho en el servidor para ver detalles,Faites un clic droit sur le serveur pour afficher les informations détaillées,Klicken Sie mit der rechten Maustaste auf den Server, um Details anzuzeigen,Щелкните правой кнопкой мыши на сервере, чтобы увидеть подробную информацию,Sunucuya sağ tıklayarak ayrıntıları görüntüleyin,คลิกขวาที่เซิร์ฟเวอร์เพื่อดูข้อมูลรายละเอียด
 RemoveUnofficial,삭제,Delete,删除,刪除,削除,Eliminar,Supprimer,Löschen,Удалить,Sil,ลบ
@@ -579,6 +579,7 @@ DrawOver,겹치기,Overlap,重叠,重疊,オーバーラップ,Superposición,Su
 width,가로,Width,宽度,寬度,幅,Ancho,Largeur,Breite,Ширина,Genislik,ความกว้าง
 height,세로,Height,高度,高度,高さ,Altura,Hauteur,Höhe,Высота,Yükseklik,ความสูง
 weight,선 두께,Stroke weight,笔触粗细,筆觸粗細,ストロークの太さ,Peso del trazo,Épaisseur du trait,Strichstärke,Толщина линии,Çizgi kalınlığı,ความหนาของเส้น
+DynamicWeight,동적인 선 두께,Dynamic Line Thickness,动态线条粗细,動態線條粗細,動的線の太さ,Espesor de línea dinámico,Épaisseur de ligne dynamique, Dynamische Linienstärke,Динамическая толщина линии,Dinamik Çizgi Kalınlığı,ความหนาของเส้นพลศาสตร์
 quickSetup,빠른 설정 기본값,Quick setup defaults,快速设置默认值,快速設定預設值,クイックセットアップのデフォルト,Valores predeterminados de configuración rápida,Paramètres par défaut de configuration rapide,Schnelleinstellungen-Standardeinstellungen,Быстрая настройка по умолчанию,Hızlı ayar varsayılanları,การตั้งค่าเริ่มต้นอย่างรวดเร็ว
 quickTransparent,투명도,Transparency,透明度,透明度,透明度,Transparencia,Transparence,Transparenz,Прозрачность,Şeffaflık,ความโปร่งใส
 apply,적용,Apply,应用,應用,適用,Aplicar,Appliquer,Anwenden,Применить,Uygula,ใช้
