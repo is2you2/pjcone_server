@@ -549,6 +549,7 @@ UseThisImage,이미지를 준비중...,Preparing image to send...,正在准备�
 newDraw,새 그림,New draw,新画,新圖,新しい絵,Nuevo dibujo,Nouvelle illustration,Neue Zeichnung,Новый рисунок,Yeni çizim,ภาพวาดใหม่
 CreateNew,새로 만들기,New,新建,新增,新規作成,Nuevo,Créer un nouveau,Nueva creación,Neu erstellen,Создать новый,Yeni oluştur,สร้างใหม่
 ColorpickDetail,그리기 상세 조정,Drawing detail adjustment,绘画详细调整,繪圖詳細調整,描画の詳細調整,Ajuste de detalles del dibujo,Ajustement des détails du dessin,Zeichnungsdetailanpassung,Корректировка деталей рисования,Ayrıntılı çizim ayarı,ปรับรายละเอียดการวาด
+ChangeSelectedColor,선택한 색상을 재설정,Reset Selected Color,重置所选颜色,重設所選顏色,選択した色をリセット,Restablecer color seleccionado,Réinitialiser la couleur sélectionnée,Ausgewählte Farbe zurücksetzen,Сбросить выбранный цвет,Renk Seçimini Sıfırla,รีเซ็ตสีที่เลือก
 ColorpickRed,빨강,Red,红色,紅色,赤,Rojo,Rouge,Rot,Красный,Kırmızı,แดง
 ColorpickGreen,초록,Green,绿色,綠色,緑,Verde,Vert,Grün,Зеленый,Yeşil,เขียว
 ColorpickBlue,파랑,Blue,蓝色,藍色,青,Azul,Bleu,Blau,Синий,Mavi,น้ำเงิน
