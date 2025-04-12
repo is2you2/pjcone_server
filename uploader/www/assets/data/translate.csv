@@ -15,6 +15,7 @@ ColorFilterGreen,초록,Green,绿色,綠色,緑,Verde,Vert,Grün,Зеленый,
 ColorFilterCyan,청록,Cyan,青色,青色,シアン,Cian,Cyan,Türkis,Голубой,Camgöbeği,ฟ้า
 ColorFilterBlue,파랑,Blue,蓝色,藍色,青,Azul,Bleu,Blau,Синий,Mavi,น้ำเงิน
 ColorFilterMagenta,자주,Magenta,洋红,洋紅,マゼンタ,Magenta,Magenta,Magenta,Пурпурный,Mor,ม่วง
+ColorFilterNone,무채색,Monochrome,无彩色,無彩色,モノクローム,Monocromo,Monochrome,Monochrom,Монохромный,Monokrom,โมโนโครม
 FilterByCreator,생성자,Creator,创建者,創建者,作成者,Creador,Créateur,Ersteller,Создатель,Yaratıcı,ผู้สร้าง
 Status,상태,Status,状态,狀態,状態,Estado,Statut,Status,Статус,Durum,สถานะ
 TimeBefore,준비중,Preparing,准备中,準備中,準備中,Preparando,En préparation,Vorbereitung,Подготовка,Hazırlıkta,กำลังเตรียม
