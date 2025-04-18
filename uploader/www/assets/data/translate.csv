@@ -585,6 +585,7 @@ width,가로,Width,宽度,寬度,幅,Ancho,Largeur,Breite,Ширина,Genislik,
 height,세로,Height,高度,高度,高さ,Altura,Hauteur,Höhe,Высота,Yükseklik,ความสูง
 weight,선 두께,Stroke weight,笔触粗细,筆觸粗細,ストロークの太さ,Peso del trazo,Épaisseur du trait,Strichstärke,Толщина линии,Çizgi kalınlığı,ความหนาของเส้น
 DynamicWeight,동적인 선 두께,Dynamic Line Thickness,动态线条粗细,動態線條粗細,動的線の太さ,Espesor de línea dinámico,Épaisseur de ligne dynamique, Dynamische Linienstärke,Динамическая толщина линии,Dinamik Çizgi Kalınlığı,ความหนาของเส้นพลศาสตร์
+BlendMode,혼합 방식,Blend Mode,混合模式,混合模式,ブレンドモード,Modo de fusión,Mode de fusion,Überblendmodus,Режим наложения,Karışım Modu,โหมดผสม
 quickSetup,빠른 설정 기본값,Quick setup defaults,快速设置默认值,快速設定預設值,クイックセットアップのデフォルト,Valores predeterminados de configuración rápida,Paramètres par défaut de configuration rapide,Schnelleinstellungen-Standardeinstellungen,Быстрая настройка по умолчанию,Hızlı ayar varsayılanları,การตั้งค่าเริ่มต้นอย่างรวดเร็ว
 quickTransparent,투명도,Transparency,透明度,透明度,透明度,Transparencia,Transparence,Transparenz,Прозрачность,Şeffaflık,ความโปร่งใส
 apply,적용,Apply,应用,應用,適用,Aplicar,Appliquer,Anwenden,Применить,Uygula,ใช้
