@@ -12,6 +12,7 @@ const ws = require('ws');
 const cheerio = require('cheerio');
 const { v4: uuidv4 } = require('uuid');
 const log4js = require('log4js');
+const { Client } = require('pg');
 
 // 로그 설정
 log4js.configure({
@@ -26,6 +27,41 @@ log4js.configure({
 
 // 로거 인스턴스 생성
 const logger = log4js.getLogger();
+
+/** PostgreSQL 데이터베이스 연결 설정  
+ * 이 설정은 docker-compose.yml 파일의 postgres 정보와 동일해야 합니다.
+ */
+const client = new Client({
+    user: 'postgres',
+    host: 'postgres',
+    database: 'nakama',
+    password: 'localdb',
+    port: 5432,
+});
+
+client.connect()
+    .then(() => {
+        logger.info('PostgreSQL 데이터베이스에 연결되었습니다.');
+    }).catch(err => {
+        logger.error('PostgreSQL 연결 오류:', err.stack);
+        isFFSOnly = true;
+    });
+
+let isFFSOnly = false;
+/** 사용자가 postgres에 존재하는지 검토 */
+async function CheckPGUserExist(userId, useFFS = isFFSOnly) {
+    try {
+        // FFS 용도로 nodejs 만 사용중이라면 있는 사용자라고 간주하여 무조건 행동시키기
+        if (useFFS) return true;
+        // 데이터베이스에서 해당 ID가 존재하는지 확인
+        const result = await client.query('SELECT * FROM users WHERE id = $1', [userId]);
+        // 사용자가 존재하면 true 반환
+        return result.rows.length > 0;
+    } catch (err) {
+        logger.warn('PG데이터베이스 오류', err.stack);
+        return false;
+    }
+}
 
 /** 사설 사이트 운영 */
 let UseCustomSite = true;
@@ -102,7 +138,6 @@ const upload = multer({ storage: storage });
 
 // 파일 업로드를 처리할 라우트 설정
 app.use('/cdn/', upload.single('files'), (req, res) => {
-    // req.file은 업로드된 파일의 정보를 가지고 있음
     const uploaded_filename = decodeURI(req.url.substring(1));
     const folderPath = `./cdn/${req.body['path']}`;
     try {
@@ -144,18 +179,28 @@ function RecursiveOutDirRemove(_path) {
 }
 
 /** 파일 삭제 요청 */
-app.use('/remove/', (req, res) => {
-    const path = decodeURIComponent(req.url);
-    const fullPath = `./cdn${path}`;
-    logger.info(`Remove file: ${fullPath}`);
-    fs.unlink(fullPath, e => {
-        logger.info(`Result: Remove file ${path}: ${e}`);
-        RecursiveOutDirRemove(fullPath);
-    });
-    // 아래, 구 버전 호환 삭제
-    fs.unlink(`./cdn${decodeURIComponent(req.url)}`, e => {
-        logger.error(`Result: Remove file ${decodeURIComponent(req.url)}: ${e}`);
-    });
+app.post('/remove/', upload.none(), (req, res) => {
+    try {
+        const path = req.body['path'];
+        const uuid = req.body['uuid'];
+        CheckPGUserExist(uuid).then(isRegisteredUser => {
+            if (!isRegisteredUser) logger.warn('등록되지 않은 사용자의 파일 삭제 요청 수신_remove: ', req.body);
+            const fullPath = `./cdn/${path}`;
+            logger.info(`Remove file: ${fullPath}`);
+            fs.unlink(fullPath, e => {
+                logger.info(`Result: Remove file ${path}: ${e}`);
+                RecursiveOutDirRemove(fullPath);
+            });
+            // 아래, 구 버전 호환 삭제
+            fs.unlink(`./cdn${path}`, e => {
+                logger.error(`Result: Remove file ${path}: ${e}`);
+            });
+        }).catch(e => {
+            logger.warn('파일 삭제 동작 오류_remove: ', e);
+        });
+    } catch (e) {
+        logger.warn('파일 삭제 동작 오류_remove: ', e);
+    }
     res.end();
 });
 
@@ -186,40 +231,50 @@ function getFilesInDirectory(dir) {
 }
 
 /** 키워드가 포함된 모든 파일 삭제 */
-app.use('/remove_key/', (req, res) => {
-    const target_key = `${decodeURIComponent(req.url).substring(1)}`;
-    const keys = target_key.split('_');
-    let target_path = '';
-    keys.forEach(key => target_path = target_path ? `${target_path}/${key}` : key);
-    let listAll = getFilesInDirectory('./cdn/');
-    while (listAll?.length) {
-        const path = listAll.pop();
-        if (path.indexOf(target_path) >= 0)
-            try {
-                const stats = fs.statSync(path);
-                // 디렉토리인 경우 재귀적으로 내부 파일 탐색
-                if (stats.isDirectory()) {
+app.post('/remove_key/', upload.none(), (req, res) => {
+    try {
+        const uuid = req.body['uuid'];
+        CheckPGUserExist(uuid).then(isRegisteredUser => {
+            if (!isRegisteredUser) logger.warn('등록되지 않은 사용자의 파일 삭제 요청 수신_remove_key: ', req.body);
+            const target_key = req.body['target_id'];
+            const keys = target_key.split('_');
+            let target_path = '';
+            keys.forEach(key => target_path = target_path ? `${target_path}/${key}` : key);
+            let listAll = getFilesInDirectory('./cdn/');
+            while (listAll?.length) {
+                const path = listAll.pop();
+                if (path.indexOf(target_path) >= 0)
                     try {
-                        fs.rmdirSync(path);
-                    } catch (e) { }
-                } else fs.unlinkSync(path);
-                RecursiveOutDirRemove(`./${path}`);
-            } catch (e) {
-                logger.warn('key로 파일 삭제하기 오류: ', e);
+                        const stats = fs.statSync(path);
+                        // 디렉토리인 경우 재귀적으로 내부 파일 탐색
+                        if (stats.isDirectory()) {
+                            try {
+                                fs.rmdirSync(path);
+                            } catch (e) { }
+                        } else fs.unlinkSync(path);
+                        RecursiveOutDirRemove(`./${path}`);
+                    } catch (e) {
+                        logger.warn('key로 파일 삭제하기 오류: ', e);
+                    }
             }
-    }
-    // 아래, 구버전 호환 코드
-    fs.readdir('./cdn', (err, files) => {
-        logger.info(`Remove file with key: ${decodeURIComponent(req.url)}`);
-        files.forEach(path => {
-            if (path.indexOf(target_key) >= 0) {
-                logger.info(`Remove file: ./cdn/${decodeURIComponent(path)}`);
-                fs.unlink(`./cdn/${path}`, e => {
-                    logger.error(`Result: Remove file with key: ${decodeURIComponent(path)}: ${e}`);
+            // 아래, 구버전 호환 코드
+            fs.readdir('./cdn', (err, files) => {
+                logger.info(`Remove file with key: ${target_key}`);
+                files.forEach(path => {
+                    if (path.indexOf(target_key) >= 0) {
+                        logger.info(`Remove file: ./cdn/${decodeURIComponent(path)}`);
+                        fs.unlink(`./cdn/${path}`, e => {
+                            logger.error(`Result: Remove file with key: ${decodeURIComponent(path)}: ${e}`);
+                        });
+                    }
                 });
-            }
+            });
+        }).catch(e => {
+            logger.warn('파일 삭제 동작 오류_remove_key: ', e);
         });
-    });
+    } catch (e) {
+        logger.warn('파일 삭제 동작 오류_remove_key: ', e);
+    }
     res.end();
 });
 
