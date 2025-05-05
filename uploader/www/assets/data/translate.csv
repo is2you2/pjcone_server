@@ -274,7 +274,10 @@ downloaded,다운로드,Download,已下载,已下載,ダウンロード済み,De
 FileSaved,파일 저장,Save file,保存文件,保存檔案,ファイルを保存,Guardar archivo,Enregistrer le fichier,Datei speichern,Файл сохранен,Dosya kaydedildi,บันทึกไฟล์
 SavingFile,파일 저장중,Saving file,保存文件中,保存檔案中,ファイルを保存中,Guardando archivo,Enregistrement du fichier,Datei wird gespeichert,Сохранение файла,Dosya kaydediliyor,กำลังบันทึกไฟล์
 SendFile,파일 전송,File sent,发送文件,發送檔案,ファイルを送信,Enviar archivo,Envoyer le fichier,Datei senden,Отправить файл,Dosya gönderildi,ส่งไฟล์
+MsgWork,메시지 작업,Message Work,消息处理,訊息處理,メッセージ作業,Trabajo de Mensajes,Travail de message,Nachrichtenverarbeitung,Обработка сообщений,Mesaj İşlemi,การทำงานของข้อความ
 qouteMsg,답장,Reply to,回复消息,回覆訊息,メッセージに返信,Responder,Répondre,Antworten,Ответить,Yanıtla,ตอบกลับ
+memoMsg,메모,Note,便笺,備忘錄,メモ,Nota,Note,Notiz,Заметка,Not,บันทึก
+memoMsgHere,메시지에 메모 작성,Write a memo in the message,在消息中写备忘录,在訊息中寫備忘錄,メッセージにメモを書く,Escribe una nota en el mensaje,Écrire une note dans le message,Notiz in die Nachricht schreiben,Написать заметку в сообщении,Mesaja not yaz,เขียนบันทึกในข้อความ
 LostOriginMsg,원본 메시지를 찾을 수 없음,Original message not found,无法找到原始消息,無法找到原始訊息,元のメッセージが見つかりません,Mensaje original no encontrado,Message original non trouvé,Originalnachricht nicht gefunden,Исходное сообщение не найдено,Orijinal mesaj bulunamadı,ไม่พบข้อความต้นฉบับ
 viewer_not_support,뷰어가 지원하지 않는 파일,Files not supported by the viewer,查看器不支持的文件,檢視器不支援的檔案,ビューアがサポートしていないファイル,Archivos no compatibles con el visor,Fichiers non pris en charge par le visualiseur,Dateien werden vom Viewer nicht unterstützt,Файлы, которые не поддерживаются просмотрщиком,Viewer'ın desteklemediği dosyalar,โปรแกรมดูไม่รองรับไฟล์
 cannot_open_file,파일을 열람할 수 없습니다,The file cannot be viewed,无法查看文件,無法查看檔案,ファイルを表示できません,No se puede ver el archivo,Impossible d'ouvrir le fichier,Datei kann nicht angezeigt werden,Невозможно просмотреть файл,Dosya görüntülenemiyor,ไม่สามารถเปิดไฟล์ได้
