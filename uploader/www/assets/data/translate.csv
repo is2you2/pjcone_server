@@ -591,6 +591,8 @@ DynamicWeight,동적인 선 두께,Dynamic Line Thickness,动态线条粗细,動
 BlendMode,혼합 방식,Blend Mode,混合模式,混合模式,ブレンドモード,Modo de fusión,Mode de fusion,Überblendmodus,Режим наложения,Karışım Modu,โหมดผสม
 quickSetup,빠른 설정 기본값,Quick setup defaults,快速设置默认值,快速設定預設值,クイックセットアップのデフォルト,Valores predeterminados de configuración rápida,Paramètres par défaut de configuration rapide,Schnelleinstellungen-Standardeinstellungen,Быстрая настройка по умолчанию,Hızlı ayar varsayılanları,การตั้งค่าเริ่มต้นอย่างรวดเร็ว
 quickTransparent,투명도,Transparency,透明度,透明度,透明度,Transparencia,Transparence,Transparenz,Прозрачность,Şeffaflık,ความโปร่งใส
+DrawAssist,그리기 보조,Drawing Assist,绘图辅助,繪圖輔助,描画補助,Asistente de Dibujo,Assistance au dessin,Zeichenhilfe,Помощь при рисовании,Çizim Yardımı,ตัวช่วยวาดภาพ
+ShowBGImg,배경그림 표시,Show Background Image,显示背景图像,顯示背景圖像,背景画像を表示,Mostrar imagen de fondo,Afficher l'image de fond,Hintergrundbild anzeigen,Показать фоновое изображение,Arka Plan Görselini Göster,แสดงภาพพื้นหลัง
 apply,적용,Apply,应用,應用,適用,Aplicar,Appliquer,Anwenden,Применить,Uygula,ใช้
 CreateChannel,새 채널 생성,Create new channel,创建新频道,創建新頻道,新しいチャンネルを作成,Crear un nuevo canal,Créer un nouveau canal,Neuen Kanal erstellen,Создать новый канал,Yeni kanal oluştur,สร้างช่องใหม่
 InputAddress,주소 입력,Input address,输入地址,輸入地址,アドレスを入力,Introduzca la dirección,Entrez l'adresse,Geben Sie die Adresse ein,Введите адрес,Adres girin,กรอกที่อยู่
