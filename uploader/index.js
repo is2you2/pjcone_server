@@ -162,6 +162,7 @@ app.use('/filesize/', (req, res) => {
         res.end(`${stat.size}`);
     } catch (e) {
         logger.warn('파일 크기 검토 오류: ', e);
+        res.end(`${e}`);
     }
 });
 
@@ -363,10 +364,6 @@ app.use('/get-page-info', async (req, res) => {
 
         if (!title) {
             title = $('meta[property="og:title"]').attr('content');
-        }
-
-        if (!title) {
-            throw '타이틀 정보 수집 실패';
         }
 
         const description = $('meta[name="description"]').attr('content');
