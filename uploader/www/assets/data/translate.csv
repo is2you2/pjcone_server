@@ -9,6 +9,7 @@ MigrateRemote,모든 로컬 할 일을 서버로 이관,All local tasks will be 
 ## TodoDetail
 Title,할 일 상세,Todo detail,任务详情,任務詳情,タスクの詳細,Detalles de la tarea,Détails de la tâche,Aufgabendetails,Детали задачи,Görev detayı,รายละเอียดงาน
 FilterCat_0,없음,None,无,None,なし,Ninguno,Aucun,Keine,Нет,Ninguno,ไม่มี
+HideAll,가리기,Hide All,全部隐藏,全部隱藏,すべて非表示,Ocultar todo,Masquer tout,Alles ausblenden,Скрыть всё,Tümünü gizle,ซ่อนทั้งหมด
 ColorFilterRed,빨강,Red,红色,紅色,赤,Rojo,Rouge,Rot,Красный,Kırmızı,แดง
 ColorFilterYellow,노랑,Yellow,黄色,黃色,黄色,Amarillo,Jaune,Gelb,Желтый,Sarı,เหลือง
 ColorFilterGreen,초록,Green,绿色,綠色,緑,Verde,Vert,Grün,Зеленый,Yeşil,เขียว
