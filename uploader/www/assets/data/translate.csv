@@ -590,6 +590,7 @@ ProgressCrayonLast,기다리기 크레용 선처리,Crayon Waiting Processing,�
 DrawOver,겹치기,Overlap,重叠,重疊,オーバーラップ,Superposición,Superposition,Überlappen,Наложение,Ü
 AutoSaveOn,자동 저장 사용,Auto Save On,自动保存开启,自動儲存開啟,自動保存オン,Auto Guardado Activado,Enregistrement automatique activé,Automatisches Speichern Ein,Автосохранение Вкл.,Otomatik Kaydetme Açık,เปิดการบันทึกอัตโนมัติ
 AutoSaveOff,자동 저장 사용 안함,Auto Save Off,自动保存关闭,自動儲存關閉,自動保存オフ,Auto Guardado Desactivado,Enregistrement automatique désactivé,Automatisches Speichern Aus,Автосохранение Выкл.,Otomatik Kaydetme Kapalı,ปิดการบันทึกอัตโนมัติ
+OutOfPage,페이지 벗어남,Out of page,超出页面,超出頁面,ページ外,Fuera de página,Hors de la page,Außerhalb der Seite,Вне страницы,Sayfa dışında,อยู่นอกหน้า
 width,가로,Width,宽度,寬度,幅,Ancho,Largeur,Breite,Ширина,Genislik,ความกว้าง
 height,세로,Height,高度,高度,高さ,Altura,Hauteur,Höhe,Высота,Yükseklik,ความสูง
 weight,선 두께,Stroke weight,笔触粗细,筆觸粗細,ストロークの太さ,Peso del trazo,Épaisseur du trait,Strichstärke,Толщина линии,Çizgi kalınlığı,ความหนาของเส้น
