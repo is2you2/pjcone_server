@@ -177,7 +177,7 @@ DevKit,보조 도구,Auxiliary tools,辅助工具,輔助工具,補助ツール,H
 FallbackFS,첫번째 파일 서버,First file server,第一个文件服务器,第一個檔案伺服器,第一ファイルサーバー,Primer servidor de archivos,Premier serveur de fichiers,Erster Datei-Server,Первичный файловый сервер,İlk dosya sunucusu,เซิร์ฟเวอร์ไฟล์แรก
 TryToFallbackFS,FFS 업로드 시도,Try with FFS,尝试使用FFS,嘗試使用FFS,FFSで試す,Intentar con FFS,Essayer avec FFS,Mit FFS versuchen,Попробовать с FFS,FFS ile dene,ลองอัปโหลดด้วย FFS
 BugReport,오류 보고,Bug Report,错误报告,錯誤報告,バグ報告,Informe de error,Signalement de bug,Fehlerbericht,Отчет об ошибке,Hata Raporu,รายงานข้อผิดพลาด
-ServerFiles,사용 설명서,User Manual,用户手册,使用說明書,ユーザーマニュアル,Manual del usuario,Manuel de l'utilisateur,Handbuch des Benutzers,Руководство пользователя,Kullanıcı Kılavuzu,คู่มือผู้ใช้
+ServerFiles,앱에 대해서,About the app,关于应用,關於應用程序,アプリについて,Acerca de la aplicación,À propos de l'application,Über die App,О приложении,Uygulama hakkında,เกี่ยวกับแอป
 InAppExplorer,인앱 탐색기,InApp Explorer,应用内资源管理器,應用內資源管理器,アプリ内エクスプローラー,Explorador en la app,Explorateur intégré,In-App Explorer,Интегрированный проводник,In-App Explorer,ตัวสำรวจในแอป
 EnginePPT,내부망 WebRTC,Internal network WebRTC,内部网络WebRTC,內部網絡WebRTC,内部ネットワークWebRTC,Red interna WebRTC,Réseau interne WebRTC,Internes Netzwerk WebRTC,Внутренняя сеть WebRTC,İç ağ WebRTC,เครือข่ายภายใน WebRTC
 joinDedi_placeholder,기본,Default,默认,預設,デフォルト,Predeterminado,Par défaut,Standard,По умолчанию,Varsayılan,ค่าเริ่มต้น
