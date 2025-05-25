@@ -15,7 +15,8 @@ self.addEventListener('push', e => {
     const data = e.data.json();
     self.registration.showNotification(data.title, {
         body: data.body,
-        icon: `https://is2you2.github.io/pjcone_pwa/assets/icon/${data.icon}.png`,
+        badge: `https://is2you2.github.io/pjcone_pwa/assets/badge/${data.icon || 'favicon'}.png`,
+        icon: `https://is2you2.github.io/pjcone_pwa/assets/icon/${data.icon || 'favicon'}.png`,
         image: data.image,
         tag: `${data.id}`,
     });
