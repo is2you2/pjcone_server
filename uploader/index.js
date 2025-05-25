@@ -192,7 +192,7 @@ webpush_app.post('/send_noti', (req, res) => {
     const title = req.body['title'];
     const body = req.body['body'];
     const icon = req.body['icon'];
-    const url = req.body['url'];
+    const image = req.body['image'];
     const id = req.body['id'];
     res.end(); // 정보 수신은 성공했으니 성공 회신
     for (let subscription of subscriptions)
@@ -204,7 +204,7 @@ webpush_app.post('/send_noti', (req, res) => {
         title: title,
         body: body,
         icon: icon,
-        url: url,
+        image: image,
     });
     for (let user of senders)
         webpush.sendNotification(user.subscription, payload)

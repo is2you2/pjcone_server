@@ -18,8 +18,5 @@ self.addEventListener('push', e => {
         icon: `https://is2you2.github.io/pjcone_pwa/assets/icon/${data.icon}.png`,
         image: data.image,
         tag: `${data.id}`,
-        data: {
-            url: data.url,
-        }
     });
 });
