@@ -1,3 +1,6 @@
+[VapidInfo]
+email=your@email.here
+
 [Operation]
 UseSSL=true
 UseCustomSite=true
@@ -8,3 +11,4 @@ SitePort=12000
 cdnPort=9001
 apachePort=9002
 squarePort=12013
+vapidPort=5000

@@ -202,6 +202,7 @@ Support,이 프로젝트를 후원합니다,Support this project,支持这个项
 set_alert,알림 받기,Get notifications,接收通知,接收通知,通知を受け取る,Recibir notificaciones,Recevoir des notifications,Benachrichtigungen erhalten,Получить уведомления,Bildirimleri al,รับการแจ้งเตือน
 set_alert_simple,알림 간소화,Simplify notifications,简化通知,簡化通知,通知を簡素化,Notificaciones simplificadas,Simplifier les notifications,Benachrichtigungen vereinfachen,Упростить уведомления,Notifikasyonları basitleştir,ทำให้การแจ้งเตือนเรียบง่าย
 set_alert_self,인앱 알림으로 전환하기,Switch to in-app notifications,切换到应用内通知,切換到應用內通知,アプリ内通知に切り替える,Cambiar a notificaciones dentro de la app,Passer aux notifications in-app,Auf In-App-Benachrichtigungen umschalten,Переключиться на уведомления внутри приложения,İçerik bildirimlerine geç,สลับไปยังการแจ้งเตือนในแอป
+set_webpush,서버별 웹 푸쉬 알림 설정,Set Web Push Notifications per Server,按服务器设置网页推送通知,依伺服器設定網頁推播通知,サーバーごとのWebプッシュ通知設定,Configurar notificaciones web por servidor,Configurer les notifications Web par serveur,Web-Push-Benachrichtigungen pro Server festlegen,Настроить веб-уведомления для каждого сервера,Sunucuya göre Web Push Bildirimlerini Ayarla,ตั้งค่าการแจ้งเตือนเว็บแยกตามเซิร์ฟเวอร์
 icon_mono,기본 앱 알림,Default,默认通知,默認通知,デフォルト通知,Notificación predeterminada,Notification par défaut,Standardbenachrichtigung,Уведомление по умолчанию,Varsayılan,การแจ้งเตือนเริ่มต้น
 diychat,Nakama 서버,Nakama server,Nakama服务器,Nakama伺服器,Nakamaサーバー,Servidor Nakama,Serveur Nakama,Nakama-Server,Сервер Nakama,Nakama sunucusu,Nakama เซิร์ฟเวอร์
 simplechat,광장,Square,广场,廣場,広場,Plaza,Place,Platz,Площадка,Alan,จตุรัส
@@ -404,6 +405,8 @@ cdnPort,파일 업로드 포트,File upload port,文件上传端口,文件上傳
 apachePort,파일 다운로드 포트,File download port,文件下载端口,文件下載端口,ファイルダウンロードポート,Puerto de descarga de archivos,Port de téléchargement de fichiers,Datei-Download-Port,Порт загрузки файлов,Port de descarga de archivos,พอร์ตดาวน์โหลดไฟล์
 SquarePort,광장 서버 포트,Square port,广场服务器端口,廣場伺服器端口,スクエアサーバーポート,Puerto del servidor Square,Port du serveur Square,Square-Server-Port,Порт сервера Square,Square sunucusu portu,พอร์ตเซิร์ฟเวอร์ Square
 WebRTCPort,WebRTC 서버 포트,WebRTC server port,WebRTC服务器端口,WebRTC伺服器端口,WebRTCサーバーポート,Puerto del servidor WebRTC,Port du serveur WebRTC,WebRTC-Server-Port,Порт WebRTC сервера,WebRTC sunucu portu,พอร์ตเซิร์ฟเวอร์ WebRTC
+WebpushPort,웹 알림 포트,Web Push Port,网页推送端口,網頁推播埠口,Webプッシュポート,Puerto de notificaciones web,Port de notification Web,Web-Push-Port,Порт веб-уведомлений,Web Push Bağlantı Noktası,พอร์ตแจ้งเตือนเว็บ
+WebpushPubkey,웹 알림 공개키,Web Push Public Key,网页推送公钥,網頁推播公鑰,Webプッシュ公開鍵,Clave pública de notificación web,Clé publique de notification Web,Web-Push-Öffentlicher Schlüssel,Открытый ключ веб-уведомлений,Web Push Genel Anahtar,คีย์สาธารณะแจ้งเตือนเว็บ
 isSSL,SSL 적용여부,use SSL,是否使用SSL,是否使用SSL,SSLを使用するか,Usar SSL,Utiliser SSL,SSL verwenden,Используется SSL,SSL kullanmak,ใช้ SSL
 submit,등록하기,Submit,提交,提交,送信する,Enviar,Envoyer,Absenden,Отправить,Gönder,ส่ง
 NeedSetDIsplayName,이름을 지정해주세요,Please specify a display name,请输入显示名称,請輸入顯示名稱,表示名を指定してください,Por favor, especifique un nombre para mostrar,Veuillez spécifier un nom d'affichage,Bitte einen Anzeigenamen angeben,Пожалуйста, укажите имя для отображения,Lütfen görüntülenecek adı belirtin,โปรดระบุชื่อที่จะแสดง

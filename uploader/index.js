@@ -3,8 +3,12 @@
 const cors = require('cors');
 const express = require("express");
 const multer = require('multer');
+/** 파일 업로드 서버 */
 const app = express();
+/** 파일 다운로드 서버 */
 const cdn = express();
+const webpush = require('web-push');
+const bodyParser = require('body-parser');
 const path = require('path');
 const https = require('node:https');
 const fs = require('node:fs');
@@ -63,6 +67,10 @@ async function CheckPGUserExist(userId, useFFS = isFFSOnly) {
     }
 }
 
+/** vapid 에서 요구는 email 정보 */
+let vapid_email = 'your-email@example.com';
+/** 웹 푸쉬 알림을 수신하는 포트 */
+let vapid_port = 5000;
 /** 사설 사이트 운영 */
 let UseCustomSite = true;
 /** 사설 사이트 포트 */
@@ -99,6 +107,12 @@ let BlockAnonymous = true;
             case 'squarePort':
                 squarePort = Number(sep[1]);
                 break;
+            case 'VapidInfo':
+                vapid_email = sep[1];
+                break;
+            case 'vapidPort':
+                vapid_port = Number(sep[1]);
+                break;
             case 'UseSSL':
                 UseSSL = sep[1] == 'true';
                 break;
@@ -112,6 +126,101 @@ let BlockAnonymous = true;
 if (!BlockAnonymous) {
     logger.warn('BlockAnonymous: 익명의 사용자가 서버 자원을 자유롭게 사용할 수 있도록 설정되어있습니다.');
 }
+
+/** 웹 푸시 서버 */
+const webpush_app = express();
+webpush_app.use(bodyParser.json());
+webpush_app.use(express.static(path.join(__dirname, 'client')));
+
+/** VAPID 키 (최초 1회만 실행 후 저장) */
+let vapidKeys;
+
+try {
+    vapidKeys = JSON.parse(fs.readFileSync('./vapid.json'));
+} catch (e) {
+    vapidKeys = webpush.generateVAPIDKeys();
+    fs.writeFileSync('./vapid.json', JSON.stringify(vapidKeys));
+    logger.info('VAPID keys generated and saved: ', vapidKeys);
+}
+
+webpush.setVapidDetails(
+    `mailto:${vapid_email}`,
+    vapidKeys.publicKey,
+    vapidKeys.privateKey
+);
+
+webpush_app.use(cors());
+
+// 클라이언트에서 구독 정보를 받음
+webpush_app.post('/get_webpush_key', (req, res) => {
+    res.status(200).json({ pubkey: vapidKeys.publicKey });
+});
+
+const webpush_subs_path = './webpush_subs.json';
+function loadSubscriptions() {
+    if (!fs.existsSync(webpush_subs_path)) return [];
+    return JSON.parse(fs.readFileSync(webpush_subs_path)).subscriptions;
+}
+/** 구독자 일람 */
+let subscriptions = loadSubscriptions();
+function saveSubscriptions() {
+    fs.writeFileSync(webpush_subs_path, JSON.stringify({ subscriptions: subscriptions }, null, 2));
+}
+// 구독 정보 저장
+webpush_app.post('/subscribe', (req, res) => {
+    const subscription = req.body['subscription'];
+    const redirectUrl = req.body['redirectUrl'];
+    const uuid = req.body['uuid'];
+    subscriptions.push({ subscription, redirectUrl, uuid });
+    saveSubscriptions();
+    res.status(201).json({ message: 'Subscribed successfully' });
+});
+
+webpush_app.post('/unsubscribe', (req, res) => {
+    const endpoint = req.body['endpoint'];
+    const index = subscriptions.findIndex(s => s.subscription.endpoint === endpoint);
+    if (index !== -1) {
+        subscriptions.splice(index, 1);
+        saveSubscriptions();
+    }
+    res.end();
+});
+
+webpush_app.post('/send_noti', (req, res) => {
+    let senders = [];
+    const users = req.body['users'];
+    const title = req.body['title'];
+    const body = req.body['body'];
+    const icon = req.body['icon'];
+    const url = req.body['url'];
+    const id = req.body['id'];
+    res.end(); // 정보 수신은 성공했으니 성공 회신
+    for (let subscription of subscriptions)
+        for (let i = 0, j = users.length; i < j; i++)
+            if (subscription.uuid == users[i])
+                senders.push(subscription);
+    const payload = JSON.stringify({
+        id: id,
+        title: title,
+        body: body,
+        icon: icon,
+        url: url,
+    });
+    for (let user of senders)
+        webpush.sendNotification(user.subscription, payload)
+            .catch(err => {
+                if (err.statusCode === 410 || err.statusCode === 404) {
+                    logger.warn('🧹 구독자 정보 무효 → 제거 필요');
+                    const index = subscriptions.findIndex(s => s.subscription.endpoint === user.subscription.endpoint);
+                    if (index !== -1) {
+                        subscriptions.splice(index, 1);
+                        saveSubscriptions();
+                    }
+                } else {
+                    logger.error('❌ 알림 발송 실패_기타 오류:', err);
+                }
+            });
+});
 
 app.use(cors());
 
@@ -419,6 +528,10 @@ if (UseSSL) {
 
     secure_server = https.createServer(options);
     wss = new ws.Server({ server: secure_server });
+
+    https.createServer(options, webpush_app).listen(vapid_port, "0.0.0.0", () => {
+        logger.info(`Open page on port ${vapid_port}`);
+    });
 } else {
     app.listen(cdnPort, "0.0.0.0", () => {
         logger.info(`Open cdn on port ${cdnPort}: No Secure`);
@@ -431,6 +544,8 @@ if (UseSSL) {
     wss = new ws.Server({ port: squarePort }, () => {
         logger.info(`Open square on port ${squarePort}: No Secure`);
     });
+
+    webpush_app.listen(vapid_port, () => logger.info(`Open webpush on port ${vapid_port}: No Secure`));
 }
 
 

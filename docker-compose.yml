@@ -57,6 +57,7 @@ services:
       - "./data/public.crt:/root/public.crt"
       - "./data/private.key:/root/private.key"
     ports:
+      - "5000:5000" # 웹 푸쉬 구독
       - "9001:9001" # 파일 업로드 받기 분리
       - "9002:9002" # 파일 게시
       - "12000:12000" # 페이지 서버
