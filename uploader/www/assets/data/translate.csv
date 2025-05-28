@@ -504,6 +504,7 @@ CancelingUpload,업로드 시도 우회,Attempt to upload bypass,绕过上传尝
 ## IndexedDB
 FailedToDownloadFile,다운받기 오류,Failed to download file,下载文件失败,下載檔案失敗,ファイルのダウンロードに失敗しました,Fallo al descargar el archivo,Échec du téléchargement du fichier,Fehler beim Herunterladen der Datei,Не удалось скачать файл,Dosya indirme hatası,ไม่สามารถดาวน์โหลดไฟล์ได้
 ## Nakama
+Initialize,초기화중,Initialize,初始化中,初始化中,初期化中,Inicializando,Initialisation,Initialisierung,Lиниализация,Yükleniyor,กำลังเริ่มต้น
 DevTestServer,개발 테스트 서버,Development test server,开发测试服务器,開發測試伺服器,開発テストサーバー,Servidor de prueba de desarrollo,Serveur de test de développement,Entwicklungs-Testserver,Сервер для разработки,Test Sunucusu,Geliştirme test sunucusu
 ServerAdded,서버가 추가되었습니다,Server added,服务器已添加,伺服器已添加,サーバーが追加されました,Servidor añadido,Serveur ajouté,Server hinzugefügt,Сервер добавлен,Sunucu eklendi,เซิร์ฟเวอร์ถูกเพิ่ม
 SyncingChannel,동기화중,Syncing,同步中,同步中,同期中,Sincronizando,En synchronisation,Synchronisieren,Синхронизация,Senkranize ediliyor,กำลังซิงค์
