@@ -222,6 +222,66 @@ webpush_app.post('/send_noti', (req, res) => {
             });
 });
 
+/** 웹 푸쉬 발송 예약 관리
+ * WebpushSendSchedule[userId][todoId] = TimeoutSchedule;
+ */
+let WebpushSendSchedule = [];
+// 알림 예약 발송 등록
+webpush_app.post('/schedule_noti', (req, res) => {
+    let senders = [];
+    const users = req.body['users'];
+    const title = req.body['title'];
+    const body = req.body['body'];
+    const icon = req.body['icon'];
+    const image = req.body['image'];
+    const todo_id = req.body['todo_id'];
+    const sendTime = req.body['time'];
+    /** 이건 알림 아이디 */
+    const id = req.body['id'];
+    res.end(); // 정보 수신은 성공했으니 성공 회신
+    const currentTime = Date.now();
+    const scheduleTime = sendTime - currentTime;
+    if (scheduleTime > 0 || users.length > 1)
+        for (let i = 0, j = users.length; i < j; i++) {
+            if (!WebpushSendSchedule[users[i]]) WebpushSendSchedule[users[i]] = {};
+            WebpushSendSchedule[users[i]][todo_id] = setTimeout(() => {
+                for (let subscription of subscriptions)
+                    if (subscription.uuid == users[i])
+                        senders.push(subscription);
+                const payload = JSON.stringify({
+                    id: id,
+                    title: title,
+                    body: body,
+                    icon: icon,
+                    image: image,
+                });
+                for (let user of senders)
+                    webpush.sendNotification(user.subscription, payload)
+                        .catch(err => {
+                            if (err.statusCode === 410 || err.statusCode === 404) {
+                                logger.warn('🧹 예약발송_구독자 정보 무효 → 제거 필요');
+                                const index = subscriptions.findIndex(s => s.subscription.endpoint === user.subscription.endpoint);
+                                if (index !== -1) {
+                                    subscriptions.splice(index, 1);
+                                    saveSubscriptions();
+                                }
+                            } else {
+                                logger.error('❌ 예약 알림 발송 실패_기타 오류:', err);
+                            }
+                        });
+            }, Math.max(scheduleTime, 0));
+        }
+});
+
+// 등록된 예약 발송 삭제
+webpush_app.post('/remove_schedule_noti', (req, res) => {
+    const users = req.body['users'];
+    const todo_id = req.body['todo_id'];
+    res.end(); // 정보 수신은 성공했으니 성공 회신
+    for (let i = 0, j = users.length; i < j; i++)
+        clearTimeout(WebpushSendSchedule[users[i]]?.[todo_id]);
+});
+
 app.use(cors());
 
 app.use((req, res, next) => {
