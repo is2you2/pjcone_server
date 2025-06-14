@@ -8,8 +8,7 @@ WorkerAbandon,할 일 포기,Give up todo,放弃任务,放棄任務,タスクを
 MigrateRemote,모든 로컬 할 일을 서버로 이관,All local tasks will be migrated to the server,将所有本地任务迁移到服务器,將所有本地任務遷移到伺服器,すべてのローカルタスクをサーバーに移行,Se migrarán todas las tareas locales al servidor,Toutes les tâches locales seront migrées vers le serveur,Alle lokalen Aufgaben werden auf den Server migriert,Все локальные задачи будут перенесены на сервер,Tüm yerel görevler sunucuya taşınacak,ทุกงานในเครื่องจะถูกย้ายไปยังเซิร์ฟเวอร์
 ## TodoDetail
 Title,할 일 상세,Todo detail,任务详情,任務詳情,タスクの詳細,Detalles de la tarea,Détails de la tâche,Aufgabendetails,Детали задачи,Görev detayı,รายละเอียดงาน
-FilterCat_0,없음,None,无,None,なし,Ninguno,Aucun,Keine,Нет,Ninguno,ไม่มี
-HideAll,가리기,Hide All,全部隐藏,全部隱藏,すべて非表示,Ocultar todo,Masquer tout,Alles ausblenden,Скрыть всё,Tümünü gizle,ซ่อนทั้งหมด
+FilterCat_0,태그,Tags,标签,標籤,タグ,Etiquetas,Étiquettes,Stichworte,Теги,Etiketler,แท็ก
 ColorFilterRed,빨강,Red,红色,紅色,赤,Rojo,Rouge,Rot,Красный,Kırmızı,แดง
 ColorFilterYellow,노랑,Yellow,黄色,黃色,黄色,Amarillo,Jaune,Gelb,Желтый,Sarı,เหลือง
 ColorFilterGreen,초록,Green,绿色,綠色,緑,Verde,Vert,Grün,Зеленый,Yeşil,เขียว
@@ -44,6 +43,8 @@ RemoveFromRemote,원격 서버에 삭제요청되며 로컬에 다시 저장,A d
 NoDeadLine,기한 없음,No deadline,无截止日期,無截止日期,期限なし,Sin fecha límite,Pas de délai,Kein Termin,Без срока,Son tarih yok,ไม่มีเส้นตาย
 DisplayName,표시명,Display name,显示名称,顯示名稱,表示名,Nombre para mostrar,Nom affiché,Anzeigename,Отображаемое имя,Görünen ad,ชื่อที่แสดง
 DisplayName_placeholder,짧게,briefly,简短,簡短,短く,Brevemente,Brèvement,Kurz,Кратко,Kısa,สั้นๆ
+Tag,태그,Tag,标签,標籤,タグ,Etiqueta,Étiquette,Tag,Тег,Etiket,แท็ก
+Tag_placeholder,쉼표로 입력 / 눌러서 삭제,Enter with commas / Tap to delete,用逗号输入 / 点击删除,用逗號輸入 / 點擊刪除,カンマで入力 / タップして削除,Introduce con comas / Toca para eliminar,Entrez avec des virgules / Appuyez pour supprimer,Geben Sie mit Kommas ein / Tippen zum Löschen,Введите через запятую / Нажмите, чтобы удалить,Virgülle girin / Silmek için dokunun,กรอกด้วยเครื่องหมายจุลภาค / แตะเพื่อลบ
 CustomColor,색상,Color,颜色,顏色,色,Color,Couleur,Farbe,Цвет,Renk,สี
 SetCustomColor,눌러서 사용자 지정,Set custom color,点击设置自定义颜色,點擊設置自定義顏色,カスタムカラーを設定,Establecer color personalizado,Définir la couleur personnalisée,Benutzerdefinierte Farbe festlegen,Установить пользовательский цвет,Renk özelleştir,ตั้งค่าสีที่กำหนดเอง
 CanAddToServer,서버 저장에 실패했습니다,Server save failed,服务器保存失败,伺服器儲存失敗,サーバーの保存に失敗しました,Fallo al guardar en el servidor,Échec de l'enregistrement sur le serveur,Fehler beim Speichern auf dem Server,Не удалось сохранить на сервере,Sunucuya kaydetme başarısız oldu,การบันทึกไปยังเซิร์ฟเวอร์ล้มเหลว
