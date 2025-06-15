@@ -569,13 +569,15 @@ app.use('/get-page-info', async (req, res) => {
 });
 
 let wss;
-let secure_server;
 
 cdn.use(express.static(path.join(__dirname, './')));
-if (UseSSL) {
+try {
+    if (!UseSSL) throw '비보안 사용 설정';
+    const private = fs.readFileSync('/root/private.key');
+    const public = fs.readFileSync('/root/public.crt');
     const options = {
-        key: fs.readFileSync('/root/private.key'),
-        cert: fs.readFileSync('/root/public.crt'),
+        key: private,
+        cert: public,
     };
 
     https.createServer(options, app).listen(cdnPort, "0.0.0.0", () => {
@@ -586,13 +588,18 @@ if (UseSSL) {
         logger.info(`Open page on port ${apachePort}`);
     });
 
-    secure_server = https.createServer(options);
+    const secure_server = https.createServer(options);
     wss = new ws.Server({ server: secure_server });
+
+    secure_server.listen(squarePort, () => {
+        logger.info(`Working on port ${squarePort}`);
+    });
 
     https.createServer(options, webpush_app).listen(vapid_port, "0.0.0.0", () => {
         logger.info(`Open page on port ${vapid_port}`);
     });
-} else {
+} catch (e) {
+    logger.info(e);
     app.listen(cdnPort, "0.0.0.0", () => {
         logger.info(`Open cdn on port ${cdnPort}: No Secure`);
     });
@@ -942,19 +949,17 @@ wss.on('connection', (ws, req) => {
     });
 });
 
-if (UseSSL)
-    secure_server.listen(squarePort, () => {
-        logger.info(`Working on port ${squarePort}`);
-    });
-
 // 이 서버를 이용하면 http://localhost:{SitePort} 로 페이지를 이용할 수 있고
 // 앱에서 비보안 서버에 접속할 때 기능에 제한 없이 사용할 수 있습니다.
 try {
     if (!UseCustomSite) throw '사이트를 운영하지 않기로 설정됨';
-    if (UseSSL) {
+    try {
+        if (!UseSSL) throw '비보안 사용 설정';
+        const private = fs.readFileSync('/root/private.key');
+        const public = fs.readFileSync('/root/public.crt');
         const options = {
-            key: fs.readFileSync('/root/private.key'),
-            cert: fs.readFileSync('/root/public.crt'),
+            key: private,
+            cert: public,
         };
         // 정적 파일 제공: /www 폴더의 파일을 / 경로로 제공
         app.use(express.static('./www'));
@@ -966,7 +971,7 @@ try {
         https.createServer(options, app).listen(SitePort, () => {
             logger.info('HTTPS server is running on https://localhost');
         });
-    } else {
+    } catch (e) {
         app.use(express.static(path.join(__dirname, './www')));
         app.listen(SitePort, () => {
             logger.info(`서버가 http://localhost:${SitePort}에서 실행 중입니다.`);
