@@ -584,6 +584,8 @@ Scribbles,손떨림,Scribbles,涂鸦,塗鴉,落書き,Garabatos,Gribouillages, K
 ScribbleExtent,손떨림 정도,Tremor Level,颤抖程度,顫抖程度,震えの程度,Nivel de temblor,Niveau de tremblement,Erzitterniveau,Уровень дрожи,Titreme Seviyesi,ระดับการสั่น
 ScribbleDampping,떨림 보정,Stabilize Scribble,笔迹稳定,筆跡穩定,スクリブル安定化,Estabilizar garabato,Stabilisation du gribouillis,Kritzelstabilisierung,Стабилизация каракулей,Karıklık Dengeleme,ลดการสั่นของเส้นขีด
 CrayonDraw,크레용선,Crayon Line,蜡笔线,蠟筆線,クレヨン線,Línea de crayón,Ligne de crayon,Kratzlinie,Карандашная линия,Krayon çizgisi,เส้นสีเทียน
+CrayonMin,최소,Minimum,最小,最小,最小,Mínimo,Minimum,Minimum,Минимум,Minimum,ขั้นต่ำ
+CrayonMax,최대,Maximum,最大,最大,最大,Máximo,Maximum,Maximum,Максимум,Maksimum,สูงสุด
 ProcessingAnim,애니메이션 작업중,Processing animation,处理中动画,處理中動畫,アニメーション処理中,Procesando animación,Traitement de l'animation,Verarbeitung der Animation,Обработка анимации,Animasyon işleniyor,กำลังประมวลผลแอนิเมชัน
 ProgressTrace,따라그리기 처리,Trace Processing,描摹处理,描摹處理,トレース処理,Procesamiento de trazado,Traitement de suivi,Nachverarbeitung,Обработка трассировки,İz İşleme,การประมวลผลการติดตาม
 ProgressLast,기다리기 처리,Waiting Processing,等待处理,等待處理,待機処理,Procesamiento de espera,Traitement d'attente,Warten-Verarbeitung,Обработка ожидания,Bekleme İşlemi,การประมวลผลการรอ
