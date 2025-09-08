@@ -924,11 +924,8 @@ wss.on('connection', (ws, req) => {
             delete dedi_client[channel_id]['users']?.[clientId];
             delete dedi_client[channel_id]['ping']?.[clientId];
             delete joined_channel[clientId];
-            { // 사용자 퇴장시 모든 사용자에게 현재 총 인원 수를 브로드캐스트
+            { // 사람이 없으면 채널 삭제처리
                 let keys = Object.keys(dedi_client[channel_id]['users']);
-                for (let i = 0, j = keys.length; i < j; i++)
-                    dedi_client[channel_id]['users'][keys[i]]['ws'].send(JSON.stringify({ count: j }));
-                // 사람이 없으면 채널 삭제처리
                 if (keys.length < 1) {
                     const CreatedSocketId = dedi_client[channel_id]['socketId'];
                     if (CreatedSocketId && regInfo[CreatedSocketId]) {
@@ -969,7 +966,7 @@ try {
         });
         // https.createServer()로 SSL을 적용한 서버 실행
         https.createServer(options, app).listen(SitePort, () => {
-            logger.info('HTTPS server is running on https://localhost');
+            logger.info(`HTTPS server is running on https://localhost:${SitePort}`);
         });
     } catch (e) {
         app.use(express.static(path.join(__dirname, './www')));
