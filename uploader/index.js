@@ -941,7 +941,7 @@ wss.on('connection', (ws, req) => {
                 delete regInfo[joined_channel[clientId]['socketId']];
             }
         } catch (e) {
-            logger.info('사용자 퇴장 정보: ', e);
+            logger.info('사용자 퇴장 정보: ', e, ` // ${reason} (${code})`);
         }
     });
 });
