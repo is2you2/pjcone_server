@@ -5,7 +5,7 @@ local function update_group_info(context, payload)
 
     nk.group_update(json.group_id, context.user_id, json.name, nil, nil, nil, nil, json.open, nil, json.max_count);
 
-    return nk.json_encode(users)
+    return nk.json_encode(json)
 end
 
 nk.register_rpc(update_group_info, "update_group_info_fn")
