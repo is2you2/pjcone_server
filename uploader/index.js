@@ -69,18 +69,19 @@ async function CheckPGUserExist(userId, useFFS = isFFSOnly) {
 
 /** vapid 에서 요구는 email 정보 */
 let vapid_email = 'your-email@example.com';
-/** 웹 푸쉬 알림을 수신하는 포트 */
-let vapid_port = 5000;
 /** 사설 사이트 운영 */
 let UseCustomSite = true;
+// 포트 정보는 docker-compose.yml 에서 호스트 포트(왼쪽)를 조정하세요
+/** 웹 푸쉬 알림을 수신하는 포트 */
+const vapid_port = 5000;
 /** 사설 사이트 포트 */
-let SitePort = 12000;
+const SitePort = 12000;
 /** Nakama 연계 파일 업로드 포트 */
-let cdnPort = 9001;
+const cdnPort = 9001;
 /** 파일 게시 포트 (구 apache 서버 교체) */
-let apachePort = 9002;
+const apachePort = 9002;
 /** 광장 채널 등 웹 소켓 포트 */
-let squarePort = 12013;
+const squarePort = 12013;
 /** 보안 프로토콜 사용 여부 */
 let UseSSL = true;
 /** 임의의 사용자가 직접 입력하여 진입하는 것을 제한함 */
@@ -95,23 +96,8 @@ let BlockAnonymous = true;
             case 'UseCustomSite':
                 UseCustomSite = sep[1] == 'true';
                 break;
-            case 'SitePort':
-                SitePort = Number(sep[1]);
-                break;
-            case 'cdnPort':
-                cdnPort = Number(sep[1]);
-                break;
-            case 'apachePort':
-                apachePort = Number(sep[1]);
-                break;
-            case 'squarePort':
-                squarePort = Number(sep[1]);
-                break;
             case 'VapidInfo':
                 vapid_email = sep[1];
-                break;
-            case 'vapidPort':
-                vapid_port = Number(sep[1]);
                 break;
             case 'UseSSL':
                 UseSSL = sep[1] == 'true';
@@ -171,18 +157,18 @@ webpush_app.post('/subscribe', (req, res) => {
     const subscription = req.body['subscription'];
     const redirectUrl = req.body['redirectUrl'];
     const uuid = req.body['uuid'];
-    subscriptions.push({ subscription, redirectUrl, uuid });
-    saveSubscriptions();
+    const exists = subscriptions.some(s => s.subscription.endpoint === subscription.endpoint);
+    if (!exists) {
+        subscriptions.push({ subscription, redirectUrl, uuid });
+        saveSubscriptions();
+    }
     res.status(201).json({ message: 'Subscribed successfully' });
 });
 
 webpush_app.post('/unsubscribe', (req, res) => {
     const endpoint = req.body['endpoint'];
-    const index = subscriptions.findIndex(s => s.subscription.endpoint === endpoint);
-    if (index !== -1) {
-        subscriptions.splice(index, 1);
-        saveSubscriptions();
-    }
+    subscriptions = subscriptions.filter(s => s.subscription.endpoint !== endpoint);
+    saveSubscriptions();
     res.end();
 });
 

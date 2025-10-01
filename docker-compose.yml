@@ -49,6 +49,15 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+  libretranslate:
+    container_name: libretranslate
+    image: docker.io/libretranslate/libretranslate:latest
+    ports:
+      - "5050:5000"
+    environment:
+      LT_LOAD_ONLY: "ko,en,zh,ja,es,fr,de,ru,tr,th"
+    volumes:
+      - libretranslate_data:/var/lib/translate
   nodejs: # 파일 업로드 공개 서버
     container_name: nodejs
     image: docker.io/node
@@ -76,3 +85,4 @@ services:
       GODOT_SILENCE_ROOT_WARNING: 1
 volumes:
   data:
+  libretranslate_data:

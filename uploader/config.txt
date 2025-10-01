@@ -5,10 +5,3 @@ email=your@email.here
 UseSSL=true
 UseCustomSite=true
 BlockAnonymous=true
-
-[Port]
-SitePort=12000
-cdnPort=9001
-apachePort=9002
-squarePort=12013
-vapidPort=5000
