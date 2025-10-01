@@ -5,7 +5,7 @@ addEventListener('notificationclick', ev => {
         self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(clients => {
             clients.forEach(client => {
                 client.focus();
-                client.postMessage({ type: 'notificationclick', data: ev.notification.tag, reply: ev.reply });
+                client.postMessage({ type: 'notificationclick', action: ev.action, data: ev.notification.data, id: ev.notification.tag, reply: ev.reply });
             });
         })
     );
