@@ -110,6 +110,11 @@ func open_file_selector(path: String):
 	if is_web_env and window.select_file:
 		window.select_file(path)
 
+# 아케이드 채팅 입력칸 포커싱
+func focus_on_chat_input():
+	if is_web_env and window.focus_chat_input:
+		window.focus_chat_input()
+
 # 로컬에 파일 준비가 완료되면 고도엔진 DB에서 저장된 파일 경로를 반환함
 # user://args[0] 으로 파일 지목 가능
 func after_file_selected(args):
