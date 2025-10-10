@@ -13,7 +13,13 @@ addEventListener('notificationclick', ev => {
 
 self.addEventListener('push', e => {
     const data = e.data.json();
-    self.registration.showNotification(data.title, {
+    // 알림 지우기
+    if (data.icon == 'remove') {
+        self.registration.getNotifications({ tag: `${data.id}` }).then(notifications => {
+            notifications.forEach(n => n.close());
+        });
+        // 알림 생성하기
+    } else self.registration.showNotification(data.title, {
         body: data.body,
         badge: `https://is2you2.github.io/pjcone_pwa/assets/badge/${data.icon || 'favicon'}.png`,
         icon: `https://is2you2.github.io/pjcone_pwa/assets/icon/${data.icon || 'favicon'}.png`,

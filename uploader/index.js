@@ -113,10 +113,10 @@ if (!BlockAnonymous) {
     logger.warn('BlockAnonymous: 익명의 사용자가 서버 자원을 자유롭게 사용할 수 있도록 설정되어있습니다.');
 }
 
-/** 웹 푸시 서버 */
-const webpush_app = express();
-webpush_app.use(bodyParser.json());
-webpush_app.use(express.static(path.join(__dirname, 'client')));
+/** 웹 푸시 서버, json 직접 입력 관련 행동은 전부 이것으로 함 (가입 제한 설정 등) */
+const json_app = express();
+json_app.use(bodyParser.json());
+json_app.use(express.static(path.join(__dirname, 'client')));
 
 /** VAPID 키 (최초 1회만 실행 후 저장) */
 let vapidKeys;
@@ -135,10 +135,10 @@ webpush.setVapidDetails(
     vapidKeys.privateKey
 );
 
-webpush_app.use(cors());
+json_app.use(cors());
 
 // 클라이언트에서 구독 정보를 받음
-webpush_app.post('/get_webpush_key', (req, res) => {
+json_app.post('/get_webpush_key', (req, res) => {
     res.status(200).json({ pubkey: vapidKeys.publicKey });
 });
 
@@ -153,7 +153,7 @@ function saveSubscriptions() {
     fs.writeFileSync(webpush_subs_path, JSON.stringify({ subscriptions: subscriptions }, null, 2));
 }
 // 구독 정보 저장
-webpush_app.post('/subscribe', (req, res) => {
+json_app.post('/subscribe', (req, res) => {
     const subscription = req.body['subscription'];
     const redirectUrl = req.body['redirectUrl'];
     const uuid = req.body['uuid'];
@@ -165,14 +165,14 @@ webpush_app.post('/subscribe', (req, res) => {
     res.status(201).json({ message: 'Subscribed successfully' });
 });
 
-webpush_app.post('/unsubscribe', (req, res) => {
+json_app.post('/unsubscribe', (req, res) => {
     const endpoint = req.body['endpoint'];
     subscriptions = subscriptions.filter(s => s.subscription.endpoint !== endpoint);
     saveSubscriptions();
     res.end();
 });
 
-webpush_app.post('/send_noti', (req, res) => {
+json_app.post('/send_noti', (req, res) => {
     let senders = [];
     const users = req.body['users'];
     const title = req.body['title'];
@@ -213,7 +213,7 @@ webpush_app.post('/send_noti', (req, res) => {
  */
 let WebpushSendSchedule = [];
 // 알림 예약 발송 등록
-webpush_app.post('/schedule_noti', (req, res) => {
+json_app.post('/schedule_noti', (req, res) => {
     let senders = [];
     const users = req.body['users'];
     const title = req.body['title'];
@@ -260,7 +260,7 @@ webpush_app.post('/schedule_noti', (req, res) => {
 });
 
 // 등록된 예약 발송 삭제
-webpush_app.post('/remove_schedule_noti', (req, res) => {
+json_app.post('/remove_schedule_noti', (req, res) => {
     const users = req.body['users'];
     const todo_id = req.body['todo_id'];
     res.end(); // 정보 수신은 성공했으니 성공 회신
@@ -434,6 +434,115 @@ app.post('/remove_key/', upload.none(), (req, res) => {
     res.end();
 });
 
+/** 가입 제한 정보 */
+let RegisterLimitation;
+// 준비된 가입 정보 불러오기
+try {
+    RegisterLimitation = JSON.parse(fs.readFileSync('./regLimit.json'));
+} catch (e) {
+    RegisterLimitation = {
+        count: 1,
+        useApproval: false,
+    };
+    fs.writeFileSync('./regLimit.json', JSON.stringify(RegisterLimitation));
+}
+
+// 가입 제한 정보 반환
+json_app.post('/GetRegLimitInfo', (req, res) => {
+    res.end(JSON.stringify(RegisterLimitation)); // 정보 수신은 성공했으니 성공 회신
+});
+
+// 가입 제한 정보 적용
+json_app.post('/ApplyRegLimit', (req, res) => {
+    const count = req.body['count'];
+    const useApproval = req.body['useApproval'];
+    RegisterLimitation.count = count;
+    RegisterLimitation.useApproval = useApproval;
+    fs.writeFileSync('./regLimit.json', JSON.stringify(RegisterLimitation));
+    res.end();
+});
+
+/** 가입 대기 목록  
+ * WaitingApproval[email] = passwd;
+ */
+let WaitingApproval;
+// 준비된 가입 정보 불러오기
+try {
+    WaitingApproval = JSON.parse(fs.readFileSync('./WaitingApproval.json'));
+} catch (e) {
+    WaitingApproval = {};
+}
+
+/** 가입 제한 인원을 1명 줄이고 저장하기 */
+function discount_reg_limit() {
+    RegisterLimitation.count = RegisterLimitation.count - 1;
+    fs.writeFileSync('./regLimit.json', JSON.stringify(RegisterLimitation));
+}
+
+// 자동 가입시 가용 가입 인원 수 조정
+json_app.post('/AutoRegCountAct', (req, res) => {
+    const email = req.body['email'];
+    delete WaitingApproval[email];
+    fs.writeFileSync('./WaitingApproval.json', JSON.stringify(WaitingApproval));
+    discount_reg_limit();
+    res.end();
+});
+
+// 가입 대기열에 자신의 정보를 추가하기
+json_app.post('/PushReqApprovalUser', (req, res) => {
+    const email = req.body['email'];
+    const passwd = req.body['password'];
+    const title = req.body['title'];
+    WaitingApproval[email] = passwd;
+    fs.writeFileSync('./WaitingApproval.json', JSON.stringify(WaitingApproval));
+    discount_reg_limit();
+    let senders = [];
+    for (let subscription of subscriptions)
+        for (let i = 0, j = admin_uuids.length; i < j; i++)
+            if (subscription.uuid == admin_uuids[i])
+                senders.push(subscription);
+    const payload = JSON.stringify({
+        id: 'approval',
+        title: title,
+        body: email,
+        icon: 'favicon',
+    });
+    for (let user of senders)
+        webpush.sendNotification(user.subscription, payload)
+            .catch(err => {
+                if (err.statusCode === 410 || err.statusCode === 404) {
+                    logger.warn('🧹 구독자 정보 무효 → 제거 필요');
+                    const index = subscriptions.findIndex(s => s.subscription.endpoint === user.subscription.endpoint);
+                    if (index !== -1) {
+                        subscriptions.splice(index, 1);
+                        saveSubscriptions();
+                    }
+                } else {
+                    logger.error('❌ 알림 발송 실패_기타 오류:', err);
+                }
+            });
+    res.end();
+});
+
+/** 관리자 페이지에 진입한 사용자의 uuid를 기억함  
+ * 가입 관련 행동에 대한 알림 발송 구현
+ */
+let admin_uuids = [];
+
+// 가입 대기열 불러오기
+json_app.post('/GetNeedApprovalList', (req, res) => {
+    const admin_uuid = req.body['uuid'];
+    if (!admin_uuids.includes(admin_uuid)) admin_uuids.push(admin_uuid);
+    res.end(JSON.stringify(WaitingApproval));
+});
+
+// 가입 대기중인 사용자 승인
+json_app.post('/ApprovalUser', async (req, res) => {
+    const email = req.body['email'];
+    delete WaitingApproval[email];
+    fs.writeFileSync('./WaitingApproval.json', JSON.stringify(WaitingApproval));
+    res.end();
+});
 
 /** 이미지 URL이 유효한지 확인하는 함수 */
 async function isValidImageUrl(url) {
@@ -581,7 +690,7 @@ try {
         logger.info(`Working on port ${squarePort}`);
     });
 
-    https.createServer(options, webpush_app).listen(vapid_port, "0.0.0.0", () => {
+    https.createServer(options, json_app).listen(vapid_port, "0.0.0.0", () => {
         logger.info(`Open page on port ${vapid_port}`);
     });
 } catch (e) {
@@ -598,7 +707,7 @@ try {
         logger.info(`Open square on port ${squarePort}: No Secure`);
     });
 
-    webpush_app.listen(vapid_port, () => logger.info(`Open webpush on port ${vapid_port}: No Secure`));
+    json_app.listen(vapid_port, () => logger.info(`Open webpush on port ${vapid_port}: No Secure`));
 }
 
 
