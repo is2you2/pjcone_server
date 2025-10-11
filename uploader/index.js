@@ -180,6 +180,7 @@ json_app.post('/send_noti', (req, res) => {
     const icon = req.body['icon'];
     const image = req.body['image'];
     const id = req.body['id'];
+    const data = req.body['data'];
     res.end(); // 정보 수신은 성공했으니 성공 회신
     for (let subscription of subscriptions)
         for (let i = 0, j = users.length; i < j; i++)
@@ -191,6 +192,7 @@ json_app.post('/send_noti', (req, res) => {
         body: body,
         icon: icon,
         image: image,
+        data: data,
     });
     for (let user of senders)
         webpush.sendNotification(user.subscription, payload)
@@ -222,6 +224,7 @@ json_app.post('/schedule_noti', (req, res) => {
     const image = req.body['image'];
     const todo_id = req.body['todo_id'];
     const sendTime = req.body['time'];
+    const data = req.body['data'];
     /** 이건 알림 아이디 */
     const id = req.body['id'];
     res.end(); // 정보 수신은 성공했으니 성공 회신
@@ -240,6 +243,7 @@ json_app.post('/schedule_noti', (req, res) => {
                     body: body,
                     icon: icon,
                     image: image,
+                    data: data,
                 });
                 for (let user of senders)
                     webpush.sendNotification(user.subscription, payload)
@@ -493,6 +497,7 @@ json_app.post('/PushReqApprovalUser', (req, res) => {
     const email = req.body['email'];
     const passwd = req.body['password'];
     const title = req.body['title'];
+    const data = req.body['data'];
     WaitingApproval[email] = passwd;
     fs.writeFileSync('./WaitingApproval.json', JSON.stringify(WaitingApproval));
     discount_reg_limit();
@@ -506,6 +511,7 @@ json_app.post('/PushReqApprovalUser', (req, res) => {
         title: title,
         body: email,
         icon: 'favicon',
+        data: data,
     });
     for (let user of senders)
         webpush.sendNotification(user.subscription, payload)

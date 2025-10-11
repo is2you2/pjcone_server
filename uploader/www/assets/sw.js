@@ -1,13 +1,26 @@
 addEventListener('notificationclick', ev => {
-    ev.notification.close(); // 알림 닫기
-    // 웹 페이지에 메시지 보내기
+    ev.notification.close();
+
+    const targetUrl = ev.notification.data?.data?.url || '/';
+
     ev.waitUntil(
-        self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(clients => {
-            clients.forEach(client => {
-                client.focus();
-                client.postMessage({ type: 'notificationclick', action: ev.action, data: ev.notification.data, id: ev.notification.tag, reply: ev.reply });
+        (async () => {
+            const allClients = await clients.matchAll({
+                type: 'window',
+                includeUncontrolled: true,
             });
-        })
+
+            // 이미 같은 사이트가 열려 있다면 그 탭을 포커스
+            for (const client of allClients) {
+                if (client.url.includes(self.location.origin)) {
+                    client.focus();
+                    client.postMessage({ type: 'notificationclick', action: ev.action, data: ev.notification.data, id: ev.notification.tag, reply: ev.reply });
+                    return;
+                }
+            }
+            // 아니면 새 창 열기
+            await clients.openWindow(targetUrl);
+        })()
     );
 });
 
@@ -25,5 +38,6 @@ self.addEventListener('push', e => {
         icon: `https://is2you2.github.io/pjcone_pwa/assets/icon/${data.icon || 'favicon'}.png`,
         image: data.image,
         tag: `${data.id}`,
+        data: data,
     });
 });
