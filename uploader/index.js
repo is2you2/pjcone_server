@@ -17,6 +17,7 @@ const cheerio = require('cheerio');
 const { v4: uuidv4 } = require('uuid');
 const log4js = require('log4js');
 const { Client } = require('pg');
+const iconv = require('iconv-lite');
 
 // 로그 설정
 log4js.configure({
@@ -683,6 +684,7 @@ app.use('/get-page-info', async (req, res) => {
         }
         res.send(JSON.stringify(result));
     } catch (e) {
+        logger.error(e);
         res.status(500).json({ error: 'Error fetching the page information' });
     }
 });
