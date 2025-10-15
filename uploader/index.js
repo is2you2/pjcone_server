@@ -621,8 +621,26 @@ app.use('/get-page-info', async (req, res) => {
         const isWebPage = await CheckifWebPage(url);
         if (!isWebPage) return res.status(400).json({ error: 'URL points to a media file, not a webpage' });
 
+        // responseType을 직접 제어할 수 없기 때문에 buffer로 읽음
         const response = await fetch(url);
-        let asText = await response.text();
+        const buffer = await response.arrayBuffer();
+        const raw = Buffer.from(buffer);
+
+        // 인코딩을 헤더에서 추정
+        const contentType = response.headers.get('content-type') || '';
+        let encoding = 'utf-8';
+        if (/euc-kr|cp949/i.test(contentType)) {
+            encoding = 'euc-kr';
+        } else {
+            // meta 태그로 보조 감지
+            const metaMatch = raw.toString().match(/charset=["']?([\w-]+)/i);
+            if (metaMatch && /euc-kr|cp949/i.test(metaMatch[1])) {
+                encoding = 'euc-kr';
+            }
+        }
+
+        // 인코딩 적용하여 문자열 변환
+        const asText = iconv.decode(raw, encoding);
         const $ = cheerio.load(asText);
 
         let title = $('title').text();
