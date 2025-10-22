@@ -321,7 +321,6 @@ app.use('/filesize/', (req, res) => {
         const stat = fs.statSync(`./cdn${decodeURIComponent(req.url)}`);
         res.end(`${stat.size}`);
     } catch (e) {
-        logger.warn('파일 크기 검토 오류: ', e);
         res.end(`${e}`);
     }
 });
