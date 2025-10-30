@@ -1,7 +1,7 @@
 addEventListener('notificationclick', ev => {
     ev.notification.close();
 
-    const targetUrl = ev.notification.data?.data?.url || '/';
+    let targetUrl = ev.notification.data?.data?.url || '/';
 
     ev.waitUntil(
         (async () => {
@@ -18,6 +18,9 @@ addEventListener('notificationclick', ev => {
                     return;
                 }
             }
+            // scope 검토 후 시작부 변경하기
+            if (self.registration.scope.includes('/pjcone_pwa/'))
+                targetUrl = '/pjcone_pwa' + targetUrl;
             // 아니면 새 창 열기
             await clients.openWindow(targetUrl);
         })()
