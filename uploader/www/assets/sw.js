@@ -18,10 +18,12 @@ addEventListener('notificationclick', ev => {
                     return;
                 }
             }
+            console.log(self.registration.scope, '/', self.registration.scope.includes('/pjcone_pwa/'));
             // scope 검토 후 시작부 변경하기
             if (self.registration.scope.includes('/pjcone_pwa/'))
                 targetUrl = '/pjcone_pwa' + targetUrl;
             // 아니면 새 창 열기
+            console.log(targetUrl);
             await clients.openWindow(targetUrl);
         })()
     );
