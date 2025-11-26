@@ -1,0 +1,88 @@
+version: '3'
+services:
+  postgres:
+    container_name: postgres
+    image: docker.io/postgres:12.2-alpine
+    environment:
+      - POSTGRES_DB=nakama
+      - POSTGRES_PASSWORD=localdb
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    expose:
+      - "8080"
+      - "5432"
+    ports:
+      - "5432:5432"
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "nakama"]
+      interval: 3s
+      timeout: 3s
+      retries: 5
+  nakama:
+    container_name: nakama
+    image: registry.heroiclabs.com/heroiclabs/nakama:3.22.0
+    entrypoint:
+      - "/bin/sh"
+      - "-ecx"
+      - >
+        /nakama/nakama migrate up --database.address postgres:localdb@postgres:5432/nakama &&
+        /nakama/nakama --config /nakama/data/pjcone.yml
+    restart: always
+    links:
+      - "postgres:db"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./data/:/nakama/data
+    expose:
+      - "7349"
+      - "7350"
+      - "7351"
+    ports:
+      - "7349:7349"
+      - "7350:7350"
+      - "7351:7351"
+    healthcheck:
+      test: ["CMD", "/nakama/nakama", "healthcheck"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  libretranslate:
+    container_name: libretranslate
+    image: docker.io/libretranslate/libretranslate:latest
+    ports:
+      - "5050:5000"
+    environment:
+      LT_LOAD_ONLY: "ko,en,zh,ja,es,fr,de,ru,tr,th"
+    volumes:
+      - libretranslate_data:/var/lib/translate
+  nodejs: # 파일 업로드 공개 서버
+    container_name: nodejs
+    image: docker.io/node
+    volumes:
+      - "./uploader:/root/uploader"
+      - "./data/public.crt:/root/public.crt"
+      - "./data/private.key:/root/private.key"
+    ports:
+      - "5000:5000" # 웹 푸쉬 구독
+      - "9001:9001" # 파일 업로드 받기 분리
+      - "9002:9002" # 파일 게시
+      - "12000:12000" # 페이지 서버
+      - "12013:12013" # 사설 그룹채팅
+    command: /bin/bash /root/uploader/setup_uploader.sh
+  coturn: # WebRTC 서버 (사용시 등록 필요)
+    container_name: coturn
+    image: docker.io/coturn/coturn
+    network_mode: host
+    volumes:
+      - ./data/:/etc/coturn/
+    environment:
+      DETECT_EXTERNAL_IP: 'yes'
+      DETECT_RELAY_IP: 'yes'
+      PATH: /usr/bin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin
+      GODOT_SILENCE_ROOT_WARNING: 1
+volumes:
+  data:
+  libretranslate_data:
