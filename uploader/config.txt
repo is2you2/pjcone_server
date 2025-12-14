@@ -1,0 +1,7 @@
+[VapidInfo]
+email=your@email.here
+
+[Operation]
+UseSSL=true
+BlockAnonymous=true
+UseCustomSite=false

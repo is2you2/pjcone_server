@@ -1,0 +1,25 @@
+{
+    "name": "file_server",
+    "version": "1.0.0",
+    "description": "nakama file side server",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "author": "liss22",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^2.2.0",
+        "cheerio": "^1.0.0",
+        "cors": "^2.8.5",
+        "express": "^4.19.2",
+        "iconv-lite": "^0.7.0",
+        "log4js": "^6.9.1",
+        "multer": "^2.0.1",
+        "pg": "^8.15.6",
+        "uuid": "^10.0.0",
+        "web-push": "^3.6.7",
+        "ws": "^8.18.0"
+    }
+}

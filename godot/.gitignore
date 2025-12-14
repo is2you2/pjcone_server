@@ -1,0 +1,42 @@
+*.import
+import/*
+*.blend1
+*.translation
+android/*
+*.tmp
+html/*
+*.bak
+result/*
+# FileEdit 읽은파일 무시
+addons/file-editor/lastopenedfiles.lastcfg
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+# Text editor related
+test_files/
+.trash/
+.trash.json
+.text_editor_state.json
+word_skip_list.txt
+# NakamaClient ignores
+*.swp
+test_suite/addons
+test_suite/addons/*
+test_suite/.import/*
+# System/tool-specific ignores
+.directory
+*~
+# 파생결과물 무시
+exports/*
+# 테스트용 데이터베이스 폴더 무시
+gd_database/*
+# vscode debug 설정 무시
+.vscode/*
+# 에디터에서 에셋 링크 무시
+assets
+# 테스트용 키 심볼릭 링크 무시
+public.crt
+private.key
+# Godot engine 4 import 파일 무시
+.godot/
