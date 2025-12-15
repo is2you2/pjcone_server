@@ -6,6 +6,12 @@ Project Cone(PJCone)는 **닫힌계 SNS(Closed-SNS) 구조를 기반으로 한 �
 
 PJCone의 목적은 **폐쇄된 멤버들만 참여하는 안전한 네트워크에서 작업·대화·자료를 공유하고 기록하는 협업 환경**을 제공하는 것입니다. 여기에 메시징, 프로젝트 공유, 경량 작업 도구 등 다양한 기능이 결합되어 하나의 일관된 협업 생태계를 구성합니다.
 
+## Demo
+아래 파일을 다운로드하면 데모 전용 테스트 서버를 통해 즉시 체험할 수 있습니다.  
+필요에 따라 운영 중인 서버를 직접 등록하여 데모 환경으로 사용할 수도 있습니다.
+
+[Window](https://pjcone.ddns.net:9002/cdn/758d326a-6f1a-4ac4-93cc-9433521464a0/19304bb6-1558-4c3d-b1f7-735711278df4/1765823091831/Project_Cone-Demo.exe),
+[Linux](https://pjcone.ddns.net:9002/cdn/758d326a-6f1a-4ac4-93cc-9433521464a0/19304bb6-1558-4c3d-b1f7-735711278df4/1765823103681/Project_Cone-Demo.AppImage)
 ---
 
 ## Closed‑SNS Concept
