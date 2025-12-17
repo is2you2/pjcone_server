@@ -1,93 +1,94 @@
 # Project Cone (PJCone)
+> **Your Private Digital Fortress for Collaboration.**
+> A self-hosted, Closed-SNS platform designed for teams and creators who demand absolute data sovereignty.
 
-## Overview
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![Platform: PWA](https://img.shields.io/badge/Platform-PWA-blue)
 
-Project Cone(PJCone)는 **닫힌계 SNS(Closed-SNS) 구조를 기반으로 한 협업 중심 웹 플랫폼**입니다. 중앙 서버나 공개 SNS에 의존하지 않고, 사용자가 직접 운영하는 **자가 서버(Self‑Hosted Server)** 를 중심으로 작동합니다.
+## 🌐 Overview
 
-PJCone의 목적은 **폐쇄된 멤버들만 참여하는 안전한 네트워크에서 작업·대화·자료를 공유하고 기록하는 협업 환경**을 제공하는 것입니다. 여기에 메시징, 프로젝트 공유, 경량 작업 도구 등 다양한 기능이 결합되어 하나의 일관된 협업 생태계를 구성합니다.
+Project Cone (PJCone) is a **collaboration-centric web platform built on a "Closed-SNS" architecture.** It operates independently of central servers or public social media, functioning entirely through a **Self-Hosted Server** managed directly by the user.
 
-## Demo
-아래 파일을 다운로드하면 데모 전용 테스트 서버를 통해 즉시 체험할 수 있습니다.  
-필요에 따라 운영 중인 서버를 직접 등록하여 데모 환경으로 사용할 수도 있습니다.
+The mission of PJCone is to provide a **secure, private digital environment** where teams, creators, and individuals can communicate, share resources, and document work without external surveillance. It seamlessly integrates messaging, project sharing, and lightweight creative tools into a single, sovereign ecosystem.
 
-[Window](https://pjcone.ddns.net:9002/cdn/758d326a-6f1a-4ac4-93cc-9433521464a0/19304bb6-1558-4c3d-b1f7-735711278df4/1765823091831/Project_Cone-Demo.exe),
-[Linux](https://pjcone.ddns.net:9002/cdn/758d326a-6f1a-4ac4-93cc-9433521464a0/19304bb6-1558-4c3d-b1f7-735711278df4/1765823103681/Project_Cone-Demo.AppImage)
----
+## 🧪 Demo
+Experience PJCone instantly via our official test servers. You can also register your own self-hosted server within the demo environment.
 
-## Closed‑SNS Concept
-
-PJCone의 핵심 개념은 **Closed-SNS**, 즉 완전히 폐쇄된 소규모 네트워크 구조입니다.
-
-### Closed‑SNS 특징
-
-* **자가 서버 기반(Self‑Hosted)**: 사용자가 직접 서버를 운영하며 모든 데이터는 이 서버에 저장.
-* **비공개 네트워크**: 초대된 멤버만 접근 가능.
-* **공개 피드 없음**: 외부 노출이나 플랫폼 기반 추천 알고리즘 없음.
-* **데이터 영속성**: 메시지, 작업 기록, 자료가 외부 플랫폼 없이 자신의 서버에 축적.
-* **작은 규모의 깊은 신뢰 네트워크**를 기반으로 작업 중심의 소통을 수행.
-
-PJCone는 이 구조 위에서 **팀·창작자·1인 스튜디오**가 스스로 운영하는 협업 공간을 만드는 것을 목표로 합니다.
+* [**Windows (EXE)**](https://pjcone.ddns.net:9002/cdn/758d326a-6f1a-4ac4-93cc-9433521464a0/19304bb6-1558-4c3d-b1f7-735711278df4/1765823091831/Project_Cone-Demo.exe)
+* [**Linux (AppImage)**](https://pjcone.ddns.net:9002/cdn/758d326a-6f1a-4ac4-93cc-9433521464a0/19304bb6-1558-4c3d-b1f7-735711278df4/1765823103681/Project_Cone-Demo.AppImage)
 
 ---
 
-## Collaboration Features
+## 🔒 The Closed-SNS Concept
 
-PJCone는 SNS 구조를 기반으로 하지만, 실제 본질은 **협업툴** 성격에 더 가깝습니다.
+At its core, PJCone redefines social networking as a private, small-scale infrastructure.
 
-### 주요 협업 기능
-
-* **프로젝트 단위 공유** (작업물, 리소스, 메모 등)
-* **메시지 및 스레드 기반 커뮤니케이션**
-* **타임라인 / 로그 기반 히스토리 관리**
-* **서버 중심의 기록 영속성**
-* **준실시간 상호작용** (메시지, 코멘트 등)
-* 서버‑클라이언트 구조를 통한 **안정적인 데이터 동기화**
-
-즉, PJCone는 **SNS + 팀 커뮤니케이션 + 개인 서버 + 생산성 도구**가 결합된 형태의 플랫폼입니다.
+### Key Characteristics
+* **Self-Hosted Sovereignty**: You own the hardware, you own the data. Everything stays on your server.
+* **Private-by-Design**: Access is strictly limited to invited members. No public discovery or global search.
+* **Zero-Algorithm**: No distracting feeds, no tracking, and no dopamine-engineered recommendations.
+* **Data Permanence**: Messages, logs, and resources are archived on your own terms, free from platform volatility.
+* **Deep Trust Network**: Built for deep collaboration within high-trust groups or solo studios.
 
 ---
 
-## Built‑in Tools
+## 🛠 Collaboration Features
 
-PJCone에는 협업을 보조하는 여러 **경량 모듈형 도구들**이 포함되어 있습니다. 이 도구들은 플랫폼의 핵심 기능이라기보다, **협업 경험을 풍부하게 만드는 부가 요소**입니다.
+While PJCone adopts an SNS-style UI, its soul lies in **Productivity and Team Communication.**
 
-대표 모듈:
-
-* 간단한 **드로잉 도구**
-* 리소스 기반 **애니메이션 생성 도구**
-* 간단한 코드/텍스트 편집기
-* Godot engine 4 실행기
-* WebRTC 기반 최대 4인 음성/화상 통화 등
-
-이 도구들은 선택적으로 확장/비활성화할 수 있으며, PJCone의 협업 흐름 속에 자연스럽게 통합됩니다.
+### Core Capabilities
+* **Project-Based Sharing**: Seamlessly manage assets, documentation, and notes categorized by projects.
+* **Threaded Communication**: Keep discussions organized with message-based threading and replies.
+* **Timeline & Activity Logs**: Track every change with persistent history management and logs.
+* **Near Real-Time Interaction**: High-performance synchronization for instant messaging and feedback.
+* **Reliable Sync**: Optimized server-client architecture for consistent data integrity across all devices.
 
 ---
 
-## Architecture
+## 🎨 Built-in Modules
 
-* **PWA 기반** 웹 애플리케이션
-* 자가 서버 중심의 **Self‑Hosted 설계**
-* 경량 API 서버 또는 기존 서버에 모듈 형태로 통합 가능
-* 대부분의 기능이 클라이언트에서 동작하여 **속도·반응성 최적화**
-* HTTPS/SSL 기반 통신 (옵션)
-* **모듈식 구조**로 유지보수 용이
+PJCone includes several **lightweight modular tools** designed to enrich the collaboration experience without bloating the system.
 
----
-
-## License
-
-MIT License
+**Featured Modules:**
+* **Creative Suite**: Simple drawing tools and asset-based animation generators for rapid prototyping.
+* **Developer Tools**: Lightweight code/text editor for quick on-the-go edits.
+* **Game Dev Ready**: Integrated **Godot Engine 4 runner** for instant web-based project testing.
+* **Communication**: WebRTC-based voice and video chat (supports up to 4 participants).
 
 ---
 
-## Contributing
+## 🏗 Technical Architecture
 
-Issue 및 Pull Request는 언제든지 환영합니다.
+* **PWA (Progressive Web App)**: Universal cross-platform access via modern web browsers.
+* **Self-Hosted First**: Designed to be deployed on home servers, NAS, or private VPS.
+* **Lightweight API**: Modular design allows easy integration into existing infrastructures.
+* **Edge-Optimized**: Most complex logic runs on the client-side for maximum speed and lower server load.
+* **Security**: Supports end-to-end encrypted communication via HTTPS/SSL protocols.
 
 ---
 
-## Support / Donate
+## 🚀 Deployment (Quick Start)
 
-프로젝트 발전을 위한 후원을 받고 있습니다.
+Deploy your own digital fortress in minutes using Docker:
 
-[Patreon](https://www.patreon.com/cw/is2you2)
+```bash
+# Clone the repository
+git clone https://github.com/is2you2/pjcone.git
+cd pjcone
+
+# Launch the server
+docker-compose up -d
+```
+
+---
+
+## ⚖️ License
+This project is licensed under the **MIT License**.
+
+## 🤝 Contributing
+We welcome all issues and pull requests. Help us build a more private and sovereign web for everyone.
+
+## ☕ Support / Donate
+Project Cone is built on the belief that **users should not be the product.** We rely on your voluntary support to remain independent and ad-free.
+
+[**Support us on Patreon**](https://www.patreon.com/cw/is2you2)
