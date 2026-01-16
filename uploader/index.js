@@ -498,9 +498,10 @@ json_app.post('/PushReqApprovalUser', (req, res) => {
     const passwd = req.body['password'];
     const title = req.body['title'];
     const data = req.body['data'];
+    const emails = Object.keys(WaitingApproval);
+    if (!emails.includes(email)) discount_reg_limit();
     WaitingApproval[email] = passwd;
     fs.writeFileSync('./WaitingApproval.json', JSON.stringify(WaitingApproval));
-    discount_reg_limit();
     let senders = [];
     for (let subscription of subscriptions)
         for (let i = 0, j = admin_uuids.length; i < j; i++)
